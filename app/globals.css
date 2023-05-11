@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bitter:200,300,400,500,600,700,800,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.body-margin {
+  margin: 0 24px;
+}
+
+/* Color */
+.black9 {
+  color: #0F0F0F
+}
+
+.black7 {
+  color: #444;
+}
+
+.grn-10 {
+  background: #EEF2F1;
+}
+
+.grn-50 {
+  color: #2B5B4E;
+}
+
+.grn-110 {
+  color: #000C09;
+}
+
+.bg-grn-60 { /* Initially hide the popup */
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background:#003A2B;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  padding:0 24px
+}
+
+.subH {
+font-family: 'Source Sans Pro';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 20px;
+}
+
+.H1 {
+  font-size: 48px;
+  line-height: 60px;
+  font-family: 'Bitter', serif;
+  font-weight: 700;
+}
+.H4 {
+  font-size: 24px;
+  line-height: 30px;
+  font-family: 'Bitter', serif;
+  font-weight: 600;
+}
+.H5 {
+font-family: 'Bitter';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+}
+.H6 {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+}
+
+.Hothers {
+  font-size: 14px;
+  line-height: 20px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15px;
+  color: #0098D4;
+}
+
+.B3 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+  line-height: 35px;
+  font-weight: 400;
+}
+.B4 {
+font-family: 'Source Sans Pro';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 28px;
+}
+.B5 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+.buttonC {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 24px;
+  width: 100%;
+  background: #EEF2F1;
+  border-radius: 8px;
+  color:#003A2B;
+}
+
+
+.buttonN {
+  border-radius: 8px;
+  padding: 16px 24px;
+  background-color: #003A2B;
+  color: white;
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 32px;
+  background: #003A2B;
+  border-radius: 8px;
+}
+
+.buttonM {
+  border-radius: 8px;
+  padding: 16px 24px;
+  background-color: #003A2B;
+  color: white;
+}
+
+nav {
+  padding-top: 32px;
+}
+
+.header-content {
+  padding-top: 64px;;
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 13px 16px;
+  gap: 10px;
+  width: 100%;
+  background: #FFFFFF;
+  border: 1px solid #AFAFAF;
+  border-radius: 8px; 
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #003A2B;
+}
+
+.newsletter:focus {
+  color: #003A2B; /* Change the text color */
+  border: 2px solid #003A2B; /* Change the border */
+}
+
+.header-left {
+  max-width: 592px;
+  width: 100%;
+}
+
+.about {
+  padding-top: 128px;
+}
+
+.about-cont-right {
+  max-width: 592px;
+}
+
+@media only screen and (min-width: 765px) {
+
+
+  .about {
+    padding-top: 192px;
+  }
+
+.body-margin {
+    margin: 0 112px;
+  }
+  
+nav {
+  padding-top: 40px;
+}
+
+.header-content {
+  padding-top: 128px;;
+}
+
+.navM {
+  gap: 40px;
+
+}
+
+.Hothers {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15px;
+  color: #0098D4;
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 19px 24px;
+  gap: 10px;
+  width: 384px;
+  height: 73px;
+  background: #FFFFFF;
+  border: 1px solid #AFAFAF;
+  border-radius: 8px; 
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #003A2B;
+}
+
+.newsletter:focus {
+  color: #003A2B; /* Change the text color */
+  border: 2px solid #003A2B; /* Change the border */
+}
+
+.buttonN {
+  border-radius: 8px;
+  padding: 16px 24px;
+  background-color: #003A2B;
+  color: white;
+  font-family: 'Bitter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 48px;
+  background: #003A2B;
+  border-radius: 8px;
+}
+}
