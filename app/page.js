@@ -451,7 +451,7 @@ useEffect(() => {
                   </svg>
                   </button>
               </div>
-          </div>
+          </div> 
 
           <div id="slideshow-container" class="pt-8 md:pt-16">
               <div id="mslideshow">
