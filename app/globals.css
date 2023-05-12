@@ -4,6 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+  color: #0F0F0F
+}
+
 .body-margin {
   margin: 0 24px;
 }
@@ -150,8 +156,31 @@ line-height: 28px;
 .buttonO {
   border-radius: 8px;
   padding: 16px 24px;
-  border: 1px solid #0F0F0F;
+  border: 1px solid #CACACA;
   color: #0F0F0F;
+}
+.buttonO2 {
+  border-radius: 8px;
+  padding: 8px 16px;
+  border: 1px solid #CACACA;
+  color: #0F0F0F;
+}
+.buttonM2 {
+  border-radius: 8px;
+  padding: 8px 16px;
+  background-color: #003A2B;
+  color: white;
+}
+.buttonM:hover {
+  background-color: #003024;
+  border: none;
+}
+
+.buttonO:hover {
+  border: 1px solid #0F0F0F;
+}
+.buttonO2:hover {
+  border: 1px solid #0F0F0F;
 }
 
 nav {
@@ -181,8 +210,8 @@ nav {
 }
 
 .newsletter:focus {
-  color: #003A2B; /* Change the text color */
-  border: 2px solid #003A2B; /* Change the border */
+  color: #003A2B; 
+  border: 2px solid #003A2B; 
 }
 
 .header-left {
@@ -210,18 +239,26 @@ nav {
 
 #slideshow {
   display: flex;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.8s ease-in-out;
   flex-direction: row;
-
+  width: 100%;
+  justify-content: space-between;
 }
 
+
 .slid {
-  flex: 0 0 calc(100% / 3); /* Adjust the width of each slide as needed */
-  padding: 10px;
+  flex: 0 0 100%;
+}
+
+.slid > img {
+  width: 100%;
 }
 
 @media only screen and (min-width: 765px) {
 
+  .slid {
+    flex: 0 0 calc(100% / 3);
+  }
 
 .basis-u {
   flex-basis: calc(50% - 16px);

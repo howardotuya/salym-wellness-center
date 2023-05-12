@@ -21,38 +21,67 @@ const popuphandler = () => {
 export default function Home() {
 
 useEffect(() => {
-  const carousel = document.querySelector('.carousel');
-  const carouselInner = carousel.querySelector('.carousel-inner');
-  const slides = carouselInner.querySelectorAll('.slide');
-  const prevBtn = carousel.querySelector('.prev');
-  const nextBtn = carousel.querySelector('.next');
-  
-  let currentIndex = 0;
-  const slideWidth = slides[0].offsetWidth;
-  const slideMargin = parseInt(getComputedStyle(slides[0]).marginRight);
-  const slideTotalWidth = slideWidth + slideMargin;
+  const slideshow = document.getElementById("slideshow");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+  const prevBtnn = document.getElementById("prevBtnn");
+  const nextBtnn = document.getElementById("nextBtnn");
+  const slideContainer = document.getElementsByClassName("slid")[0];
+  const slideWidth = slideContainer.clientWidth; // Width of each slide
 
-  const handlePrevClick = () => {
-    if (currentIndex > 0) {
-      currentIndex--;
-      carouselInner.style.transform = `translateX(-${slideTotalWidth * currentIndex}px)`;
+  let currentPosition = 0;
+  // nextBtnn.classList.add('buttonM2');
+  // prevBtnn.classList.add('buttonO2');
+  // nextBtnn.classList.remove('buttonO2');
+  // prevBtnn.classList.remove('buttonO2')
+
+  prevBtn.addEventListener("click", () => {
+    currentPosition += slideWidth * 3;
+    if (currentPosition > 0) {
+      currentPosition = 0;
+      prevBtn.classList.remove('buttonM');
+      prevBtn.classList.add('buttonO');
     }
-  };
-
-  const handleNextClick = () => {
-    if (currentIndex < slides.length - 3) {
-      currentIndex++;
-      carouselInner.style.transform = `translateX(-${slideTotalWidth * currentIndex}px)`;
+    slideshow.style.transform = `translateX(${currentPosition}px)`;
+    nextBtn.classList.remove('buttonO');
+    nextBtn.classList.add('buttonM');
+  });
+  nextBtn.addEventListener("click", () => {
+    currentPosition -= slideWidth * 3;
+    const maxPosition = -(slideWidth * (slideshow.childElementCount - 3));
+    if (currentPosition < maxPosition) {
+      currentPosition = maxPosition;
+      nextBtn.classList.remove('buttonM');
+      nextBtn.classList.add('buttonO');
     }
-  };
+    slideshow.style.transform = `translateX(${currentPosition}px)`;
+    prevBtn.classList.remove('buttonO');
+    prevBtn.classList.add('buttonM');
+  });
+  prevBtnn.addEventListener("click", () => {
+    currentPosition += slideWidth * 1;
+    if (currentPosition > 0) {
+      currentPosition = 0;
+      prevBtnn.classList.remove('buttonM2');
+      prevBtnn.classList.add('buttonO2');
+    }
+    slideshow.style.transform = `translateX(${currentPosition}px)`;
+    nextBtnn.classList.remove('buttonO2');
+    nextBtnn.classList.add('buttonM2');
+  });
 
-  prevBtn.addEventListener('click', handlePrevClick);
-  nextBtn.addEventListener('click', handleNextClick);
-
-  return () => {
-    prevBtn.removeEventListener('click', handlePrevClick);
-    nextBtn.removeEventListener('click', handleNextClick);
-  };
+  nextBtnn.addEventListener("click", () => {
+    currentPosition -= slideWidth * 1;
+    const maxPosition = -(slideWidth * (slideshow.childElementCount - 1));
+    if (currentPosition < maxPosition) {
+      currentPosition = maxPosition;
+      nextBtnn.classList.remove('buttonM2');
+      nextBtnn.classList.add('buttonO2');
+    }
+    slideshow.style.transform = `translateX(${currentPosition}px)`;
+    prevBtnn.classList.remove('buttonO2');
+    prevBtnn.classList.add('buttonM2');
+  });
 }, []);
 
   return (
@@ -189,7 +218,7 @@ useEffect(() => {
           </div>
 
           <div class="">
-            <div class='pt-16 flex flex-col gap-6'>
+            <div class='md:pt-16 pt-8 flex flex-col gap-6'>
               <h4 class="H4 hidden md:block">Clinicals</h4>
               <h4 class="H5 md:hidden block">Clinicals</h4>
 
@@ -259,53 +288,155 @@ useEffect(() => {
               </div>
             </div> 
             
-            <div class="pt-12 flex justify-center gap-6">
+            <div class="md:pt-12 pt-6 flex md:justify-center gap-6">
               <button class="buttonM hidden md:block H6">Book a Consultation</button>
               <button class="buttonM md:hidden block subH">Book a Consultation</button>
               <button class="buttonO hidden md:block H6">Learn More</button>
               <button class="buttonO md:hidden block subH">Learn More</button>
             </div>
             
-            <div class="md:pt-24 flex w-full justify-between">
+            <div class="md:pt-24 pt-20 flex w-full justify-between">
               <h4 class="H4 hidden md:block self-end">Production</h4>
-              <h4 class="H5 md:hidden block">Production</h4>
-              <div class="flex flex-row gap-4">
+              <h4 class="H5 md:hidden block self-end">Production</h4>
+              <div class="md:hidden flex flex-row items-center justify-center gap-2">
+                  <button id="prevBtnn" class="buttonO2 gap-2 subH flex">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                    <path fill-rule="evenodd" d="M17 10a.75.75 0 01-.75.75H5.612l4.158 3.96a.75.75 0 11-1.04 1.08l-5.5-5.25a.75.75 0 010-1.08l5.5-5.25a.75.75 0 111.04 1.08L5.612 9.25H16.25A.75.75 0 0117 10z" clip-rule="evenodd" />
+                  </svg>
+                  </button>
+                  <button id="nextBtnn" class="buttonM2 gap-2 subH flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                      <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" />
+                    </svg>
+                  </button>
+              </div>
+              <div class="hidden md:flex flex-row gap-4">
                 <button id="prevBtn" class="buttonO hidden md:flex gap-2 H6">
-                  <Image class="H4 text-center hidden md:block self-center" src='/arrow-left.svg' priority width="24" height="24" quality={100} unoptimized={true} />
-                  Prev
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+                </svg>
+                Prev
                 </button>
                 <button id="nextBtn" class="buttonM hidden md:flex gap-2 H6">
                   Next
-                  <Image class="H4 text-center hidden md:block self-center" src='/arrow-right.svg' priority width="24" height="24" quality={100} unoptimized={true} />                
-                </button>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                  </button>
               </div>
             </div>
-
-            
 
             <div id="slideshow-container" class="pt-8">
               <div id="slideshow">
-                  <div class="slid"><Image class="H4 text-center hidden md:block self-center" src='/p1.png' priority width="384" height="240" quality={100} unoptimized={true} /></div>
-                  <div class="slid"><Image class="H4 text-center hidden md:block self-center" src='/p2.png' priority width="384" height="240" quality={100} unoptimized={true} /></div>
-                  <div class="slid"><Image class="H4 text-center hidden md:block self-center" src='/p3.png' priority width="384" height="240" quality={100} unoptimized={true} /></div>
-        
-                  <div class="slid"><Image class="H4 text-center hidden md:block self-center" src='/p1.png' priority width="384" height="240" quality={100} unoptimized={true} /></div>
-                  <div class="slid"><Image class="H4 text-center hidden md:block self-center" src='/p2.png' priority width="384" height="240" quality={100} unoptimized={true} /></div>
-                  <div class="slid"><Image class="H4 text-center hidden md:block self-center" src='/p3.png' priority width="384" height="240" quality={100} unoptimized={true} /></div>
-               
-                  <div class="slid"><Image class="H4 text-center hidden md:block self-center" src='/p1.png' priority width="384" height="240" quality={100} unoptimized={true} /></div>
-                  <div class="slid"><Image class="H4 text-center hidden md:block self-center" src='/p2.png' priority width="384" height="240" quality={100} unoptimized={true} /></div>
-                  <div class="slid"><Image class="H4 text-center hidden md:block self-center" src='/p3.png' priority width="384" height="240" quality={100} unoptimized={true} /></div>
-                
-                  <div class="slid"><Image class="H4 text-center hidden md:block self-center" src='/p1.png' priority width="384" height="240" quality={100} unoptimized={true} /></div>
-                  <div class="slid"><Image class="H4 text-center hidden md:block self-center" src='/p2.png' priority width="384" height="240" quality={100} unoptimized={true} /></div>
-                  <div class="slid"><Image class="H4 text-center hidden md:block self-center" src='/p3.png' priority width="384" height="240" quality={100} unoptimized={true} /></div>
-                
-              </div>
+                  <div class="slid md:px-6">
+                    <img class="H4 text-center hidden md:block self-center" src='/p1.png' priority quality={100} unoptimized={true} />
+                    <img class="H4 text-center md:hidden block self-center" src='/p1.png' priority quality={100} unoptimized={true} />
+                    <h4 class="H5 hidden md:block self-end text-center pt-4">Local Herbs and Leaves</h4>
+                    <h4 class="subH md:hidden block text-center pt-2">Local Herbs and Leaves</h4>
+                  </div>
+                  <div class="slid md:px-6">
+                    <img class="H4 text-center hidden md:block self-center" src='/p2.png' priority quality={100} unoptimized={true} />
+                    <img class="H4 text-center md:hidden block self-center" src='/p2.png' priority quality={100} unoptimized={true} />
+                    <h4 class="H5 hidden md:block self-end text-center pt-4">Local Roots and Barks</h4>
+                    <h4 class="subH md:hidden block text-center pt-2">Local Roots and Barks</h4>
+                  </div>
+                  <div class="slid md:px-6">
+                    <img class="H4 text-center hidden md:block self-center" src='/p3.png' priority quality={100} unoptimized={true} />
+                    <img class="H4 text-center md:hidden block self-center" src='/p3.png' priority quality={100} unoptimized={true} />
+                    <h4 class="H5 hidden md:block self-end text-center pt-4">Seeds, Flowers and Fruits</h4>
+                    <h4 class="subH md:hidden block text-center pt-2">Seeds, Flowers and Fruits</h4>
+                  </div>        
+                  <div class="slid md:px-6">
+                    <img class="H4 text-center hidden md:block self-center" src='/p4.png' priority quality={100} unoptimized={true} />
+                    <img class="H4 text-center md:hidden block self-center" src='/p4.png' priority quality={100} unoptimized={true} />
+                    <h4 class="H5 hidden md:block self-end text-center pt-4">Spices</h4>
+                    <h4 class="subH md:hidden block text-center pt-2">Spices</h4>
+                  </div>
+                  <div class="slid md:px-6">
+                    <img class="H4 text-center hidden md:block self-center" src='/p5.png' priority quality={100} unoptimized={true} />
+                    <img class="H4 text-center md:hidden block self-center" src='/p5.png' priority quality={100} unoptimized={true} />
+                    <h4 class="H5 hidden md:block self-end text-center pt-4">Foreign Products</h4>
+                    <h4 class="subH md:hidden block text-center pt-2">Foreign Products</h4>
+                  </div>
+                  <div class="slid md:px-6">
+                    <img class="H4 text-center hidden md:block self-center" src='/p6.png' priority quality={100} unoptimized={true} />
+                    <img class="H4 text-center md:hidden block self-center" src='/p6.png' priority quality={100} unoptimized={true} />
+                    <h4 class="H5 hidden md:block self-end text-center pt-4">Oils and Fluids</h4>
+                    <h4 class="subH md:hidden block text-center pt-2">Oils and Fluids</h4>
+                  </div>               
+                  <div class="slid md:px-6">
+                    <img class="H4 text-center hidden md:block self-center" src='/p7.png' priority quality={100} unoptimized={true} />
+                    <img class="H4 text-center md:hidden block self-center" src='/p7.png' priority quality={100} unoptimized={true} />
+                    <h4 class="H5 hidden md:block self-end text-center pt-4">Teas</h4>
+                    <h4 class="subH md:hidden block text-center pt-2">Teas</h4>
+                  </div>
+                  <div class="slid md:px-6">
+                    <img class="H4 text-center hidden md:block self-center" src='/p8.png' priority quality={100} unoptimized={true} />
+                    <img class="H4 text-center md:hidden block self-center" src='/p8.png' priority quality={100} unoptimized={true} />
+                    <h4 class="H5 hidden md:block self-end text-center pt-4">Apparatus</h4>
+                    <h4 class="subH md:hidden block text-center pt-2">Apparatus</h4>
+                  </div>
+                  <div class="slid md:px-6">
+                    <img class="H4 text-center hidden md:block self-center" src='/p9.png' priority quality={100} unoptimized={true} />
+                    <img class="H4 text-center md:hidden block self-center" src='/p9.png' priority quality={100} unoptimized={true} />
+                    <h4 class="H5 hidden md:block self-end text-center pt-4">Cosmetics - Creams/Soaps</h4>
+                    <h4 class="subH md:hidden block text-center pt-2">Cosmetics - Creams/Soaps</h4>
+                  </div>                
+                  <div class="slid md:px-6">
+                    <img class="H4 text-center hidden md:block self-center" src='/p10.png' priority quality={100} unoptimized={true} />
+                    <img class="H4 text-center md:hidden mlock self-center" src='/p10.png' priority quality={100} unoptimized={true} />
+                    <h4 class="H5 hidden md:block self-end text-center pt-4">Salts, Edibles and Miscellaneous</h4>
+                    <h4 class="subH md:hidden block text-center pt-2">Salts, Edibles and Miscellaneous</h4>
+                  </div>
+                </div>
+            </div>
+            
+            <div class="md:pt-12 pt-6 flex md:justify-center gap-6">
+              <button class="buttonM hidden md:block H6">Reach Out to US</button>
+              <button class="buttonM md:hidden block subH">Reach Out to US</button>
+              <button class="buttonO hidden md:block H6">View Catalogue</button>
+              <button class="buttonO md:hidden block subH">View Catalogue</button>
             </div>
           </div>
-          
         </section>
+
+        <section class="onws">
+          <div class="flex justify-between items-end">
+            <div class="flex flex-col gap-4">
+              <h4 class="H4 hidden md:block">Recent Blog Posts</h4>
+              <h4 class="H5 md:hidden block">Recent Blog Posts</h4>
+              <div class="w-full flex">
+                <p class="B3 hidden md:block black7 max-w-xl">Stay up to date with our recent blog posts, featuring insightful articles on health, wellness, and natural remedies for your daily life.</p>
+                <p class="B5 md:hidden block black7 max-w-xl ">Stay up to date with our recent blog posts, featuring insightful articles on health, wellness, and natural remedies for your daily life.</p>
+              </div>
+            </div>
+            <div class="hidden md:flex flex-row gap-4">
+                <button id="prevBtn" class="buttonO hidden md:flex gap-2 H6">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+                </svg>
+                Prev
+                </button>
+                <button id="nextBtn" class="buttonM hidden md:flex gap-2 H6">
+                  Next
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                  </button>
+              </div>
+          </div>
+
+          <div>
+            <div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </section>
+
+
     </main>
     </>
   )
