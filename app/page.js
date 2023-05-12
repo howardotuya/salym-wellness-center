@@ -28,12 +28,14 @@ useEffect(() => {
   const nextBtnn = document.getElementById("nextBtnn");
   const slideContainer = document.getElementsByClassName("slid")[0];
   const slideWidth = slideContainer.clientWidth; // Width of each slide
+  const mslideshow = document.getElementById("mslideshow");
+  const mslideContainer = document.getElementsByClassName("slidx")[0];
+  const mslideWidth = mslideContainer.clientWidth; // Width of each slide
+  const prevBtnnn = document.getElementById("prevBtnnn");
+  const nextBtnnn = document.getElementById("nextBtnnn");
 
   let currentPosition = 0;
-  // nextBtnn.classList.add('buttonM2');
-  // prevBtnn.classList.add('buttonO2');
-  // nextBtnn.classList.remove('buttonO2');
-  // prevBtnn.classList.remove('buttonO2')
+  let mcurrentPosition = 0;
 
   prevBtn.addEventListener("click", () => {
     currentPosition += slideWidth * 3;
@@ -81,6 +83,31 @@ useEffect(() => {
     slideshow.style.transform = `translateX(${currentPosition}px)`;
     prevBtnn.classList.remove('buttonO2');
     prevBtnn.classList.add('buttonM2');
+  });
+
+  prevBtnnn.addEventListener("click", () => {
+    mcurrentPosition += mslideWidth * 3;
+    if (mcurrentPosition > 0) {
+      mcurrentPosition = 0;
+      prevBtnnn.classList.remove('buttonM3');
+      prevBtnnn.classList.add('buttonO3');
+    }
+    mslideshow.style.transform = `translateX(${mcurrentPosition}px)`;
+    nextBtnnn.classList.remove('buttonO3');
+    nextBtnnn.classList.add('buttonM3');
+  });
+
+  nextBtnnn.addEventListener("click", () => {
+    mcurrentPosition -= mslideWidth * 3;
+    const maxPosition = -(mslideWidth * (mslideshow.childElementCount - 3));
+    if (mcurrentPosition < maxPosition) {
+      mcurrentPosition = maxPosition;
+      nextBtnnn.classList.remove('buttonM3');
+      nextBtnnn.classList.add('buttonO3');
+    }
+    mslideshow.style.transform = `translateX(${mcurrentPosition}px)`;
+    prevBtnnn.classList.remove('buttonO3');
+    prevBtnnn.classList.add('buttonM3');
   });
 }, []);
 
@@ -410,14 +437,14 @@ useEffect(() => {
                 <p class="B5 md:hidden block black7 max-w-xl ">Stay up to date with our recent blog posts, featuring insightful articles on health, wellness, and natural remedies for your daily life.</p>
               </div>
             </div>
-            <div class="hidden md:flex flex-row gap-4">
-                <button id="prevBtn" class="buttonO hidden md:flex gap-2 H6">
+              <div class="hidden md:flex flex-row gap-4">
+                <button id="prevBtnnn" class="buttonO3 hidden md:flex gap-2 H6">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
                 </svg>
                 Prev
                 </button>
-                <button id="nextBtn" class="buttonM hidden md:flex gap-2 H6">
+                <button id="nextBtnnn" class="buttonM3 hidden md:flex gap-2 H6">
                   Next
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
@@ -426,14 +453,80 @@ useEffect(() => {
               </div>
           </div>
 
-          <div>
-            <div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
+          <div id="slideshow-container" class="pt-8 md:pt-16">
+              <div id="mslideshow">
+                  <div class="slidx md:px-6">
+                    <div class="bic flex gap-4 md:gap-6 flex-col p-4 md:py-8 md:px-6">
+                      <img class="H4 text-center hidden md:block self-center" src='/blogimg.png' priority quality={100} unoptimized={true} />
+                      <img class="H4 text-center md:hidden block self-center" src='/blogimg.png' priority quality={100} unoptimized={true} />
+                      <h4 class="H5 hidden md:block">The Healing Powers of Methyl C...</h4>
+                      <h4 class="H6 md:hidden block">The Healing Powers of Methyl C...</h4>
+                      <p class="B4 hidden md:block black7 max-w-2xl">Our solutions offer customized clinical sessions and herbal productions, utilizing a variety of researched herbs to promote functional and safe wellness.</p>
+                      <p class="B5 md:hidden block black7 max-w-2xl ">Our solutions offer customized clinical sessions and herbal productions, utilizing a variety of researched herbs to promote functional and safe wellness.</p>
+                      <div class="flex justify-between items-center">
+                        <span class="grn-10 grn-60 H6 hidden md:block py-2 px-4 rounded-full ">Herbal Wellness</span>
+                        <span class=" md:hidden block grn-10 grn-60 subH py-2 px-4 rounded-full">Herbal Wellness</span>
+                        <p class="H6 hidden md:block"> 3 mins read</p>
+                        <p class="subH md:hidden block"> 3 mins read</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slidx md:px-6">
+                    <div class="bic flex gap-4 md:gap-6 flex-col p-4 md:py-8 md:px-6">
+                      <img class="H4 text-center hidden md:block self-center" src='/blogimg.png' priority quality={100} unoptimized={true} />
+                      <img class="H4 text-center md:hidden block self-center" src='/blogimg.png' priority quality={100} unoptimized={true} />
+                      <h4 class="H5 hidden md:block">The Healing Powers of Methyl C...</h4>
+                      <h4 class="H6 md:hidden block">The Healing Powers of Methyl C...</h4>
+                      <p class="B4 hidden md:block black7 max-w-2xl">Our solutions offer customized clinical sessions and herbal productions, utilizing a variety of researched herbs to promote functional and safe wellness.</p>
+                      <p class="B5 md:hidden block black7 max-w-2xl ">Our solutions offer customized clinical sessions and herbal productions, utilizing a variety of researched herbs to promote functional and safe wellness.</p>
+                      <div class="flex justify-between items-center">
+                        <span class="grn-10 grn-60 H6 hidden md:block py-2 px-4 rounded-full ">Herbal Wellness</span>
+                        <span class=" md:hidden block grn-10 grn-60 subH py-2 px-4 rounded-full">Herbal Wellness</span>
+                        <p class="H6 hidden md:block"> 3 mins read</p>
+                        <p class="subH md:hidden block"> 3 mins read</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slidx md:px-6">
+                    <div class="bic flex gap-4 md:gap-6 flex-col p-4 md:py-8 md:px-6">
+                      <img class="H4 text-center hidden md:block self-center" src='/blogimg.png' priority quality={100} unoptimized={true} />
+                      <img class="H4 text-center md:hidden block self-center" src='/blogimg.png' priority quality={100} unoptimized={true} />
+                      <h4 class="H5 hidden md:block">The Healing Powers of Methyl C...</h4>
+                      <h4 class="H6 md:hidden block">The Healing Powers of Methyl C...</h4>
+                      <p class="B4 hidden md:block black7 max-w-2xl">Our solutions offer customized clinical sessions and herbal productions, utilizing a variety of researched herbs to promote functional and safe wellness.</p>
+                      <p class="B5 md:hidden block black7 max-w-2xl ">Our solutions offer customized clinical sessions and herbal productions, utilizing a variety of researched herbs to promote functional and safe wellness.</p>
+                      <div class="flex justify-between items-center">
+                        <span class="grn-10 grn-60 H6 hidden md:block py-2 px-4 rounded-full ">Herbal Wellness</span>
+                        <span class=" md:hidden block grn-10 grn-60 subH py-2 px-4 rounded-full">Herbal Wellness</span>
+                        <p class="H6 hidden md:block"> 3 mins read</p>
+                        <p class="subH md:hidden block"> 3 mins read</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slidx md:px-6">
+                    <div class="bic flex gap-4 md:gap-6 flex-col p-4 md:py-8 md:px-6">
+                      <img class="H4 text-center hidden md:block self-center" src='/blogimg.png' priority quality={100} unoptimized={true} />
+                      <img class="H4 text-center md:hidden block self-center" src='/blogimg.png' priority quality={100} unoptimized={true} />
+                      <h4 class="H5 hidden md:block">The Healing Powers of Methyl C...</h4>
+                      <h4 class="H6 md:hidden block">The Healing Powers of Methyl C...</h4>
+                      <p class="B4 hidden md:block black7 max-w-2xl">Our solutions offer customized clinical sessions and herbal productions, utilizing a variety of researched herbs to promote functional and safe wellness.</p>
+                      <p class="B5 md:hidden block black7 max-w-2xl ">Our solutions offer customized clinical sessions and herbal productions, utilizing a variety of researched herbs to promote functional and safe wellness.</p>
+                      <div class="flex justify-between items-center">
+                        <span class="grn-10 grn-60 H6 hidden md:block py-2 px-4 rounded-full ">Herbal Wellness</span>
+                        <span class=" md:hidden block grn-10 grn-60 subH py-2 px-4 rounded-full">Herbal Wellness</span>
+                        <p class="H6 hidden md:block"> 3 mins read</p>
+                        <p class="subH md:hidden block"> 3 mins read</p>
+                      </div>
+                    </div>
+                  </div>
             </div>
           </div>
+
+          
+          <div class="md:pt-12 pt-6 flex md:justify-center gap-6">
+              <button class="buttonM hidden md:block H6">Explore the Blog</button>
+              <button class="buttonM md:hidden block subH">Explore the Blog</button>
+            </div>
         </section>
 
 
