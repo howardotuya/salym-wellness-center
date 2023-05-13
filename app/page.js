@@ -154,19 +154,19 @@ useEffect(() => {
         <Image onClick={popuphandler} unoptimized={true} class="md:hidden block" src='/menu.svg' width="44" height="44" quality={100} />
         </nav>
 
-        <div class="flex md:flex-row flex-col gap-10 md:gap-0 justify-between items-center header-content">
+        <div class="flex md:flex-row flex-col gap-10 md:gap-16 justify-between items-center header-content">
           <div class="order-2 md:order-1 header-left gap-4 md:gap-8 flex flex-col">
             <span class="Hothers">naturopathic wellness centre</span>
             <h1 class="H1 hidden md:block">Welcome to Salym Wellness Centre – your natural health partner</h1>
             <h1 class="H4 md:hidden block">Welcome to Salym Wellness Centre – your natural health partner</h1>
-            <p class="B3 hidden md:block black7">Prioritize your well-being today. Join our community of like-minded individuals and businesses. Subscribe to our newsletter and book a consultation now.</p>
+            <p class="B4 hidden md:block black7">Prioritize your well-being today. Join our community of like-minded individuals and businesses. Subscribe to our newsletter and book a consultation now.</p>
             <p class="B5 md:hidden block black7">Prioritize your well-being today. Join our community of like-minded individuals and businesses. Subscribe to our newsletter and book a consultation now.</p>
             <div class="flex gap-2 md:gap-4">
               <input class="newsletter outline-none" type="text" placeholder="you@example.com" />
               <button class="buttonN">Subscribe</button>
             </div>
           </div>
-          <div class="order-1 md:order-2">
+          <div class="order-1 header-right md:order-2">
             <Image src='/header-right.png' class="hidden md:block" width="488" height="478" quality={100} unoptimized={true} priority />
             <Image src='/header-right.png' class="md:hidden block" width="345" height="338" quality={100} unoptimized={true} priority />
             </div>
@@ -178,7 +178,7 @@ useEffect(() => {
           <h4 class="H4 text-center hidden md:block">Why Choose Salym Wellness Centre?</h4>
           <h4 class="H5 md:hidden block">Why Choose Salym Wellness Centre?</h4>
           <div class="w-full flex md:justify-center">
-          <p class="B3 hidden md:block black7 max-w-2xl text-center">Our safe and effective herbal remedies are distinguished by sensory evaluation techniques and the Organoleptic Method for quality and potency.</p>
+          <p class="B4 hidden md:block black7 max-w-2xl text-center">Our safe and effective herbal remedies are distinguished by sensory evaluation techniques and the Organoleptic Method for quality and potency.</p>
           <p class="B5 md:hidden block black7 max-w-2xl ">Our safe and effective herbal remedies are distinguished by sensory evaluation techniques and the Organoleptic Method for quality and potency.</p>
           </div>
         </div>
@@ -218,11 +218,11 @@ useEffect(() => {
         </div>
       </section>
 
-        <section class="about flex md:flex-row flex-col gap-10 md:gap-0 items-center justify-between">
-          <div class="order-2 md:order-1">
+        <section class="about flex md:flex-row flex-col gap-10 md:gap-16 items-center justify-between">
+          <div class="order-2 md:order-1 md:w-1/2">
             <Image src='/about.png' class="hidden md:block" width="528" height="436" quality={100} unoptimized={true}  />
-            </div>
-          <div class="order-1 md:order-2 about-cont-right flex gap-6 flex-col md:gap-8">
+          </div>
+          <div class="order-1 md:order-2 about-cont-right md:w-1/2 flex gap-6 flex-col md:gap-8">
             <h4 class="H4 hidden md:block">About Us</h4>
             <h4 class="H5 md:hidden block pb-2">About Us</h4>
             <Image src='/about.png' class="md:hidden block" width="345" height="286" quality={100} unoptimized={true}  />
@@ -239,8 +239,8 @@ useEffect(() => {
             <h4 class="H4 text-center hidden md:block">Our Natural Health Solutions</h4>
             <h4 class="H5 md:hidden block">Our Natural Health Solutions</h4>
             <div class="w-full flex md:justify-center">
-            <p class="B3 hidden md:block black7 max-w-2xl text-center">Our solutions offer customized clinical sessions and herbal productions, utilizing a variety of researched herbs to promote functional and safe wellness.</p>
-            <p class="B5 md:hidden block black7 max-w-2xl ">Our solutions offer customized clinical sessions and herbal productions, utilizing a variety of researched herbs to promote functional and safe wellness.</p>
+            <p class="B4 hidden md:block black7 max-w-2xl text-center">Our solutions offer customized clinical sessions and herbal productions, utilizing a variety of researched herbs to promote functional and safe wellness.</p>
+            <p class="B5 md:hidden block black7 max-w-2xl">Our solutions offer customized clinical sessions and herbal productions, utilizing a variety of researched herbs to promote functional and safe wellness.</p>
             </div>
           </div>
 
@@ -433,7 +433,7 @@ useEffect(() => {
               <h4 class="H4 hidden md:block">Recent Blog Posts</h4>
               <h4 class="H5 md:hidden block">Recent Blog Posts</h4>
               <div class="w-full flex">
-                <p class="B3 hidden md:block black7 max-w-xl">Stay up to date with our recent blog posts, featuring insightful articles on health, wellness, and natural remedies for your daily life.</p>
+                <p class="B4 hidden md:block black7 max-w-xl">Stay up to date with our recent blog posts, featuring insightful articles on health, wellness, and natural remedies for your daily life.</p>
                 <p class="B5 md:hidden block black7 max-w-xl ">Stay up to date with our recent blog posts, featuring insightful articles on health, wellness, and natural remedies for your daily life.</p>
               </div>
             </div>
@@ -459,8 +459,8 @@ useEffect(() => {
                     <div class="bic flex gap-4 md:gap-6 flex-col p-4 md:py-8 md:px-6">
                       <img class="H4 text-center hidden md:block self-center" src='/blogimg.png' priority quality={100} unoptimized={true} />
                       <img class="H4 text-center md:hidden block self-center" src='/blogimg.png' priority quality={100} unoptimized={true} />
-                      <h4 class="H5 hidden md:block">The Healing Powers of Methyl C...</h4>
-                      <h4 class="H6 md:hidden block">The Healing Powers of Methyl C...</h4>
+                      <h4 class="H5 hidden md:block">The Healing Powers of Methyl</h4>
+                      <h4 class="H6 md:hidden block">The Healing Powers of Methyl</h4>
                       <p class="B4 hidden md:block black7 max-w-2xl">Our solutions offer customized clinical sessions and herbal productions, utilizing a variety of researched herbs to promote functional and safe wellness.</p>
                       <p class="B5 md:hidden block black7 max-w-2xl ">Our solutions offer customized clinical sessions and herbal productions, utilizing a variety of researched herbs to promote functional and safe wellness.</p>
                       <div class="flex justify-between items-center">
@@ -475,8 +475,8 @@ useEffect(() => {
                     <div class="bic flex gap-4 md:gap-6 flex-col p-4 md:py-8 md:px-6">
                       <img class="H4 text-center hidden md:block self-center" src='/blogimg.png' priority quality={100} unoptimized={true} />
                       <img class="H4 text-center md:hidden block self-center" src='/blogimg.png' priority quality={100} unoptimized={true} />
-                      <h4 class="H5 hidden md:block">The Healing Powers of Methyl C...</h4>
-                      <h4 class="H6 md:hidden block">The Healing Powers of Methyl C...</h4>
+                      <h4 class="H5 hidden md:block">The Healing Powers of Methyl</h4>
+                      <h4 class="H6 md:hidden block">The Healing Powers of Methyl</h4>
                       <p class="B4 hidden md:block black7 max-w-2xl">Our solutions offer customized clinical sessions and herbal productions, utilizing a variety of researched herbs to promote functional and safe wellness.</p>
                       <p class="B5 md:hidden block black7 max-w-2xl ">Our solutions offer customized clinical sessions and herbal productions, utilizing a variety of researched herbs to promote functional and safe wellness.</p>
                       <div class="flex justify-between items-center">
@@ -491,8 +491,8 @@ useEffect(() => {
                     <div class="bic flex gap-4 md:gap-6 flex-col p-4 md:py-8 md:px-6">
                       <img class="H4 text-center hidden md:block self-center" src='/blogimg.png' priority quality={100} unoptimized={true} />
                       <img class="H4 text-center md:hidden block self-center" src='/blogimg.png' priority quality={100} unoptimized={true} />
-                      <h4 class="H5 hidden md:block">The Healing Powers of Methyl C...</h4>
-                      <h4 class="H6 md:hidden block">The Healing Powers of Methyl C...</h4>
+                      <h4 class="H5 hidden md:block">The Healing Powers of Methyl</h4>
+                      <h4 class="H6 md:hidden block">The Healing Powers of Methyl</h4>
                       <p class="B4 hidden md:block black7 max-w-2xl">Our solutions offer customized clinical sessions and herbal productions, utilizing a variety of researched herbs to promote functional and safe wellness.</p>
                       <p class="B5 md:hidden block black7 max-w-2xl ">Our solutions offer customized clinical sessions and herbal productions, utilizing a variety of researched herbs to promote functional and safe wellness.</p>
                       <div class="flex justify-between items-center">
@@ -507,8 +507,8 @@ useEffect(() => {
                     <div class="bic flex gap-4 md:gap-6 flex-col p-4 md:py-8 md:px-6">
                       <img class="H4 text-center hidden md:block self-center" src='/blogimg.png' priority quality={100} unoptimized={true} />
                       <img class="H4 text-center md:hidden block self-center" src='/blogimg.png' priority quality={100} unoptimized={true} />
-                      <h4 class="H5 hidden md:block">The Healing Powers of Methyl C...</h4>
-                      <h4 class="H6 md:hidden block">The Healing Powers of Methyl C...</h4>
+                      <h4 class="H5 hidden md:block">The Healing Powers of Methyl</h4>
+                      <h4 class="H6 md:hidden block">The Healing Powers of Methyl</h4>
                       <p class="B4 hidden md:block black7 max-w-2xl">Our solutions offer customized clinical sessions and herbal productions, utilizing a variety of researched herbs to promote functional and safe wellness.</p>
                       <p class="B5 md:hidden block black7 max-w-2xl ">Our solutions offer customized clinical sessions and herbal productions, utilizing a variety of researched herbs to promote functional and safe wellness.</p>
                       <div class="flex justify-between items-center">
@@ -529,6 +529,21 @@ useEffect(() => {
             </div>
         </section>
 
+        <section class="onws">
+          <div class="outer-m">
+          <div class="newws px-4 py-10 md:py-16 flex justify-center items-center text-white flex-col gap-6 md:gap-10">
+            <h2 class="H4 text-center hidden md:block">Subscribe to our newsletter</h2>
+            <h2 class="H5 md:hidden block">Subscribe to our newsletter</h2>
+            <p class="B4 grn-10x hidden md:block black7 max-w-xl text-center">Discover the latest health and wellness tips, exclusive discounts, and updates on our products and services by subscribing to our newsletter. Join our community of like-minded individuals and businesses who prioritize their health and well-being. Don't miss out, sign up today and stay informed.</p>
+            <p class="B5 grn-10x md:hidden block black7 max-w-xl">Discover the latest health and wellness tips, exclusive discounts, and updates on our products and services by subscribing to our newsletter. Join our community of like-minded individuals and businesses who prioritize their health and well-being. Don't miss out, sign up today and stay informed.</p>
+            <div class="labelcont w-full">
+              <input class='newsletterI' type="email" placeholder="you@example.com" />
+              <button class="newS">Subscribe</button>
+            </div>
+          </div>
+          </div>
+
+        </section>
 
     </main>
     </>
