@@ -398,15 +398,15 @@ input[type="radio"]:checked {
 
   .onwss {
     padding-top: 192px;
-    margin: 0 -112px -2px;
+    margin: 0 -64px -2px;
   }
 
   .footer {
     background: url("/footer.png");
     background-size: cover;
     background-repeat: no-repeat;
-    margin: 0 -112px;
-    padding: 0 112px;
+    margin: 0 -64px;
+    padding: 0 64px;
   }
 
   .caax {
@@ -593,4 +593,17 @@ input[type="radio"]:checked {
     margin: 0 112px;
     max-width: 1440px;
   }
+  .onwss {
+    padding-top: 192px;
+    margin: 0 -112px -2px;
+  }
+
+  .footer {
+    background: url("/footer.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 -112px;
+    padding: 0 112px;
+  }
+
 }

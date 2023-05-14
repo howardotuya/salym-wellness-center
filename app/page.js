@@ -1,8 +1,8 @@
 "use client";
-import { useEffect } from "react";
-
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import axios from "axios";
 
 export const metadata = {
   title: "Home Maybe",
@@ -139,11 +139,31 @@ export default function Home() {
     });
   }, []);
 
+  const [email, setEmail] = useState("");
+  const [success, setSuccess] = useState("");
+  const [error, setError] = useState("");
+
+  const subHandler = async (e) => {
+    e.preventDefault();
+
+    try {
+      const { data } = await axios.post(
+        "http://localhost:5000/api/mail/subscribe",
+        { email }
+      );
+
+      console.log(data)
+
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   return (
     <>
       <div class="bg-grn-60 flex flex-col justify-between">
         <div class="flex justify-end pt-6">
-          <Image
+          <Image alt="png will occupy here"
             onClick={popuphandler}
             unoptimized={true}
             class="cancel"
@@ -165,7 +185,7 @@ export default function Home() {
         <div class="flex flex-col pb-8 gap-6 justify-center items-center">
           <div class="flex gap-6">
             <div>
-              <Image
+              <Image alt="png will occupy here"
                 unoptimized={true}
                 class="cancel"
                 src="/IG.svg"
@@ -175,7 +195,7 @@ export default function Home() {
               />
             </div>
             <div>
-              <Image
+              <Image alt="png will occupy here"
                 unoptimized={true}
                 class="cancel"
                 src="/fb.svg"
@@ -185,7 +205,7 @@ export default function Home() {
               />
             </div>
             <div>
-              <Image
+              <Image alt="png will occupy here"
                 unoptimized={true}
                 class="cancel"
                 src="/twit.svg"
@@ -207,7 +227,7 @@ export default function Home() {
         <header>
           <nav class="flex items-center flex-row justify-between">
             <div>
-              <Image
+              <Image alt="png will occupy here"
                 unoptimized={true}
                 class="hidden lg:block"
                 src="/logoLarge.png"
@@ -215,7 +235,7 @@ export default function Home() {
                 height="64"
                 quality={100}
               />
-              <Image
+              <Image alt="png will occupy here"
                 unoptimized={true}
                 class="lg:hidden block"
                 src="/logoLarge.png"
@@ -244,7 +264,7 @@ export default function Home() {
             <button class="buttonM H6 hidden lg:flex">
               Book a Consultation
             </button>
-            <Image
+            <Image alt="png will occupy here"
               onClick={popuphandler}
               unoptimized={true}
               class="lg:hidden block"
@@ -274,17 +294,21 @@ export default function Home() {
                 like-minded individuals and businesses. Subscribe to our
                 newsletter and book a consultation now.
               </p>
-              <div class="flex gap-2 lg:gap-4">
+              <form onSubmit={subHandler} class="flex gap-2 lg:gap-4">
                 <input
                   class="newsletter outline-none"
-                  type="text"
+                  type="email"
                   placeholder="you@example.com"
+                  onChange={e => {
+                    setEmail(e.target.value)
+                  }}
+                  value={email}
                 />
-                <button class="buttonN">Subscribe</button>
-              </div>
+                <button type="submit" class="buttonN">Subscribe</button>
+              </form>
             </div>
             <div class="order-1 header-right lg:order-2">
-              <Image
+              <Image alt="png will occupy here"
                 src="/header-right.png"
                 class="hidden lg:block"
                 width="488"
@@ -293,7 +317,7 @@ export default function Home() {
                 unoptimized={true}
                 priority
               />
-              <Image
+              <Image alt="png will occupy here"
                 src="/header-right.png"
                 class="lg:hidden block"
                 width="345"
@@ -329,7 +353,7 @@ export default function Home() {
           </div>
           <div class="flex flex-col lg:flex-row gap-6 ">
             <div class="lg:px-4 px-6 py-8 grn-10 flex flex-col gap-4 rounded-lg flex-grow  basis-0">
-              <Image
+              <Image alt="png will occupy here"
                 class="H4 text-center hidden lg:block self-start"
                 src="/wh1.svg"
                 priority
@@ -338,7 +362,7 @@ export default function Home() {
                 quality={100}
                 unoptimized={true}
               />
-              <Image
+              <Image alt="png will occupy here"
                 class="H5 lg:hidden block"
                 src="/whh1.png"
                 width="56"
@@ -363,7 +387,7 @@ export default function Home() {
               </p>
             </div>
             <div class="lg:px-4 px-6 py-8 grn-10 flex flex-col gap-4 rounded-lg flex-grow  basis-0">
-              <Image
+              <Image alt="png will occupy here"
                 class="H4 text-center hidden lg:block self-start"
                 src="/wh2.svg"
                 priority
@@ -372,7 +396,7 @@ export default function Home() {
                 quality={100}
                 unoptimized={true}
               />
-              <Image
+              <Image alt="png will occupy here"
                 class="H5 lg:hidden block"
                 src="/whh2.png"
                 width="56"
@@ -393,7 +417,7 @@ export default function Home() {
               </p>
             </div>
             <div class="lg:px-4 px-6 py-8 grn-10 flex flex-col gap-4 rounded-lg flex-grow  basis-0">
-              <Image
+              <Image alt="png will occupy here"
                 class="H4 text-center hidden lg:block self-start"
                 src="/t1.svg"
                 priority
@@ -402,7 +426,7 @@ export default function Home() {
                 quality={100}
                 unoptimized={true}
               />
-              <Image
+              <Image alt="png will occupy here"
                 class="H5 lg:hidden block"
                 src="/whh3.png"
                 width="56"
@@ -425,7 +449,7 @@ export default function Home() {
               </p>
             </div>
             <div class="lg:px-4 px-6 py-8 grn-10 flex flex-col gap-4 rounded-lg flex-grow  basis-0">
-              <Image
+              <Image alt="png will occupy here"
                 class="H4 text-center hidden lg:block self-start"
                 src="/wh4.svg"
                 priority
@@ -434,7 +458,7 @@ export default function Home() {
                 quality={100}
                 unoptimized={true}
               />
-              <Image
+              <Image alt="png will occupy here"
                 class=" lg:hidden block"
                 src="/whh4.png"
                 width="56"
@@ -459,7 +483,7 @@ export default function Home() {
 
         <section class="about flex lg:flex-row flex-col gap-10 lg:gap-16 items-center justify-between">
           <div class="order-2 lg:order-1 lg:w-1/2">
-            <Image
+            <Image alt="png will occupy here"
               src="/about.png"
               class="hidden lg:block"
               width="528"
@@ -471,7 +495,7 @@ export default function Home() {
           <div class="order-1 lg:order-2 about-cont-right lg:w-1/2 flex gap-6 flex-col lg:gap-8">
             <h4 class="H4 hidden lg:block">About Us</h4>
             <h4 class="H5 lg:hidden block pb-2">About Us</h4>
-            <Image
+            <Image alt="png will occupy here"
               src="/about.png"
               class="lg:hidden block"
               width="345"
@@ -539,7 +563,7 @@ export default function Home() {
 
               <div class="flex flex-wrap gap-8">
                 <div class="flex flex-row gap-4 lg:gap-6 py-8 px-6 lg:p-8 grn-10 rounded-2xl basis-u">
-                  <Image
+                  <Image alt="png will occupy here"
                     class="H4 text-center hidden lg:block  self-center"
                     src="/c1.svg"
                     priority
@@ -548,7 +572,7 @@ export default function Home() {
                     quality={100}
                     unoptimized={true}
                   />
-                  <Image
+                  <Image alt="png will occupy here"
                     class="lg:hidden block self-start"
                     src="/cc1.png"
                     width="48"
@@ -573,7 +597,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div class="flex flex-row gap-4 lg:gap-6 py-8 px-6 lg:p-8 grn-10 rounded-2xl basis-u">
-                  <Image
+                  <Image alt="png will occupy here"
                     class="H4 text-center hidden lg:block  self-center"
                     src="/c2.svg"
                     priority
@@ -582,7 +606,7 @@ export default function Home() {
                     quality={100}
                     unoptimized={true}
                   />
-                  <Image
+                  <Image alt="png will occupy here"
                     class="lg:hidden block self-start"
                     src="/cc2.png"
                     width="48"
@@ -607,7 +631,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div class="flex flex-row gap-4 lg:gap-6 py-8 px-6 lg:p-8 grn-10 rounded-2xl basis-u">
-                  <Image
+                  <Image alt="png will occupy here"
                     class="H4 text-center hidden lg:block  self-center"
                     src="/c3.svg"
                     priority
@@ -616,7 +640,7 @@ export default function Home() {
                     quality={100}
                     unoptimized={true}
                   />
-                  <Image
+                  <Image alt="png will occupy here"
                     class="lg:hidden block self-start"
                     src="/cc3.png"
                     width="48"
@@ -641,7 +665,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div class="flex flex-row gap-4 lg:gap-6 py-8 px-6 lg:p-8 grn-10 rounded-2xl basis-u">
-                  <Image
+                  <Image alt="png will occupy here"
                     class="H4 text-center hidden lg:block  self-center"
                     src="/c4.svg"
                     priority
@@ -650,7 +674,7 @@ export default function Home() {
                     quality={100}
                     unoptimized={true}
                   />
-                  <Image
+                  <Image alt="png will occupy here"
                     class="lg:hidden block self-start"
                     src="/cc4.png"
                     width="48"
@@ -675,7 +699,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div class="flex flex-row gap-4 lg:gap-6 py-8 px-6 lg:p-8 grn-10 rounded-2xl basis-u">
-                  <Image
+                  <Image alt="png will occupy here"
                     class="H4 text-center hidden lg:block  self-center"
                     src="/c5.svg"
                     priority
@@ -684,7 +708,7 @@ export default function Home() {
                     quality={100}
                     unoptimized={true}
                   />
-                  <Image
+                  <Image alt="png will occupy here"
                     class="lg:hidden block self-start"
                     src="/cc5.png"
                     width="48"
@@ -709,7 +733,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div class="flex flex-row gap-4 lg:gap-6 py-8 px-6 lg:p-8 grn-10 rounded-2xl basis-u">
-                  <Image
+                  <Image alt="png will occupy here"
                     class="H4 text-center hidden lg:block  self-center"
                     src="/c6.svg"
                     priority
@@ -718,7 +742,7 @@ export default function Home() {
                     quality={100}
                     unoptimized={true}
                   />
-                  <Image
+                  <Image alt="png will occupy here"
                     class="lg:hidden block self-start"
                     src="/cc6.png"
                     width="48"
@@ -1321,14 +1345,14 @@ export default function Home() {
                 discounts, and updates on our products and services by
                 subscribing to our newsletter. Join our community of like-minded
                 individuals and businesses who prioritize their health and
-                well-being. Don't miss out, sign up today and stay informed.
+                well-being. Do not miss out, sign up today and stay informed.
               </p>
               <p class="B5 grn-10x lg:hidden block black7 max-w-xl">
                 Discover the latest health and wellness tips, exclusive
                 discounts, and updates on our products and services by
                 subscribing to our newsletter. Join our community of like-minded
                 individuals and businesses who prioritize their health and
-                well-being. Don't miss out, sign up today and stay informed.
+                well-being. Do not miss out, sign up today and stay informed.
               </p>
               <div class="labelcont flex justify-center w-full">
                 <input
@@ -1364,7 +1388,7 @@ export default function Home() {
             <div id="tslideshow" class="md:pt-16 pt-8 flex flex-row lg:gap-8">
               <div class="tc">
                 <div class="flex ttc flex-col gap-8">
-                  <Image
+                  <Image alt="png will occupy here"
                     class="H4 text-center hidden lg:block self-start"
                     src="/t1.svg"
                     priority
@@ -1373,7 +1397,7 @@ export default function Home() {
                     quality={100}
                     unoptimized={true}
                   />
-                  <Image
+                  <Image alt="png will occupy here"
                     class="H5 lg:hidden block"
                     src="/t1.svg"
                     width="64"
@@ -1406,7 +1430,7 @@ export default function Home() {
               </div>
               <div class="tc">
                 <div class="flex ttc flex-col gap-8">
-                  <Image
+                  <Image alt="png will occupy here"
                     class="H4 text-center hidden lg:block self-start"
                     src="/quote-up.svg"
                     priority
@@ -1415,7 +1439,7 @@ export default function Home() {
                     quality={100}
                     unoptimized={true}
                   />
-                  <Image
+                  <Image alt="png will occupy here"
                     class="H5 lg:hidden block"
                     src="/quote-up.svg"
                     width="24"
@@ -1437,7 +1461,7 @@ export default function Home() {
                     Organoleptic Method to ensure quality and potency.
                   </p>
                   <div class="flex-row gap-4 hidden lg:flex items-center">
-                    <Image
+                    <Image alt="png will occupy here"
                       src="/t2.svg"
                       priority
                       width="80"
@@ -1451,7 +1475,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div class="flex-row gap-2 lg:hidden flex items-center">
-                    <Image
+                    <Image alt="png will occupy here"
                       src="/t2.svg"
                       width="64"
                       height="64"
@@ -1468,7 +1492,7 @@ export default function Home() {
               </div>
               <div class="tc">
                 <div class="flex ttc flex-col gap-8">
-                  <Image
+                  <Image alt="png will occupy here"
                     class="H4 text-center hidden lg:block self-start"
                     src="/t3.svg"
                     priority
@@ -1477,7 +1501,7 @@ export default function Home() {
                     quality={100}
                     unoptimized={true}
                   />
-                  <Image
+                  <Image alt="png will occupy here"
                     class="H5 lg:hidden block"
                     src="/t3.svg"
                     width="64"
@@ -1747,7 +1771,7 @@ export default function Home() {
                 </div>
                 <div class="flex flex-col gap-4">
                   <div class="flex gap-4">
-                    <Image
+                    <Image alt="png will occupy here"
                       src="/house-2.svg"
                       class=""
                       width="24"
@@ -1766,7 +1790,7 @@ export default function Home() {
                     </p>
                   </div>
                   <div class="flex gap-4">
-                    <Image
+                    <Image alt="png will occupy here"
                       src="/call.svg"
                       class=""
                       width="24"
@@ -1779,7 +1803,7 @@ export default function Home() {
                     <p class="B5 lg:hidden block">+23412345678</p>
                   </div>
                   <div class="flex gap-4">
-                    <Image
+                    <Image alt="png will occupy here"
                       src="/sms.svg"
                       class=""
                       width="24"
@@ -1800,7 +1824,7 @@ export default function Home() {
                 </div>
                 <div class="flex flex-col gap-4">
                   <div class="flex gap-4">
-                    <Image
+                    <Image alt="png will occupy here"
                       src="/house-2.svg"
                       class=""
                       width="24"
@@ -1819,7 +1843,7 @@ export default function Home() {
                     </p>
                   </div>
                   <div class="flex gap-4">
-                    <Image
+                    <Image alt="png will occupy here"
                       src="/call.svg"
                       class=""
                       width="24"
@@ -1832,7 +1856,7 @@ export default function Home() {
                     <p class="B5 lg:hidden block">+23412345678</p>
                   </div>
                   <div class="flex gap-4">
-                    <Image
+                    <Image alt="png will occupy here"
                       src="/sms.svg"
                       class=""
                       width="24"
@@ -1865,7 +1889,7 @@ export default function Home() {
               </div>
 
               <div class="flex justify-center gap-4">
-                <Image
+                <Image alt="png will occupy here"
                   class="H4 text-center hidden lg:block  self-center"
                   src="/ig.svg"
                   priority
@@ -1874,7 +1898,7 @@ export default function Home() {
                   quality={100}
                   unoptimized={true}
                 />
-                <Image
+                <Image alt="png will occupy here"
                   class="lg:hidden block self-start"
                   src="/iig.svg"
                   width="24"
@@ -1883,7 +1907,7 @@ export default function Home() {
                   quality={100}
                   unoptimized={true}
                 />
-                <Image
+                <Image alt="png will occupy here"
                   class="H4 text-center hidden lg:block  self-center"
                   src="/ffb.svg"
                   priority
@@ -1892,7 +1916,7 @@ export default function Home() {
                   quality={100}
                   unoptimized={true}
                 />
-                <Image
+                <Image alt="png will occupy here"
                   class="lg:hidden block self-start"
                   src="/ffb.svg"
                   width="24"
@@ -1901,7 +1925,7 @@ export default function Home() {
                   quality={100}
                   unoptimized={true}
                 />
-                <Image
+                <Image alt="png will occupy here"
                   class="H4 text-center hidden lg:block  self-center"
                   src="/ttw.svg"
                   priority
@@ -1910,7 +1934,7 @@ export default function Home() {
                   quality={100}
                   unoptimized={true}
                 />
-                <Image
+                <Image alt="png will occupy here"
                   class="lg:hidden block self-start"
                   src="/ttw.svg"
                   width="24"
