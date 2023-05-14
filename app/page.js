@@ -1738,7 +1738,7 @@ export default function Home() {
         </section>
 
         <footer class="onwsss">
-          <div class="footer px-6 lg:px-0 text-white">
+          <div class="footer px-6 text-white">
             <div class="flex lg:flex-row flex-col gap-8 justify-center pt-10 lg:pt-20">
               <div class="py-8 w-full px-6 flex flex-col gap-6 bg-grx">
                 <div>
@@ -1746,7 +1746,7 @@ export default function Home() {
                   <h4 class="H6 lg:hidden block">Head Office</h4>
                 </div>
                 <div class="flex flex-col gap-4">
-                  <div class="flex items-center gap-2 lg:gap-4">
+                  <div class="flex gap-4">
                     <Image
                       src="/house-2.svg"
                       class=""
@@ -1765,7 +1765,7 @@ export default function Home() {
                       Lagos.
                     </p>
                   </div>
-                  <div class="flex items-center gap-2 lg:gap-4">
+                  <div class="flex gap-4">
                     <Image
                       src="/call.svg"
                       class=""
@@ -1778,7 +1778,7 @@ export default function Home() {
                     <p class="B4 hidden lg:block">+23412345678</p>
                     <p class="B5 lg:hidden block">+23412345678</p>
                   </div>
-                  <div class="flex items-center gap-2 lg:gap-4">
+                  <div class="flex gap-4">
                     <Image
                       src="/sms.svg"
                       class=""
@@ -1799,7 +1799,7 @@ export default function Home() {
                   <h4 class="H6 lg:hidden block">Branch Office</h4>
                 </div>
                 <div class="flex flex-col gap-4">
-                  <div class="flex items-center gap-2 lg:gap-4">
+                  <div class="flex gap-4">
                     <Image
                       src="/house-2.svg"
                       class=""
@@ -1818,7 +1818,7 @@ export default function Home() {
                       Lagos.
                     </p>
                   </div>
-                  <div class="flex items-center gap-2 lg:gap-4">
+                  <div class="flex gap-4">
                     <Image
                       src="/call.svg"
                       class=""
@@ -1831,7 +1831,7 @@ export default function Home() {
                     <p class="B4 hidden lg:block">+23412345678</p>
                     <p class="B5 lg:hidden block">+23412345678</p>
                   </div>
-                  <div class="flex items-center gap-2 lg:gap-4">
+                  <div class="flex gap-4">
                     <Image
                       src="/sms.svg"
                       class=""
@@ -1848,7 +1848,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div class="flex lg:flex-row flex-col justify-between items-center pt-12 lg:pt-16">
+            <div class="flex lg:flex-row flex-col justify-between lg:items-center pt-12 lg:pt-16">
               <div class="flex lg:flex-row pb-12 lg:pb-0 flex-col gap-10">
                 <p class="H6 hidden lg:block ">Home</p>
                 <p class="subH lg:hidden block">Home</p>
@@ -1922,7 +1922,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div class="pt-12 pb-10 text-center w-full">
+            <div class="lg:pt-12 lg:pb-10 pt-6 pb-8 text-center w-full">
               <p class="H6 hidden lg:block ">
                 2023 Copyrights. All rights reserved.
               </p>

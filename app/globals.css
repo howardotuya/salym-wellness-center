@@ -370,6 +370,7 @@ input[type="radio"]:checked {
   background: url("/footer.png");
   background-size: cover;
   background-repeat: no-repeat;
+  margin: 0 -24px;
 }
 
 .bg-grx {
@@ -378,17 +379,16 @@ input[type="radio"]:checked {
 }
 
 .onwss {
-  padding-top: 128px;
+  padding-top: 96px;
 }
 
 .onwsss{
   padding-top: 96px;
-  margin: 0 -24px;
 }
 
 @media only screen and (min-width: 1024px) {
   .onwsss{
-
+    margin: 0;
   }
 
   .bg-grx {
