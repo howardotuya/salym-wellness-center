@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Bitter:200,300,400,500,600,700,800,900&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Bitter:200,300,400,500,600,700,800,900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  color: #0F0F0F;
-  font-family: 'Source Sans Pro', sans-serif;
+  color: #0f0f0f;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 .body-margin {
@@ -15,35 +15,35 @@ body {
 
 /* Color */
 .black9 {
-  color: #0F0F0F
+  color: #0f0f0f;
 }
 
 .black7 {
-  color: #5F5F5F;
+  color: #5f5f5f;
 }
 
 .grn-10 {
-  background: #EEF2F1;
+  background: #eef2f1;
 }
 
 .grn-10x {
-  color: #EEF2F1;
+  color: #eef2f1;
 }
 
-
 .grn-50 {
-  color: #2B5B4E;
+  color: #2b5b4e;
 }
 
 .grn-110 {
-  color: #000C09;
+  color: #000c09;
 }
 
 .grn-60 {
-  color: #003A2B;
+  color: #003a2b;
 }
 
-.bg-grn-60 { /* Initially hide the popup */
+.bg-grn-60 {
+  /* Initially hide the popup */
   position: fixed;
   display: none;
   top: 0;
@@ -51,71 +51,71 @@ body {
   width: 100%;
   height: 100%;
   z-index: 9999;
-  background:#003A2B;
+  background: #003a2b;
   color: #fff;
   height: 100%;
   width: 100%;
-  padding:0 24px
+  padding: 0 24px;
 }
 
 .subH {
-font-family: 'Source Sans Pro';
-font-style: normal;
-font-weight: 600;
-font-size: 14px;
-line-height: 20px;
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .H1 {
   font-size: 48px;
   line-height: 60px;
-  font-family: 'Bitter', serif;
+  font-family: "Bitter", serif;
   font-weight: 700;
 }
 .H4 {
   font-size: 24px;
   line-height: 30px;
-  font-family: 'Bitter', serif;
+  font-family: "Bitter", serif;
   font-weight: 600;
 }
 .H5 {
-font-family: 'Bitter';
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 24px;
+  font-family: "Bitter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
 }
 .H6 {
   font-size: 16px;
   line-height: 24px;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
 }
 .Hothers {
   font-size: 14px;
   line-height: 20px;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.15px;
-  color: #0098D4;
+  color: #0098d4;
 }
 
 .B3 {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 20px;
   line-height: 35px;
   font-weight: 400;
 }
-.B4 { 
-font-family: 'Source Sans Pro';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 28px;
+.B4 {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
 }
 .B5 {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 14px;
   line-height: 26px;
   font-weight: 400;
@@ -128,18 +128,17 @@ line-height: 28px;
   align-items: center;
   padding: 16px 24px;
   width: 100%;
-  background: #EEF2F1;
+  background: #eef2f1;
   border-radius: 8px;
-  color:#003A2B;
+  color: #003a2b;
 }
-
 
 .buttonN {
   border-radius: 8px;
   padding: 16px 24px;
-  background-color: #003A2B;
+  background-color: #003a2b;
   color: white;
-  font-family: 'Source Sans Pro';
+  font-family: "Source Sans Pro";
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
@@ -149,44 +148,56 @@ line-height: 28px;
   justify-content: center;
   align-items: center;
   padding: 16px 32px;
-  background: #003A2B;
+  background: #003a2b;
   border-radius: 8px;
 }
 
 .buttonM {
   border-radius: 8px;
   padding: 16px 24px;
-  background-color: #003A2B;
+  background-color: #003a2b;
   color: white;
 }
 .buttonO {
   border-radius: 8px;
   padding: 16px 24px;
-  border: 1px solid #CACACA;
-  color: #0F0F0F;
+  border: 1px solid #cacaca;
+  color: #0f0f0f;
 }
 .buttonO2 {
   border-radius: 8px;
   padding: 8px 16px;
-  border: 1px solid #CACACA;
-  color: #0F0F0F;
+  border: 1px solid #cacaca;
+  color: #5f5f5f;
 }
 .buttonM2 {
   border-radius: 8px;
   padding: 8px 16px;
-  background-color: #003A2B;
+  background-color: #003a2b;
   color: white;
 }
 .buttonO3 {
   border-radius: 8px;
   padding: 16px 24px;
-  border: 1px solid #CACACA;
-  color: #0F0F0F;
+  border: 1px solid #cacaca;
+  color: #0f0f0f;
 }
 .buttonM3 {
-  border-radius: 8px;  
+  border-radius: 8px;
   padding: 16px 24px;
-  background-color: #003A2B;
+  background-color: #003a2b;
+  color: white;
+}
+.buttonO4 {
+  border-radius: 8px;
+  padding: 8px 16px;
+  border: 1px solid #cacaca;
+  color: #0f0f0f;
+}
+.buttonM4 {
+  border-radius: 8px;
+  padding: 8px 16px;
+  background-color: #003a2b;
   color: white;
 }
 .buttonM:hover {
@@ -195,10 +206,10 @@ line-height: 28px;
 }
 
 .buttonO:hover {
-  border: 1px solid #0F0F0F;
+  border: 1px solid #0f0f0f;
 }
 .buttonO2:hover {
-  border: 1px solid #0F0F0F;
+  border: 1px solid #0f0f0f;
 }
 
 nav {
@@ -206,7 +217,7 @@ nav {
 }
 
 .header-content {
-  padding-top: 64px;;
+  padding-top: 64px;
 }
 
 .newsletter {
@@ -216,22 +227,21 @@ nav {
   padding: 13px 16px;
   gap: 10px;
   width: 100%;
-  background: #FFFFFF;
-  border: 1px solid #AFAFAF;
-  border-radius: 8px; 
-  font-family: 'Source Sans Pro';
+  background: #ffffff;
+  border: 1px solid #afafaf;
+  border-radius: 8px;
+  font-family: "Source Sans Pro";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
-  color: #003A2B;
+  color: #003a2b;
 }
 
 .newsletter:focus {
-  color: #003A2B; 
-  border: 2px solid #003A2B; 
+  color: #003a2b;
+  border: 2px solid #003a2b;
 }
-
 
 .about {
   padding-top: 128px;
@@ -248,7 +258,7 @@ nav {
 }
 #slideshow {
   display: flex;
-  transition: transform 0.8s ease-in-out;
+  transition: transform 0.4s ease-in-out;
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
@@ -260,7 +270,7 @@ nav {
 }
 #mslideshow {
   display: flex;
-  transition: transform 0.8s ease-in-out;
+  transition: transform 0.4s ease-in-out;
   flex-direction: column;
   gap: 24px;
   width: 100%;
@@ -280,21 +290,20 @@ nav {
 }
 .bic {
   padding: 16px;
-  border: 1px solid #CACACA;
+  border: 1px solid #cacaca;
   border-radius: 16px;
 }
-
 
 .newsletterI {
   padding: 14px 16px;
   gap: 10px;
   width: 100%;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 8px;
 }
 
 .newws {
-  background: url('/newsmm.png');
+  background: url("/newsmm.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -302,7 +311,7 @@ nav {
 .newS {
   padding: 16px 32px;
   width: 100%;
-  background: #01754C;
+  background: #01754c;
   color: #fff;
   font-style: normal;
   font-weight: 600;
@@ -323,10 +332,103 @@ nav {
   margin: 0 -24px;
 }
 
+#tslideshow-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+#tslideshow {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  width: 100%;
+}
+
+.tc {
+  flex: 0 0 100%;
+}
+
+.ttc {
+  padding: 32px 20px;
+  border: 1px solid #cacaca;
+  border-radius: 16px;
+  flex: 0 0 100%;
+}
+
+.in1 {
+  border-bottom: 1px solid #0f0f0f;
+  padding: 16px 0;
+  width: 100%;
+}
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  color: #003a2b;
+}
+
+.footer {
+  background: url("/footer.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-grx {
+  background-color: #2b5b4e;
+  border-radius: 8px;
+}
+
+.onwss {
+  padding-top: 128px;
+}
+
+.onwsss{
+  padding-top: 96px;
+  margin: 0 -24px;
+}
+
 @media only screen and (min-width: 1024px) {
+  .onwsss{
+
+  }
+
+  .bg-grx {
+    background-color: #2b5b4e;
+    border-radius: 16px;
+  }
+
+  .onwss {
+    padding-top: 192px;
+    margin: 0 -112px -2px;
+  }
+
+  .footer {
+    background: url("/footer.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 -112px;
+    padding: 0 112px;
+  }
+
+  .caax {
+    border: 1px solid #003a2b;
+    padding: 32px 24px;
+    border-radius: 16px;
+  }
+
+  .tc {
+    flex: initial;
+  }
+
+  .ttc {
+    padding: 32px 24px;
+    border: 1px solid #cacaca;
+    border-radius: 16px;
+  }
+
   .outer-m {
     margin: 0;
   }
+
   .newsletterI {
     display: flex;
     flex-direction: row;
@@ -335,12 +437,12 @@ nav {
     gap: 10px;
     width: 400px;
     height: 73px;
-    background: #FFFFFF;
+    background: #ffffff;
     border-radius: 8px;
   }
 
   .newws {
-    background: url('/newsletter.png');
+    background: url("/newsletter.png");
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -352,9 +454,9 @@ nav {
     align-items: center;
     padding: 24px 48px;
     width: 190px;
-    background: #01754C;
+    background: #01754c;
     color: #fff;
-    font-family: 'Bitter';
+    font-family: "Bitter";
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
@@ -381,7 +483,7 @@ nav {
 
   .bic {
     padding: 32px 24px;
-    border: 1px solid #CACACA;
+    border: 1px solid #cacaca;
     border-radius: 16px;
   }
   #mslideshow-container {
@@ -391,7 +493,7 @@ nav {
   }
   #mslideshow {
     display: flex;
-    transition: transform 0.8s ease-in-out;
+    transition: transform 0.4s ease-in-out;
     flex-direction: row;
     gap: 0;
     width: 100%;
@@ -405,93 +507,90 @@ nav {
     flex: 0 0 calc(100% / 3);
   }
 
-.basis-u {
-  flex-basis: calc(50% - 16px);
-}
+  .basis-u {
+    flex-basis: calc(50% - 16px);
+  }
   .onws {
     padding-top: 192px;
   }
 
-.about {
+  .about {
     padding-top: 192px;
   }
 
-.body-margin {
+  .body-margin {
     margin: 0 64px;
-}
+  }
 
-nav {
-  padding-top: 40px;
-}
+  nav {
+    padding-top: 40px;
+  }
 
-.header-content {
-  padding-top: 128px;;
-}
+  .header-content {
+    padding-top: 128px;
+  }
 
-.navM {
-  gap: 40px;
+  .navM {
+    gap: 40px;
+  }
 
-}
+  .Hothers {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15px;
+    color: #0098d4;
+  }
 
-.Hothers {
-  font-size: 16px;
-  line-height: 24px;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.15px;
-  color: #0098D4;
-}
+  .newsletter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 19px 24px;
+    gap: 10px;
+    width: 384px;
+    height: 73px;
+    background: #ffffff;
+    border: 1px solid #afafaf;
+    border-radius: 8px;
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #003a2b;
+  }
 
-.newsletter {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 19px 24px;
-  gap: 10px;
-  width: 384px;
-  height: 73px;
-  background: #FFFFFF;
-  border: 1px solid #AFAFAF;
-  border-radius: 8px;
-  font-family: 'Source Sans Pro';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 28px;
-  color: #003A2B;
-}
+  .newsletter:focus {
+    color: #003a2b; /* Change the text color */
+    border: 2px solid #003a2b; /* Change the border */
+  }
 
-.newsletter:focus {
-  color: #003A2B; /* Change the text color */
-  border: 2px solid #003A2B; /* Change the border */
-}
-
-.buttonN {
-  border-radius: 8px;
-  padding: 16px 24px;
-  background-color: #003A2B;
-  color: white;
-  font-family: 'Bitter';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 24px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 24px 48px;
-  background: #003A2B;
-  border-radius: 8px;
-}
-
+  .buttonN {
+    border-radius: 8px;
+    padding: 16px 24px;
+    background-color: #003a2b;
+    color: white;
+    font-family: "Bitter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 48px;
+    background: #003a2b;
+    border-radius: 8px;
+  }
 }
 
 @media only screen and (min-width: 1440px) {
-
   .body-margin {
     margin: 0 112px;
-    max-width: 1440PX;
+    max-width: 1440px;
   }
 }
