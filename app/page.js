@@ -5,8 +5,8 @@ import Link from "next/link";
 import axios from "axios";
 
 export const metadata = {
-  title: "Home Maybe",
-  description: "Welcome to Next.js",
+  title: "kanda",
+  description: "kanda",
 };
 
 const popuphandler = () => {
@@ -124,7 +124,6 @@ export default function Home() {
       nextBtnx.classList.remove("buttonO4");
       nextBtnx.classList.add("buttonM4");
     });
-
     nextBtnx.addEventListener("click", () => {
       tcurrentPosition -= tslideWidth * 1;
       const maxPosition = -(tslideWidth * (tslideshow.childElementCount - 1));
@@ -137,8 +136,26 @@ export default function Home() {
       prevBtnx.classList.remove("buttonO4");
       prevBtnx.classList.add("buttonM4");
     });
+    var closeButtons = document.getElementsByClassName("colse");
+    for (var i = 0; i < closeButtons.length; i++) {
+      closeButtons[i].addEventListener("click", function () {
+        document.getElementById("modales").style.display = "none";
+        document.getElementById("modalss").style.display = "none";
+      });
+    }
   }, []);
 
+  const [fname, setfname] = useState("");
+  const [phone, setPhone] = useState("");
+  const [emailAddress, setEmailAddress] = useState("");
+  const [companyName, setCompanyName] = useState("");
+  const [methodOfContact, setMethodOfContact] = useState("");
+  const [like, setLike] = useState("");
+  const [interest, setInterest] = useState({
+    Clinicals: false,
+    Productions: false,
+    NewsorBlog: false
+  });
   const [email, setEmail] = useState("");
   const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
@@ -146,24 +163,314 @@ export default function Home() {
   const subHandler = async (e) => {
     e.preventDefault();
 
+    document.getElementById("head-sub").style.display = "none";
+    document.getElementById("head-sub2").style.display = "flex";
+
     try {
       const { data } = await axios.post(
         "http://localhost:5000/api/mail/subscribe",
         { email }
       );
 
-      console.log(data)
-
+      document.getElementById("modalss").style.display = "flex";
+      document.getElementById("head-sub").style.display = "flex";
+      document.getElementById("head-sub2").style.display = "none";
+      setEmail("");
     } catch (error) {
-      console.log(error)
+      document.getElementById("modales").style.display = "flex";
+      document.getElementById("head-sub").style.display = "flex";
+      document.getElementById("head-sub2").style.display = "none";
+      setEmail("");
     }
-  }
+  };
+
+  const subHandler2 = async (e) => {
+    e.preventDefault();
+
+    document.getElementById("low-sub").style.display = "none";
+    document.getElementById("low-sub2").style.display = "flex";
+
+    try {
+      const { data } = await axios.post(
+        "http://localhost:5000/api/mail/subscribe",
+        { email }
+      );
+
+      document.getElementById("modalss").style.display = "flex";
+      document.getElementById("low-sub").style.display = "flex";
+      document.getElementById("low-sub2").style.display = "none";
+      setEmail("");
+    } catch (error) {
+      document.getElementById("modales").style.display = "flex";
+      document.getElementById("low-sub").style.display = "flex";
+      document.getElementById("low-sub2").style.display = "none";
+      setEmail("");
+    }
+  };
+
+  const contactHandler = async (e) => {
+    e.preventDefault();
+
+    document.getElementById("low-contact").style.display = "none";
+    document.getElementById("low-contact2").style.display = "flex";
+
+    try {
+      const { data } = await axios.post(
+        "http://localhost:5000/api/mail/contact",
+        { fname, phone, emailAddress, companyName, methodOfContact, like, interest }
+      );
+
+      document.getElementById("modalss").style.display = "flex";
+      document.getElementById("low-contact").style.display = "flex";
+      document.getElementById("low-contact2").style.display = "none";
+      setEmail("");
+    } catch (error) {
+      document.getElementById("modales").style.display = "flex";
+      document.getElementById("low-contact").style.display = "flex";
+      document.getElementById("low-contact2").style.display = "none";
+      setEmail("");
+    }
+  };
 
   return (
     <>
+      <div
+        id="modalss"
+        class="flex px-6 justify-center items-center w-full h-full"
+      >
+        <div class="max-w-xl success w-full items-center rounded-2xl bg-white flex flex-col px-4 lg:px-6 py-10 gap-4 lg:gap-6">
+          <div>
+            <Image
+              alt="png will occupy here"
+              class="H4 text-center hidden lg:block self-start"
+              src="/success.svg"
+              priority
+              width="96"
+              height="96"
+              quality={100}
+              unoptimized={true}
+            />
+            <Image
+              alt="png will occupy here"
+              class="H5 lg:hidden block"
+              src="/success.svg"
+              width="64"
+              height="64"
+              priority
+              quality={100}
+              unoptimized={true}
+            />
+          </div>
+          <div>
+            <h4></h4>
+            <h5 class="H5 grn-110 hidden lg:block">Subscription Confirmed!</h5>
+            <h5 class="H6 grn-110 lg:hidden block">Subscription Confirmed!</h5>
+          </div>
+          <div>
+            <p class="B4 grn-50 hidden lg:block">
+              Stay tuned for our latest updates and offers.
+            </p>
+            <p class="B5 grn-50 lg:hidden block">
+              Stay tuned for our latest updates and offers.
+            </p>
+          </div>
+          <div class="flex gap-4">
+            <button class="H5 colse buttonx grn-110 hidden lg:block">
+              Close
+            </button>
+            <button class="H5 colse buttonxg grn-110 hidden lg:block">
+              Continue
+            </button>
+            <button class="H6 colse buttonx grn-110 lg:hidden block">
+              Close
+            </button>
+            <button class="H6 colse buttonxg grn-110 lg:hidden block">
+              Continue
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        id="modales"
+        class="flex px-6 justify-center items-center w-full h-full"
+      >
+        <div class="max-w-xl danger w-full items-center rounded-2xl bg-white flex flex-col px-6 py-10 gap-6">
+          <div>
+            <Image
+              alt="png will occupy here"
+              class="H4 text-center hidden lg:block self-start"
+              src="/danger.svg"
+              priority
+              width="96"
+              height="96"
+              quality={100}
+              unoptimized={true}
+            />
+            <Image
+              alt="png will occupy here"
+              class="H5 lg:hidden block"
+              src="/danger.svg"
+              width="64"
+              height="64"
+              priority
+              quality={100}
+              unoptimized={true}
+            />
+          </div>
+          <div>
+            <h4></h4>
+            <h5 class="H5 rde-110 hidden lg:block">
+              Oops! something went wrong.
+            </h5>
+            <h5 class="H6 rde-110 lg:hidden block">
+              Oops! something went wrong.
+            </h5>
+          </div>
+          <div>
+            <p class="B4 grn-50 hidden lg:block">
+              Sorry, we couldn't process your subscription. Please try again.
+            </p>
+            <p class="B5 grn-50 lg:hidden block">
+              Sorry, we couldn't process your subscription. Please try again.
+            </p>
+          </div>
+          <div class="flex gap-4">
+            <button class="H5 colse buttonrx rde-110 hidden lg:block">
+              Close
+            </button>
+            <button class="H5 colse buttonrxg rde-110 hidden lg:block">
+              Try Again
+            </button>
+            <button class="H6 colse buttonrx rde-110 lg:hidden block">
+              Close
+            </button>
+            <button class="H6 colse buttonrxg rde-110 lg:hidden block">
+              Try Again
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        id="modalsc"
+        class="flex px-6 justify-center items-center w-full h-full"
+      >
+        <div class="max-w-xl success w-full items-center rounded-2xl bg-white flex flex-col px-4 lg:px-6 py-10 gap-4 lg:gap-6">
+          <div>
+            <Image
+              alt="png will occupy here"
+              class="H4 text-center hidden lg:block self-start"
+              src="/success.svg"
+              priority
+              width="96"
+              height="96"
+              quality={100}
+              unoptimized={true}
+            />
+            <Image
+              alt="png will occupy here"
+              class="H5 lg:hidden block"
+              src="/success.svg"
+              width="64"
+              height="64"
+              priority
+              quality={100}
+              unoptimized={true}
+            />
+          </div>
+          <div>
+            <h4></h4>
+            <h5 class="H5 grn-110 hidden lg:block">Message Sent!</h5>
+            <h5 class="H6 grn-110 lg:hidden block">Message Sent!</h5>
+          </div>
+          <div>
+            <p class="B4 grn-50 hidden lg:block">
+              Thank you for reaching out. We will get back to you shortly.
+            </p>
+            <p class="B5 grn-50 lg:hidden block">
+              Thank you for reaching out. We will get back to you shortly.
+            </p>
+          </div>
+          <div class="flex gap-4">
+            <button class="H5 colse buttonx grn-110 hidden lg:block">
+              Close
+            </button>
+            <button class="H5 colse buttonxg grn-110 hidden lg:block">
+              Continue
+            </button>
+            <button class="H6 colse buttonx grn-110 lg:hidden block">
+              Close
+            </button>
+            <button class="H6 colse buttonxg grn-110 lg:hidden block">
+              Continue
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        id="modales"
+        class="flex px-6 justify-center items-center w-full h-full"
+      >
+        <div class="max-w-xl danger w-full items-center rounded-2xl bg-white flex flex-col px-6 py-10 gap-6">
+          <div>
+            <Image
+              alt="png will occupy here"
+              class="H4 text-center hidden lg:block self-start"
+              src="/danger.svg"
+              priority
+              width="96"
+              height="96"
+              quality={100}
+              unoptimized={true}
+            />
+            <Image
+              alt="png will occupy here"
+              class="H5 lg:hidden block"
+              src="/danger.svg"
+              width="64"
+              height="64"
+              priority
+              quality={100}
+              unoptimized={true}
+            />
+          </div>
+          <div>
+            <h4></h4>
+            <h5 class="H5 rde-110 hidden lg:block">
+              Oops! message not sent.
+            </h5>
+            <h5 class="H6 rde-110 lg:hidden block">
+              Oops! message not sent.
+            </h5>
+          </div>
+          <div>
+            <p class="B4 grn-50 hidden lg:block">
+              Sorry,  please try again or reach out to us directly.
+            </p>
+            <p class="B5 grn-50 lg:hidden block">
+              Sorry,  please try again or reach out to us directly.
+            </p>
+          </div>
+          <div class="flex gap-4">
+            <button class="H5 colse buttonrx rde-110 hidden lg:block">
+              Close
+            </button>
+            <button class="H5 colse buttonrxg rde-110 hidden lg:block">
+              Try Again
+            </button>
+            <button class="H6 colse buttonrx rde-110 lg:hidden block">
+              Close
+            </button>
+            <button class="H6 colse buttonrxg rde-110 lg:hidden block">
+              Try Again
+            </button>
+          </div>
+        </div>
+      </div>
+
       <div class="bg-grn-60 flex flex-col justify-between">
         <div class="flex justify-end pt-6">
-          <Image alt="png will occupy here"
+          <Image
+            alt="png will occupy here"
             onClick={popuphandler}
             unoptimized={true}
             class="cancel"
@@ -185,7 +492,8 @@ export default function Home() {
         <div class="flex flex-col pb-8 gap-6 justify-center items-center">
           <div class="flex gap-6">
             <div>
-              <Image alt="png will occupy here"
+              <Image
+                alt="png will occupy here"
                 unoptimized={true}
                 class="cancel"
                 src="/IG.svg"
@@ -195,7 +503,8 @@ export default function Home() {
               />
             </div>
             <div>
-              <Image alt="png will occupy here"
+              <Image
+                alt="png will occupy here"
                 unoptimized={true}
                 class="cancel"
                 src="/fb.svg"
@@ -205,7 +514,8 @@ export default function Home() {
               />
             </div>
             <div>
-              <Image alt="png will occupy here"
+              <Image
+                alt="png will occupy here"
                 unoptimized={true}
                 class="cancel"
                 src="/twit.svg"
@@ -227,7 +537,8 @@ export default function Home() {
         <header>
           <nav class="flex items-center flex-row justify-between">
             <div>
-              <Image alt="png will occupy here"
+              <Image
+                alt="png will occupy here"
                 unoptimized={true}
                 class="hidden lg:block"
                 src="/logoLarge.png"
@@ -235,7 +546,8 @@ export default function Home() {
                 height="64"
                 quality={100}
               />
-              <Image alt="png will occupy here"
+              <Image
+                alt="png will occupy here"
                 unoptimized={true}
                 class="lg:hidden block"
                 src="/logoLarge.png"
@@ -264,7 +576,8 @@ export default function Home() {
             <button class="buttonM H6 hidden lg:flex">
               Book a Consultation
             </button>
-            <Image alt="png will occupy here"
+            <Image
+              alt="png will occupy here"
               onClick={popuphandler}
               unoptimized={true}
               class="lg:hidden block"
@@ -299,16 +612,28 @@ export default function Home() {
                   class="newsletter outline-none"
                   type="email"
                   placeholder="you@example.com"
-                  onChange={e => {
-                    setEmail(e.target.value)
+                  required
+                  onChange={(e) => {
+                    setEmail(e.target.value);
                   }}
                   value={email}
                 />
-                <button type="submit" class="buttonN">Subscribe</button>
+                <button id="head-sub" type="submit" class="buttonN">
+                  Subscribe
+                </button>
+                <div id="head-sub2" class="buttonNn flex gap-2">
+                  Subscribe
+                  <img
+                    class="w-6 h-6 spinner"
+                    src="/spinner.svg"
+                    alt="spinner"
+                  />
+                </div>
               </form>
             </div>
             <div class="order-1 header-right lg:order-2">
-              <Image alt="png will occupy here"
+              <Image
+                alt="png will occupy here"
                 src="/header-right.png"
                 class="hidden lg:block"
                 width="488"
@@ -317,7 +642,8 @@ export default function Home() {
                 unoptimized={true}
                 priority
               />
-              <Image alt="png will occupy here"
+              <Image
+                alt="png will occupy here"
                 src="/header-right.png"
                 class="lg:hidden block"
                 width="345"
@@ -353,7 +679,8 @@ export default function Home() {
           </div>
           <div class="flex flex-col lg:flex-row gap-6 ">
             <div class="lg:px-4 px-6 py-8 grn-10 flex flex-col gap-4 rounded-lg flex-grow  basis-0">
-              <Image alt="png will occupy here"
+              <Image
+                alt="png will occupy here"
                 class="H4 text-center hidden lg:block self-start"
                 src="/wh1.svg"
                 priority
@@ -362,7 +689,8 @@ export default function Home() {
                 quality={100}
                 unoptimized={true}
               />
-              <Image alt="png will occupy here"
+              <Image
+                alt="png will occupy here"
                 class="H5 lg:hidden block"
                 src="/whh1.png"
                 width="56"
@@ -387,7 +715,8 @@ export default function Home() {
               </p>
             </div>
             <div class="lg:px-4 px-6 py-8 grn-10 flex flex-col gap-4 rounded-lg flex-grow  basis-0">
-              <Image alt="png will occupy here"
+              <Image
+                alt="png will occupy here"
                 class="H4 text-center hidden lg:block self-start"
                 src="/wh2.svg"
                 priority
@@ -396,7 +725,8 @@ export default function Home() {
                 quality={100}
                 unoptimized={true}
               />
-              <Image alt="png will occupy here"
+              <Image
+                alt="png will occupy here"
                 class="H5 lg:hidden block"
                 src="/whh2.png"
                 width="56"
@@ -417,7 +747,8 @@ export default function Home() {
               </p>
             </div>
             <div class="lg:px-4 px-6 py-8 grn-10 flex flex-col gap-4 rounded-lg flex-grow  basis-0">
-              <Image alt="png will occupy here"
+              <Image
+                alt="png will occupy here"
                 class="H4 text-center hidden lg:block self-start"
                 src="/t1.svg"
                 priority
@@ -426,7 +757,8 @@ export default function Home() {
                 quality={100}
                 unoptimized={true}
               />
-              <Image alt="png will occupy here"
+              <Image
+                alt="png will occupy here"
                 class="H5 lg:hidden block"
                 src="/whh3.png"
                 width="56"
@@ -449,7 +781,8 @@ export default function Home() {
               </p>
             </div>
             <div class="lg:px-4 px-6 py-8 grn-10 flex flex-col gap-4 rounded-lg flex-grow  basis-0">
-              <Image alt="png will occupy here"
+              <Image
+                alt="png will occupy here"
                 class="H4 text-center hidden lg:block self-start"
                 src="/wh4.svg"
                 priority
@@ -458,7 +791,8 @@ export default function Home() {
                 quality={100}
                 unoptimized={true}
               />
-              <Image alt="png will occupy here"
+              <Image
+                alt="png will occupy here"
                 class=" lg:hidden block"
                 src="/whh4.png"
                 width="56"
@@ -483,7 +817,8 @@ export default function Home() {
 
         <section class="about flex lg:flex-row flex-col gap-10 lg:gap-16 items-center justify-between">
           <div class="order-2 lg:order-1 lg:w-1/2">
-            <Image alt="png will occupy here"
+            <Image
+              alt="png will occupy here"
               src="/about.png"
               class="hidden lg:block"
               width="528"
@@ -495,7 +830,8 @@ export default function Home() {
           <div class="order-1 lg:order-2 about-cont-right lg:w-1/2 flex gap-6 flex-col lg:gap-8">
             <h4 class="H4 hidden lg:block">About Us</h4>
             <h4 class="H5 lg:hidden block pb-2">About Us</h4>
-            <Image alt="png will occupy here"
+            <Image
+              alt="png will occupy here"
               src="/about.png"
               class="lg:hidden block"
               width="345"
@@ -563,7 +899,8 @@ export default function Home() {
 
               <div class="flex flex-wrap gap-8">
                 <div class="flex flex-row gap-4 lg:gap-6 py-8 px-6 lg:p-8 grn-10 rounded-2xl basis-u">
-                  <Image alt="png will occupy here"
+                  <Image
+                    alt="png will occupy here"
                     class="H4 text-center hidden lg:block  self-center"
                     src="/c1.svg"
                     priority
@@ -572,7 +909,8 @@ export default function Home() {
                     quality={100}
                     unoptimized={true}
                   />
-                  <Image alt="png will occupy here"
+                  <Image
+                    alt="png will occupy here"
                     class="lg:hidden block self-start"
                     src="/cc1.png"
                     width="48"
@@ -597,7 +935,8 @@ export default function Home() {
                   </div>
                 </div>
                 <div class="flex flex-row gap-4 lg:gap-6 py-8 px-6 lg:p-8 grn-10 rounded-2xl basis-u">
-                  <Image alt="png will occupy here"
+                  <Image
+                    alt="png will occupy here"
                     class="H4 text-center hidden lg:block  self-center"
                     src="/c2.svg"
                     priority
@@ -606,7 +945,8 @@ export default function Home() {
                     quality={100}
                     unoptimized={true}
                   />
-                  <Image alt="png will occupy here"
+                  <Image
+                    alt="png will occupy here"
                     class="lg:hidden block self-start"
                     src="/cc2.png"
                     width="48"
@@ -631,7 +971,8 @@ export default function Home() {
                   </div>
                 </div>
                 <div class="flex flex-row gap-4 lg:gap-6 py-8 px-6 lg:p-8 grn-10 rounded-2xl basis-u">
-                  <Image alt="png will occupy here"
+                  <Image
+                    alt="png will occupy here"
                     class="H4 text-center hidden lg:block  self-center"
                     src="/c3.svg"
                     priority
@@ -640,7 +981,8 @@ export default function Home() {
                     quality={100}
                     unoptimized={true}
                   />
-                  <Image alt="png will occupy here"
+                  <Image
+                    alt="png will occupy here"
                     class="lg:hidden block self-start"
                     src="/cc3.png"
                     width="48"
@@ -665,7 +1007,8 @@ export default function Home() {
                   </div>
                 </div>
                 <div class="flex flex-row gap-4 lg:gap-6 py-8 px-6 lg:p-8 grn-10 rounded-2xl basis-u">
-                  <Image alt="png will occupy here"
+                  <Image
+                    alt="png will occupy here"
                     class="H4 text-center hidden lg:block  self-center"
                     src="/c4.svg"
                     priority
@@ -674,7 +1017,8 @@ export default function Home() {
                     quality={100}
                     unoptimized={true}
                   />
-                  <Image alt="png will occupy here"
+                  <Image
+                    alt="png will occupy here"
                     class="lg:hidden block self-start"
                     src="/cc4.png"
                     width="48"
@@ -699,7 +1043,8 @@ export default function Home() {
                   </div>
                 </div>
                 <div class="flex flex-row gap-4 lg:gap-6 py-8 px-6 lg:p-8 grn-10 rounded-2xl basis-u">
-                  <Image alt="png will occupy here"
+                  <Image
+                    alt="png will occupy here"
                     class="H4 text-center hidden lg:block  self-center"
                     src="/c5.svg"
                     priority
@@ -708,7 +1053,8 @@ export default function Home() {
                     quality={100}
                     unoptimized={true}
                   />
-                  <Image alt="png will occupy here"
+                  <Image
+                    alt="png will occupy here"
                     class="lg:hidden block self-start"
                     src="/cc5.png"
                     width="48"
@@ -733,7 +1079,8 @@ export default function Home() {
                   </div>
                 </div>
                 <div class="flex flex-row gap-4 lg:gap-6 py-8 px-6 lg:p-8 grn-10 rounded-2xl basis-u">
-                  <Image alt="png will occupy here"
+                  <Image
+                    alt="png will occupy here"
                     class="H4 text-center hidden lg:block  self-center"
                     src="/c6.svg"
                     priority
@@ -742,7 +1089,8 @@ export default function Home() {
                     quality={100}
                     unoptimized={true}
                   />
-                  <Image alt="png will occupy here"
+                  <Image
+                    alt="png will occupy here"
                     class="lg:hidden block self-start"
                     src="/cc6.png"
                     width="48"
@@ -1354,14 +1702,32 @@ export default function Home() {
                 individuals and businesses who prioritize their health and
                 well-being. Do not miss out, sign up today and stay informed.
               </p>
-              <div class="labelcont flex justify-center w-full">
+              <form
+                onSubmit={subHandler2}
+                class="labelcont flex justify-center w-full"
+              >
                 <input
                   class="newsletterI"
                   type="email"
                   placeholder="you@example.com"
+                  required
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                  }}
+                  value={email}
                 />
-                <button class="newS">Subscribe</button>
-              </div>
+                <button id="low-sub" class="newS">
+                  Subscribe
+                </button>
+                <div id="low-sub2" class="buttonNn flex gap-2">
+                  Subscribe
+                  <img
+                    class="w-6 h-6 spinner"
+                    src="/spinner.svg"
+                    alt="spinner"
+                  />
+                </div>
+              </form>
             </div>
           </div>
         </section>
@@ -1388,7 +1754,8 @@ export default function Home() {
             <div id="tslideshow" class="md:pt-16 pt-8 flex flex-row lg:gap-8">
               <div class="tc">
                 <div class="flex ttc flex-col gap-8">
-                  <Image alt="png will occupy here"
+                  <Image
+                    alt="png will occupy here"
                     class="H4 text-center hidden lg:block self-start"
                     src="/t1.svg"
                     priority
@@ -1397,7 +1764,8 @@ export default function Home() {
                     quality={100}
                     unoptimized={true}
                   />
-                  <Image alt="png will occupy here"
+                  <Image
+                    alt="png will occupy here"
                     class="H5 lg:hidden block"
                     src="/t1.svg"
                     width="64"
@@ -1430,7 +1798,8 @@ export default function Home() {
               </div>
               <div class="tc">
                 <div class="flex ttc flex-col gap-8">
-                  <Image alt="png will occupy here"
+                  <Image
+                    alt="png will occupy here"
                     class="H4 text-center hidden lg:block self-start"
                     src="/quote-up.svg"
                     priority
@@ -1439,7 +1808,8 @@ export default function Home() {
                     quality={100}
                     unoptimized={true}
                   />
-                  <Image alt="png will occupy here"
+                  <Image
+                    alt="png will occupy here"
                     class="H5 lg:hidden block"
                     src="/quote-up.svg"
                     width="24"
@@ -1461,7 +1831,8 @@ export default function Home() {
                     Organoleptic Method to ensure quality and potency.
                   </p>
                   <div class="flex-row gap-4 hidden lg:flex items-center">
-                    <Image alt="png will occupy here"
+                    <Image
+                      alt="png will occupy here"
                       src="/t2.svg"
                       priority
                       width="80"
@@ -1475,7 +1846,8 @@ export default function Home() {
                     </div>
                   </div>
                   <div class="flex-row gap-2 lg:hidden flex items-center">
-                    <Image alt="png will occupy here"
+                    <Image
+                      alt="png will occupy here"
                       src="/t2.svg"
                       width="64"
                       height="64"
@@ -1492,7 +1864,8 @@ export default function Home() {
               </div>
               <div class="tc">
                 <div class="flex ttc flex-col gap-8">
-                  <Image alt="png will occupy here"
+                  <Image
+                    alt="png will occupy here"
                     class="H4 text-center hidden lg:block self-start"
                     src="/t3.svg"
                     priority
@@ -1501,7 +1874,8 @@ export default function Home() {
                     quality={100}
                     unoptimized={true}
                   />
-                  <Image alt="png will occupy here"
+                  <Image
+                    alt="png will occupy here"
                     class="H5 lg:hidden block"
                     src="/t3.svg"
                     width="64"
@@ -1586,7 +1960,7 @@ export default function Home() {
           </div>
 
           <div class="flex consus justify-center items-center w-full pt-8 lg:pt-16">
-            <div class="max-w-xl bg-white caax flex flex-col gap-8 w-full">
+            <form onSubmit={contactHandler} class="max-w-xl bg-white caax flex flex-col gap-8 w-full">
               <div class="flex flex-col gap-2 w-full">
                 <label class="la1 hidden lg:block H6">
                   Full Name <span class="text-red-600">*</span>
@@ -1599,6 +1973,11 @@ export default function Home() {
                     class="in1 outline-none"
                     type="text"
                     placeholder="John Doe"
+                    required
+                    onChange={(e) => {
+                      setfname(e.target.value);
+                    }}
+                    value={fname}
                   />
                 </div>
               </div>
@@ -1615,6 +1994,11 @@ export default function Home() {
                       class="in1 outline-none"
                       type="text"
                       placeholder="+23412345678"
+                      required
+                      onChange={(e) => {
+                        setPhone(e.target.value);
+                      }}
+                      value={phone}
                     />
                   </div>
                 </div>
@@ -1630,6 +2014,11 @@ export default function Home() {
                       class="in1 outline-none"
                       type="text"
                       placeholder="you@example.com"
+                      required
+                      onChange={(e) => {
+                        setEmailAddress(e.target.value);
+                      }}
+                      value={emailAddress}
                     />
                   </div>
                 </div>
@@ -1642,6 +2031,10 @@ export default function Home() {
                     class="in1 outline-none"
                     type="text"
                     placeholder="John Doe"
+                    onChange={(e) => {
+                      setCompanyName(e.target.value);
+                    }}
+                    value={companyName}
                   />
                 </div>
               </div>
@@ -1659,6 +2052,11 @@ export default function Home() {
                     name="preferredMethod"
                     id="preferredMethod"
                     class="dropdown-icon in1 outline-none"
+                    required
+                    onChange={(e) => {
+                      setMethodOfContact(e.target.value);
+                    }}
+                    value={methodOfContact}
                   >
                     <option value="" disabled selected>
                       Select an option
@@ -1683,7 +2081,11 @@ export default function Home() {
                       type="radio"
                       id="bookConsultation"
                       name="purpose"
-                      value="bookConsultation"
+                      required
+                      onChange={(e) => {
+                        setLike(e.target.value);
+                      }}
+                      value={like === "Book A Consultation"}
                     />
                     <label class="text-sm lg:text-base" for="bookConsultation">
                       Book a Consultation
@@ -1695,7 +2097,11 @@ export default function Home() {
                       type="radio"
                       id="contactUs"
                       name="purpose"
-                      value="contactUs"
+                      required
+                      onChange={(e) => {
+                        setLike(e.target.value);
+                      }}
+                      value={like === "Contact Us"}
                     />
                     <label class="text-sm lg:text-base" for="contactUs">
                       Contact Us
@@ -1716,8 +2122,11 @@ export default function Home() {
                       class="w-6 h-6 checkbox"
                       type="checkbox"
                       id="clinicalservices"
-                      name="clinicalservices"
-                      value="clinicalservices"
+                      name="Clinicals"
+                      checked={interest.Clinicals}
+                      onChange={ (e) => {
+                        const { name, checked } = e.target;
+                        setInterest({ ...interest, [name]: checked });}}
                     />
                     <label class="text-sm lg:text-base" for="clinicalservices">
                       Clinical Services
@@ -1728,8 +2137,11 @@ export default function Home() {
                       class="w-6 h-6 checkbox"
                       type="checkbox"
                       id="productions"
-                      name="productions"
-                      value="productions"
+                      name="Productions"
+                      checked={interest.Productions}
+                      onChange={ (e) => {
+                        const { name, checked } = e.target;
+                        setInterest({ ...interest, [name]: checked });}}
                     />
                     <label class="text-sm lg:text-base" for="productions">
                       Productions
@@ -1740,8 +2152,11 @@ export default function Home() {
                       class="w-6 h-6 checkbox"
                       type="checkbox"
                       id="newsorblog"
-                      name="newsorblog"
-                      value="newsorblog"
+                      name="NewsorBlog"
+                      checked={interest.NewsorBlog}
+                      onChange={(e) => {
+                        const { name, checked } = e.target;
+                        setInterest({ ...interest, [name]: checked });}}
                     />
                     <label class="text-sm lg:text-base" for="newsorblog">
                       Newsletter or Blog
@@ -1749,7 +2164,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div class="flex pt-2 lg:justify-center">
+              <div id="low-contact" class="flex pt-2 lg:justify-center ">
                 <button class="buttonM hidden lg:block H6">
                   Contact us today
                 </button>
@@ -1757,7 +2172,25 @@ export default function Home() {
                   Contact us today
                 </button>
               </div>
-            </div>
+              <div id="low-contact2" class=" hidden pt-2 lg:justify-center ">
+                <div class="buttonMm gap-2 hidden lg:flex  H6">
+                  Contact us today
+                  <img
+                    class="w-6 h-6 spinner"
+                    src="/spinner.svg"
+                    alt="spinner"
+                  />
+                </div>
+                <div class="buttonMm gap-2 lg:hidden flex subH">
+                  Contact us today
+                  <img
+                    class="w-6 h-6 spinner"
+                    src="/spinner.svg"
+                    alt="spinner"
+                  />
+                </div>
+              </div>
+            </form>
           </div>
         </section>
 
@@ -1771,7 +2204,8 @@ export default function Home() {
                 </div>
                 <div class="flex flex-col gap-4">
                   <div class="flex gap-4">
-                    <Image alt="png will occupy here"
+                    <Image
+                      alt="png will occupy here"
                       src="/house-2.svg"
                       class=""
                       width="24"
@@ -1790,7 +2224,8 @@ export default function Home() {
                     </p>
                   </div>
                   <div class="flex gap-4">
-                    <Image alt="png will occupy here"
+                    <Image
+                      alt="png will occupy here"
                       src="/call.svg"
                       class=""
                       width="24"
@@ -1803,7 +2238,8 @@ export default function Home() {
                     <p class="B5 lg:hidden block">+23412345678</p>
                   </div>
                   <div class="flex gap-4">
-                    <Image alt="png will occupy here"
+                    <Image
+                      alt="png will occupy here"
                       src="/sms.svg"
                       class=""
                       width="24"
@@ -1824,7 +2260,8 @@ export default function Home() {
                 </div>
                 <div class="flex flex-col gap-4">
                   <div class="flex gap-4">
-                    <Image alt="png will occupy here"
+                    <Image
+                      alt="png will occupy here"
                       src="/house-2.svg"
                       class=""
                       width="24"
@@ -1843,7 +2280,8 @@ export default function Home() {
                     </p>
                   </div>
                   <div class="flex gap-4">
-                    <Image alt="png will occupy here"
+                    <Image
+                      alt="png will occupy here"
                       src="/call.svg"
                       class=""
                       width="24"
@@ -1856,7 +2294,8 @@ export default function Home() {
                     <p class="B5 lg:hidden block">+23412345678</p>
                   </div>
                   <div class="flex gap-4">
-                    <Image alt="png will occupy here"
+                    <Image
+                      alt="png will occupy here"
                       src="/sms.svg"
                       class=""
                       width="24"
@@ -1889,7 +2328,8 @@ export default function Home() {
               </div>
 
               <div class="flex justify-center gap-4">
-                <Image alt="png will occupy here"
+                <Image
+                  alt="png will occupy here"
                   class="H4 text-center hidden lg:block  self-center"
                   src="/ig.svg"
                   priority
@@ -1898,7 +2338,8 @@ export default function Home() {
                   quality={100}
                   unoptimized={true}
                 />
-                <Image alt="png will occupy here"
+                <Image
+                  alt="png will occupy here"
                   class="lg:hidden block self-start"
                   src="/iig.svg"
                   width="24"
@@ -1907,7 +2348,8 @@ export default function Home() {
                   quality={100}
                   unoptimized={true}
                 />
-                <Image alt="png will occupy here"
+                <Image
+                  alt="png will occupy here"
                   class="H4 text-center hidden lg:block  self-center"
                   src="/ffb.svg"
                   priority
@@ -1916,7 +2358,8 @@ export default function Home() {
                   quality={100}
                   unoptimized={true}
                 />
-                <Image alt="png will occupy here"
+                <Image
+                  alt="png will occupy here"
                   class="lg:hidden block self-start"
                   src="/ffb.svg"
                   width="24"
@@ -1925,7 +2368,8 @@ export default function Home() {
                   quality={100}
                   unoptimized={true}
                 />
-                <Image alt="png will occupy here"
+                <Image
+                  alt="png will occupy here"
                   class="H4 text-center hidden lg:block  self-center"
                   src="/ttw.svg"
                   priority
@@ -1934,7 +2378,8 @@ export default function Home() {
                   quality={100}
                   unoptimized={true}
                 />
-                <Image alt="png will occupy here"
+                <Image
+                  alt="png will occupy here"
                   class="lg:hidden block self-start"
                   src="/ttw.svg"
                   width="24"
