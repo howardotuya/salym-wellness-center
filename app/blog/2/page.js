@@ -408,20 +408,18 @@ export default function About() {
               </h4>
 
               <div class="flex flex-col gap-4 lg:gap-6">
-
-                
-              <div class="flex-row gap-4 hidden lg:flex items-center">
-                <div class="flex flex-col gap-2">
-                  <p class="h6">By Salym Wellness Center Team</p>
-                  <p class="subH black7">Published 5th May, 2023</p>
+                <div class="flex-row gap-4 hidden lg:flex items-center">
+                  <div class="flex flex-col gap-2">
+                    <p class="h6">By Salym Wellness Center Team</p>
+                    <p class="subH black7">Published 5th May, 2023</p>
+                  </div>
                 </div>
-              </div>
-              <div class="flex-row gap-2 lg:hidden flex items-center">
-                <div class="flex flex-col gap-2">
-                  <p class="subH">By Salym Wellness Center Team</p>
-                  <p class="subH black7">Published 5th May, 2023</p>
+                <div class="flex-row gap-2 lg:hidden flex items-center">
+                  <div class="flex flex-col gap-2">
+                    <p class="subH">By Salym Wellness Center Team</p>
+                    <p class="subH black7">Published 5th May, 2023</p>
+                  </div>
                 </div>
-              </div>
 
                 <div class="flex justify-between items-center">
                   <span class="grn-10 grn-60 H6 hidden lg:block py-2 px-4 rounded-lg ">
@@ -506,56 +504,94 @@ export default function About() {
               <h4 class="H4 hidden lg:block">Herbs for Stress Management:</h4>
               <h4 class="H6 lg:hidden block">Herbs for Stress Management:</h4>
               <p class="B4 hidden lg:block">
-                <div>1. Ashwagandha: This ancient herb has been used for centuries in
-                Ayurvedic medicine to combat stress and anxiety. Ashwagandha
-                helps regulate the body's stress response by reducing cortisol
-                levels and promoting a sense of calm. </div>
-                <div>2. Chamomile: Known for
-                its soothing properties, chamomile is a popular herb for
-                relaxation and stress relief. It can help ease tension, promote
-                better sleep, and alleviate anxiety symptoms.</div>
-                <div> 3. Holy Basil:
-                Revered as a sacred herb in many cultures, holy basil has
-                adaptogenic properties that support the body's stress response.
-                It can help reduce stress-related symptoms, boost resilience,
-                and enhance mental clarity.</div>
+                <div>
+                  1. Ashwagandha: This ancient herb has been used for centuries
+                  in Ayurvedic medicine to combat stress and anxiety.
+                  Ashwagandha helps regulate the body's stress response by
+                  reducing cortisol levels and promoting a sense of calm.{" "}
+                </div>
+                <div>
+                  2. Chamomile: Known for its soothing properties, chamomile is
+                  a popular herb for relaxation and stress relief. It can help
+                  ease tension, promote better sleep, and alleviate anxiety
+                  symptoms.
+                </div>
+                <div>
+                  {" "}
+                  3. Holy Basil: Revered as a sacred herb in many cultures, holy
+                  basil has adaptogenic properties that support the body's
+                  stress response. It can help reduce stress-related symptoms,
+                  boost resilience, and enhance mental clarity.
+                </div>
               </p>
               <p class="B5 lg:hidden block">
-                <div>1. Ashwagandha: This ancient herb has been used for centuries in
-                Ayurvedic medicine to combat stress and anxiety. Ashwagandha
-                helps regulate the body's stress response by reducing cortisol
-                levels and promoting a sense of calm. </div>
-                <div>2. Chamomile: Known for
-                its soothing properties, chamomile is a popular herb for
-                relaxation and stress relief. It can help ease tension, promote
-                better sleep, and alleviate anxiety symptoms.</div>
-                <div> 3. Holy Basil:
-                Revered as a sacred herb in many cultures, holy basil has
-                adaptogenic properties that support the body's stress response.
-                It can help reduce stress-related symptoms, boost resilience,
-                and enhance mental clarity.</div>
+                <div>
+                  1. Ashwagandha: This ancient herb has been used for centuries
+                  in Ayurvedic medicine to combat stress and anxiety.
+                  Ashwagandha helps regulate the body's stress response by
+                  reducing cortisol levels and promoting a sense of calm.{" "}
+                </div>
+                <div>
+                  2. Chamomile: Known for its soothing properties, chamomile is
+                  a popular herb for relaxation and stress relief. It can help
+                  ease tension, promote better sleep, and alleviate anxiety
+                  symptoms.
+                </div>
+                <div>
+                  {" "}
+                  3. Holy Basil: Revered as a sacred herb in many cultures, holy
+                  basil has adaptogenic properties that support the body's
+                  stress response. It can help reduce stress-related symptoms,
+                  boost resilience, and enhance mental clarity.
+                </div>
               </p>
             </div>
             <div class="gap-4 flex flex-col">
-              <h4 class="H4 hidden lg:block">Incorporating Herbal Therapy into Your Routine:
+              <h4 class="H4 hidden lg:block">
+                Incorporating Herbal Therapy into Your Routine:
               </h4>
-              <h4 class="H6 lg:hidden block">Incorporating Herbal Therapy into Your Routine:
+              <h4 class="H6 lg:hidden block">
+                Incorporating Herbal Therapy into Your Routine:
               </h4>
               <p class="B4 hidden lg:block">
-                If you're considering incorporating herbal therapy into your stress management routine, it's important to consult with a qualified herbalist or healthcare professional. They can guide you in selecting the right herbs and dosage for your specific needs. Additionally, integrating relaxation techniques like meditation, yoga, and deep breathing exercises can complement the effects of herbal therapy.
+                If you're considering incorporating herbal therapy into your
+                stress management routine, it's important to consult with a
+                qualified herbalist or healthcare professional. They can guide
+                you in selecting the right herbs and dosage for your specific
+                needs. Additionally, integrating relaxation techniques like
+                meditation, yoga, and deep breathing exercises can complement
+                the effects of herbal therapy.
               </p>
               <p class="B5 lg:hidden block">
-                If you're considering incorporating herbal therapy into your stress management routine, it's important to consult with a qualified herbalist or healthcare professional. They can guide you in selecting the right herbs and dosage for your specific needs. Additionally, integrating relaxation techniques like meditation, yoga, and deep breathing exercises can complement the effects of herbal therapy.
+                If you're considering incorporating herbal therapy into your
+                stress management routine, it's important to consult with a
+                qualified herbalist or healthcare professional. They can guide
+                you in selecting the right herbs and dosage for your specific
+                needs. Additionally, integrating relaxation techniques like
+                meditation, yoga, and deep breathing exercises can complement
+                the effects of herbal therapy.
               </p>
             </div>
             <div class="gap-4 flex flex-col">
               <h4 class="H4 hidden lg:block">Conclusion</h4>
               <h4 class="H6 lg:hidden block">Conclusion</h4>
               <p class="B4 hidden lg:block">
-                In a world filled with constant stressors, herbal therapy offers a natural and effective way to find relief and restore balance. By harnessing the power of herbs, we can nurture our well-being, improve resilience, and cultivate a calmer state of mind. Embrace the wisdom of nature and explore the potential of herbal therapy for stress management. Take a step towards holistic wellness and reclaim your inner harmony.
+                In a world filled with constant stressors, herbal therapy offers
+                a natural and effective way to find relief and restore balance.
+                By harnessing the power of herbs, we can nurture our well-being,
+                improve resilience, and cultivate a calmer state of mind.
+                Embrace the wisdom of nature and explore the potential of herbal
+                therapy for stress management. Take a step towards holistic
+                wellness and reclaim your inner harmony.
               </p>
               <p class="B5 lg:hidden block">
-                In a world filled with constant stressors, herbal therapy offers a natural and effective way to find relief and restore balance. By harnessing the power of herbs, we can nurture our well-being, improve resilience, and cultivate a calmer state of mind. Embrace the wisdom of nature and explore the potential of herbal therapy for stress management. Take a step towards holistic wellness and reclaim your inner harmony.
+                In a world filled with constant stressors, herbal therapy offers
+                a natural and effective way to find relief and restore balance.
+                By harnessing the power of herbs, we can nurture our well-being,
+                improve resilience, and cultivate a calmer state of mind.
+                Embrace the wisdom of nature and explore the potential of herbal
+                therapy for stress management. Take a step towards holistic
+                wellness and reclaim your inner harmony.
               </p>
             </div>
           </div>
@@ -565,7 +601,7 @@ export default function About() {
           <div class="footer px-6 text-white">
             <div class="flex lg:flex-row flex-col justify-between lg:items-center pt-12 lg:pt-16">
               <div class="flex lg:flex-row pb-12 lg:pb-0 flex-col gap-10">
-              <Link href="/" class="hover:text-green-200 H6 hidden lg:block ">
+                <Link href="/" class="hover:text-green-200 H6 hidden lg:block ">
                   Home
                 </Link>
                 <Link

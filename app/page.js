@@ -5,11 +5,6 @@ import Link from "next/link";
 import axios from "axios";
 import LinesEllipsis from "react-lines-ellipsis";
 
-export const metadata = {
-  title: "kanda",
-  description: "kanda",
-};
-
 const popuphandler = () => {
   const popup = document.querySelector(".bg-grn-60");
 
