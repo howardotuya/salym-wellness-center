@@ -154,7 +154,7 @@ export default function Home() {
   const [interest, setInterest] = useState({
     Clinicals: false,
     Productions: false,
-    NewsorBlog: false
+    NewsorBlog: false,
   });
   const [email, setEmail] = useState("");
   const [success, setSuccess] = useState("");
@@ -217,7 +217,15 @@ export default function Home() {
     try {
       const { data } = await axios.post(
         "http://localhost:5000/api/mail/contact",
-        { fname, phone, emailAddress, companyName, methodOfContact, like, interest }
+        {
+          fname,
+          phone,
+          emailAddress,
+          companyName,
+          methodOfContact,
+          like,
+          interest,
+        }
       );
 
       document.getElementById("modalss").style.display = "flex";
@@ -435,19 +443,15 @@ export default function Home() {
           </div>
           <div>
             <h4></h4>
-            <h5 class="H5 rde-110 hidden lg:block">
-              Oops! message not sent.
-            </h5>
-            <h5 class="H6 rde-110 lg:hidden block">
-              Oops! message not sent.
-            </h5>
+            <h5 class="H5 rde-110 hidden lg:block">Oops! message not sent.</h5>
+            <h5 class="H6 rde-110 lg:hidden block">Oops! message not sent.</h5>
           </div>
           <div>
             <p class="B4 grn-50 hidden lg:block">
-              Sorry,  please try again or reach out to us directly.
+              Sorry, please try again or reach out to us directly.
             </p>
             <p class="B5 grn-50 lg:hidden block">
-              Sorry,  please try again or reach out to us directly.
+              Sorry, please try again or reach out to us directly.
             </p>
           </div>
           <div class="flex gap-4">
@@ -481,12 +485,12 @@ export default function Home() {
           />
         </div>
         <div class="flex gap-8 flex-col">
-          <div class="H6 ">Home</div>
-          <div class="H6 ">About Us</div>
-          <div class="H6 ">Clinicals</div>
-          <div class="H6 ">Production</div>
-          <div class="H6 ">Blog</div>
-          <div class="H6 ">Contact US</div>
+          <Link href="#" class="H6 ">Home</Link>
+          <Link href="#" class="H6 ">About Us</Link>
+          <Link href="#" class="H6 ">Clinicals</Link>
+          <Link href="#" class="H6 ">Production</Link>
+          <Link href="#" class="H6 ">Blog</Link>
+          <Link href="#" class="H6 ">Contact US</Link>
           <button class="buttonC H6">Book a Consultation</button>
         </div>
         <div class="flex flex-col pb-8 gap-6 justify-center items-center">
@@ -557,25 +561,25 @@ export default function Home() {
               />
             </div>
             <div class="navM hidden lg:flex">
-              <Link class="H6" href="#">
+              <Link class="H6" href="#about">
                 About
               </Link>
-              <Link class="H6" href="#">
+              <Link class="H6" href="#clinicals">
                 Clinicals
               </Link>
-              <Link class="H6" href="#">
+              <Link class="H6" href="#productions">
                 Production
               </Link>
-              <Link class="H6" href="#">
+              <Link class="H6" href="#blog">
                 Blog
               </Link>
-              <Link class="H6" href="#">
+              <Link class="H6" href="#contact">
                 Contact
               </Link>
             </div>
-            <button class="buttonM H6 hidden lg:flex">
+            <Link href="#contact" class="buttonM H6 hidden lg:flex">
               Book a Consultation
-            </button>
+            </Link>
             <Image
               alt="png will occupy here"
               onClick={popuphandler}
@@ -656,7 +660,7 @@ export default function Home() {
           </div>
         </header>
 
-        <section class="lg:pt-48 pt-32 flex flex-col gap-8 lg:gap-16">
+        <section id="why" class="lg:pt-48 pt-32 flex flex-col gap-8 lg:gap-16">
           <div class="flex flex-col justify-center gap-4">
             <h4 class="H4 text-center hidden lg:block">
               Why Choose Salym Wellness Centre?
@@ -682,7 +686,7 @@ export default function Home() {
               <Image
                 alt="png will occupy here"
                 class="H4 text-center hidden lg:block self-start"
-                src="/wh1.svg"
+                src="/wh1.png"
                 priority
                 width="80"
                 height="80"
@@ -718,7 +722,7 @@ export default function Home() {
               <Image
                 alt="png will occupy here"
                 class="H4 text-center hidden lg:block self-start"
-                src="/wh2.svg"
+                src="/wh2.png"
                 priority
                 width="80"
                 height="80"
@@ -750,7 +754,7 @@ export default function Home() {
               <Image
                 alt="png will occupy here"
                 class="H4 text-center hidden lg:block self-start"
-                src="/t1.svg"
+                src="/wh3.svg"
                 priority
                 width="80"
                 height="80"
@@ -784,7 +788,7 @@ export default function Home() {
               <Image
                 alt="png will occupy here"
                 class="H4 text-center hidden lg:block self-start"
-                src="/wh4.svg"
+                src="/wh4.png"
                 priority
                 width="80"
                 height="80"
@@ -815,7 +819,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section class="about flex lg:flex-row flex-col gap-10 lg:gap-16 items-center justify-between">
+        <section
+          id="about"
+          class="about flex lg:flex-row flex-col gap-10 lg:gap-16 items-center justify-between"
+        >
           <div class="order-2 lg:order-1 lg:w-1/2">
             <Image
               alt="png will occupy here"
@@ -862,12 +869,24 @@ export default function Home() {
               consultation today.
             </p>
             <div>
-              <button class="buttonM hidden lg:block H6">
-                Connect with Us
-              </button>
-              <button class="buttonM lg:hidden block subH">
-                Connect with Us
-              </button>
+              <div
+                  class="hidden lg:flex">
+                <Link
+                  href="/about"
+                  class="buttonM hidden lg:flex items-start w-auto H6"
+                >
+                  Connect with Us
+                </Link>
+              </div>
+              <div
+                  class="lg:hidden flex">
+                <Link
+                  href="/about"
+                  class="buttonM lg:hidden flex items-start w-auto subH"
+                >
+                  Connect with Us
+                </Link>
+              </div>
             </div>
           </div>
         </section>
@@ -893,7 +912,7 @@ export default function Home() {
           </div>
 
           <div class="">
-            <div class="lg:pt-16 pt-8 flex flex-col gap-6">
+            <div id="clinicals" class="lg:pt-16 pt-8 flex flex-col gap-6">
               <h4 class="H4 hidden lg:block">Clinicals</h4>
               <h4 class="H5 lg:hidden block">Clinicals</h4>
 
@@ -1119,17 +1138,20 @@ export default function Home() {
             </div>
 
             <div class="lg:pt-12 pt-6 flex lg:justify-center gap-6">
-              <button class="buttonM hidden lg:block H6">
+              <Link href="#contact" class="buttonM hidden lg:block H6">
                 Book a Consultation
-              </button>
-              <button class="buttonM lg:hidden block subH">
+              </Link>
+              <Link href="#contact" class="buttonM lg:hidden block subH">
                 Book a Consultation
-              </button>
-              <button class="buttonO hidden lg:block H6">Learn More</button>
-              <button class="buttonO lg:hidden block subH">Learn More</button>
+              </Link>
+              <Link href="#contact" class="buttonO hidden lg:block H6">Learn More</Link>
+              <Link href="#contact" class="buttonO lg:hidden block subH">Learn More</Link>
             </div>
 
-            <div class="lg:pt-24 pt-20 flex w-full justify-between">
+            <div
+              id="productions"
+              class="lg:pt-24 pt-20 flex w-full justify-between"
+            >
               <h4 class="H4 hidden lg:block self-end">Production</h4>
               <h4 class="H5 lg:hidden block self-end">Production</h4>
               <div class="lg:hidden flex flex-row items-center justify-center gap-2">
@@ -1422,12 +1444,12 @@ export default function Home() {
             </div>
 
             <div class="lg:pt-12 pt-6 flex lg:justify-center gap-6">
-              <button class="buttonM hidden lg:block H6">
+              <Link href="#contact" class="buttonM hidden lg:block H6">
                 Reach Out to US
-              </button>
-              <button class="buttonM lg:hidden block subH">
+              </Link>
+              <Link href="#contact" class="buttonM lg:hidden block subH">
                 Reach Out to US
-              </button>
+              </Link>
               <button class="buttonO hidden lg:block H6">View Catalogue</button>
               <button class="buttonO lg:hidden block subH">
                 View Catalogue
@@ -1436,7 +1458,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section class="onws">
+        <section id="blog" class="onws">
           <div class="flex justify-between items-end">
             <div class="flex flex-col gap-4">
               <h4 class="H4 hidden lg:block">Recent Blog Posts</h4>
@@ -1681,7 +1703,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section class="onws">
+        <section id="newsletter" class="onws">
           <div class="outer-m">
             <div class="newws lg:rounded-2xl px-4 py-10 lg:py-16 flex justify-center items-center text-white flex-col gap-6 lg:gap-10">
               <h2 class="H4 text-center hidden lg:block">
@@ -1732,7 +1754,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section class="onws">
+        <section id="testimonials" class="onws">
           <div class="flex flex-col lg:justify-center gap-4">
             <h4 class="H4 text-center hidden lg:block">Testimonials</h4>
             <h4 class="H5 lg:hidden block">Testimonials</h4>
@@ -1943,7 +1965,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section class="onwss">
+        <section id="contact" class="onwss">
           <div class="flex flex-col lg:justify-center gap-4">
             <h4 class="H4 text-center hidden lg:block">Get in Touch</h4>
             <h4 class="H5 lg:hidden block">Get in Touch</h4>
@@ -1960,7 +1982,10 @@ export default function Home() {
           </div>
 
           <div class="flex consus justify-center items-center w-full pt-8 lg:pt-16">
-            <form onSubmit={contactHandler} class="max-w-xl bg-white caax flex flex-col gap-8 w-full">
+            <form
+              onSubmit={contactHandler}
+              class="max-w-xl bg-white caax flex flex-col gap-8 w-full"
+            >
               <div class="flex flex-col gap-2 w-full">
                 <label class="la1 hidden lg:block H6">
                   Full Name <span class="text-red-600">*</span>
@@ -2124,9 +2149,10 @@ export default function Home() {
                       id="clinicalservices"
                       name="Clinicals"
                       checked={interest.Clinicals}
-                      onChange={ (e) => {
+                      onChange={(e) => {
                         const { name, checked } = e.target;
-                        setInterest({ ...interest, [name]: checked });}}
+                        setInterest({ ...interest, [name]: checked });
+                      }}
                     />
                     <label class="text-sm lg:text-base" for="clinicalservices">
                       Clinical Services
@@ -2139,9 +2165,10 @@ export default function Home() {
                       id="productions"
                       name="Productions"
                       checked={interest.Productions}
-                      onChange={ (e) => {
+                      onChange={(e) => {
                         const { name, checked } = e.target;
-                        setInterest({ ...interest, [name]: checked });}}
+                        setInterest({ ...interest, [name]: checked });
+                      }}
                     />
                     <label class="text-sm lg:text-base" for="productions">
                       Productions
@@ -2156,7 +2183,8 @@ export default function Home() {
                       checked={interest.NewsorBlog}
                       onChange={(e) => {
                         const { name, checked } = e.target;
-                        setInterest({ ...interest, [name]: checked });}}
+                        setInterest({ ...interest, [name]: checked });
+                      }}
                     />
                     <label class="text-sm lg:text-base" for="newsorblog">
                       Newsletter or Blog
