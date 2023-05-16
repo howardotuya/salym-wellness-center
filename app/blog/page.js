@@ -36,7 +36,7 @@ export default function About() {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/api/mail/subscribe",
+        "https://clean-blue-tutu.cyclic.app/api/mail/subscribe",
         { email }
       );
 

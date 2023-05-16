@@ -49,7 +49,7 @@ export default function About() {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/api/mail/contact",
+        "https://clean-blue-tutu.cyclic.app/api/mail/contact",
         {
           fname,
           phone,
@@ -1555,24 +1555,18 @@ export default function About() {
                     unoptimized={true}
                   />
                   <p class="B4 hidden lg:block black7 max-w-2xl">
-                    At Salym Wellness Centre, we provide safe and effective
-                    herbal medical products to promote health and wellness. Our
-                    meticulously produced natural remedies are made using the
-                    Organoleptic Method to ensure quality and potency.
+                    Salym Wellness Centre has been a game-changer for my well-being. Their immune booster and herbal tea blends have significantly improved my health. I'm grateful for their commitment to providing safe and effective herbal solutions. Highly recommended for a holistic approach to wellness.
                   </p>
                   <p class="B5 lg:hidden block black7 max-w-2xl ">
-                    At Salym Wellness Centre, we provide safe and effective
-                    herbal medical products to promote health and wellness. Our
-                    meticulously produced natural remedies are made using the
-                    Organoleptic Method to ensure quality and potency.
+                    Salym Wellness Centre has been a game-changer for my well-being. Their immune booster and herbal tea blends have significantly improved my health. I'm grateful for their commitment to providing safe and effective herbal solutions. Highly recommended for a holistic approach to wellness.
                   </p>
                   <div class="flex-col gap-2 hidden lg:flex">
-                    <p class="h6">John Doe</p>
-                    <p class="h6 black7">Software Engineering</p>
+                    <p class="h6">Amina Bello</p>
+                    <p class="h6 black7">Entrepreneur</p>
                   </div>
                   <div class="flex-col gap-2 lg:hidden flex">
-                    <p class="subH">John Doe</p>
-                    <p class="subH black7">Software Engineering</p>
+                    <p class="subH">Amina Bello</p>
+                    <p class="subH black7">Entrepreneur</p>
                   </div>
                 </div>
               </div>
@@ -1599,16 +1593,10 @@ export default function About() {
                     unoptimized={true}
                   />
                   <p class="B4 hidden lg:block black7 max-w-2xl">
-                    At Salym Wellness Centre, we provide safe and effective
-                    herbal medical products to promote health and wellness. Our
-                    meticulously produced natural remedies are made using the
-                    Organoleptic Method to ensure quality and potency.
+                    As a pharmacist, I always seek high-quality herbal medicine suppliers. Salym Wellness Centre exceeds my expectations with their extensive range of herbal products. The Organoleptic Method they employ ensures safety and efficacy. A reliable partner for my practice.
                   </p>
                   <p class="B5 lg:hidden block black7 max-w-2xl ">
-                    At Salym Wellness Centre, we provide safe and effective
-                    herbal medical products to promote health and wellness. Our
-                    meticulously produced natural remedies are made using the
-                    Organoleptic Method to ensure quality and potency.
+                    As a pharmacist, I always seek high-quality herbal medicine suppliers. Salym Wellness Centre exceeds my expectations with their extensive range of herbal products. The Organoleptic Method they employ ensures safety and efficacy. A reliable partner for my practice.
                   </p>
                   <div class="flex-row gap-4 hidden lg:flex items-center">
                     <Image
@@ -1621,8 +1609,8 @@ export default function About() {
                       unoptimized={true}
                     />
                     <div class="flex flex-col gap-2">
-                      <p class="h6">John Doe</p>
-                      <p class="h6 black7">Software Engineering</p>
+                      <p class="h6">Chioma Okonkwo</p>
+                      <p class="h6 black7">Pharmacist</p>
                     </div>
                   </div>
                   <div class="flex-row gap-2 lg:hidden flex items-center">
@@ -1636,8 +1624,8 @@ export default function About() {
                       unoptimized={true}
                     />
                     <div class="flex flex-col gap-2">
-                      <p class="subH">John Doe</p>
-                      <p class="subH black7">Software Engineering</p>
+                      <p class="subH">Chioma Okonkwo</p>
+                      <p class="subH black7">Pharmacist</p>
                     </div>
                   </div>
                 </div>
@@ -1665,25 +1653,19 @@ export default function About() {
                     unoptimized={true}
                   />
                   <p class="B4 hidden lg:block black7 max-w-2xl">
-                    At Salym Wellness Centre, we provide safe and effective
-                    herbal medical products to promote health and wellness. Our
-                    meticulously produced natural remedies are made using the
-                    Organoleptic Method to ensure quality and potency.
+                    I've integrated Salym Wellness Centre's herbal therapy into my practice, and my clients have experienced remarkable results. Their commitment to using indigenous sources and comprehensive process documentation sets them apart. A trusted brand in the field of naturopathy.
                   </p>
                   <p class="B5 lg:hidden block black7 max-w-2xl ">
-                    At Salym Wellness Centre, we provide safe and effective
-                    herbal medical products to promote health and wellness. Our
-                    meticulously produced natural remedies are made using the
-                    Organoleptic Method to ensure quality and potency.
+                    I've integrated Salym Wellness Centre's herbal therapy into my practice, and my clients have experienced remarkable results. Their commitment to using indigenous sources and comprehensive process documentation sets them apart. A trusted brand in the field of naturopathy.
                   </p>
                   <div>
                     <div class="flex-col gap-2 hidden lg:flex">
-                      <p class="h6">John Doe</p>
-                      <p class="h6 black7">Software Engineering</p>
+                      <p class="h6">Ibrahim Adekunle</p>
+                      <p class="h6 black7">Naturopath</p>
                     </div>
                     <div class="flex-col gap-2 lg:hidden flex">
-                      <p class="subH">John Doe</p>
-                      <p class="subH black7">Software Engineering</p>
+                      <p class="subH">Ibrahim Adekunle</p>
+                      <p class="subH black7">Naturopath</p>
                     </div>
                   </div>
                 </div>
