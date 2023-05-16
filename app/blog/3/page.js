@@ -258,7 +258,7 @@ export default function About() {
       </div>
 
       <div class="bg-grn-60 flex flex-col justify-between">
-        <div class="flex justify-end pt-6">
+        <Link href="/" class="flex justify-end pt-6">
           <Image
             alt="png will occupy here"
             onClick={popuphandler}
@@ -269,15 +269,29 @@ export default function About() {
             height="48"
             quality={100}
           />
-        </div>
+        </Link>
         <div class="flex gap-8 flex-col">
-          <div class="H6 ">Home</div>
-          <div class="H6 ">About Us</div>
-          <div class="H6 ">Clinicals</div>
-          <div class="H6 ">Production</div>
-          <div class="H6 ">Blog</div>
-          <div class="H6 ">Contact US</div>
-          <button class="buttonC H6">Book a Consultation</button>
+          <Link onClick={popuphandler} href="/" class="H6 ">
+            Home
+          </Link>
+          <Link onClick={popuphandler} href="/about" class="H6 ">
+            About Us
+          </Link>
+          <Link onClick={popuphandler} href="/#clinicals" class="H6 ">
+            Clinicals
+          </Link>
+          <Link onClick={popuphandler} href="/#productions" class="H6 ">
+            Production
+          </Link>
+          <Link onClick={popuphandler} href="/blog" class="H6 ">
+            Blog
+          </Link>
+          <Link onClick={popuphandler} href="/#contact" class="H6 ">
+            Contact US
+          </Link>
+          <Link onClick={popuphandler} href="/#contact" class="buttonC H6">
+            Book a Consultation
+          </Link>
         </div>
         <div class="flex flex-col pb-8 gap-6 justify-center items-center">
           <div class="flex gap-6">
@@ -326,7 +340,7 @@ export default function About() {
       <main class="body-margin">
         <header>
           <nav class="flex items-center flex-row justify-between">
-            <div>
+            <Link href="/">
               <Image
                 alt="png will occupy here"
                 unoptimized={true}
@@ -345,27 +359,28 @@ export default function About() {
                 height="48"
                 quality={100}
               />
-            </div>
+            </Link>
             <div class="navM hidden lg:flex">
-              <Link class="H6" href="#">
+              <Link class="H6" href="/about">
                 About
               </Link>
-              <Link class="H6" href="#">
+              <Link class="H6" href="/#clinicals">
                 Clinicals
               </Link>
-              <Link class="H6" href="#">
+              <Link class="H6" href="/#productions">
                 Production
               </Link>
-              <Link class="H6" href="#">
+              <Link class="H6" href="/blog">
                 Blog
               </Link>
-              <Link class="H6" href="#">
+              <Link class="H6" href="/#contact">
                 Contact
               </Link>
             </div>
-            <button class="buttonM H6 hidden lg:flex">
+
+            <Link href="/#contact" class="buttonM H6 hidden lg:flex">
               Book a Consultation
-            </button>
+            </Link>
             <Image
               alt="png will occupy here"
               onClick={popuphandler}
@@ -481,18 +496,75 @@ export default function About() {
           <div class="footer px-6 text-white">
             <div class="flex lg:flex-row flex-col justify-between lg:items-center pt-12 lg:pt-16">
               <div class="flex lg:flex-row pb-12 lg:pb-0 flex-col gap-10">
-                <p class="H6 hidden lg:block ">Home</p>
-                <p class="subH lg:hidden block">Home</p>
-                <p class="H6 hidden lg:block">About</p>
-                <p class="subH lg:hidden block">About</p>
-                <p class="H6 hidden lg:block">Clinicals</p>
-                <p class="subH lg:hidden block">Clinicals</p>
-                <p class="H6 hidden lg:block ">Productions</p>
-                <p class="subH lg:hidden block">Productions</p>
-                <p class="H6 hidden lg:block">Blog</p>
-                <p class="subH lg:hidden block">Blog</p>
-                <p class="H6 hidden lg:block">Contact</p>
-                <p class="subH lg:hidden block">Contact</p>
+              <Link href="/" class="hover:text-green-200 H6 hidden lg:block ">
+                  Home
+                </Link>
+                <Link
+                  href="/"
+                  class="hover:text-green-200 subH lg:hidden block"
+                >
+                  Home
+                </Link>
+                <Link
+                  href="/about"
+                  class="hover:text-green-200 H6 hidden lg:block"
+                >
+                  About
+                </Link>
+                <Link
+                  href="/about"
+                  class="hover:text-green-200 subH lg:hidden block"
+                >
+                  About
+                </Link>
+                <Link
+                  href="/#clinicals"
+                  class="hover:text-green-200 H6 hidden lg:block"
+                >
+                  Clinicals
+                </Link>
+                <Link
+                  href="/#clinicals"
+                  class="hover:text-green-200 subH lg:hidden block"
+                >
+                  Clinicals
+                </Link>
+                <Link
+                  href="/#productions"
+                  class="hover:text-green-200 H6 hidden lg:block "
+                >
+                  Productions
+                </Link>
+                <Link
+                  href="/#productions"
+                  class="hover:text-green-200 subH lg:hidden block"
+                >
+                  Productions
+                </Link>
+                <Link
+                  href="blog"
+                  class="hover:text-green-200 H6 hidden lg:block"
+                >
+                  Blog
+                </Link>
+                <Link
+                  href="blog"
+                  class="hover:text-green-200 subH lg:hidden block"
+                >
+                  Blog
+                </Link>
+                <Link
+                  href="/#contact"
+                  class="hover:text-green-200 H6 hidden lg:block"
+                >
+                  Contact
+                </Link>
+                <Link
+                  href="/#contact"
+                  class="hover:text-green-200 subH lg:hidden block"
+                >
+                  Contact
+                </Link>
               </div>
 
               <div class="flex justify-center gap-4">

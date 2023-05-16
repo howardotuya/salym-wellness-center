@@ -386,7 +386,7 @@ export default function About() {
       <main class="body-margin">
         <header>
           <nav class="flex items-center flex-row justify-between">
-            <div>
+          <Link href="/">
               <Image
                 alt="png will occupy here"
                 unoptimized={true}
@@ -405,27 +405,27 @@ export default function About() {
                 height="48"
                 quality={100}
               />
-            </div>
+            </Link>
             <div class="navM hidden lg:flex">
-              <Link class="H6" href="#">
+              <Link class="H6" href="/about/#">
                 About
               </Link>
-              <Link class="H6" href="#">
+              <Link class="H6" href="/about/#clinicals">
                 Clinicals
               </Link>
-              <Link class="H6" href="#">
+              <Link class="H6" href="/about/#productions">
                 Production
               </Link>
-              <Link class="H6" href="#">
+              <Link class="H6" href="/blog">
                 Blog
               </Link>
-              <Link class="H6" href="#">
+              <Link class="H6" href="/about/#contact">
                 Contact
               </Link>
             </div>
-            <button class="buttonM H6 hidden lg:flex">
+            <Link href="/#contact" class="buttonM H6 hidden lg:flex">
               Book a Consultation
-            </button>
+            </Link>
             <Image
               alt="png will occupy here"
               onClick={popuphandler}
@@ -1567,11 +1567,11 @@ export default function About() {
                     Organoleptic Method to ensure quality and potency.
                   </p>
                   <div class="flex-col gap-2 hidden lg:flex">
-                    <p class="h6">Otuya Howard</p>
+                    <p class="h6">John Doe</p>
                     <p class="h6 black7">Software Engineering</p>
                   </div>
                   <div class="flex-col gap-2 lg:hidden flex">
-                    <p class="subH">Otuya Howard</p>
+                    <p class="subH">John Doe</p>
                     <p class="subH black7">Software Engineering</p>
                   </div>
                 </div>
@@ -1621,7 +1621,7 @@ export default function About() {
                       unoptimized={true}
                     />
                     <div class="flex flex-col gap-2">
-                      <p class="h6">Otuya Howard</p>
+                      <p class="h6">John Doe</p>
                       <p class="h6 black7">Software Engineering</p>
                     </div>
                   </div>
@@ -1636,7 +1636,7 @@ export default function About() {
                       unoptimized={true}
                     />
                     <div class="flex flex-col gap-2">
-                      <p class="subH">Otuya Howard</p>
+                      <p class="subH">John Doe</p>
                       <p class="subH black7">Software Engineering</p>
                     </div>
                   </div>
@@ -1678,11 +1678,11 @@ export default function About() {
                   </p>
                   <div>
                     <div class="flex-col gap-2 hidden lg:flex">
-                      <p class="h6">Otuya Howard</p>
+                      <p class="h6">John Doe</p>
                       <p class="h6 black7">Software Engineering</p>
                     </div>
                     <div class="flex-col gap-2 lg:hidden flex">
-                      <p class="subH">Otuya Howard</p>
+                      <p class="subH">John Doe</p>
                       <p class="subH black7">Software Engineering</p>
                     </div>
                   </div>
@@ -2001,12 +2001,10 @@ export default function About() {
                       priority
                     />
                     <p class="B4 hidden lg:block">
-                      17, Olalekan Olaniyan Street, Off Karimu Laka St, Egbeda,
-                      Lagos.
+                      22, Ilupeju Road, Ilupeju, Lagos.
                     </p>
                     <p class="B5 lg:hidden block">
-                      17, Olalekan Olaniyan Street, Off Karimu Laka St, Egbeda,
-                      Lagos.
+                      22, Ilupeju Road, Ilupeju, Lagos.
                     </p>
                   </div>
                   <div class="flex gap-4">
@@ -2020,8 +2018,8 @@ export default function About() {
                       unoptimized={true}
                       priority
                     />
-                    <p class="B4 hidden lg:block">+23412345678</p>
-                    <p class="B5 lg:hidden block">+23412345678</p>
+                    <p class="B4 hidden lg:block">+2349121325047</p>
+                    <p class="B5 lg:hidden block">+2349121325047</p>
                   </div>
                   <div class="flex gap-4">
                     <Image
@@ -2076,8 +2074,8 @@ export default function About() {
                       unoptimized={true}
                       priority
                     />
-                    <p class="B4 hidden lg:block">+23412345678</p>
-                    <p class="B5 lg:hidden block">+23412345678</p>
+                    <p class="B4 hidden lg:block">+2348061782702</p>
+                    <p class="B5 lg:hidden block">+2348061782702</p>
                   </div>
                   <div class="flex gap-4">
                     <Image
@@ -2096,7 +2094,6 @@ export default function About() {
                 </div>
               </div>
             </div>
-
             <div class="flex lg:flex-row flex-col justify-between lg:items-center pt-12 lg:pt-16">
               <div class="flex lg:flex-row pb-12 lg:pb-0 flex-col gap-10">
                 <Link href="/" class="hover:text-green-200 H6 hidden lg:block ">

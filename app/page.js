@@ -555,7 +555,7 @@ export default function Home() {
       <main class="body-margin">
         <header>
           <nav class="flex items-center flex-row justify-between">
-            <div>
+          <Link href="/">
               <Image
                 alt="png will occupy here"
                 unoptimized={true}
@@ -574,7 +574,7 @@ export default function Home() {
                 height="48"
                 quality={100}
               />
-            </div>
+            </Link>
             <div class="navM hidden lg:flex">
               <Link class="H6" href="#about">
                 About
@@ -1846,11 +1846,11 @@ export default function Home() {
                     Organoleptic Method to ensure quality and potency.
                   </p>
                   <div class="flex-col gap-2 hidden lg:flex">
-                    <p class="h6">Otuya Howard</p>
+                    <p class="h6">John Doe</p>
                     <p class="h6 black7">Software Engineering</p>
                   </div>
                   <div class="flex-col gap-2 lg:hidden flex">
-                    <p class="subH">Otuya Howard</p>
+                    <p class="subH">John Doe</p>
                     <p class="subH black7">Software Engineering</p>
                   </div>
                 </div>
@@ -1900,7 +1900,7 @@ export default function Home() {
                       unoptimized={true}
                     />
                     <div class="flex flex-col gap-2">
-                      <p class="h6">Otuya Howard</p>
+                      <p class="h6">John Doe</p>
                       <p class="h6 black7">Software Engineering</p>
                     </div>
                   </div>
@@ -1915,7 +1915,7 @@ export default function Home() {
                       unoptimized={true}
                     />
                     <div class="flex flex-col gap-2">
-                      <p class="subH">Otuya Howard</p>
+                      <p class="subH">John Doe</p>
                       <p class="subH black7">Software Engineering</p>
                     </div>
                   </div>
@@ -1957,11 +1957,11 @@ export default function Home() {
                   </p>
                   <div>
                     <div class="flex-col gap-2 hidden lg:flex">
-                      <p class="h6">Otuya Howard</p>
+                      <p class="h6">John Doe</p>
                       <p class="h6 black7">Software Engineering</p>
                     </div>
                     <div class="flex-col gap-2 lg:hidden flex">
-                      <p class="subH">Otuya Howard</p>
+                      <p class="subH">John Doe</p>
                       <p class="subH black7">Software Engineering</p>
                     </div>
                   </div>
@@ -2280,12 +2280,10 @@ export default function Home() {
                       priority
                     />
                     <p class="B4 hidden lg:block">
-                      17, Olalekan Olaniyan Street, Off Karimu Laka St, Egbeda,
-                      Lagos.
+                      22, Ilupeju Road, Ilupeju, Lagos.
                     </p>
                     <p class="B5 lg:hidden block">
-                      17, Olalekan Olaniyan Street, Off Karimu Laka St, Egbeda,
-                      Lagos.
+                      22, Ilupeju Road, Ilupeju, Lagos.
                     </p>
                   </div>
                   <div class="flex gap-4">
@@ -2299,8 +2297,8 @@ export default function Home() {
                       unoptimized={true}
                       priority
                     />
-                    <p class="B4 hidden lg:block">+23412345678</p>
-                    <p class="B5 lg:hidden block">+23412345678</p>
+                    <p class="B4 hidden lg:block">+2349121325047</p>
+                    <p class="B5 lg:hidden block">+2349121325047</p>
                   </div>
                   <div class="flex gap-4">
                     <Image
@@ -2355,8 +2353,8 @@ export default function Home() {
                       unoptimized={true}
                       priority
                     />
-                    <p class="B4 hidden lg:block">+23412345678</p>
-                    <p class="B5 lg:hidden block">+23412345678</p>
+                    <p class="B4 hidden lg:block">+2348061782702</p>
+                    <p class="B5 lg:hidden block">+2348061782702</p>
                   </div>
                   <div class="flex gap-4">
                     <Image
