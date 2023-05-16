@@ -88,7 +88,7 @@ export default function About() {
               width="96"
               height="96"
               quality={100}
-              unoptimized={true}
+               
             />
             <Image
               alt="png will occupy here"
@@ -98,7 +98,7 @@ export default function About() {
               height="64"
               priority
               quality={100}
-              unoptimized={true}
+               
             />
           </div>
           <div>
@@ -144,7 +144,7 @@ export default function About() {
               width="96"
               height="96"
               quality={100}
-              unoptimized={true}
+               
             />
             <Image
               alt="png will occupy here"
@@ -154,7 +154,7 @@ export default function About() {
               height="64"
               priority
               quality={100}
-              unoptimized={true}
+               
             />
           </div>
           <div>
@@ -204,7 +204,7 @@ export default function About() {
               width="96"
               height="96"
               quality={100}
-              unoptimized={true}
+               
             />
             <Image
               alt="png will occupy here"
@@ -214,7 +214,7 @@ export default function About() {
               height="64"
               priority
               quality={100}
-              unoptimized={true}
+               
             />
           </div>
           <div>
@@ -260,7 +260,7 @@ export default function About() {
               width="96"
               height="96"
               quality={100}
-              unoptimized={true}
+               
             />
             <Image
               alt="png will occupy here"
@@ -270,7 +270,7 @@ export default function About() {
               height="64"
               priority
               quality={100}
-              unoptimized={true}
+               
             />
           </div>
           <div>
@@ -308,7 +308,7 @@ export default function About() {
           <Image
             alt="png will occupy here"
             onClick={popuphandler}
-            unoptimized={true}
+             
             class="cancel"
             src="/close-circle.svg"
             width="48"
@@ -344,7 +344,7 @@ export default function About() {
             <div>
               <Image
                 alt="png will occupy here"
-                unoptimized={true}
+                 
                 class="cancel"
                 src="/IG.svg"
                 width="24"
@@ -355,7 +355,7 @@ export default function About() {
             <div>
               <Image
                 alt="png will occupy here"
-                unoptimized={true}
+                 
                 class="cancel"
                 src="/fb.svg"
                 width="24"
@@ -366,7 +366,7 @@ export default function About() {
             <div>
               <Image
                 alt="png will occupy here"
-                unoptimized={true}
+                 
                 class="cancel"
                 src="/twit.svg"
                 width="24"
@@ -389,7 +389,7 @@ export default function About() {
           <Link href="/">
               <Image
                 alt="png will occupy here"
-                unoptimized={true}
+                 
                 class="hidden lg:block"
                 src="/logoLarge.png"
                 width="46"
@@ -398,7 +398,7 @@ export default function About() {
               />
               <Image
                 alt="png will occupy here"
-                unoptimized={true}
+                 
                 class="lg:hidden block"
                 src="/logoLarge.png"
                 width="34"
@@ -429,7 +429,7 @@ export default function About() {
             <Image
               alt="png will occupy here"
               onClick={popuphandler}
-              unoptimized={true}
+               
               class="lg:hidden block"
               src="/menu.svg"
               width="44"
@@ -470,7 +470,7 @@ export default function About() {
               width="488"
               height="478"
               quality={100}
-              unoptimized={true}
+               
             />
             <Image
               alt="png will occupy here"
@@ -479,7 +479,7 @@ export default function About() {
               width="345"
               height="338"
               quality={100}
-              unoptimized={true}
+               
             />
           </div>
           <div class="order-2 about-cont-right lg:w-1/2 flex gap-4 flex-col lg:gap-8">
@@ -538,7 +538,7 @@ export default function About() {
                 width="80"
                 height="80"
                 quality={100}
-                unoptimized={true}
+                 
               />
               <Image
                 alt="png will occupy here"
@@ -548,7 +548,7 @@ export default function About() {
                 height="56"
                 priority
                 quality={100}
-                unoptimized={true}
+                 
               />
               <h5 class="H5 grn-110 hidden lg:block">Our Mission</h5>
               <h5 class="H6 grn-110 lg:hidden block">Our Mission</h5>
@@ -580,7 +580,7 @@ export default function About() {
                 width="80"
                 height="80"
                 quality={100}
-                unoptimized={true}
+                 
               />
               <Image
                 alt="png will occupy here"
@@ -590,7 +590,7 @@ export default function About() {
                 height="56"
                 priority
                 quality={100}
-                unoptimized={true}
+                 
               />
               <h5 class="H5 grn-110 hidden lg:block">Our Vision</h5>
               <h5 class="H6 grn-110 lg:hidden block">Our Vision</h5>
@@ -647,7 +647,7 @@ export default function About() {
                 width="80"
                 height="80"
                 quality={100}
-                unoptimized={true}
+                 
               />
               <Image
                 alt="png will occupy here"
@@ -657,7 +657,7 @@ export default function About() {
                 height="56"
                 priority
                 quality={100}
-                unoptimized={true}
+                 
               />
               <h5 class="H5 grn-110 hidden lg:block">+ 4 years</h5>
               <h5 class="H6 grn-110 lg:hidden block">+ 4 years</h5>
@@ -679,7 +679,7 @@ export default function About() {
                 width="80"
                 height="80"
                 quality={100}
-                unoptimized={true}
+                 
               />
               <Image
                 alt="png will occupy here"
@@ -689,7 +689,7 @@ export default function About() {
                 height="56"
                 priority
                 quality={100}
-                unoptimized={true}
+                 
               />
               <h5 class="H5 grn-110 hidden lg:block">+ 70 Customers</h5>
               <h5 class="H6 grn-110 lg:hidden block">+ 70 Customers</h5>
@@ -711,7 +711,7 @@ export default function About() {
                 width="80"
                 height="80"
                 quality={100}
-                unoptimized={true}
+                 
               />
               <Image
                 alt="png will occupy here"
@@ -721,7 +721,7 @@ export default function About() {
                 height="56"
                 priority
                 quality={100}
-                unoptimized={true}
+                 
               />
               <h5 class="H5 grn-110 hidden lg:block">+100 Million Generated</h5>
               <h5 class="H6 grn-110 lg:hidden block">+100 Million Generated</h5>
@@ -743,7 +743,7 @@ export default function About() {
                 width="80"
                 height="80"
                 quality={100}
-                unoptimized={true}
+                 
               />
               <Image
                 alt="png will occupy here"
@@ -753,7 +753,7 @@ export default function About() {
                 height="56"
                 priority
                 quality={100}
-                unoptimized={true}
+                 
               />
               <h5 class="H5 grn-110 hidden lg:block">7 Employees</h5>
               <h5 class="H6 grn-110 lg:hidden block">7 Employees</h5>
@@ -797,7 +797,7 @@ export default function About() {
                 width="80"
                 height="80"
                 quality={100}
-                unoptimized={true}
+                 
               />
               <Image
                 alt="png will occupy here"
@@ -807,7 +807,7 @@ export default function About() {
                 height="56"
                 priority
                 quality={100}
-                unoptimized={true}
+                 
               />
               <h5 class="H5 grn-110 hidden lg:block">Individuals</h5>
               <h5 class="H6 grn-110 lg:hidden block">Individuals</h5>
@@ -837,7 +837,7 @@ export default function About() {
                 width="80"
                 height="80"
                 quality={100}
-                unoptimized={true}
+                 
               />
               <Image
                 alt="png will occupy here"
@@ -847,7 +847,7 @@ export default function About() {
                 height="56"
                 priority
                 quality={100}
-                unoptimized={true}
+                 
               />
               <h5 class="H5 grn-110 hidden lg:block">Businesses</h5>
               <h5 class="H6 grn-110 lg:hidden block">Businesses</h5>
@@ -976,7 +976,7 @@ export default function About() {
                     width="80"
                     height="80"
                     quality={100}
-                    unoptimized={true}
+                     
                   />
                   <Image
                     alt="png will occupy here"
@@ -986,7 +986,7 @@ export default function About() {
                     height="48"
                     priority
                     quality={100}
-                    unoptimized={true}
+                     
                   />
                   <div class="flex flex-col gap-4">
                     <h5 class="H5 grn-110 hidden lg:block">Herbal Therapy</h5>
@@ -1012,7 +1012,7 @@ export default function About() {
                     width="80"
                     height="80"
                     quality={100}
-                    unoptimized={true}
+                     
                   />
                   <Image
                     alt="png will occupy here"
@@ -1022,7 +1022,7 @@ export default function About() {
                     height="48"
                     priority
                     quality={100}
-                    unoptimized={true}
+                     
                   />
                   <div class="flex flex-col gap-4">
                     <h5 class="H5 grn-110 hidden lg:block">Physical Therapy</h5>
@@ -1048,7 +1048,7 @@ export default function About() {
                     width="80"
                     height="80"
                     quality={100}
-                    unoptimized={true}
+                     
                   />
                   <Image
                     alt="png will occupy here"
@@ -1058,7 +1058,7 @@ export default function About() {
                     height="48"
                     priority
                     quality={100}
-                    unoptimized={true}
+                     
                   />
                   <div class="flex flex-col gap-4">
                     <h5 class="H5 grn-110 hidden lg:block">Massage</h5>
@@ -1084,7 +1084,7 @@ export default function About() {
                     width="80"
                     height="80"
                     quality={100}
-                    unoptimized={true}
+                     
                   />
                   <Image
                     alt="png will occupy here"
@@ -1094,7 +1094,7 @@ export default function About() {
                     height="48"
                     priority
                     quality={100}
-                    unoptimized={true}
+                     
                   />
                   <div class="flex flex-col gap-4">
                     <h5 class="H5 grn-110 hidden lg:block">Acupressure</h5>
@@ -1120,7 +1120,7 @@ export default function About() {
                     width="80"
                     height="80"
                     quality={100}
-                    unoptimized={true}
+                     
                   />
                   <Image
                     alt="png will occupy here"
@@ -1130,7 +1130,7 @@ export default function About() {
                     height="48"
                     priority
                     quality={100}
-                    unoptimized={true}
+                     
                   />
                   <div class="flex flex-col gap-4">
                     <h5 class="H5 grn-110 hidden lg:block">Naturopathy</h5>
@@ -1156,7 +1156,7 @@ export default function About() {
                     width="80"
                     height="80"
                     quality={100}
-                    unoptimized={true}
+                     
                   />
                   <Image
                     alt="png will occupy here"
@@ -1166,7 +1166,7 @@ export default function About() {
                     height="48"
                     priority
                     quality={100}
-                    unoptimized={true}
+                     
                   />
 
                   <div class="flex flex-col gap-4 w-auto">
@@ -1284,14 +1284,14 @@ export default function About() {
                     src="/p1.png"
                     priority
                     quality={100}
-                    unoptimized={true}
+                     
                   />
                   <img
                     class="H4 text-center lg:hidden block self-center"
                     src="/p1.png"
                     priority
                     quality={100}
-                    unoptimized={true}
+                     
                   />
                   <h4 class="H5 hidden lg:block self-end text-center pt-4">
                     Local Herbs and Leaves
@@ -1306,14 +1306,14 @@ export default function About() {
                     src="/p2.png"
                     priority
                     quality={100}
-                    unoptimized={true}
+                     
                   />
                   <img
                     class="H4 text-center lg:hidden block self-center"
                     src="/p2.png"
                     priority
                     quality={100}
-                    unoptimized={true}
+                     
                   />
                   <h4 class="H5 hidden lg:block self-end text-center pt-4">
                     Local Roots and Barks
@@ -1328,14 +1328,14 @@ export default function About() {
                     src="/p3.png"
                     priority
                     quality={100}
-                    unoptimized={true}
+                     
                   />
                   <img
                     class="H4 text-center lg:hidden block self-center"
                     src="/p3.png"
                     priority
                     quality={100}
-                    unoptimized={true}
+                     
                   />
                   <h4 class="H5 hidden lg:block self-end text-center pt-4">
                     Seeds, Flowers and Fruits
@@ -1350,14 +1350,14 @@ export default function About() {
                     src="/p4.png"
                     priority
                     quality={100}
-                    unoptimized={true}
+                     
                   />
                   <img
                     class="H4 text-center lg:hidden block self-center"
                     src="/p4.png"
                     priority
                     quality={100}
-                    unoptimized={true}
+                     
                   />
                   <h4 class="H5 hidden lg:block self-end text-center pt-4">
                     Spices
@@ -1370,14 +1370,14 @@ export default function About() {
                     src="/p5.png"
                     priority
                     quality={100}
-                    unoptimized={true}
+                     
                   />
                   <img
                     class="H4 text-center lg:hidden block self-center"
                     src="/p5.png"
                     priority
                     quality={100}
-                    unoptimized={true}
+                     
                   />
                   <h4 class="H5 hidden lg:block self-end text-center pt-4">
                     Foreign Products
@@ -1392,14 +1392,14 @@ export default function About() {
                     src="/p6.png"
                     priority
                     quality={100}
-                    unoptimized={true}
+                     
                   />
                   <img
                     class="H4 text-center lg:hidden block self-center"
                     src="/p6.png"
                     priority
                     quality={100}
-                    unoptimized={true}
+                     
                   />
                   <h4 class="H5 hidden lg:block self-end text-center pt-4">
                     Oils and Fluids
@@ -1414,14 +1414,14 @@ export default function About() {
                     src="/p7.png"
                     priority
                     quality={100}
-                    unoptimized={true}
+                     
                   />
                   <img
                     class="H4 text-center lg:hidden block self-center"
                     src="/p7.png"
                     priority
                     quality={100}
-                    unoptimized={true}
+                     
                   />
                   <h4 class="H5 hidden lg:block self-end text-center pt-4">
                     Teas
@@ -1434,14 +1434,14 @@ export default function About() {
                     src="/p8.png"
                     priority
                     quality={100}
-                    unoptimized={true}
+                     
                   />
                   <img
                     class="H4 text-center lg:hidden block self-center"
                     src="/p8.png"
                     priority
                     quality={100}
-                    unoptimized={true}
+                     
                   />
                   <h4 class="H5 hidden lg:block self-end text-center pt-4">
                     Apparatus
@@ -1456,14 +1456,14 @@ export default function About() {
                     src="/p9.png"
                     priority
                     quality={100}
-                    unoptimized={true}
+                     
                   />
                   <img
                     class="H4 text-center lg:hidden block self-center"
                     src="/p9.png"
                     priority
                     quality={100}
-                    unoptimized={true}
+                     
                   />
                   <h4 class="H5 hidden lg:block self-end text-center pt-4">
                     Cosmetics - Creams/Soaps
@@ -1478,14 +1478,14 @@ export default function About() {
                     src="/p10.png"
                     priority
                     quality={100}
-                    unoptimized={true}
+                     
                   />
                   <img
                     class="H4 text-center lg:hidden mlock self-center"
                     src="/p10.png"
                     priority
                     quality={100}
-                    unoptimized={true}
+                     
                   />
                   <h4 class="H5 hidden lg:block self-end text-center pt-4">
                     Salts, Edibles and Miscellaneous
@@ -1542,7 +1542,7 @@ export default function About() {
                     width="80"
                     height="80"
                     quality={100}
-                    unoptimized={true}
+                     
                   />
                   <Image
                     alt="png will occupy here"
@@ -1552,7 +1552,7 @@ export default function About() {
                     height="64"
                     priority
                     quality={100}
-                    unoptimized={true}
+                     
                   />
                   <p class="B4 hidden lg:block black7 max-w-2xl">
                     Salym Wellness Centre has been a game-changer for my well-being. Their immune booster and herbal tea blends have significantly improved my health. I'm grateful for their commitment to providing safe and effective herbal solutions. Highly recommended for a holistic approach to wellness.
@@ -1580,7 +1580,7 @@ export default function About() {
                     width="24"
                     height="24"
                     quality={100}
-                    unoptimized={true}
+                     
                   />
                   <Image
                     alt="png will occupy here"
@@ -1590,7 +1590,7 @@ export default function About() {
                     height="24"
                     priority
                     quality={100}
-                    unoptimized={true}
+                     
                   />
                   <p class="B4 hidden lg:block black7 max-w-2xl">
                     As a pharmacist, I always seek high-quality herbal medicine suppliers. Salym Wellness Centre exceeds my expectations with their extensive range of herbal products. The Organoleptic Method they employ ensures safety and efficacy. A reliable partner for my practice.
@@ -1606,7 +1606,7 @@ export default function About() {
                       width="80"
                       height="80"
                       quality={100}
-                      unoptimized={true}
+                       
                     />
                     <div class="flex flex-col gap-2">
                       <p class="h6">Chioma Okonkwo</p>
@@ -1621,7 +1621,7 @@ export default function About() {
                       height="64"
                       priority
                       quality={100}
-                      unoptimized={true}
+                       
                     />
                     <div class="flex flex-col gap-2">
                       <p class="subH">Chioma Okonkwo</p>
@@ -1640,7 +1640,7 @@ export default function About() {
                     width="80"
                     height="80"
                     quality={100}
-                    unoptimized={true}
+                     
                   />
                   <Image
                     alt="png will occupy here"
@@ -1650,7 +1650,7 @@ export default function About() {
                     height="64"
                     priority
                     quality={100}
-                    unoptimized={true}
+                     
                   />
                   <p class="B4 hidden lg:block black7 max-w-2xl">
                     I've integrated Salym Wellness Centre's herbal therapy into my practice, and my clients have experienced remarkable results. Their commitment to using indigenous sources and comprehensive process documentation sets them apart. A trusted brand in the field of naturopathy.
@@ -1979,7 +1979,7 @@ export default function About() {
                       width="24"
                       height="24"
                       quality={100}
-                      unoptimized={true}
+                       
                       priority
                     />
                     <p class="B4 hidden lg:block">
@@ -1997,7 +1997,7 @@ export default function About() {
                       width="24"
                       height="24"
                       quality={100}
-                      unoptimized={true}
+                       
                       priority
                     />
                     <p class="B4 hidden lg:block">+2349121325047</p>
@@ -2011,7 +2011,7 @@ export default function About() {
                       width="24"
                       height="24"
                       quality={100}
-                      unoptimized={true}
+                       
                       priority
                     />
                     <p class="B4 hidden lg:block">info@salymwellness.center</p>
@@ -2033,7 +2033,7 @@ export default function About() {
                       width="24"
                       height="24"
                       quality={100}
-                      unoptimized={true}
+                       
                       priority
                     />
                     <p class="B4 hidden lg:block">
@@ -2053,7 +2053,7 @@ export default function About() {
                       width="24"
                       height="24"
                       quality={100}
-                      unoptimized={true}
+                       
                       priority
                     />
                     <p class="B4 hidden lg:block">+2348061782702</p>
@@ -2067,7 +2067,7 @@ export default function About() {
                       width="24"
                       height="24"
                       quality={100}
-                      unoptimized={true}
+                       
                       priority
                     />
                     <p class="B4 hidden lg:block">info@salymwellness.center</p>
@@ -2153,12 +2153,12 @@ export default function About() {
                 <Image
                   alt="png will occupy here"
                   class="H4 text-center hidden lg:block  self-center"
-                  src="/ig.svg"
+                  src="/IG.svg"
                   priority
                   width="24"
                   height="24"
                   quality={100}
-                  unoptimized={true}
+                   
                 />
                 <Image
                   alt="png will occupy here"
@@ -2168,7 +2168,7 @@ export default function About() {
                   height="24"
                   priority
                   quality={100}
-                  unoptimized={true}
+                   
                 />
                 <Image
                   alt="png will occupy here"
@@ -2178,7 +2178,7 @@ export default function About() {
                   width="24"
                   height="24"
                   quality={100}
-                  unoptimized={true}
+                   
                 />
                 <Image
                   alt="png will occupy here"
@@ -2188,7 +2188,7 @@ export default function About() {
                   height="24"
                   priority
                   quality={100}
-                  unoptimized={true}
+                   
                 />
                 <Image
                   alt="png will occupy here"
@@ -2198,7 +2198,7 @@ export default function About() {
                   width="24"
                   height="24"
                   quality={100}
-                  unoptimized={true}
+                   
                 />
                 <Image
                   alt="png will occupy here"
@@ -2208,7 +2208,7 @@ export default function About() {
                   height="24"
                   priority
                   quality={100}
-                  unoptimized={true}
+                   
                 />
               </div>
             </div>

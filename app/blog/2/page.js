@@ -42,7 +42,7 @@ export default function About() {
               width="96"
               height="96"
               quality={100}
-              unoptimized={true}
+               
             />
             <Image
               alt="png will occupy here"
@@ -52,7 +52,7 @@ export default function About() {
               height="64"
               priority
               quality={100}
-              unoptimized={true}
+               
             />
           </div>
           <div>
@@ -98,7 +98,7 @@ export default function About() {
               width="96"
               height="96"
               quality={100}
-              unoptimized={true}
+               
             />
             <Image
               alt="png will occupy here"
@@ -108,7 +108,7 @@ export default function About() {
               height="64"
               priority
               quality={100}
-              unoptimized={true}
+               
             />
           </div>
           <div>
@@ -158,7 +158,7 @@ export default function About() {
               width="96"
               height="96"
               quality={100}
-              unoptimized={true}
+               
             />
             <Image
               alt="png will occupy here"
@@ -168,7 +168,7 @@ export default function About() {
               height="64"
               priority
               quality={100}
-              unoptimized={true}
+               
             />
           </div>
           <div>
@@ -214,7 +214,7 @@ export default function About() {
               width="96"
               height="96"
               quality={100}
-              unoptimized={true}
+               
             />
             <Image
               alt="png will occupy here"
@@ -224,7 +224,7 @@ export default function About() {
               height="64"
               priority
               quality={100}
-              unoptimized={true}
+               
             />
           </div>
           <div>
@@ -262,7 +262,7 @@ export default function About() {
           <Image
             alt="png will occupy here"
             onClick={popuphandler}
-            unoptimized={true}
+             
             class="cancel"
             src="/close-circle.svg"
             width="48"
@@ -298,7 +298,7 @@ export default function About() {
             <div>
               <Image
                 alt="png will occupy here"
-                unoptimized={true}
+                 
                 class="cancel"
                 src="/IG.svg"
                 width="24"
@@ -309,7 +309,7 @@ export default function About() {
             <div>
               <Image
                 alt="png will occupy here"
-                unoptimized={true}
+                 
                 class="cancel"
                 src="/fb.svg"
                 width="24"
@@ -320,7 +320,7 @@ export default function About() {
             <div>
               <Image
                 alt="png will occupy here"
-                unoptimized={true}
+                 
                 class="cancel"
                 src="/twit.svg"
                 width="24"
@@ -343,7 +343,7 @@ export default function About() {
             <Link href="/">
               <Image
                 alt="png will occupy here"
-                unoptimized={true}
+                 
                 class="hidden lg:block"
                 src="/logoLarge.png"
                 width="46"
@@ -352,7 +352,7 @@ export default function About() {
               />
               <Image
                 alt="png will occupy here"
-                unoptimized={true}
+                 
                 class="lg:hidden block"
                 src="/logoLarge.png"
                 width="34"
@@ -384,7 +384,7 @@ export default function About() {
             <Image
               alt="png will occupy here"
               onClick={popuphandler}
-              unoptimized={true}
+               
               class="lg:hidden block"
               src="/menu.svg"
               width="44"
@@ -676,12 +676,12 @@ export default function About() {
                 <Image
                   alt="png will occupy here"
                   class="H4 text-center hidden lg:block  self-center"
-                  src="/ig.svg"
+                  src="/IG.svg"
                   priority
                   width="24"
                   height="24"
                   quality={100}
-                  unoptimized={true}
+                   
                 />
                 <Image
                   alt="png will occupy here"
@@ -691,7 +691,7 @@ export default function About() {
                   height="24"
                   priority
                   quality={100}
-                  unoptimized={true}
+                   
                 />
                 <Image
                   alt="png will occupy here"
@@ -701,7 +701,7 @@ export default function About() {
                   width="24"
                   height="24"
                   quality={100}
-                  unoptimized={true}
+                   
                 />
                 <Image
                   alt="png will occupy here"
@@ -711,7 +711,7 @@ export default function About() {
                   height="24"
                   priority
                   quality={100}
-                  unoptimized={true}
+                   
                 />
                 <Image
                   alt="png will occupy here"
@@ -721,7 +721,7 @@ export default function About() {
                   width="24"
                   height="24"
                   quality={100}
-                  unoptimized={true}
+                   
                 />
                 <Image
                   alt="png will occupy here"
@@ -731,7 +731,7 @@ export default function About() {
                   height="24"
                   priority
                   quality={100}
-                  unoptimized={true}
+                   
                 />
               </div>
             </div>
