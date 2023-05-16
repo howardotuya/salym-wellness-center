@@ -168,10 +168,10 @@ export default function About() {
           </div>
           <div>
             <p class="B4 grn-50 hidden lg:block">
-              Sorry, we couldn't process your subscription. Please try again.
+              Sorry, we couldn&apos;t process your subscription. Please try again.
             </p>
             <p class="B5 grn-50 lg:hidden block">
-              Sorry, we couldn't process your subscription. Please try again.
+              Sorry, we couldn&apos;t process your subscription. Please try again.
             </p>
           </div>
           <div class="flex gap-4">
@@ -597,7 +597,7 @@ export default function About() {
               <p class="B4 grn-50 hidden lg:block">
                 To become the leading producer of natural herbal medical
                 products in Africa. We strive to empower our customers with the
-                best of nature's healing power, and provide safe and effective
+                best of nature&apos;s healing power, and provide safe and effective
                 solutions for their health needs. With a focus on indigenous
                 sources and a commitment to the environment, It is our main aim
                 to bring a balanced approach to healthcare and make natural
@@ -606,7 +606,7 @@ export default function About() {
               <p class="B5 grn-50 lg:hidden block">
                 To become the leading producer of natural herbal medical
                 products in Africa. We strive to empower our customers with the
-                best of nature's healing power, and provide safe and effective
+                best of nature&apos;s healing power, and provide safe and effective
                 solutions for their health needs. With a focus on indigenous
                 sources and a commitment to the environment, It is our main aim
                 to bring a balanced approach to healthcare and make natural

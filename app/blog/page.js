@@ -36,7 +36,7 @@ export default function About() {
 
     try {
       const { data } = await axios.post(
-        "https://clean-blue-tutu.cyclic.app/api/mail/subscribe",
+        "http://localhost:5000/api/mail/subscribe",
         { email }
       );
 
@@ -148,10 +148,10 @@ export default function About() {
           </div>
           <div>
             <p class="B4 grn-50 hidden lg:block">
-              Sorry, we couldn't process your subscription. Please try again.
+              Sorry, we couldn&apos;t process your subscription. Please try again.
             </p>
             <p class="B5 grn-50 lg:hidden block">
-              Sorry, we couldn't process your subscription. Please try again.
+              Sorry, we couldn&apos;t process your subscription. Please try again.
             </p>
           </div>
           <div class="flex gap-4">

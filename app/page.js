@@ -332,10 +332,10 @@ export default function Home() {
           </div>
           <div>
             <p class="B4 grn-50 hidden lg:block">
-              Sorry, we couldn't process your subscription. Please try again.
+              Sorry, we couldn&apos;t process your subscription. Please try again.
             </p>
             <p class="B5 grn-50 lg:hidden block">
-              Sorry, we couldn't process your subscription. Please try again.
+              Sorry, we couldn&apos;t process your subscription. Please try again.
             </p>
           </div>
           <div class="flex gap-4">
