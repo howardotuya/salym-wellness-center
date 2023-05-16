@@ -393,47 +393,30 @@ export default function About() {
             </h4>
 
             <div class="flex flex-col gap-4 lg:gap-6">
-              <div class="flex justify-between items-center">
-                <span class="grn-10 grn-60 H6 hidden lg:block py-2 px-4 rounded-lg ">
-                  Herbal Wellness
-                </span>
-                <span class=" lg:hidden block grn-10 grn-60 subH py-2 px-4 rounded-lg">
-                  Herbal Wellness
-                </span>
-                <p class="H6 hidden lg:block"> 3 mins read</p>
-                <p class="subH lg:hidden block"> 3 mins read</p>
-              </div>
-
               <div class="flex-row gap-4 hidden lg:flex items-center">
-                <Image
-                  alt="png will occupy here"
-                  src="/t2.svg"
-                  priority
-                  width="56"
-                  height="56"
-                  quality={100}
-                  unoptimized={true}
-                />
                 <div class="flex flex-col gap-2">
-                  <p class="h6">Otuya Howard</p>
-                  <p class="subH black7">Software Engineering</p>
+                  <p class="h6">By Salym Wellness Center Team</p>
+                  <p class="subH black7">Published 9th May, 2023</p>
                 </div>
               </div>
               <div class="flex-row gap-2 lg:hidden flex items-center">
-                <Image
-                  alt="png will occupy here"
-                  src="/t2.svg"
-                  width="40"
-                  height="40"
-                  priority
-                  quality={100}
-                  unoptimized={true}
-                />
                 <div class="flex flex-col gap-2">
-                  <p class="subH">Otuya Howard</p>
-                  <p class="subH black7">Software Engineering</p>
+                  <p class="subH">By Salym Wellness Center Team</p>
+                  <p class="subH black7">Published 9th May, 2023</p>
                 </div>
               </div>
+
+              <div class="flex gap-8 lg:justify-start justify-between items-center">
+                <span class="grn-10 grn-60 H6 hidden lg:block py-2 px-4 rounded-lg ">
+                  Food and Lifestyle
+                </span>
+                <span class=" lg:hidden block grn-10 grn-60 subH py-2 px-4 rounded-lg">
+                  Food and Lifestyle
+                </span>
+                <p class="H6 hidden lg:block">5 mins read</p>
+                <p class="subH lg:hidden block">5 mins read</p>
+              </div>
+
             </div>
           </div>
         </div>

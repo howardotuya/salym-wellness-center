@@ -382,57 +382,40 @@ export default function About() {
         <div class=" max-w-3xl w-full mx-auto">
         <div class="lg:pt-32 pt-16 flex flex-col item gap-8 lg:gap-10">
           <div class="lg:h-96 object-cover h-56 w-full rounded-2xl overflow-hidden">
-            <div class="headImg3"></div>
+            <div class="headImg4"></div>
           </div>
           <div class="flex flex-col gap-6">
             <h4 class="H5 hidden lg:block">
-              The Art of French Cooking: Mastering Classic Recipes
+            Unlocking the Secrets of Acupressure: Enhancing Well-being Through Pressure Points
             </h4>
             <h4 class="H5 lg:hidden block">
-              The Art of French Cooking: Mastering Classic Recipes
+            Unlocking the Secrets of Acupressure: Enhancing Well-being Through Pressure Points
             </h4>
 
             <div class="flex flex-col gap-4 lg:gap-6">
-              <div class="flex justify-between items-center">
-                <span class="grn-10 grn-60 H6 hidden lg:block py-2 px-4 rounded-lg ">
-                  Herbal Wellness
-                </span>
-                <span class=" lg:hidden block grn-10 grn-60 subH py-2 px-4 rounded-lg">
-                  Herbal Wellness
-                </span>
-                <p class="H6 hidden lg:block"> 3 mins read</p>
-                <p class="subH lg:hidden block"> 3 mins read</p>
+              <div class="flex-row gap-2 lg:hidden flex items-center">
+                <div class="flex flex-col gap-2">
+                  <p class="subH">By Salym Wellness Center Team</p>
+                  <p class="subH black7">Published 14th May, 2023</p>
+                </div>
+              </div>
+              
+              <div class="flex-row gap-4 hidden lg:flex items-center">
+                <div class="flex flex-col gap-2">
+                  <p class="h6">By Salym Wellness Center Team</p>
+                  <p class="subH black7">Published 14th May, 2023</p>
+                </div>
               </div>
 
-              <div class="flex-row gap-4 hidden lg:flex items-center">
-                <Image
-                  alt="png will occupy here"
-                  src="/t2.svg"
-                  priority
-                  width="56"
-                  height="56"
-                  quality={100}
-                  unoptimized={true}
-                />
-                <div class="flex flex-col gap-2">
-                  <p class="h6">Otuya Howard</p>
-                  <p class="subH black7">Software Engineering</p>
-                </div>
-              </div>
-              <div class="flex-row gap-2 lg:hidden flex items-center">
-                <Image
-                  alt="png will occupy here"
-                  src="/t2.svg"
-                  width="40"
-                  height="40"
-                  priority
-                  quality={100}
-                  unoptimized={true}
-                />
-                <div class="flex flex-col gap-2">
-                  <p class="subH">Otuya Howard</p>
-                  <p class="subH black7">Software Engineering</p>
-                </div>
+              <div class="flex gap-8 lg:justify-start justify-between items-center">
+                <span class="grn-10 grn-60 H6 hidden lg:block py-2 px-4 rounded-lg ">
+                  Physical Therapy
+                </span>
+                <span class=" lg:hidden block grn-10 grn-60 subH py-2 px-4 rounded-lg">
+                  Physical Therapy
+                </span>
+                <p class="H6 hidden lg:block">6 mins read</p>
+                <p class="subH lg:hidden block">6 mins read</p>
               </div>
             </div>
           </div>
@@ -441,54 +424,74 @@ export default function About() {
         <div class=" flex flex-col gap-8 lg:gap-12 pt-12 lg:pt-16">
           <div class="gap-4 flex flex-col">
             <p class="B4 hidden lg:block">
-              If you love French cuisine, you've probably heard of Julia Child's "Mastering the Art of French Cooking." This classic cookbook has been the go-to guide for home cooks looking to learn the fundamentals of French cuisine for over 50 years. In this blog post, we'll explore why this book is a must-have for anyone looking to master the art of French cooking.
+              Acupressure is an ancient healing technique that has been used for centuries to promote well-being and alleviate various ailments. By applying pressure to specific points on the body, acupressure stimulates the body's natural healing abilities and restores balance. In this blog post, we will delve into the fascinating world of acupressure and explore how it can enhance your overall well-being.
             </p>
             <p class="B5 lg:hidden block">
-              If you love French cuisine, you've probably heard of Julia Child's "Mastering the Art of French Cooking." This classic cookbook has been the go-to guide for home cooks looking to learn the fundamentals of French cuisine for over 50 years. In this blog post, we'll explore why this book is a must-have for anyone looking to master the art of French cooking.
+              Acupressure is an ancient healing technique that has been used for centuries to promote well-being and alleviate various ailments. By applying pressure to specific points on the body, acupressure stimulates the body's natural healing abilities and restores balance. In this blog post, we will delve into the fascinating world of acupressure and explore how it can enhance your overall well-being.
             </p>
           </div>
           <div class="gap-4 flex flex-col">
             <h4 class="H4 hidden lg:block">
-              The History of "Mastering the Art of French Cooking
+              What is Acupressure?
             </h4>
             <h4 class="H6 lg:hidden block">
-              The History of "Mastering the Art of French Cooking
+              What is Acupressure?
             </h4>
             <p class="B4 hidden lg:block">
-              Julia Child, Simone Beck, and Louisette Bertholle co-authored "Mastering the Art of French Cooking" in 1961. The book was an instant success and became a staple in many American kitchens. Its popularity can be attributed to its clear and concise instructions, as well as the emphasis on using fresh, high-quality ingredients.
+              Acupressure is a non-invasive practice derived from traditional Chinese medicine. It is based on the concept that vital energy, known as Qi, flows through meridians in the body. By applying pressure to specific points along these meridians, blockages are cleared, and the energy can flow freely, promoting physical and mental well-being.
             </p>
             <p class="B5 lg:hidden block">
-              Julia Child, Simone Beck, and Louisette Bertholle co-authored "Mastering the Art of French Cooking" in 1961. The book was an instant success and became a staple in many American kitchens. Its popularity can be attributed to its clear and concise instructions, as well as the emphasis on using fresh, high-quality ingredients.
+              Acupressure is a non-invasive practice derived from traditional Chinese medicine. It is based on the concept that vital energy, known as Qi, flows through meridians in the body. By applying pressure to specific points along these meridians, blockages are cleared, and the energy can flow freely, promoting physical and mental well-being.
             </p>
           </div>
           <div class="gap-4 flex flex-col">
-            <h4 class="H4 hidden lg:block">The Techniques of French Cooking</h4>
-            <h4 class="H6 lg:hidden block">The Techniques of French Cooking</h4>
+            <h4 class="H4 hidden lg:block">The Benefits of Acupressure</h4>
+            <h4 class="H6 lg:hidden block">The Benefits of Acupressure</h4>
             <p class="B4 hidden lg:block">
-              One of the most significant benefits of "Mastering the Art of French Cooking" is its focus on teaching the fundamental techniques of French cooking. The book covers everything from basic knife skills to advanced techniques like souffle-making. By mastering these techniques, home cooks can create a wide variety of dishes and build a foundation for future culinary endeavors.
+              Acupressure offers a wide range of benefits for both physical and mental health. By targeting specific pressure points, it can help to relieve pain, reduce stress and anxiety, improve circulation, enhance digestion, boost the immune system, and promote relaxation. Regular acupressure sessions can provide long-term benefits and contribute to a healthier and more balanced life.
             </p>
             <p class="B5 lg:hidden block">
-              One of the most significant benefits of "Mastering the Art of French Cooking" is its focus on teaching the fundamental techniques of French cooking. The book covers everything from basic knife skills to advanced techniques like souffle-making. By mastering these techniques, home cooks can create a wide variety of dishes and build a foundation for future culinary endeavors.
+              Acupressure offers a wide range of benefits for both physical and mental health. By targeting specific pressure points, it can help to relieve pain, reduce stress and anxiety, improve circulation, enhance digestion, boost the immune system, and promote relaxation. Regular acupressure sessions can provide long-term benefits and contribute to a healthier and more balanced life.
             </p>
           </div>
           <div class="gap-4 flex flex-col">
-            <h4 class="H4 hidden lg:block">The Classic French Recipes</h4>
-            <h4 class="H6 lg:hidden block">The Classic French Recipes</h4>
+            <h4 class="H4 hidden lg:block">Common Pressure Points for Well-being</h4>
+            <h4 class="H6 lg:hidden block">Common Pressure Points for Well-being</h4>
             <p class="B4 hidden lg:block">
-              "Mastering the Art of French Cooking" is filled with classic French recipes that have stood the test of time. From Beef Bourguignon to Coq au Vin, these recipes are not only delicious but also provide an excellent introduction to French cuisine. The recipes are written in a straightforward, easy-to-follow manner, making them accessible to cooks of all skill levels.
+              In acupressure, there are numerous pressure points located throughout the body that correspond to different organs, systems, and conditions. Some commonly targeted pressure points include the LI4 point for headache relief, the PC6 point for reducing nausea and anxiety, and the LV3 point for promoting liver health. Each pressure point has unique benefits and applications, and consulting with a qualified acupressure practitioner can help you identify the most appropriate points for your specific needs.
             </p>
             <p class="B5 lg:hidden block">
-              "Mastering the Art of French Cooking" is filled with classic French recipes that have stood the test of time. From Beef Bourguignon to Coq au Vin, these recipes are not only delicious but also provide an excellent introduction to French cuisine. The recipes are written in a straightforward, easy-to-follow manner, making them accessible to cooks of all skill levels.
+              In acupressure, there are numerous pressure points located throughout the body that correspond to different organs, systems, and conditions. Some commonly targeted pressure points include the LI4 point for headache relief, the PC6 point for reducing nausea and anxiety, and the LV3 point for promoting liver health. Each pressure point has unique benefits and applications, and consulting with a qualified acupressure practitioner can help you identify the most appropriate points for your specific needs.
+            </p>
+          </div>
+          <div class="gap-4 flex flex-col">
+            <h4 class="H4 hidden lg:block">Acupressure Techniques and Tools</h4>
+            <h4 class="H6 lg:hidden block">Acupressure Techniques and Tools</h4>
+            <p class="B4 hidden lg:block">
+              Acupressure can be performed using various techniques and tools. Finger pressure is the most common method, where gentle yet firm pressure is applied using the fingertips or knuckles. Other techniques include palm pressure, where the entire palm is used to apply pressure, and wristband acupressure, which utilizes specially designed wristbands with acupressure buttons. Additionally, acupressure mats and pillows with strategically placed spikes can provide a therapeutic effect when lying or sitting on them.
+            </p>
+            <p class="B5 lg:hidden block">
+              Acupressure can be performed using various techniques and tools. Finger pressure is the most common method, where gentle yet firm pressure is applied using the fingertips or knuckles. Other techniques include palm pressure, where the entire palm is used to apply pressure, and wristband acupressure, which utilizes specially designed wristbands with acupressure buttons. Additionally, acupressure mats and pillows with strategically placed spikes can provide a therapeutic effect when lying or sitting on them.
+            </p>
+          </div>
+          <div class="gap-4 flex flex-col">
+            <h4 class="H4 hidden lg:block">Incorporating Acupressure Into Your Daily Routine</h4>
+            <h4 class="H6 lg:hidden block">Incorporating Acupressure Into Your Daily Routine</h4>
+            <p class="B4 hidden lg:block">
+              Acupressure can easily be incorporated into your daily routine to promote overall well-being. Simple self-care practices such as a daily acupressure massage, focusing on key pressure points, can help you reap the benefits. You can also explore acupressure techniques for specific concerns or seek professional guidance from an acupressure practitioner.
+            </p>
+            <p class="B5 lg:hidden block">
+              Acupressure can easily be incorporated into your daily routine to promote overall well-being. Simple self-care practices such as a daily acupressure massage, focusing on key pressure points, can help you reap the benefits. You can also explore acupressure techniques for specific concerns or seek professional guidance from an acupressure practitioner.
             </p>
           </div>
           <div class="gap-4 flex flex-col">
             <h4 class="H4 hidden lg:block">Conclusion</h4>
             <h4 class="H6 lg:hidden block">Conclusion</h4>
             <p class="B4 hidden lg:block">
-              Whether you're a seasoned home cook or just starting, "Mastering the Art of French Cooking" is an essential cookbook to have in your collection. Its focus on technique, fresh ingredients, and classic recipes provides a solid foundation for anyone looking to explore the art of French cooking. With this cookbook by your side, you'll be able to impress your family and friends with delicious French cuisine in no time.
+             Unlocking the secrets of acupressure can lead to a transformative journey of self-healing and well-being. By tapping into the power of pressure points, you can experience a myriad of benefits, from pain relief to stress reduction and enhanced vitality. Whether you choose to explore acupressure on your own or seek professional guidance, this ancient practice has the potential to unlock a world of wellness and vitality. Start your acupressure journey today and discover the incredible benefits it holds for you.
             </p>
             <p class="B5 lg:hidden block">
-              Whether you're a seasoned home cook or just starting, "Mastering the Art of French Cooking" is an essential cookbook to have in your collection. Its focus on technique, fresh ingredients, and classic recipes provides a solid foundation for anyone looking to explore the art of French cooking. With this cookbook by your side, you'll be able to impress your family and friends with delicious French cuisine in no time.
+             Unlocking the secrets of acupressure can lead to a transformative journey of self-healing and well-being. By tapping into the power of pressure points, you can experience a myriad of benefits, from pain relief to stress reduction and enhanced vitality. Whether you choose to explore acupressure on your own or seek professional guidance, this ancient practice has the potential to unlock a world of wellness and vitality. Start your acupressure journey today and discover the incredible benefits it holds for you.
             </p>
           </div>
         </div>

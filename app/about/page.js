@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import LinesEllipsis from "react-lines-ellipsis";
 import axios from "axios";
 
 const popuphandler = () => {
@@ -316,13 +317,27 @@ export default function About() {
           />
         </div>
         <div class="flex gap-8 flex-col">
-          <div class="H6 ">Home</div>
-          <div class="H6 ">About Us</div>
-          <div class="H6 ">Clinicals</div>
-          <div class="H6 ">Production</div>
-          <div class="H6 ">Blog</div>
-          <div class="H6 ">Contact US</div>
-          <button class="buttonC H6">Book a Consultation</button>
+          <Link onClick={popuphandler} href="/about/#" class="H6 ">
+            Home
+          </Link>
+          <Link onClick={popuphandler} href="/about" class="H6 ">
+            About Us
+          </Link>
+          <Link onClick={popuphandler} href="/about/#clinicals" class="H6 ">
+            Clinicals
+          </Link>
+          <Link onClick={popuphandler} href="/about/#productions" class="H6 ">
+            Production
+          </Link>
+          <Link onClick={popuphandler} href="/blog" class="H6 ">
+            Blog
+          </Link>
+          <Link onClick={popuphandler} href="/about/#contact" class="H6 ">
+            Contact US
+          </Link>
+          <Link onClick={popuphandler} href="/about/#contact" class="buttonC H6">
+            Book a Consultation
+          </Link>
         </div>
         <div class="flex flex-col pb-8 gap-6 justify-center items-center">
           <div class="flex gap-6">
@@ -490,13 +505,24 @@ export default function About() {
               healing, and we believe that the use of organic herbs and natural
               ingredients can provide effective and safe health solutions.
             </p>
+            
             <div>
-              <button class="buttonM hidden lg:block H6">
-                Connect with Us
-              </button>
-              <button class="buttonM lg:hidden block subH">
-                Connect with Us
-              </button>
+              <div class="hidden lg:flex">
+                <Link
+                  href="/about/#contact"
+                  class="buttonM hidden lg:flex items-start w-auto H6"
+                >
+                  Connect with Us
+                </Link>
+              </div>
+              <div class="lg:hidden flex">
+                <Link
+                  href="/about/#contact"
+                  class="buttonM lg:hidden flex items-start w-auto subH"
+                >
+                  Connect with Us
+                </Link>
+              </div>
             </div>
           </div>
         </section>
@@ -915,7 +941,7 @@ export default function About() {
           </div>
         </section>
 
-        <section class="pt-24 lg:pt-48">
+        <section class="onws">
           <div class="flex flex-col lg:justify-center gap-4">
             <h4 class="H4 text-center hidden lg:block">
               Our Natural Health Solutions
@@ -936,7 +962,7 @@ export default function About() {
           </div>
 
           <div class="">
-            <div class="lg:pt-16 pt-8 flex flex-col gap-6">
+            <div id="clinicals" class="lg:pt-16 pt-8 flex flex-col gap-6">
               <h4 class="H4 hidden lg:block">Clinicals</h4>
               <h4 class="H5 lg:hidden block">Clinicals</h4>
 
@@ -1162,17 +1188,24 @@ export default function About() {
             </div>
 
             <div class="lg:pt-12 pt-6 flex lg:justify-center gap-6">
-              <button class="buttonM hidden lg:block H6">
+              <Link href="#contact" class="buttonM hidden lg:block H6">
                 Book a Consultation
-              </button>
-              <button class="buttonM lg:hidden block subH">
+              </Link>
+              <Link href="#contact" class="buttonM lg:hidden block subH">
                 Book a Consultation
-              </button>
-              <button class="buttonO hidden lg:block H6">Learn More</button>
-              <button class="buttonO lg:hidden block subH">Learn More</button>
+              </Link>
+              <Link href="#contact" class="buttonO hidden lg:block H6">
+                Learn More
+              </Link>
+              <Link href="#contact" class="buttonO lg:hidden block subH">
+                Learn More
+              </Link>
             </div>
 
-            <div class="lg:pt-24 pt-20 flex w-full justify-between">
+            <div
+              id="productions"
+              class="lg:pt-24 pt-20 flex w-full justify-between"
+            >
               <h4 class="H4 hidden lg:block self-end">Production</h4>
               <h4 class="H5 lg:hidden block self-end">Production</h4>
               <div class="lg:hidden flex flex-row items-center justify-center gap-2">
@@ -1465,12 +1498,12 @@ export default function About() {
             </div>
 
             <div class="lg:pt-12 pt-6 flex lg:justify-center gap-6">
-              <button class="buttonM hidden lg:block H6">
+              <Link href="#contact" class="buttonM hidden lg:block H6">
                 Reach Out to US
-              </button>
-              <button class="buttonM lg:hidden block subH">
+              </Link>
+              <Link href="#contact" class="buttonM lg:hidden block subH">
                 Reach Out to US
-              </button>
+              </Link>
               <button class="buttonO hidden lg:block H6">View Catalogue</button>
               <button class="buttonO lg:hidden block subH">
                 View Catalogue
@@ -1479,7 +1512,7 @@ export default function About() {
           </div>
         </section>
 
-        <section class="onws">
+        <section id="testimonials" class="onws">
           <div class="flex flex-col lg:justify-center gap-4">
             <h4 class="H4 text-center hidden lg:block">Testimonials</h4>
             <h4 class="H5 lg:hidden block">Testimonials</h4>
@@ -1690,7 +1723,7 @@ export default function About() {
           </div>
         </section>
 
-        <section class="onwss">
+        <section id="contact" class="onwss">
           <div class="flex flex-col lg:justify-center gap-4">
             <h4 class="H4 text-center hidden lg:block">Get in Touch</h4>
             <h4 class="H5 lg:hidden block">Get in Touch</h4>
@@ -2066,18 +2099,75 @@ export default function About() {
 
             <div class="flex lg:flex-row flex-col justify-between lg:items-center pt-12 lg:pt-16">
               <div class="flex lg:flex-row pb-12 lg:pb-0 flex-col gap-10">
-                <p class="H6 hidden lg:block ">Home</p>
-                <p class="subH lg:hidden block">Home</p>
-                <p class="H6 hidden lg:block">About</p>
-                <p class="subH lg:hidden block">About</p>
-                <p class="H6 hidden lg:block">Clinicals</p>
-                <p class="subH lg:hidden block">Clinicals</p>
-                <p class="H6 hidden lg:block ">Productions</p>
-                <p class="subH lg:hidden block">Productions</p>
-                <p class="H6 hidden lg:block">Blog</p>
-                <p class="subH lg:hidden block">Blog</p>
-                <p class="H6 hidden lg:block">Contact</p>
-                <p class="subH lg:hidden block">Contact</p>
+                <Link href="/" class="hover:text-green-200 H6 hidden lg:block ">
+                  Home
+                </Link>
+                <Link
+                  href="/"
+                  class="hover:text-green-200 subH lg:hidden block"
+                >
+                  Home
+                </Link>
+                <Link
+                  href="/about"
+                  class="hover:text-green-200 H6 hidden lg:block"
+                >
+                  About
+                </Link>
+                <Link
+                  href="/about"
+                  class="hover:text-green-200 subH lg:hidden block"
+                >
+                  About
+                </Link>
+                <Link
+                  href="/about#clinicals"
+                  class="hover:text-green-200 H6 hidden lg:block"
+                >
+                  Clinicals
+                </Link>
+                <Link
+                  href="/about#clinicals"
+                  class="hover:text-green-200 subH lg:hidden block"
+                >
+                  Clinicals
+                </Link>
+                <Link
+                  href="/about#productions"
+                  class="hover:text-green-200 H6 hidden lg:block "
+                >
+                  Productions
+                </Link>
+                <Link
+                  href="/about#productions"
+                  class="hover:text-green-200 subH lg:hidden block"
+                >
+                  Productions
+                </Link>
+                <Link
+                  href="blog"
+                  class="hover:text-green-200 H6 hidden lg:block"
+                >
+                  Blog
+                </Link>
+                <Link
+                  href="blog"
+                  class="hover:text-green-200 subH lg:hidden block"
+                >
+                  Blog
+                </Link>
+                <Link
+                  href="/about#contact"
+                  class="hover:text-green-200 H6 hidden lg:block"
+                >
+                  Contact
+                </Link>
+                <Link
+                  href="/about#contact"
+                  class="hover:text-green-200 subH lg:hidden block"
+                >
+                  Contact
+                </Link>
               </div>
 
               <div class="flex justify-center gap-4">
