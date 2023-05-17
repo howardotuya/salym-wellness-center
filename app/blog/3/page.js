@@ -22,6 +22,8 @@ export default function About() {
       closeButtons[i].addEventListener("click", function () {
         document.getElementById("modales").style.display = "none";
         document.getElementById("modalss").style.display = "none";
+        document.getElementById("modalec").style.display = "none";
+        document.getElementById("modalsc").style.display = "none";
       });
     }
   }, []);
@@ -143,8 +145,7 @@ export default function About() {
             </button>
           </div>
         </div>
-      </div>
-      <div
+      </div><div
         id="modalsc"
         class="flex px-6 justify-center items-center w-full h-full"
       >
@@ -201,7 +202,7 @@ export default function About() {
         </div>
       </div>
       <div
-        id="modales"
+        id="modalec"
         class="flex px-6 justify-center items-center w-full h-full"
       >
         <div class="max-w-xl danger w-full items-center rounded-2xl bg-white flex flex-col px-6 py-10 gap-6">

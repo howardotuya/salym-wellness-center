@@ -22,6 +22,8 @@ export default function About() {
       closeButtons[i].addEventListener("click", function () {
         document.getElementById("modales").style.display = "none";
         document.getElementById("modalss").style.display = "none";
+        document.getElementById("modalec").style.display = "none";
+        document.getElementById("modalsc").style.display = "none";
       });
     }
   }, []);
@@ -61,12 +63,12 @@ export default function About() {
         }
       );
 
-      document.getElementById("modalss").style.display = "flex";
+      document.getElementById("modalsc").style.display = "flex";
       document.getElementById("low-contact").style.display = "flex";
       document.getElementById("low-contact2").style.display = "none";
       setEmail("");
     } catch (error) {
-      document.getElementById("modales").style.display = "flex";
+      document.getElementById("modalec").style.display = "flex";
       document.getElementById("low-contact").style.display = "flex";
       document.getElementById("low-contact2").style.display = "none";
       setEmail("");
@@ -76,7 +78,7 @@ export default function About() {
     <>
       <div
         id="modalss"
-        class="flex px-6 justify-center items-center w-full h-full"
+        class="flex z-50 px-6 justify-center items-center w-full h-full"
       >
         <div class="max-w-xl success w-full items-center rounded-2xl bg-white flex flex-col px-4 lg:px-6 py-10 gap-4 lg:gap-6">
           <div>
@@ -132,7 +134,7 @@ export default function About() {
       </div>
       <div
         id="modales"
-        class="flex px-6 justify-center items-center w-full h-full"
+        class="flex z-50 px-6 justify-center items-center w-full h-full"
       >
         <div class="max-w-xl danger w-full items-center rounded-2xl bg-white flex flex-col px-6 py-10 gap-6">
           <div>
@@ -192,7 +194,7 @@ export default function About() {
       </div>
       <div
         id="modalsc"
-        class="flex px-6 justify-center items-center w-full h-full"
+        class="flex z-50 px-6 justify-center items-center w-full h-full"
       >
         <div class="max-w-xl success w-full items-center rounded-2xl bg-white flex flex-col px-4 lg:px-6 py-10 gap-4 lg:gap-6">
           <div>
@@ -247,8 +249,8 @@ export default function About() {
         </div>
       </div>
       <div
-        id="modales"
-        class="flex px-6 justify-center items-center w-full h-full"
+        id="modalec"
+        class="flex z-50 px-6 justify-center items-center w-full h-full"
       >
         <div class="max-w-xl danger w-full items-center rounded-2xl bg-white flex flex-col px-6 py-10 gap-6">
           <div>
@@ -260,7 +262,6 @@ export default function About() {
               width="96"
               height="96"
               quality={100}
-               
             />
             <Image
               alt="png will occupy here"
@@ -270,7 +271,6 @@ export default function About() {
               height="64"
               priority
               quality={100}
-               
             />
           </div>
           <div>
@@ -308,7 +308,6 @@ export default function About() {
           <Image
             alt="png will occupy here"
             onClick={popuphandler}
-             
             class="cancel"
             src="/close-circle.svg"
             width="48"
@@ -335,7 +334,11 @@ export default function About() {
           <Link onClick={popuphandler} href="/about/#contact" class="H6 ">
             Contact US
           </Link>
-          <Link onClick={popuphandler} href="/about/#contact" class="buttonC H6">
+          <Link
+            onClick={popuphandler}
+            href="/about/#contact"
+            class="buttonC H6"
+          >
             Book a Consultation
           </Link>
         </div>
@@ -344,7 +347,6 @@ export default function About() {
             <div>
               <Image
                 alt="png will occupy here"
-                 
                 class="cancel"
                 src="/IG.svg"
                 width="24"
@@ -355,7 +357,6 @@ export default function About() {
             <div>
               <Image
                 alt="png will occupy here"
-                 
                 class="cancel"
                 src="/fb.svg"
                 width="24"
@@ -366,7 +367,6 @@ export default function About() {
             <div>
               <Image
                 alt="png will occupy here"
-                 
                 class="cancel"
                 src="/twit.svg"
                 width="24"
@@ -386,10 +386,9 @@ export default function About() {
       <main class="body-margin">
         <header>
           <nav class="flex items-center flex-row justify-between">
-          <Link href="/">
+            <Link href="/">
               <Image
                 alt="png will occupy here"
-                 
                 class="hidden lg:block"
                 src="/logoLarge.png"
                 width="46"
@@ -398,7 +397,6 @@ export default function About() {
               />
               <Image
                 alt="png will occupy here"
-                 
                 class="lg:hidden block"
                 src="/logoLarge.png"
                 width="34"
@@ -429,7 +427,6 @@ export default function About() {
             <Image
               alt="png will occupy here"
               onClick={popuphandler}
-               
               class="lg:hidden block"
               src="/menu.svg"
               width="44"
@@ -470,7 +467,6 @@ export default function About() {
               width="488"
               height="478"
               quality={100}
-               
             />
             <Image
               alt="png will occupy here"
@@ -479,7 +475,6 @@ export default function About() {
               width="345"
               height="338"
               quality={100}
-               
             />
           </div>
           <div class="order-2 about-cont-right lg:w-1/2 flex gap-4 flex-col lg:gap-8">
@@ -505,7 +500,7 @@ export default function About() {
               healing, and we believe that the use of organic herbs and natural
               ingredients can provide effective and safe health solutions.
             </p>
-            
+
             <div>
               <div class="hidden lg:flex">
                 <Link
@@ -538,7 +533,6 @@ export default function About() {
                 width="80"
                 height="80"
                 quality={100}
-                 
               />
               <Image
                 alt="png will occupy here"
@@ -548,7 +542,6 @@ export default function About() {
                 height="56"
                 priority
                 quality={100}
-                 
               />
               <h5 class="H5 grn-110 hidden lg:block">Our Mission</h5>
               <h5 class="H6 grn-110 lg:hidden block">Our Mission</h5>
@@ -580,7 +573,6 @@ export default function About() {
                 width="80"
                 height="80"
                 quality={100}
-                 
               />
               <Image
                 alt="png will occupy here"
@@ -590,27 +582,26 @@ export default function About() {
                 height="56"
                 priority
                 quality={100}
-                 
               />
               <h5 class="H5 grn-110 hidden lg:block">Our Vision</h5>
               <h5 class="H6 grn-110 lg:hidden block">Our Vision</h5>
               <p class="B4 grn-50 hidden lg:block">
                 To become the leading producer of natural herbal medical
                 products in Africa. We strive to empower our customers with the
-                best of nature&apos;s healing power, and provide safe and effective
-                solutions for their health needs. With a focus on indigenous
-                sources and a commitment to the environment, It is our main aim
-                to bring a balanced approach to healthcare and make natural
-                wellness accessible to every human being.
+                best of nature&apos;s healing power, and provide safe and
+                effective solutions for their health needs. With a focus on
+                indigenous sources and a commitment to the environment, It is
+                our main aim to bring a balanced approach to healthcare and make
+                natural wellness accessible to every human being.
               </p>
               <p class="B5 grn-50 lg:hidden block">
                 To become the leading producer of natural herbal medical
                 products in Africa. We strive to empower our customers with the
-                best of nature&apos;s healing power, and provide safe and effective
-                solutions for their health needs. With a focus on indigenous
-                sources and a commitment to the environment, It is our main aim
-                to bring a balanced approach to healthcare and make natural
-                wellness accessible to every human being.
+                best of nature&apos;s healing power, and provide safe and
+                effective solutions for their health needs. With a focus on
+                indigenous sources and a commitment to the environment, It is
+                our main aim to bring a balanced approach to healthcare and make
+                natural wellness accessible to every human being.
               </p>
             </div>
           </div>
@@ -647,7 +638,6 @@ export default function About() {
                 width="80"
                 height="80"
                 quality={100}
-                 
               />
               <Image
                 alt="png will occupy here"
@@ -657,7 +647,6 @@ export default function About() {
                 height="56"
                 priority
                 quality={100}
-                 
               />
               <h5 class="H5 grn-110 hidden lg:block">+ 4 years</h5>
               <h5 class="H6 grn-110 lg:hidden block">+ 4 years</h5>
@@ -679,7 +668,6 @@ export default function About() {
                 width="80"
                 height="80"
                 quality={100}
-                 
               />
               <Image
                 alt="png will occupy here"
@@ -689,7 +677,6 @@ export default function About() {
                 height="56"
                 priority
                 quality={100}
-                 
               />
               <h5 class="H5 grn-110 hidden lg:block">+ 70 Customers</h5>
               <h5 class="H6 grn-110 lg:hidden block">+ 70 Customers</h5>
@@ -711,7 +698,6 @@ export default function About() {
                 width="80"
                 height="80"
                 quality={100}
-                 
               />
               <Image
                 alt="png will occupy here"
@@ -721,7 +707,6 @@ export default function About() {
                 height="56"
                 priority
                 quality={100}
-                 
               />
               <h5 class="H5 grn-110 hidden lg:block">+100 Million Generated</h5>
               <h5 class="H6 grn-110 lg:hidden block">+100 Million Generated</h5>
@@ -743,7 +728,6 @@ export default function About() {
                 width="80"
                 height="80"
                 quality={100}
-                 
               />
               <Image
                 alt="png will occupy here"
@@ -753,7 +737,6 @@ export default function About() {
                 height="56"
                 priority
                 quality={100}
-                 
               />
               <h5 class="H5 grn-110 hidden lg:block">7 Employees</h5>
               <h5 class="H6 grn-110 lg:hidden block">7 Employees</h5>
@@ -797,7 +780,6 @@ export default function About() {
                 width="80"
                 height="80"
                 quality={100}
-                 
               />
               <Image
                 alt="png will occupy here"
@@ -807,7 +789,6 @@ export default function About() {
                 height="56"
                 priority
                 quality={100}
-                 
               />
               <h5 class="H5 grn-110 hidden lg:block">Individuals</h5>
               <h5 class="H6 grn-110 lg:hidden block">Individuals</h5>
@@ -837,7 +818,6 @@ export default function About() {
                 width="80"
                 height="80"
                 quality={100}
-                 
               />
               <Image
                 alt="png will occupy here"
@@ -847,7 +827,6 @@ export default function About() {
                 height="56"
                 priority
                 quality={100}
-                 
               />
               <h5 class="H5 grn-110 hidden lg:block">Businesses</h5>
               <h5 class="H6 grn-110 lg:hidden block">Businesses</h5>
@@ -976,7 +955,6 @@ export default function About() {
                     width="80"
                     height="80"
                     quality={100}
-                     
                   />
                   <Image
                     alt="png will occupy here"
@@ -986,7 +964,6 @@ export default function About() {
                     height="48"
                     priority
                     quality={100}
-                     
                   />
                   <div class="flex flex-col gap-4">
                     <h5 class="H5 grn-110 hidden lg:block">Herbal Therapy</h5>
@@ -1012,7 +989,6 @@ export default function About() {
                     width="80"
                     height="80"
                     quality={100}
-                     
                   />
                   <Image
                     alt="png will occupy here"
@@ -1022,7 +998,6 @@ export default function About() {
                     height="48"
                     priority
                     quality={100}
-                     
                   />
                   <div class="flex flex-col gap-4">
                     <h5 class="H5 grn-110 hidden lg:block">Physical Therapy</h5>
@@ -1048,7 +1023,6 @@ export default function About() {
                     width="80"
                     height="80"
                     quality={100}
-                     
                   />
                   <Image
                     alt="png will occupy here"
@@ -1058,7 +1032,6 @@ export default function About() {
                     height="48"
                     priority
                     quality={100}
-                     
                   />
                   <div class="flex flex-col gap-4">
                     <h5 class="H5 grn-110 hidden lg:block">Massage</h5>
@@ -1084,7 +1057,6 @@ export default function About() {
                     width="80"
                     height="80"
                     quality={100}
-                     
                   />
                   <Image
                     alt="png will occupy here"
@@ -1094,7 +1066,6 @@ export default function About() {
                     height="48"
                     priority
                     quality={100}
-                     
                   />
                   <div class="flex flex-col gap-4">
                     <h5 class="H5 grn-110 hidden lg:block">Acupressure</h5>
@@ -1120,7 +1091,6 @@ export default function About() {
                     width="80"
                     height="80"
                     quality={100}
-                     
                   />
                   <Image
                     alt="png will occupy here"
@@ -1130,7 +1100,6 @@ export default function About() {
                     height="48"
                     priority
                     quality={100}
-                     
                   />
                   <div class="flex flex-col gap-4">
                     <h5 class="H5 grn-110 hidden lg:block">Naturopathy</h5>
@@ -1156,7 +1125,6 @@ export default function About() {
                     width="80"
                     height="80"
                     quality={100}
-                     
                   />
                   <Image
                     alt="png will occupy here"
@@ -1166,7 +1134,6 @@ export default function About() {
                     height="48"
                     priority
                     quality={100}
-                     
                   />
 
                   <div class="flex flex-col gap-4 w-auto">
@@ -1284,14 +1251,12 @@ export default function About() {
                     src="/p1.png"
                     priority
                     quality={100}
-                     
                   />
                   <img
                     class="H4 text-center lg:hidden block self-center"
                     src="/p1.png"
                     priority
                     quality={100}
-                     
                   />
                   <h4 class="H5 hidden lg:block self-end text-center pt-4">
                     Local Herbs and Leaves
@@ -1306,14 +1271,12 @@ export default function About() {
                     src="/p2.png"
                     priority
                     quality={100}
-                     
                   />
                   <img
                     class="H4 text-center lg:hidden block self-center"
                     src="/p2.png"
                     priority
                     quality={100}
-                     
                   />
                   <h4 class="H5 hidden lg:block self-end text-center pt-4">
                     Local Roots and Barks
@@ -1328,14 +1291,12 @@ export default function About() {
                     src="/p3.png"
                     priority
                     quality={100}
-                     
                   />
                   <img
                     class="H4 text-center lg:hidden block self-center"
                     src="/p3.png"
                     priority
                     quality={100}
-                     
                   />
                   <h4 class="H5 hidden lg:block self-end text-center pt-4">
                     Seeds, Flowers and Fruits
@@ -1350,14 +1311,12 @@ export default function About() {
                     src="/p4.png"
                     priority
                     quality={100}
-                     
                   />
                   <img
                     class="H4 text-center lg:hidden block self-center"
                     src="/p4.png"
                     priority
                     quality={100}
-                     
                   />
                   <h4 class="H5 hidden lg:block self-end text-center pt-4">
                     Spices
@@ -1370,14 +1329,12 @@ export default function About() {
                     src="/p5.png"
                     priority
                     quality={100}
-                     
                   />
                   <img
                     class="H4 text-center lg:hidden block self-center"
                     src="/p5.png"
                     priority
                     quality={100}
-                     
                   />
                   <h4 class="H5 hidden lg:block self-end text-center pt-4">
                     Foreign Products
@@ -1392,14 +1349,12 @@ export default function About() {
                     src="/p6.png"
                     priority
                     quality={100}
-                     
                   />
                   <img
                     class="H4 text-center lg:hidden block self-center"
                     src="/p6.png"
                     priority
                     quality={100}
-                     
                   />
                   <h4 class="H5 hidden lg:block self-end text-center pt-4">
                     Oils and Fluids
@@ -1414,14 +1369,12 @@ export default function About() {
                     src="/p7.png"
                     priority
                     quality={100}
-                     
                   />
                   <img
                     class="H4 text-center lg:hidden block self-center"
                     src="/p7.png"
                     priority
                     quality={100}
-                     
                   />
                   <h4 class="H5 hidden lg:block self-end text-center pt-4">
                     Teas
@@ -1434,14 +1387,12 @@ export default function About() {
                     src="/p8.png"
                     priority
                     quality={100}
-                     
                   />
                   <img
                     class="H4 text-center lg:hidden block self-center"
                     src="/p8.png"
                     priority
                     quality={100}
-                     
                   />
                   <h4 class="H5 hidden lg:block self-end text-center pt-4">
                     Apparatus
@@ -1456,14 +1407,12 @@ export default function About() {
                     src="/p9.png"
                     priority
                     quality={100}
-                     
                   />
                   <img
                     class="H4 text-center lg:hidden block self-center"
                     src="/p9.png"
                     priority
                     quality={100}
-                     
                   />
                   <h4 class="H5 hidden lg:block self-end text-center pt-4">
                     Cosmetics - Creams/Soaps
@@ -1478,14 +1427,12 @@ export default function About() {
                     src="/p10.png"
                     priority
                     quality={100}
-                     
                   />
                   <img
                     class="H4 text-center lg:hidden mlock self-center"
                     src="/p10.png"
                     priority
                     quality={100}
-                     
                   />
                   <h4 class="H5 hidden lg:block self-end text-center pt-4">
                     Salts, Edibles and Miscellaneous
@@ -1542,7 +1489,6 @@ export default function About() {
                     width="80"
                     height="80"
                     quality={100}
-                     
                   />
                   <Image
                     alt="png will occupy here"
@@ -1552,13 +1498,20 @@ export default function About() {
                     height="64"
                     priority
                     quality={100}
-                     
                   />
                   <p class="B4 hidden lg:block black7 max-w-2xl">
-                    Salym Wellness Centre has been a game-changer for my well-being. Their immune booster and herbal tea blends have significantly improved my health. I'm grateful for their commitment to providing safe and effective herbal solutions. Highly recommended for a holistic approach to wellness.
+                    Salym Wellness Centre has been a game-changer for my
+                    well-being. Their immune booster and herbal tea blends have
+                    significantly improved my health. I'm grateful for their
+                    commitment to providing safe and effective herbal solutions.
+                    Highly recommended for a holistic approach to wellness.
                   </p>
                   <p class="B5 lg:hidden block black7 max-w-2xl ">
-                    Salym Wellness Centre has been a game-changer for my well-being. Their immune booster and herbal tea blends have significantly improved my health. I'm grateful for their commitment to providing safe and effective herbal solutions. Highly recommended for a holistic approach to wellness.
+                    Salym Wellness Centre has been a game-changer for my
+                    well-being. Their immune booster and herbal tea blends have
+                    significantly improved my health. I'm grateful for their
+                    commitment to providing safe and effective herbal solutions.
+                    Highly recommended for a holistic approach to wellness.
                   </p>
                   <div class="flex-col gap-2 hidden lg:flex">
                     <p class="h6">Amina Bello</p>
@@ -1580,7 +1533,6 @@ export default function About() {
                     width="24"
                     height="24"
                     quality={100}
-                     
                   />
                   <Image
                     alt="png will occupy here"
@@ -1590,13 +1542,20 @@ export default function About() {
                     height="24"
                     priority
                     quality={100}
-                     
                   />
                   <p class="B4 hidden lg:block black7 max-w-2xl">
-                    As a pharmacist, I always seek high-quality herbal medicine suppliers. Salym Wellness Centre exceeds my expectations with their extensive range of herbal products. The Organoleptic Method they employ ensures safety and efficacy. A reliable partner for my practice.
+                    As a pharmacist, I always seek high-quality herbal medicine
+                    suppliers. Salym Wellness Centre exceeds my expectations
+                    with their extensive range of herbal products. The
+                    Organoleptic Method they employ ensures safety and efficacy.
+                    A reliable partner for my practice.
                   </p>
                   <p class="B5 lg:hidden block black7 max-w-2xl ">
-                    As a pharmacist, I always seek high-quality herbal medicine suppliers. Salym Wellness Centre exceeds my expectations with their extensive range of herbal products. The Organoleptic Method they employ ensures safety and efficacy. A reliable partner for my practice.
+                    As a pharmacist, I always seek high-quality herbal medicine
+                    suppliers. Salym Wellness Centre exceeds my expectations
+                    with their extensive range of herbal products. The
+                    Organoleptic Method they employ ensures safety and efficacy.
+                    A reliable partner for my practice.
                   </p>
                   <div class="flex-row gap-4 hidden lg:flex items-center">
                     <Image
@@ -1606,7 +1565,6 @@ export default function About() {
                       width="80"
                       height="80"
                       quality={100}
-                       
                     />
                     <div class="flex flex-col gap-2">
                       <p class="h6">Chioma Okonkwo</p>
@@ -1621,7 +1579,6 @@ export default function About() {
                       height="64"
                       priority
                       quality={100}
-                       
                     />
                     <div class="flex flex-col gap-2">
                       <p class="subH">Chioma Okonkwo</p>
@@ -1640,7 +1597,6 @@ export default function About() {
                     width="80"
                     height="80"
                     quality={100}
-                     
                   />
                   <Image
                     alt="png will occupy here"
@@ -1650,13 +1606,20 @@ export default function About() {
                     height="64"
                     priority
                     quality={100}
-                     
                   />
                   <p class="B4 hidden lg:block black7 max-w-2xl">
-                    I've integrated Salym Wellness Centre's herbal therapy into my practice, and my clients have experienced remarkable results. Their commitment to using indigenous sources and comprehensive process documentation sets them apart. A trusted brand in the field of naturopathy.
+                    I've integrated Salym Wellness Centre's herbal therapy into
+                    my practice, and my clients have experienced remarkable
+                    results. Their commitment to using indigenous sources and
+                    comprehensive process documentation sets them apart. A
+                    trusted brand in the field of naturopathy.
                   </p>
                   <p class="B5 lg:hidden block black7 max-w-2xl ">
-                    I've integrated Salym Wellness Centre's herbal therapy into my practice, and my clients have experienced remarkable results. Their commitment to using indigenous sources and comprehensive process documentation sets them apart. A trusted brand in the field of naturopathy.
+                    I've integrated Salym Wellness Centre's herbal therapy into
+                    my practice, and my clients have experienced remarkable
+                    results. Their commitment to using indigenous sources and
+                    comprehensive process documentation sets them apart. A
+                    trusted brand in the field of naturopathy.
                   </p>
                   <div>
                     <div class="flex-col gap-2 hidden lg:flex">
@@ -1979,7 +1942,6 @@ export default function About() {
                       width="24"
                       height="24"
                       quality={100}
-                       
                       priority
                     />
                     <p class="B4 hidden lg:block">
@@ -1997,7 +1959,6 @@ export default function About() {
                       width="24"
                       height="24"
                       quality={100}
-                       
                       priority
                     />
                     <p class="B4 hidden lg:block">+2349121325047</p>
@@ -2011,7 +1972,6 @@ export default function About() {
                       width="24"
                       height="24"
                       quality={100}
-                       
                       priority
                     />
                     <p class="B4 hidden lg:block">info@salymwellness.center</p>
@@ -2033,7 +1993,6 @@ export default function About() {
                       width="24"
                       height="24"
                       quality={100}
-                       
                       priority
                     />
                     <p class="B4 hidden lg:block">
@@ -2053,7 +2012,6 @@ export default function About() {
                       width="24"
                       height="24"
                       quality={100}
-                       
                       priority
                     />
                     <p class="B4 hidden lg:block">+2348061782702</p>
@@ -2067,7 +2025,6 @@ export default function About() {
                       width="24"
                       height="24"
                       quality={100}
-                       
                       priority
                     />
                     <p class="B4 hidden lg:block">info@salymwellness.center</p>
@@ -2158,7 +2115,6 @@ export default function About() {
                   width="24"
                   height="24"
                   quality={100}
-                   
                 />
                 <Image
                   alt="png will occupy here"
@@ -2168,7 +2124,6 @@ export default function About() {
                   height="24"
                   priority
                   quality={100}
-                   
                 />
                 <Image
                   alt="png will occupy here"
@@ -2178,7 +2133,6 @@ export default function About() {
                   width="24"
                   height="24"
                   quality={100}
-                   
                 />
                 <Image
                   alt="png will occupy here"
@@ -2188,7 +2142,6 @@ export default function About() {
                   height="24"
                   priority
                   quality={100}
-                   
                 />
                 <Image
                   alt="png will occupy here"
@@ -2198,7 +2151,6 @@ export default function About() {
                   width="24"
                   height="24"
                   quality={100}
-                   
                 />
                 <Image
                   alt="png will occupy here"
@@ -2208,7 +2160,6 @@ export default function About() {
                   height="24"
                   priority
                   quality={100}
-                   
                 />
               </div>
             </div>

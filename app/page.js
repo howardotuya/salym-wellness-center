@@ -137,6 +137,8 @@ export default function Home() {
       closeButtons[i].addEventListener("click", function () {
         document.getElementById("modales").style.display = "none";
         document.getElementById("modalss").style.display = "none";
+        document.getElementById("modalec").style.display = "none";
+        document.getElementById("modalsc").style.display = "none";
       });
     }
   }, []);
@@ -224,12 +226,12 @@ export default function Home() {
         }
       );
 
-      document.getElementById("modalss").style.display = "flex";
+      document.getElementById("modalsc").style.display = "flex";
       document.getElementById("low-contact").style.display = "flex";
       document.getElementById("low-contact2").style.display = "none";
       setEmail("");
     } catch (error) {
-      document.getElementById("modales").style.display = "flex";
+      document.getElementById("modalec").style.display = "flex";
       document.getElementById("low-contact").style.display = "flex";
       document.getElementById("low-contact2").style.display = "none";
       setEmail("");
@@ -240,7 +242,7 @@ export default function Home() {
     <>
       <div
         id="modalss"
-        class="flex px-6 justify-center items-center w-full h-full"
+        class="flex z-50 px-6 justify-center items-center w-full h-full"
       >
         <div class="max-w-xl success w-full items-center rounded-2xl bg-white flex flex-col px-4 lg:px-6 py-10 gap-4 lg:gap-6">
           <div>
@@ -296,7 +298,7 @@ export default function Home() {
       </div>
       <div
         id="modales"
-        class="flex px-6 justify-center items-center w-full h-full"
+        class="flex z-50 px-6 justify-center items-center w-full h-full"
       >
         <div class="max-w-xl danger w-full items-center rounded-2xl bg-white flex flex-col px-6 py-10 gap-6">
           <div>
@@ -356,7 +358,7 @@ export default function Home() {
       </div>
       <div
         id="modalsc"
-        class="flex px-6 justify-center items-center w-full h-full"
+        class="flex z-50 px-6 justify-center items-center w-full h-full"
       >
         <div class="max-w-xl success w-full items-center rounded-2xl bg-white flex flex-col px-4 lg:px-6 py-10 gap-4 lg:gap-6">
           <div>
@@ -411,8 +413,8 @@ export default function Home() {
         </div>
       </div>
       <div
-        id="modales"
-        class="flex px-6 justify-center items-center w-full h-full"
+        id="modalec"
+        class="flex z-50 px-6 justify-center items-center w-full h-full"
       >
         <div class="max-w-xl danger w-full items-center rounded-2xl bg-white flex flex-col px-6 py-10 gap-6">
           <div>
@@ -1462,10 +1464,10 @@ export default function Home() {
               <Link href="#contact" class="buttonM lg:hidden block subH">
                 Reach Out to US
               </Link>
-              <button class="buttonO hidden lg:block H6">View Catalogue</button>
-              <button class="buttonO lg:hidden block subH">
+              <a href="/Salym-new-products-and-pricing.pdf" target="_blank" class="buttonO hidden lg:block H6">View Catalogue</a>
+              <a href="/Salym-new-products-and-pricing.pdf" target="_blank" class="buttonO lg:hidden block subH">
                 View Catalogue
-              </button>
+              </a>
             </div>
           </div>
         </section>
