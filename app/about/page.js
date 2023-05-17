@@ -90,7 +90,6 @@ export default function About() {
               width="96"
               height="96"
               quality={100}
-               
             />
             <Image
               alt="png will occupy here"
@@ -100,7 +99,6 @@ export default function About() {
               height="64"
               priority
               quality={100}
-               
             />
           </div>
           <div>
@@ -146,7 +144,6 @@ export default function About() {
               width="96"
               height="96"
               quality={100}
-               
             />
             <Image
               alt="png will occupy here"
@@ -156,7 +153,6 @@ export default function About() {
               height="64"
               priority
               quality={100}
-               
             />
           </div>
           <div>
@@ -170,10 +166,12 @@ export default function About() {
           </div>
           <div>
             <p class="B4 grn-50 hidden lg:block">
-              Sorry, we couldn&apos;t process your subscription. Please try again.
+              Sorry, we couldn&apos;t process your subscription. Please try
+              again.
             </p>
             <p class="B5 grn-50 lg:hidden block">
-              Sorry, we couldn&apos;t process your subscription. Please try again.
+              Sorry, we couldn&apos;t process your subscription. Please try
+              again.
             </p>
           </div>
           <div class="flex gap-4">
@@ -206,7 +204,6 @@ export default function About() {
               width="96"
               height="96"
               quality={100}
-               
             />
             <Image
               alt="png will occupy here"
@@ -216,7 +213,6 @@ export default function About() {
               height="64"
               priority
               quality={100}
-               
             />
           </div>
           <div>
@@ -346,37 +342,52 @@ export default function About() {
         <div class="flex flex-col pb-8 gap-6 justify-center items-center">
           <div class="flex gap-6">
             <div>
-              <Image
-                alt="png will occupy here"
-                priority
-                class="cancel"
-                src="/IG.svg"
-                width="24"
-                height="24"
-                quality={100}
-              />
+              <a
+                href="https://www.instagram.com/salym_wellness_centre"
+                target="_blank"
+              >
+                <Image
+                  alt="png will occupy here"
+                  class="H4 text-center self-center"
+                  src="/IG.svg"
+                  priority
+                  width="24"
+                  height="24"
+                  quality={100}
+                />
+              </a>
             </div>
             <div>
-              <Image
-                alt="png will occupy here"
-                class="cancel"
-                priority
-                src="/fb.svg"
-                width="24"
-                height="24"
-                quality={100}
-              />
+              <a
+                href="https://www.facebook.com/profile.php?id=100063809140048&mibextid=LQQJ4d"
+                target="_blank"
+              >
+                <Image
+                  alt="png will occupy here"
+                  class="H4 text-center self-center"
+                  src="/ffb.svg"
+                  priority
+                  width="24"
+                  height="24"
+                  quality={100}
+                />
+              </a>
             </div>
             <div>
-              <Image
-                alt="png will occupy here"
-                class="cancel"
-                src="/twit.svg"
-                priority
-                width="24"
-                height="24"
-                quality={100}
-              />
+              <a
+                href="https://twitter.com/salymwc?s=21&t=-e4Q0Ih6HOOkE7S_kJdCjg"
+                target="_blank"
+              >
+                <Image
+                  alt="png will occupy here"
+                  class="H4 text-center self-center"
+                  src="/ttw.svg"
+                  priority
+                  width="24"
+                  height="24"
+                  quality={100}
+                />
+              </a>
             </div>
           </div>
           <div>
@@ -1934,84 +1945,40 @@ export default function About() {
 
         <footer class="onwsss">
           <div class="footer px-6 text-white">
-            <div class="flex lg:flex-row flex-col gap-8 justify-center pt-10 lg:pt-20">
-              <div class="py-8 w-full px-6 flex flex-col gap-6 bg-grx">
-                <div>
-                  <h4 class="H5 hidden lg:block">Head Office</h4>
-                  <h4 class="H6 lg:hidden block">Head Office</h4>
-                </div>
-                <div class="flex flex-col gap-4">
-                  <div class="flex gap-4">
-                    <Image
-                      alt="png will occupy here"
-                      src="/house-2.svg"
-                      class=""
-                      width="24"
-                      height="24"
-                      quality={100}
-                      priority
-                    />
-                    <p class="B4 hidden lg:block">
-                      22, Ilupeju Road, Ilupeju, Lagos.
-                    </p>
-                    <p class="B5 lg:hidden block">
-                      22, Ilupeju Road, Ilupeju, Lagos.
-                    </p>
-                  </div>
-                  <div class="flex gap-4">
-                    <Image
-                      alt="png will occupy here"
-                      src="/call.svg"
-                      class=""
-                      width="24"
-                      height="24"
-                      quality={100}
-                      priority
-                    />
-                    <p class="B4 hidden lg:block">+2349121325047</p>
-                    <p class="B5 lg:hidden block">+2349121325047</p>
-                  </div>
-                  <div class="flex gap-4">
-                    <Image
-                      alt="png will occupy here"
-                      src="/sms.svg"
-                      class=""
-                      width="24"
-                      height="24"
-                      quality={100}
-                      priority
-                    />
-                    <p class="B4 hidden lg:block">info@salymwellness.center</p>
-                    <p class="B5 lg:hidden block">info@salymwellness.center</p>
-                  </div>
-                </div>
+            <div class="flex flex-col gap-16 pt-10 lg:pt-20">
+              <div class="gap-6 flex flex-col">
+                <h4 class="H5 hidden lg:block">Our Office</h4>
+                <h4 class="H5 lg:hidden block">Our Office</h4>
+                <p class="B4 hidden lg:flex gap-4 items-center">
+                  <Image
+                    alt="png will occupy here"
+                    src="/house-2.svg"
+                    class=""
+                    width="24"
+                    height="24"
+                    quality={100}
+                    priority
+                  />
+                  1 Qudus Hassan Close, Santos, Idi Mangoro. Lagos. NG
+                </p>
+                <p class="B5 lg:hidden flex gap-2 items-center">
+                  <Image
+                    alt="png will occupy here"
+                    src="/house-2.svg"
+                    class=""
+                    width="20"
+                    height="20"
+                    quality={100}
+                    priority
+                  />
+                  1 Qudus Hassan Close, Santos, Idi Mangoro. Lagos. NG
+                </p>
               </div>
-              <div class="py-8 w-full px-6 flex flex-col gap-6 bg-grx">
-                <div>
-                  <h4 class="H5 hidden lg:block">Branch Office</h4>
-                  <h4 class="H6 lg:hidden block">Branch Office</h4>
-                </div>
+              <div class="gap-6 flex flex-col">
+                <h4 class="H5 hidden lg:block">Our Contact</h4>
+                <h4 class="H5 lg:hidden block">Our Contact</h4>
                 <div class="flex flex-col gap-4">
-                  <div class="flex gap-4">
-                    <Image
-                      alt="png will occupy here"
-                      src="/house-2.svg"
-                      class=""
-                      width="24"
-                      height="24"
-                      quality={100}
-                      priority
-                    />
-                    <p class="B4 hidden lg:block">
-                      17, Olalekan Olaniyan Street, Off Karimu Laka St, Egbeda,
-                      Lagos.
-                    </p>
-                    <p class="B5 lg:hidden block">
-                      17, Olalekan Olaniyan Street, Off Karimu Laka St, Egbeda,
-                      Lagos.
-                    </p>
-                  </div>
-                  <div class="flex gap-4">
+                  <p class="B4 hidden lg:flex gap-4 items-center">
                     <Image
                       alt="png will occupy here"
                       src="/call.svg"
@@ -2021,10 +1988,21 @@ export default function About() {
                       quality={100}
                       priority
                     />
-                    <p class="B4 hidden lg:block">+2348061782702</p>
-                    <p class="B5 lg:hidden block">+2348061782702</p>
-                  </div>
-                  <div class="flex gap-4">
+                    +2349121325047
+                  </p>
+                  <p class="B5 lg:hidden flex gap-2 items-center">
+                    <Image
+                      alt="png will occupy here"
+                      src="/call.svg"
+                      class=""
+                      width="20"
+                      height="20"
+                      quality={100}
+                      priority
+                    />
+                    +2349121325047
+                  </p>
+                  <p class="B4 hidden lg:flex gap-4 items-center">
                     <Image
                       alt="png will occupy here"
                       src="/sms.svg"
@@ -2034,13 +2012,73 @@ export default function About() {
                       quality={100}
                       priority
                     />
-                    <p class="B4 hidden lg:block">info@salymwellness.center</p>
-                    <p class="B5 lg:hidden block">info@salymwellness.center</p>
-                  </div>
+                    muilisalimot@salymwellness.center
+                  </p>
+                  <p class="B5 lg:hidden flex gap-2 items-center">
+                    <Image
+                      alt="png will occupy here"
+                      src="/sms.svg"
+                      class=""
+                      width="20"
+                      height="20"
+                      quality={100}
+                      priority
+                    />
+                    muilisalimot@salymwellness.center
+                  </p>
+                  <p class="B4 hidden lg:flex gap-4 items-center">
+                    <Image
+                      alt="png will occupy here"
+                      src="/call.svg"
+                      class=""
+                      width="24"
+                      height="24"
+                      quality={100}
+                      priority
+                    />
+                    +2348061782702
+                  </p>
+                  <p class="B5 lg:hidden flex gap-2 items-center">
+                    <Image
+                      alt="png will occupy here"
+                      src="/call.svg"
+                      class=""
+                      width="20"
+                      height="20"
+                      quality={100}
+                      priority
+                    />
+                    +2348061782702
+                  </p>
+                  <p class="B4 hidden lg:flex gap-4 items-center">
+                    <Image
+                      alt="png will occupy here"
+                      src="/sms.svg"
+                      class=""
+                      width="24"
+                      height="24"
+                      quality={100}
+                      priority
+                    />
+                    info@salymwellness.center
+                  </p>
+                  <p class="B5 lg:hidden flex gap-2 items-center">
+                    <Image
+                      alt="png will occupy here"
+                      src="/sms.svg"
+                      class=""
+                      width="20"
+                      height="20"
+                      quality={100}
+                      priority
+                    />
+                    info@salymwellness.center
+                  </p>
                 </div>
               </div>
             </div>
-            <div class="flex lg:flex-row flex-col justify-between lg:items-center pt-12 lg:pt-16">
+
+            <div class="flex lg:flex-row flex-col justify-between lg:items-center pt-16">
               <div class="flex lg:flex-row pb-12 lg:pb-0 flex-col gap-10">
                 <Link href="/" class="hover:text-green-200 H6 hidden lg:block ">
                   Home
@@ -2114,60 +2152,90 @@ export default function About() {
               </div>
 
               <div class="flex justify-center gap-4">
-                <Image
-                  alt="png will occupy here"
-                  class="H4 text-center hidden lg:block  self-center"
-                  src="/IG.svg"
-                  priority
-                  width="24"
-                  height="24"
-                  quality={100}
-                />
-                <Image
-                  alt="png will occupy here"
-                  class="lg:hidden block self-start"
-                  src="/iig.svg"
-                  width="24"
-                  height="24"
-                  priority
-                  quality={100}
-                />
-                <Image
-                  alt="png will occupy here"
-                  class="H4 text-center hidden lg:block  self-center"
-                  src="/ffb.svg"
-                  priority
-                  width="24"
-                  height="24"
-                  quality={100}
-                />
-                <Image
-                  alt="png will occupy here"
-                  class="lg:hidden block self-start"
-                  src="/ffb.svg"
-                  width="24"
-                  height="24"
-                  priority
-                  quality={100}
-                />
-                <Image
-                  alt="png will occupy here"
-                  class="H4 text-center hidden lg:block  self-center"
-                  src="/ttw.svg"
-                  priority
-                  width="24"
-                  height="24"
-                  quality={100}
-                />
-                <Image
-                  alt="png will occupy here"
-                  class="lg:hidden block self-start"
-                  src="/ttw.svg"
-                  width="24"
-                  height="24"
-                  priority
-                  quality={100}
-                />
+                <a
+                  href="https://www.instagram.com/salym_wellness_centre"
+                  target="_blank"
+                >
+                  <Image
+                    alt="png will occupy here"
+                    class="H4 text-center hidden lg:block  self-center"
+                    src="/IG.svg"
+                    priority
+                    width="24"
+                    height="24"
+                    quality={100}
+                  />
+                </a>
+                <a
+                  href="https://www.instagram.com/salym_wellness_centre"
+                  target="_blank"
+                >
+                  <Image
+                    alt="png will occupy here"
+                    class="lg:hidden block self-start"
+                    src="/iig.svg"
+                    width="24"
+                    height="24"
+                    priority
+                    quality={100}
+                  />
+                </a>
+                <a
+                  href="https://www.facebook.com/profile.php?id=100063809140048&mibextid=LQQJ4d"
+                  target="_blank"
+                >
+                  <Image
+                    alt="png will occupy here"
+                    class="H4 text-center hidden lg:block  self-center"
+                    src="/ffb.svg"
+                    priority
+                    width="24"
+                    height="24"
+                    quality={100}
+                  />
+                </a>
+                <a
+                  href="https://www.facebook.com/profile.php?id=100063809140048&mibextid=LQQJ4d"
+                  target="_blank"
+                >
+                  <Image
+                    alt="png will occupy here"
+                    class="lg:hidden block self-start"
+                    src="/ffb.svg"
+                    width="24"
+                    height="24"
+                    priority
+                    quality={100}
+                  />
+                </a>
+                <a
+                  href="https://twitter.com/salymwc?s=21&t=-e4Q0Ih6HOOkE7S_kJdCjg"
+                  target="_blank"
+                >
+                  <Image
+                    alt="png will occupy here"
+                    class="H4 text-center hidden lg:block  self-center"
+                    src="/ttw.svg"
+                    priority
+                    width="24"
+                    height="24"
+                    quality={100}
+                  />
+                </a>
+                <a
+                  href="https://twitter.com/salymwc?s=21&t=-e4Q0Ih6HOOkE7S_kJdCjg"
+                  target="_blank"
+                >
+                  <Image
+                    alt="png will occupy here"
+                    class="lg:hidden block self-start"
+                    src="/ttw.svg"
+                    width="24"
+                    height="24"
+                    priority
+                    quality={100}
+                  />
+                </a>
               </div>
             </div>
 

@@ -295,39 +295,54 @@ export default function About() {
           </Link>
         </div>
         <div class="flex flex-col pb-8 gap-6 justify-center items-center">
-          <div class="flex gap-6">
+        <div class="flex gap-6">
             <div>
-              <Image
-                alt="png will occupy here"
-                priority
-                class="cancel"
-                src="/IG.svg"
-                width="24"
-                height="24"
-                quality={100}
-              />
+              <a
+                href="https://www.instagram.com/salym_wellness_centre"
+                target="_blank"
+              >
+                <Image
+                  alt="png will occupy here"
+                  class="H4 text-center self-center"
+                  src="/IG.svg"
+                  priority
+                  width="24"
+                  height="24"
+                  quality={100}
+                />
+              </a>
             </div>
             <div>
-              <Image
-                alt="png will occupy here"
-                priority
-                class="cancel"
-                src="/fb.svg"
-                width="24"
-                height="24"
-                quality={100}
-              />
+              <a
+                href="https://www.facebook.com/profile.php?id=100063809140048&mibextid=LQQJ4d"
+                target="_blank"
+              >
+                <Image
+                  alt="png will occupy here"
+                  class="H4 text-center self-center"
+                  src="/ffb.svg"
+                  priority
+                  width="24"
+                  height="24"
+                  quality={100}
+                />
+              </a>
             </div>
             <div>
-              <Image
-                alt="png will occupy here"
-                priority
-                class="cancel"
-                src="/twit.svg"
-                width="24"
-                height="24"
-                quality={100}
-              />
+              <a
+                href="https://twitter.com/salymwc?s=21&t=-e4Q0Ih6HOOkE7S_kJdCjg"
+                target="_blank"
+              >
+                <Image
+                  alt="png will occupy here"
+                  class="H4 text-center self-center"
+                  src="/ttw.svg"
+                  priority
+                  width="24"
+                  height="24"
+                  quality={100}
+                />
+              </a>
             </div>
           </div>
           <div>
@@ -569,7 +584,7 @@ export default function About() {
               </div>
 
               <div class="flex justify-center gap-4">
-                <Image
+                <a href="https://www.instagram.com/salym_wellness_centre" target="_blank"><Image
                   alt="png will occupy here"
                   class="H4 text-center hidden lg:block  self-center"
                   src="/IG.svg"
@@ -577,9 +592,8 @@ export default function About() {
                   width="24"
                   height="24"
                   quality={100}
-                   
-                />
-                <Image
+                /></a>
+                <a href="https://www.instagram.com/salym_wellness_centre" target="_blank"><Image
                   alt="png will occupy here"
                   class="lg:hidden block self-start"
                   src="/iig.svg"
@@ -587,9 +601,8 @@ export default function About() {
                   height="24"
                   priority
                   quality={100}
-                   
-                />
-                <Image
+                /></a>
+                <a href="https://www.facebook.com/profile.php?id=100063809140048&mibextid=LQQJ4d" target="_blank"><Image
                   alt="png will occupy here"
                   class="H4 text-center hidden lg:block  self-center"
                   src="/ffb.svg"
@@ -597,9 +610,8 @@ export default function About() {
                   width="24"
                   height="24"
                   quality={100}
-                   
-                />
-                <Image
+                /></a>
+                <a href="https://www.facebook.com/profile.php?id=100063809140048&mibextid=LQQJ4d" target="_blank"><Image
                   alt="png will occupy here"
                   class="lg:hidden block self-start"
                   src="/ffb.svg"
@@ -607,9 +619,8 @@ export default function About() {
                   height="24"
                   priority
                   quality={100}
-                   
-                />
-                <Image
+                /></a>
+                <a href="https://twitter.com/salymwc?s=21&t=-e4Q0Ih6HOOkE7S_kJdCjg" target="_blank"><Image
                   alt="png will occupy here"
                   class="H4 text-center hidden lg:block  self-center"
                   src="/ttw.svg"
@@ -617,9 +628,8 @@ export default function About() {
                   width="24"
                   height="24"
                   quality={100}
-                   
-                />
-                <Image
+                /></a>
+                <a href="https://twitter.com/salymwc?s=21&t=-e4Q0Ih6HOOkE7S_kJdCjg" target="_blank"><Image
                   alt="png will occupy here"
                   class="lg:hidden block self-start"
                   src="/ttw.svg"
@@ -627,8 +637,7 @@ export default function About() {
                   height="24"
                   priority
                   quality={100}
-                   
-                />
+                /></a>
               </div>
             </div>
 

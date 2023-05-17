@@ -254,7 +254,6 @@ export default function Home() {
               width="96"
               height="96"
               quality={100}
-               
             />
             <Image
               alt="png will occupy here"
@@ -264,7 +263,6 @@ export default function Home() {
               height="64"
               priority
               quality={100}
-               
             />
           </div>
           <div>
@@ -310,7 +308,6 @@ export default function Home() {
               width="96"
               height="96"
               quality={100}
-               
             />
             <Image
               alt="png will occupy here"
@@ -320,7 +317,6 @@ export default function Home() {
               height="64"
               priority
               quality={100}
-               
             />
           </div>
           <div>
@@ -334,10 +330,12 @@ export default function Home() {
           </div>
           <div>
             <p class="B4 grn-50 hidden lg:block">
-              Sorry, we couldn&apos;t process your subscription. Please try again.
+              Sorry, we couldn&apos;t process your subscription. Please try
+              again.
             </p>
             <p class="B5 grn-50 lg:hidden block">
-              Sorry, we couldn&apos;t process your subscription. Please try again.
+              Sorry, we couldn&apos;t process your subscription. Please try
+              again.
             </p>
           </div>
           <div class="flex gap-4">
@@ -370,7 +368,6 @@ export default function Home() {
               width="96"
               height="96"
               quality={100}
-               
             />
             <Image
               alt="png will occupy here"
@@ -380,7 +377,6 @@ export default function Home() {
               height="64"
               priority
               quality={100}
-               
             />
           </div>
           <div>
@@ -426,7 +422,6 @@ export default function Home() {
               width="96"
               height="96"
               quality={100}
-               
             />
             <Image
               alt="png will occupy here"
@@ -436,7 +431,6 @@ export default function Home() {
               height="64"
               priority
               quality={100}
-               
             />
           </div>
           <div>
@@ -506,39 +500,54 @@ export default function Home() {
           </Link>
         </div>
         <div class="flex flex-col pb-8 gap-6 justify-center items-center">
-          <div class="flex gap-6">
+        <div class="flex gap-6">
             <div>
-              <Image
-                alt="png will occupy here"
-                 
-                class="cancel"
-                src="/IG.svg"
-                width="24"
-                height="24"
-                quality={100}
-              />
+              <a
+                href="https://www.instagram.com/salym_wellness_centre"
+                target="_blank"
+              >
+                <Image
+                  alt="png will occupy here"
+                  class="H4 text-center self-center"
+                  src="/IG.svg"
+                  priority
+                  width="24"
+                  height="24"
+                  quality={100}
+                />
+              </a>
             </div>
             <div>
-              <Image
-                alt="png will occupy here"
-                 
-                class="cancel"
-                src="/fb.svg"
-                width="24"
-                height="24"
-                quality={100}
-              />
+              <a
+                href="https://www.facebook.com/profile.php?id=100063809140048&mibextid=LQQJ4d"
+                target="_blank"
+              >
+                <Image
+                  alt="png will occupy here"
+                  class="H4 text-center self-center"
+                  src="/ffb.svg"
+                  priority
+                  width="24"
+                  height="24"
+                  quality={100}
+                />
+              </a>
             </div>
             <div>
-              <Image
-                alt="png will occupy here"
-                 
-                class="cancel"
-                src="/twit.svg"
-                width="24"
-                height="24"
-                quality={100}
-              />
+              <a
+                href="https://twitter.com/salymwc?s=21&t=-e4Q0Ih6HOOkE7S_kJdCjg"
+                target="_blank"
+              >
+                <Image
+                  alt="png will occupy here"
+                  class="H4 text-center self-center"
+                  src="/ttw.svg"
+                  priority
+                  width="24"
+                  height="24"
+                  quality={100}
+                />
+              </a>
             </div>
           </div>
           <div>
@@ -552,7 +561,7 @@ export default function Home() {
       <main class="body-margin">
         <header>
           <nav class="flex items-center flex-row justify-between">
-          <Link href="/">
+            <Link href="/">
               <Image
                 alt="png will occupy here"
                 priority
@@ -655,7 +664,6 @@ export default function Home() {
                 width="488"
                 height="478"
                 quality={100}
-                 
                 priority
               />
               <Image
@@ -665,7 +673,6 @@ export default function Home() {
                 width="345"
                 height="338"
                 quality={100}
-                 
                 priority
               />
             </div>
@@ -703,7 +710,6 @@ export default function Home() {
                 width="80"
                 height="80"
                 quality={100}
-                 
               />
               <Image
                 alt="png will occupy here"
@@ -713,7 +719,6 @@ export default function Home() {
                 height="56"
                 priority
                 quality={100}
-                 
               />
               <h5 class="H5 grn-110 hidden lg:block">
                 Clinicals and Production
@@ -739,7 +744,6 @@ export default function Home() {
                 width="80"
                 height="80"
                 quality={100}
-                 
               />
               <Image
                 alt="png will occupy here"
@@ -749,7 +753,6 @@ export default function Home() {
                 height="56"
                 priority
                 quality={100}
-                 
               />
               <h5 class="H5 grn-110 hidden lg:block">Process Documentation</h5>
               <h5 class="H6 grn-110 lg:hidden block">Process Documentation</h5>
@@ -771,7 +774,6 @@ export default function Home() {
                 width="80"
                 height="80"
                 quality={100}
-                 
               />
               <Image
                 alt="png will occupy here"
@@ -781,7 +783,6 @@ export default function Home() {
                 height="56"
                 priority
                 quality={100}
-                 
               />
               <h5 class="H5 grn-110 hidden lg:block">Variety of 1000+ herbs</h5>
               <h5 class="H6 grn-110 lg:hidden block">Variety of 1000+ herbs</h5>
@@ -805,7 +806,6 @@ export default function Home() {
                 width="80"
                 height="80"
                 quality={100}
-                 
               />
               <Image
                 alt="png will occupy here"
@@ -815,7 +815,6 @@ export default function Home() {
                 height="56"
                 priority
                 quality={100}
-                 
               />
               <h5 class="H5 grn-110 hidden lg:block">Collaborators</h5>
               <h5 class="H6 grn-110 lg:hidden block">Collaborators</h5>
@@ -843,7 +842,6 @@ export default function Home() {
               width="528"
               height="436"
               quality={100}
-               
             />
           </div>
           <div class="order-1 lg:order-2 about-cont-right lg:w-1/2 flex gap-6 flex-col lg:gap-8">
@@ -856,7 +854,6 @@ export default function Home() {
               width="345"
               height="286"
               quality={100}
-               
             />
             <p class="B4 hidden lg:block black7">
               At Salym Wellness Centre, we provide safe and effective herbal
@@ -936,7 +933,6 @@ export default function Home() {
                     width="80"
                     height="80"
                     quality={100}
-                     
                   />
                   <Image
                     alt="png will occupy here"
@@ -946,7 +942,6 @@ export default function Home() {
                     height="48"
                     priority
                     quality={100}
-                     
                   />
                   <div class="flex flex-col gap-4">
                     <h5 class="H5 grn-110 hidden lg:block">Herbal Therapy</h5>
@@ -972,7 +967,6 @@ export default function Home() {
                     width="80"
                     height="80"
                     quality={100}
-                     
                   />
                   <Image
                     alt="png will occupy here"
@@ -982,7 +976,6 @@ export default function Home() {
                     height="48"
                     priority
                     quality={100}
-                     
                   />
                   <div class="flex flex-col gap-4">
                     <h5 class="H5 grn-110 hidden lg:block">Physical Therapy</h5>
@@ -1008,7 +1001,6 @@ export default function Home() {
                     width="80"
                     height="80"
                     quality={100}
-                     
                   />
                   <Image
                     alt="png will occupy here"
@@ -1018,7 +1010,6 @@ export default function Home() {
                     height="48"
                     priority
                     quality={100}
-                     
                   />
                   <div class="flex flex-col gap-4">
                     <h5 class="H5 grn-110 hidden lg:block">Massage</h5>
@@ -1044,7 +1035,6 @@ export default function Home() {
                     width="80"
                     height="80"
                     quality={100}
-                     
                   />
                   <Image
                     alt="png will occupy here"
@@ -1054,7 +1044,6 @@ export default function Home() {
                     height="48"
                     priority
                     quality={100}
-                     
                   />
                   <div class="flex flex-col gap-4">
                     <h5 class="H5 grn-110 hidden lg:block">Acupressure</h5>
@@ -1080,7 +1069,6 @@ export default function Home() {
                     width="80"
                     height="80"
                     quality={100}
-                     
                   />
                   <Image
                     alt="png will occupy here"
@@ -1090,7 +1078,6 @@ export default function Home() {
                     height="48"
                     priority
                     quality={100}
-                     
                   />
                   <div class="flex flex-col gap-4">
                     <h5 class="H5 grn-110 hidden lg:block">Naturopathy</h5>
@@ -1116,7 +1103,6 @@ export default function Home() {
                     width="80"
                     height="80"
                     quality={100}
-                     
                   />
                   <Image
                     alt="png will occupy here"
@@ -1126,7 +1112,6 @@ export default function Home() {
                     height="48"
                     priority
                     quality={100}
-                     
                   />
 
                   <div class="flex flex-col gap-4 w-auto">
@@ -1244,14 +1229,12 @@ export default function Home() {
                     src="/p1.png"
                     priority
                     quality={100}
-                     
                   />
                   <img
                     class="H4 text-center lg:hidden block self-center"
                     src="/p1.png"
                     priority
                     quality={100}
-                     
                   />
                   <h4 class="H5 hidden lg:block self-end text-center pt-4">
                     Local Herbs and Leaves
@@ -1266,14 +1249,12 @@ export default function Home() {
                     src="/p2.png"
                     priority
                     quality={100}
-                     
                   />
                   <img
                     class="H4 text-center lg:hidden block self-center"
                     src="/p2.png"
                     priority
                     quality={100}
-                     
                   />
                   <h4 class="H5 hidden lg:block self-end text-center pt-4">
                     Local Roots and Barks
@@ -1288,14 +1269,12 @@ export default function Home() {
                     src="/p3.png"
                     priority
                     quality={100}
-                     
                   />
                   <img
                     class="H4 text-center lg:hidden block self-center"
                     src="/p3.png"
                     priority
                     quality={100}
-                     
                   />
                   <h4 class="H5 hidden lg:block self-end text-center pt-4">
                     Seeds, Flowers and Fruits
@@ -1310,14 +1289,12 @@ export default function Home() {
                     src="/p4.png"
                     priority
                     quality={100}
-                     
                   />
                   <img
                     class="H4 text-center lg:hidden block self-center"
                     src="/p4.png"
                     priority
                     quality={100}
-                     
                   />
                   <h4 class="H5 hidden lg:block self-end text-center pt-4">
                     Spices
@@ -1330,14 +1307,12 @@ export default function Home() {
                     src="/p5.png"
                     priority
                     quality={100}
-                     
                   />
                   <img
                     class="H4 text-center lg:hidden block self-center"
                     src="/p5.png"
                     priority
                     quality={100}
-                     
                   />
                   <h4 class="H5 hidden lg:block self-end text-center pt-4">
                     Foreign Products
@@ -1352,14 +1327,12 @@ export default function Home() {
                     src="/p6.png"
                     priority
                     quality={100}
-                     
                   />
                   <img
                     class="H4 text-center lg:hidden block self-center"
                     src="/p6.png"
                     priority
                     quality={100}
-                     
                   />
                   <h4 class="H5 hidden lg:block self-end text-center pt-4">
                     Oils and Fluids
@@ -1374,14 +1347,12 @@ export default function Home() {
                     src="/p7.png"
                     priority
                     quality={100}
-                     
                   />
                   <img
                     class="H4 text-center lg:hidden block self-center"
                     src="/p7.png"
                     priority
                     quality={100}
-                     
                   />
                   <h4 class="H5 hidden lg:block self-end text-center pt-4">
                     Teas
@@ -1394,14 +1365,12 @@ export default function Home() {
                     src="/p8.png"
                     priority
                     quality={100}
-                     
                   />
                   <img
                     class="H4 text-center lg:hidden block self-center"
                     src="/p8.png"
                     priority
                     quality={100}
-                     
                   />
                   <h4 class="H5 hidden lg:block self-end text-center pt-4">
                     Apparatus
@@ -1416,14 +1385,12 @@ export default function Home() {
                     src="/p9.png"
                     priority
                     quality={100}
-                     
                   />
                   <img
                     class="H4 text-center lg:hidden block self-center"
                     src="/p9.png"
                     priority
                     quality={100}
-                     
                   />
                   <h4 class="H5 hidden lg:block self-end text-center pt-4">
                     Cosmetics - Creams/Soaps
@@ -1438,14 +1405,12 @@ export default function Home() {
                     src="/p10.png"
                     priority
                     quality={100}
-                     
                   />
                   <img
                     class="H4 text-center lg:hidden mlock self-center"
                     src="/p10.png"
                     priority
                     quality={100}
-                     
                   />
                   <h4 class="H5 hidden lg:block self-end text-center pt-4">
                     Salts, Edibles and Miscellaneous
@@ -1464,8 +1429,18 @@ export default function Home() {
               <Link href="#contact" class="buttonM lg:hidden block subH">
                 Reach Out to US
               </Link>
-              <a href="/Salym-new-products-and-pricing.pdf" target="_blank" class="buttonO hidden lg:block H6">View Catalogue</a>
-              <a href="/Salym-new-products-and-pricing.pdf" target="_blank" class="buttonO lg:hidden block subH">
+              <a
+                href="/Salym-new-products-and-pricing.pdf"
+                target="_blank"
+                class="buttonO hidden lg:block H6"
+              >
+                View Catalogue
+              </a>
+              <a
+                href="/Salym-new-products-and-pricing.pdf"
+                target="_blank"
+                class="buttonO lg:hidden block subH"
+              >
                 View Catalogue
               </a>
             </div>
@@ -1483,7 +1458,7 @@ export default function Home() {
                   insightful articles on health, wellness, and natural remedies
                   for your daily life.
                 </p>
-                <p class="B5 lg:hidden block black7 max-w-xl ">
+                <p class="B5 lg:hidden block black7 max-w-xl">
                   Stay up to date with our recent blog posts, featuring
                   insightful articles on health, wellness, and natural remedies
                   for your daily life.
@@ -1689,7 +1664,7 @@ export default function Home() {
                   </Link>
                   <Link
                     href="/blog/4"
-                    class="H5 hover:underline hover:text-green-900 lg:hidden whitespace-nowrap overflow-hidden text-ellipsis block"
+                    class="H6 hover:underline hover:text-green-900 lg:hidden whitespace-nowrap overflow-hidden text-ellipsis block"
                   >
                     Unlocking the Secrets of Acupressure: Enhancing Well-being
                     Through Pressure Points
@@ -1818,7 +1793,6 @@ export default function Home() {
                     width="80"
                     height="80"
                     quality={100}
-                     
                   />
                   <Image
                     alt="png will occupy here"
@@ -1828,13 +1802,20 @@ export default function Home() {
                     height="64"
                     priority
                     quality={100}
-                     
                   />
                   <p class="B4 hidden lg:block black7 max-w-2xl">
-                    Salym Wellness Centre has been a game-changer for my well-being. Their immune booster and herbal tea blends have significantly improved my health. I'm grateful for their commitment to providing safe and effective herbal solutions. Highly recommended for a holistic approach to wellness.
+                    Salym Wellness Centre has been a game-changer for my
+                    well-being. Their immune booster and herbal tea blends have
+                    significantly improved my health. I'm grateful for their
+                    commitment to providing safe and effective herbal solutions.
+                    Highly recommended for a holistic approach to wellness.
                   </p>
                   <p class="B5 lg:hidden block black7 max-w-2xl ">
-                    Salym Wellness Centre has been a game-changer for my well-being. Their immune booster and herbal tea blends have significantly improved my health. I'm grateful for their commitment to providing safe and effective herbal solutions. Highly recommended for a holistic approach to wellness.
+                    Salym Wellness Centre has been a game-changer for my
+                    well-being. Their immune booster and herbal tea blends have
+                    significantly improved my health. I'm grateful for their
+                    commitment to providing safe and effective herbal solutions.
+                    Highly recommended for a holistic approach to wellness.
                   </p>
                   <div class="flex-col gap-2 hidden lg:flex">
                     <p class="h6">Amina Bello</p>
@@ -1856,7 +1837,6 @@ export default function Home() {
                     width="24"
                     height="24"
                     quality={100}
-                     
                   />
                   <Image
                     alt="png will occupy here"
@@ -1866,13 +1846,20 @@ export default function Home() {
                     height="24"
                     priority
                     quality={100}
-                     
                   />
                   <p class="B4 hidden lg:block black7 max-w-2xl">
-                    As a pharmacist, I always seek high-quality herbal medicine suppliers. Salym Wellness Centre exceeds my expectations with their extensive range of herbal products. The Organoleptic Method they employ ensures safety and efficacy. A reliable partner for my practice.
+                    As a pharmacist, I always seek high-quality herbal medicine
+                    suppliers. Salym Wellness Centre exceeds my expectations
+                    with their extensive range of herbal products. The
+                    Organoleptic Method they employ ensures safety and efficacy.
+                    A reliable partner for my practice.
                   </p>
                   <p class="B5 lg:hidden block black7 max-w-2xl ">
-                    As a pharmacist, I always seek high-quality herbal medicine suppliers. Salym Wellness Centre exceeds my expectations with their extensive range of herbal products. The Organoleptic Method they employ ensures safety and efficacy. A reliable partner for my practice.
+                    As a pharmacist, I always seek high-quality herbal medicine
+                    suppliers. Salym Wellness Centre exceeds my expectations
+                    with their extensive range of herbal products. The
+                    Organoleptic Method they employ ensures safety and efficacy.
+                    A reliable partner for my practice.
                   </p>
                   <div class="flex-row gap-4 hidden lg:flex items-center">
                     <Image
@@ -1882,7 +1869,6 @@ export default function Home() {
                       width="80"
                       height="80"
                       quality={100}
-                       
                     />
                     <div class="flex flex-col gap-2">
                       <p class="h6">Chioma Okonkwo</p>
@@ -1897,7 +1883,6 @@ export default function Home() {
                       height="64"
                       priority
                       quality={100}
-                       
                     />
                     <div class="flex flex-col gap-2">
                       <p class="subH">Chioma Okonkwo</p>
@@ -1916,7 +1901,6 @@ export default function Home() {
                     width="80"
                     height="80"
                     quality={100}
-                     
                   />
                   <Image
                     alt="png will occupy here"
@@ -1926,13 +1910,20 @@ export default function Home() {
                     height="64"
                     priority
                     quality={100}
-                     
                   />
                   <p class="B4 hidden lg:block black7 max-w-2xl">
-                    I've integrated Salym Wellness Centre's herbal therapy into my practice, and my clients have experienced remarkable results. Their commitment to using indigenous sources and comprehensive process documentation sets them apart. A trusted brand in the field of naturopathy.
+                    I've integrated Salym Wellness Centre's herbal therapy into
+                    my practice, and my clients have experienced remarkable
+                    results. Their commitment to using indigenous sources and
+                    comprehensive process documentation sets them apart. A
+                    trusted brand in the field of naturopathy.
                   </p>
                   <p class="B5 lg:hidden block black7 max-w-2xl ">
-                    I've integrated Salym Wellness Centre's herbal therapy into my practice, and my clients have experienced remarkable results. Their commitment to using indigenous sources and comprehensive process documentation sets them apart. A trusted brand in the field of naturopathy.
+                    I've integrated Salym Wellness Centre's herbal therapy into
+                    my practice, and my clients have experienced remarkable
+                    results. Their commitment to using indigenous sources and
+                    comprehensive process documentation sets them apart. A
+                    trusted brand in the field of naturopathy.
                   </p>
                   <div>
                     <div class="flex-col gap-2 hidden lg:flex">
@@ -2240,120 +2231,129 @@ export default function Home() {
 
         <footer class="onwsss">
           <div class="footer px-6 text-white">
-            <div class="flex lg:flex-row flex-col gap-8 justify-center pt-10 lg:pt-20">
-              <div class="py-8 w-full px-6 flex flex-col gap-6 bg-grx">
-                <div>
-                  <h4 class="H5 hidden lg:block">Head Office</h4>
-                  <h4 class="H6 lg:hidden block">Head Office</h4>
-                </div>
-                <div class="flex flex-col gap-4">
-                  <div class="flex gap-4">
-                    <Image
-                      alt="png will occupy here"
-                      src="/house-2.svg"
-                      class=""
-                      width="24"
-                      height="24"
-                      quality={100}
-                       
-                      priority
-                    />
-                    <p class="B4 hidden lg:block">
-                      22, Ilupeju Road, Ilupeju, Lagos.
-                    </p>
-                    <p class="B5 lg:hidden block">
-                      22, Ilupeju Road, Ilupeju, Lagos.
-                    </p>
-                  </div>
-                  <div class="flex gap-4">
-                    <Image
-                      alt="png will occupy here"
-                      src="/call.svg"
-                      class=""
-                      width="24"
-                      height="24"
-                      quality={100}
-                       
-                      priority
-                    />
-                    <p class="B4 hidden lg:block">+2349121325047</p>
-                    <p class="B5 lg:hidden block">+2349121325047</p>
-                  </div>
-                  <div class="flex gap-4">
-                    <Image
-                      alt="png will occupy here"
-                      src="/sms.svg"
-                      class=""
-                      width="24"
-                      height="24"
-                      quality={100}
-                       
-                      priority
-                    />
-                    <p class="B4 hidden lg:block">info@salymwellness.center</p>
-                    <p class="B5 lg:hidden block">info@salymwellness.center</p>
-                  </div>
-                </div>
+            <div class="flex flex-col gap-16 pt-10 lg:pt-20">
+              <div class="gap-6 flex flex-col">
+                <h4 class="H5 hidden lg:block">Our Office</h4>
+                <h4 class="H5 lg:hidden block">Our Office</h4>
+                <p class="B4 hidden lg:flex gap-4 items-center">
+                  <Image
+                    alt="png will occupy here"
+                    src="/house-2.svg"
+                    class=""
+                    width="24"
+                    height="24"
+                    quality={100}
+                    priority
+                  />
+                  1 Qudus Hassan Close, Santos, Idi Mangoro. Lagos. NG
+                </p>
+                <p class="B5 lg:hidden flex gap-2 items-center">
+                <Image
+                    alt="png will occupy here"
+                    src="/house-2.svg"
+                    class=""
+                    width="20"
+                    height="20"
+                    quality={100}
+                    priority
+                  />1 Qudus Hassan Close, Santos, Idi Mangoro. Lagos. NG
+                </p>
               </div>
-              <div class="py-8 w-full px-6 flex flex-col gap-6 bg-grx">
-                <div>
-                  <h4 class="H5 hidden lg:block">Branch Office</h4>
-                  <h4 class="H6 lg:hidden block">Branch Office</h4>
-                </div>
+              <div class="gap-6 flex flex-col">
+                <h4 class="H5 hidden lg:block">Our Contact</h4>
+                <h4 class="H5 lg:hidden block">Our Contact</h4>
                 <div class="flex flex-col gap-4">
-                  <div class="flex gap-4">
-                    <Image
-                      alt="png will occupy here"
-                      src="/house-2.svg"
-                      class=""
-                      width="24"
-                      height="24"
-                      quality={100}
-                       
-                      priority
-                    />
-                    <p class="B4 hidden lg:block">
-                      17, Olalekan Olaniyan Street, Off Karimu Laka St, Egbeda,
-                      Lagos.
-                    </p>
-                    <p class="B5 lg:hidden block">
-                      17, Olalekan Olaniyan Street, Off Karimu Laka St, Egbeda,
-                      Lagos.
-                    </p>
-                  </div>
-                  <div class="flex gap-4">
-                    <Image
-                      alt="png will occupy here"
-                      src="/call.svg"
-                      class=""
-                      width="24"
-                      height="24"
-                      quality={100}
-                       
-                      priority
-                    />
-                    <p class="B4 hidden lg:block">+2348061782702</p>
-                    <p class="B5 lg:hidden block">+2348061782702</p>
-                  </div>
-                  <div class="flex gap-4">
-                    <Image
-                      alt="png will occupy here"
-                      src="/sms.svg"
-                      class=""
-                      width="24"
-                      height="24"
-                      quality={100}
-                       
-                      priority
-                    />
-                    <p class="B4 hidden lg:block">info@salymwellness.center</p>
-                    <p class="B5 lg:hidden block">info@salymwellness.center</p>
-                  </div>
+                  <p class="B4 hidden lg:flex gap-4 items-center">
+                  <Image
+                    alt="png will occupy here"
+                    src="/call.svg"
+                    class=""
+                    width="24"
+                    height="24"
+                    quality={100}
+                    priority
+                  />+2349121325047</p>
+                  <p class="B5 lg:hidden flex gap-2 items-center">
+                <Image
+                    alt="png will occupy here"
+                    src="/call.svg"
+                    class=""
+                    width="20"
+                    height="20"
+                    quality={100}
+                    priority
+                  />+2349121325047</p>
+                  <p class="B4 hidden lg:flex gap-4 items-center">
+                  <Image
+                    alt="png will occupy here"
+                    src="/sms.svg"
+                    class=""
+                    width="24"
+                    height="24"
+                    quality={100}
+                    priority
+                  />
+                    muilisalimot@salymwellness.center
+                  </p>
+                  <p class="B5 lg:hidden flex gap-2 items-center">
+                <Image
+                    alt="png will occupy here"
+                    src="/sms.svg"
+                    class=""
+                    width="20"
+                    height="20"
+                    quality={100}
+                    priority
+                  />muilisalimot@salymwellness.center
+                  </p>
+                  <p class="B4 hidden lg:flex gap-4 items-center">
+                  <Image
+                    alt="png will occupy here"
+                    src="/call.svg"
+                    class=""
+                    width="24"
+                    height="24"
+                    quality={100}
+                    priority
+                  />+2348061782702</p>
+                  <p class="B5 lg:hidden flex gap-2 items-center">
+                <Image
+                    alt="png will occupy here"
+                    src="/call.svg"
+                    class=""
+                    width="20"
+                    height="20"
+                    quality={100}
+                    priority
+                  />+2348061782702</p>
+                  <p class="B4 hidden lg:flex gap-4 items-center">
+                  <Image
+                    alt="png will occupy here"
+                    src="/sms.svg"
+                    class=""
+                    width="24"
+                    height="24"
+                    quality={100}
+                    priority
+                  />
+                    info@salymwellness.center
+                  </p>
+                  <p class="B5 lg:hidden flex gap-2 items-center">
+                <Image
+                    alt="png will occupy here"
+                    src="/sms.svg"
+                    class=""
+                    width="20"
+                    height="20"
+                    quality={100}
+                    priority
+                  />info@salymwellness.center
+                  </p>
                 </div>
               </div>
             </div>
 
-            <div class="flex lg:flex-row flex-col justify-between lg:items-center pt-12 lg:pt-16">
+            <div class="flex lg:flex-row flex-col justify-between lg:items-center pt-16">
               <div class="flex lg:flex-row pb-12 lg:pb-0 flex-col gap-10">
                 <Link href="/" class="hover:text-green-200 H6 hidden lg:block ">
                   Home
@@ -2427,7 +2427,7 @@ export default function Home() {
               </div>
 
               <div class="flex justify-center gap-4">
-                <Image
+                <a href="https://www.instagram.com/salym_wellness_centre" target="_blank"><Image
                   alt="png will occupy here"
                   class="H4 text-center hidden lg:block  self-center"
                   src="/IG.svg"
@@ -2435,9 +2435,8 @@ export default function Home() {
                   width="24"
                   height="24"
                   quality={100}
-                   
-                />
-                <Image
+                /></a>
+                <a href="https://www.instagram.com/salym_wellness_centre" target="_blank"><Image
                   alt="png will occupy here"
                   class="lg:hidden block self-start"
                   src="/iig.svg"
@@ -2445,9 +2444,8 @@ export default function Home() {
                   height="24"
                   priority
                   quality={100}
-                   
-                />
-                <Image
+                /></a>
+                <a href="https://www.facebook.com/profile.php?id=100063809140048&mibextid=LQQJ4d" target="_blank"><Image
                   alt="png will occupy here"
                   class="H4 text-center hidden lg:block  self-center"
                   src="/ffb.svg"
@@ -2455,9 +2453,8 @@ export default function Home() {
                   width="24"
                   height="24"
                   quality={100}
-                   
-                />
-                <Image
+                /></a>
+                <a href="https://www.facebook.com/profile.php?id=100063809140048&mibextid=LQQJ4d" target="_blank"><Image
                   alt="png will occupy here"
                   class="lg:hidden block self-start"
                   src="/ffb.svg"
@@ -2465,9 +2462,8 @@ export default function Home() {
                   height="24"
                   priority
                   quality={100}
-                   
-                />
-                <Image
+                /></a>
+                <a href="https://twitter.com/salymwc?s=21&t=-e4Q0Ih6HOOkE7S_kJdCjg" target="_blank"><Image
                   alt="png will occupy here"
                   class="H4 text-center hidden lg:block  self-center"
                   src="/ttw.svg"
@@ -2475,9 +2471,8 @@ export default function Home() {
                   width="24"
                   height="24"
                   quality={100}
-                   
-                />
-                <Image
+                /></a>
+                <a href="https://twitter.com/salymwc?s=21&t=-e4Q0Ih6HOOkE7S_kJdCjg" target="_blank"><Image
                   alt="png will occupy here"
                   class="lg:hidden block self-start"
                   src="/ttw.svg"
@@ -2485,8 +2480,7 @@ export default function Home() {
                   height="24"
                   priority
                   quality={100}
-                   
-                />
+                /></a>
               </div>
             </div>
 
