@@ -259,18 +259,18 @@ export default function About() {
       </div>
 
       <div class="bg-grn-60 flex flex-col justify-between">
-        <Link href="/" class="flex justify-end pt-6">
+        <div class="flex justify-end pt-6">
           <Image
             alt="png will occupy here"
             onClick={popuphandler}
-             
+            priority
             class="cancel"
             src="/close-circle.svg"
             width="48"
             height="48"
             quality={100}
           />
-        </Link>
+        </div>
         <div class="flex gap-8 flex-col">
           <Link onClick={popuphandler} href="/" class="H6 ">
             Home
@@ -299,7 +299,7 @@ export default function About() {
             <div>
               <Image
                 alt="png will occupy here"
-                 
+                priority
                 class="cancel"
                 src="/IG.svg"
                 width="24"
@@ -310,7 +310,7 @@ export default function About() {
             <div>
               <Image
                 alt="png will occupy here"
-                 
+                priority
                 class="cancel"
                 src="/fb.svg"
                 width="24"
@@ -321,7 +321,7 @@ export default function About() {
             <div>
               <Image
                 alt="png will occupy here"
-                 
+                priority
                 class="cancel"
                 src="/twit.svg"
                 width="24"
@@ -344,7 +344,7 @@ export default function About() {
             <Link href="/">
               <Image
                 alt="png will occupy here"
-                 
+                priority
                 class="hidden lg:block"
                 src="/logoLarge.png"
                 width="46"
@@ -353,7 +353,7 @@ export default function About() {
               />
               <Image
                 alt="png will occupy here"
-                 
+                priority
                 class="lg:hidden block"
                 src="/logoLarge.png"
                 width="34"
@@ -385,7 +385,7 @@ export default function About() {
             <Image
               alt="png will occupy here"
               onClick={popuphandler}
-               
+              priority
               class="lg:hidden block"
               src="/menu.svg"
               width="44"

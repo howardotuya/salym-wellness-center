@@ -308,6 +308,7 @@ export default function About() {
           <Image
             alt="png will occupy here"
             onClick={popuphandler}
+            priority
             class="cancel"
             src="/close-circle.svg"
             width="48"
@@ -347,6 +348,7 @@ export default function About() {
             <div>
               <Image
                 alt="png will occupy here"
+                priority
                 class="cancel"
                 src="/IG.svg"
                 width="24"
@@ -358,6 +360,7 @@ export default function About() {
               <Image
                 alt="png will occupy here"
                 class="cancel"
+                priority
                 src="/fb.svg"
                 width="24"
                 height="24"
@@ -369,6 +372,7 @@ export default function About() {
                 alt="png will occupy here"
                 class="cancel"
                 src="/twit.svg"
+                priority
                 width="24"
                 height="24"
                 quality={100}
@@ -388,6 +392,7 @@ export default function About() {
           <nav class="flex items-center flex-row justify-between">
             <Link href="/">
               <Image
+                priority
                 alt="png will occupy here"
                 class="hidden lg:block"
                 src="/logoLarge.png"
@@ -396,6 +401,7 @@ export default function About() {
                 quality={100}
               />
               <Image
+                priority
                 alt="png will occupy here"
                 class="lg:hidden block"
                 src="/logoLarge.png"
@@ -432,6 +438,7 @@ export default function About() {
               width="44"
               height="44"
               quality={100}
+              priority
             />
           </nav>
 

@@ -474,7 +474,7 @@ export default function Home() {
           <Image
             alt="png will occupy here"
             onClick={popuphandler}
-             
+            priority
             class="cancel"
             src="/close-circle.svg"
             width="48"
@@ -555,7 +555,7 @@ export default function Home() {
           <Link href="/">
               <Image
                 alt="png will occupy here"
-                 
+                priority
                 class="hidden lg:block"
                 src="/logoLarge.png"
                 width="46"
@@ -564,7 +564,7 @@ export default function Home() {
               />
               <Image
                 alt="png will occupy here"
-                 
+                priority
                 class="lg:hidden block"
                 src="/logoLarge.png"
                 width="34"
@@ -595,7 +595,7 @@ export default function Home() {
             <Image
               alt="png will occupy here"
               onClick={popuphandler}
-               
+              priority
               class="lg:hidden block"
               src="/menu.svg"
               width="44"
