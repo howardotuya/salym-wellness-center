@@ -2,8 +2,17 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import LinesEllipsis from "react-lines-ellipsis";
 import axios from "axios";
+import p1 from "../../public/p1.png";
+import p2 from "../../public/p2.png";
+import p3 from "../../public/p3.png";
+import p4 from "../../public/p4.png";
+import p5 from "../../public/p5.png";
+import p6 from "../../public/p6.png";
+import p7 from "../../public/p7.png";
+import p8 from "../../public/p8.png";
+import p9 from "../../public/p9.png";
+import p10 from "../../public/p10.png";
 
 const popuphandler = () => {
   const popup = document.querySelector(".bg-grn-60");
@@ -1264,15 +1273,17 @@ export default function About() {
             <div id="slideshow-container" class="pt-8">
               <div id="slideshow">
                 <div class="slid lg:px-6">
-                  <img
+                  <Image
                     class="H4 text-center hidden lg:block self-center"
-                    src="/p1.png"
+                    src={p1}
+                    alt="Local Herbs and Leaves"
                     priority
                     quality={100}
                   />
-                  <img
+                  <Image
                     class="H4 text-center lg:hidden block self-center"
-                    src="/p1.png"
+                    src={p1}
+                    alt="Local Herbs and Leaves"
                     priority
                     quality={100}
                   />
@@ -1284,15 +1295,17 @@ export default function About() {
                   </h4>
                 </div>
                 <div class="slid lg:px-6">
-                  <img
+                  <Image
                     class="H4 text-center hidden lg:block self-center"
-                    src="/p2.png"
+                    src={p2}
+                    alt="Local Roots and Barks"
                     priority
                     quality={100}
                   />
-                  <img
+                  <Image
                     class="H4 text-center lg:hidden block self-center"
-                    src="/p2.png"
+                    src={p2}
+                    alt="Local Roots and Barks"
                     priority
                     quality={100}
                   />
@@ -1304,16 +1317,18 @@ export default function About() {
                   </h4>
                 </div>
                 <div class="slid lg:px-6">
-                  <img
+                  <Image
                     class="H4 text-center hidden lg:block self-center"
-                    src="/p3.png"
+                    src={p3}
+                    alt="Seeds, Flowers and Fruits"
                     priority
                     quality={100}
                   />
-                  <img
+                  <Image
                     class="H4 text-center lg:hidden block self-center"
-                    src="/p3.png"
+                    src={p3}
                     priority
+                    alt="Seeds, Flowers and Fruits"
                     quality={100}
                   />
                   <h4 class="H5 hidden lg:block self-end text-center pt-4">
@@ -1324,15 +1339,17 @@ export default function About() {
                   </h4>
                 </div>
                 <div class="slid lg:px-6">
-                  <img
+                  <Image
+                    alt="Spices"
                     class="H4 text-center hidden lg:block self-center"
-                    src="/p4.png"
+                    src={p4}
                     priority
                     quality={100}
                   />
-                  <img
+                  <Image
                     class="H4 text-center lg:hidden block self-center"
-                    src="/p4.png"
+                    src={p4}
+                    alt="Spices"
                     priority
                     quality={100}
                   />
@@ -1342,15 +1359,17 @@ export default function About() {
                   <h4 class="subH lg:hidden block text-center pt-2">Spices</h4>
                 </div>
                 <div class="slid lg:px-6">
-                  <img
+                  <Image
                     class="H4 text-center hidden lg:block self-center"
-                    src="/p5.png"
+                    src={p5}
+                    alt="Foreign Products"
                     priority
                     quality={100}
                   />
-                  <img
+                  <Image
                     class="H4 text-center lg:hidden block self-center"
-                    src="/p5.png"
+                    src={p5}
+                    alt="Foreign Products"
                     priority
                     quality={100}
                   />
@@ -1362,16 +1381,18 @@ export default function About() {
                   </h4>
                 </div>
                 <div class="slid lg:px-6">
-                  <img
+                  <Image
                     class="H4 text-center hidden lg:block self-center"
-                    src="/p6.png"
+                    src={p6}
+                    alt="Oils and Fluids"
                     priority
                     quality={100}
                   />
-                  <img
+                  <Image
                     class="H4 text-center lg:hidden block self-center"
-                    src="/p6.png"
+                    src={p6}
                     priority
+                    alt="Oils and Fluids"
                     quality={100}
                   />
                   <h4 class="H5 hidden lg:block self-end text-center pt-4">
@@ -1382,15 +1403,17 @@ export default function About() {
                   </h4>
                 </div>
                 <div class="slid lg:px-6">
-                  <img
+                  <Image
                     class="H4 text-center hidden lg:block self-center"
-                    src="/p7.png"
+                    src={p7}
+                    alt="Teas"
                     priority
                     quality={100}
                   />
-                  <img
+                  <Image
                     class="H4 text-center lg:hidden block self-center"
-                    src="/p7.png"
+                    src={p7}
+                    alt="Teas"
                     priority
                     quality={100}
                   />
@@ -1400,16 +1423,18 @@ export default function About() {
                   <h4 class="subH lg:hidden block text-center pt-2">Teas</h4>
                 </div>
                 <div class="slid lg:px-6">
-                  <img
+                  <Image
                     class="H4 text-center hidden lg:block self-center"
-                    src="/p8.png"
+                    src={p8}
+                    alt="Apparatus"
                     priority
                     quality={100}
                   />
-                  <img
+                  <Image
                     class="H4 text-center lg:hidden block self-center"
-                    src="/p8.png"
+                    src={p8}
                     priority
+                    alt="Apparatus"
                     quality={100}
                   />
                   <h4 class="H5 hidden lg:block self-end text-center pt-4">
@@ -1420,17 +1445,19 @@ export default function About() {
                   </h4>
                 </div>
                 <div class="slid lg:px-6">
-                  <img
+                  <Image
                     class="H4 text-center hidden lg:block self-center"
-                    src="/p9.png"
+                    src={p9}
+                    alt="Cosmetics - Creams/Soaps"
                     priority
                     quality={100}
                   />
-                  <img
+                  <Image
                     class="H4 text-center lg:hidden block self-center"
-                    src="/p9.png"
+                    src={p9}
                     priority
                     quality={100}
+                    alt="Cosmetics - Creams/Soaps"
                   />
                   <h4 class="H5 hidden lg:block self-end text-center pt-4">
                     Cosmetics - Creams/Soaps
@@ -1440,15 +1467,17 @@ export default function About() {
                   </h4>
                 </div>
                 <div class="slid lg:px-6">
-                  <img
+                  <Image
                     class="H4 text-center hidden lg:block self-center"
-                    src="/p10.png"
+                    src={p10}
+                    alt="Salts, Edibles and Miscellaneous"
                     priority
                     quality={100}
                   />
-                  <img
+                  <Image
                     class="H4 text-center lg:hidden mlock self-center"
-                    src="/p10.png"
+                    src={p10}
+                    alt="Salts, Edibles and Miscellaneous"
                     priority
                     quality={100}
                   />
@@ -1469,10 +1498,20 @@ export default function About() {
               <Link href="#contact" class="buttonM lg:hidden block subH">
                 Reach Out to US
               </Link>
-              <button class="buttonO hidden lg:block H6">View Catalogue</button>
-              <button class="buttonO lg:hidden block subH">
+              <a
+                href="/Salym-new-products-and-pricing.pdf"
+                target="_blank"
+                class="buttonO hidden lg:block H6"
+              >
                 View Catalogue
-              </button>
+              </a>
+              <a
+                href="/Salym-new-products-and-pricing.pdf"
+                target="_blank"
+                class="buttonO lg:hidden block subH"
+              >
+                View Catalogue
+              </a>
             </div>
           </div>
         </section>

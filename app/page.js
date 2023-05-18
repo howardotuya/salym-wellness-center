@@ -1,9 +1,20 @@
 "use client";
 import { useEffect, useState } from "react";
+import dynamic from 'next/dynamic';
 import Image from "next/image";
 import Link from "next/link";
 import axios from "axios";
 import LinesEllipsis from "react-lines-ellipsis";
+import p1 from "../public/p1.png";
+import p2 from "../public/p2.png";
+import p3 from "../public/p3.png";
+import p4 from "../public/p4.png";
+import p5 from "../public/p5.png";
+import p6 from "../public/p6.png";
+import p7 from "../public/p7.png";
+import p8 from "../public/p8.png";
+import p9 from "../public/p9.png";
+import p10 from "../public/p10.png";
 
 const popuphandler = () => {
   const popup = document.querySelector(".bg-grn-60");
@@ -16,6 +27,7 @@ const popuphandler = () => {
 };
 
 export default function Home() {
+  
   useEffect(() => {
     const slideshow = document.getElementById("slideshow");
     const prevBtn = document.getElementById("prevBtn");
@@ -500,7 +512,7 @@ export default function Home() {
           </Link>
         </div>
         <div class="flex flex-col pb-8 gap-6 justify-center items-center">
-        <div class="flex gap-6">
+          <div class="flex gap-6">
             <div>
               <a
                 href="https://www.instagram.com/salym_wellness_centre"
@@ -1224,15 +1236,17 @@ export default function Home() {
             <div id="slideshow-container" class="pt-8">
               <div id="slideshow">
                 <div class="slid lg:px-6">
-                  <img
+                  <Image
                     class="H4 text-center hidden lg:block self-center"
-                    src="/p1.png"
+                    src={p1}
+                    alt="Local Herbs and Leaves"
                     priority
                     quality={100}
                   />
-                  <img
+                  <Image
                     class="H4 text-center lg:hidden block self-center"
-                    src="/p1.png"
+                    src={p1}
+                    alt="Local Herbs and Leaves"
                     priority
                     quality={100}
                   />
@@ -1244,15 +1258,17 @@ export default function Home() {
                   </h4>
                 </div>
                 <div class="slid lg:px-6">
-                  <img
+                  <Image
                     class="H4 text-center hidden lg:block self-center"
-                    src="/p2.png"
+                    src={p2}
+                    alt="Local Roots and Barks"
                     priority
                     quality={100}
                   />
-                  <img
+                  <Image
                     class="H4 text-center lg:hidden block self-center"
-                    src="/p2.png"
+                    src={p2}
+                    alt="Local Roots and Barks"
                     priority
                     quality={100}
                   />
@@ -1264,16 +1280,18 @@ export default function Home() {
                   </h4>
                 </div>
                 <div class="slid lg:px-6">
-                  <img
+                  <Image
                     class="H4 text-center hidden lg:block self-center"
-                    src="/p3.png"
+                    src={p3}
+                    alt="Seeds, Flowers and Fruits"
                     priority
                     quality={100}
                   />
-                  <img
+                  <Image
                     class="H4 text-center lg:hidden block self-center"
-                    src="/p3.png"
+                    src={p3}
                     priority
+                    alt="Seeds, Flowers and Fruits"
                     quality={100}
                   />
                   <h4 class="H5 hidden lg:block self-end text-center pt-4">
@@ -1284,15 +1302,17 @@ export default function Home() {
                   </h4>
                 </div>
                 <div class="slid lg:px-6">
-                  <img
+                  <Image
+                    alt="Spices"
                     class="H4 text-center hidden lg:block self-center"
-                    src="/p4.png"
+                    src={p4}
                     priority
                     quality={100}
                   />
-                  <img
+                  <Image
                     class="H4 text-center lg:hidden block self-center"
-                    src="/p4.png"
+                    src={p4}
+                    alt="Spices"
                     priority
                     quality={100}
                   />
@@ -1302,15 +1322,17 @@ export default function Home() {
                   <h4 class="subH lg:hidden block text-center pt-2">Spices</h4>
                 </div>
                 <div class="slid lg:px-6">
-                  <img
+                  <Image
                     class="H4 text-center hidden lg:block self-center"
-                    src="/p5.png"
+                    src={p5}
+                    alt="Foreign Products"
                     priority
                     quality={100}
                   />
-                  <img
+                  <Image
                     class="H4 text-center lg:hidden block self-center"
-                    src="/p5.png"
+                    src={p5}
+                    alt="Foreign Products"
                     priority
                     quality={100}
                   />
@@ -1322,16 +1344,18 @@ export default function Home() {
                   </h4>
                 </div>
                 <div class="slid lg:px-6">
-                  <img
+                  <Image
                     class="H4 text-center hidden lg:block self-center"
-                    src="/p6.png"
+                    src={p6}
+                    alt="Oils and Fluids"
                     priority
                     quality={100}
                   />
-                  <img
+                  <Image
                     class="H4 text-center lg:hidden block self-center"
-                    src="/p6.png"
+                    src={p6}
                     priority
+                    alt="Oils and Fluids"
                     quality={100}
                   />
                   <h4 class="H5 hidden lg:block self-end text-center pt-4">
@@ -1342,15 +1366,17 @@ export default function Home() {
                   </h4>
                 </div>
                 <div class="slid lg:px-6">
-                  <img
+                  <Image
                     class="H4 text-center hidden lg:block self-center"
-                    src="/p7.png"
+                    src={p7}
+                    alt="Teas"
                     priority
                     quality={100}
                   />
-                  <img
+                  <Image
                     class="H4 text-center lg:hidden block self-center"
-                    src="/p7.png"
+                    src={p7}
+                    alt="Teas"
                     priority
                     quality={100}
                   />
@@ -1360,16 +1386,18 @@ export default function Home() {
                   <h4 class="subH lg:hidden block text-center pt-2">Teas</h4>
                 </div>
                 <div class="slid lg:px-6">
-                  <img
+                  <Image
                     class="H4 text-center hidden lg:block self-center"
-                    src="/p8.png"
+                    src={p8}
+                    alt="Apparatus"
                     priority
                     quality={100}
                   />
-                  <img
+                  <Image
                     class="H4 text-center lg:hidden block self-center"
-                    src="/p8.png"
+                    src={p8}
                     priority
+                    alt="Apparatus"
                     quality={100}
                   />
                   <h4 class="H5 hidden lg:block self-end text-center pt-4">
@@ -1380,17 +1408,19 @@ export default function Home() {
                   </h4>
                 </div>
                 <div class="slid lg:px-6">
-                  <img
+                  <Image
                     class="H4 text-center hidden lg:block self-center"
-                    src="/p9.png"
+                    src={p9}
+                    alt="Cosmetics - Creams/Soaps"
                     priority
                     quality={100}
                   />
-                  <img
+                  <Image
                     class="H4 text-center lg:hidden block self-center"
-                    src="/p9.png"
+                    src={p9}
                     priority
                     quality={100}
+                    alt="Cosmetics - Creams/Soaps"
                   />
                   <h4 class="H5 hidden lg:block self-end text-center pt-4">
                     Cosmetics - Creams/Soaps
@@ -1400,15 +1430,17 @@ export default function Home() {
                   </h4>
                 </div>
                 <div class="slid lg:px-6">
-                  <img
+                  <Image
                     class="H4 text-center hidden lg:block self-center"
-                    src="/p10.png"
+                    src={p10}
+                    alt="Salts, Edibles and Miscellaneous"
                     priority
                     quality={100}
                   />
-                  <img
+                  <Image
                     class="H4 text-center lg:hidden mlock self-center"
-                    src="/p10.png"
+                    src={p10}
+                    alt="Salts, Edibles and Miscellaneous"
                     priority
                     quality={100}
                   />
@@ -1508,7 +1540,7 @@ export default function Home() {
               <div class="slidx lg:px-6">
                 <div class="bic flex gap-4 lg:gap-6 flex-col p-4 lg:py-8 lg:px-6">
                   <div class="lg:h-64 object-cover h-52 w-full rounded-2xl overflow-hidden">
-                    <div class="headImg"></div>
+                    <div class="loaddi headImg"></div>
                   </div>
                   <Link
                     href="/blog/1"
@@ -1522,7 +1554,7 @@ export default function Home() {
                   >
                     The Healing Powers of Methyl Cream
                   </Link>
-                  <p class="B4 hidden lg:block black7 max-w-2xl">
+                  <div class="B4 hidden lg:block black7 max-w-2xl">
                     <LinesEllipsis
                       text="Methyl cream, a natural remedy derived from medicinal plants, has gained popularity for its remarkable healing properties. This blog post explores the benefits and uses of methyl cream in promoting overall well-being and addressing various health concerns."
                       maxLine="3"
@@ -1530,8 +1562,8 @@ export default function Home() {
                       trimRight
                       basedOn="letters"
                     />
-                  </p>
-                  <p class="B5 lg:hidden block black7 max-w-2xl ">
+                  </div>
+                  <div class="B5 lg:hidden block black7 max-w-2xl ">
                     <LinesEllipsis
                       text="Methyl cream, a natural remedy derived from medicinal plants, has gained popularity for its remarkable healing properties. This blog post explores the benefits and uses of methyl cream in promoting overall well-being and addressing various health concerns."
                       maxLine="3"
@@ -1539,7 +1571,7 @@ export default function Home() {
                       trimRight
                       basedOn="letters"
                     />
-                  </p>
+                  </div>
                   <div class="flex justify-between items-center">
                     <span class="grn-10 grn-60 H6 hidden lg:block py-2 px-4 rounded-full ">
                       Herbal Wellness
@@ -1555,7 +1587,7 @@ export default function Home() {
               <div class="slidx lg:px-6">
                 <div class="bic flex gap-4 lg:gap-6 flex-col p-4 lg:py-8 lg:px-6">
                   <div class="lg:h-64 object-cover h-52 w-full rounded-2xl overflow-hidden">
-                    <div class="headImg2"></div>
+                    <div class="loaddi headImg2"></div>
                   </div>
                   <Link
                     href="/blog/2"
@@ -1569,7 +1601,7 @@ export default function Home() {
                   >
                     The Power of Herbal Therapy for Stress Management
                   </Link>
-                  <p class="B4 hidden lg:block black7 max-w-2xl">
+                  <div class="B4 hidden lg:block black7 max-w-2xl">
                     <LinesEllipsis
                       text="Stress has become an unavoidable part of our modern lives, impacting our physical and mental well-being. While there are various approaches to managing stress, herbal therapy has emerged as a powerful and natural solution. In this blog post, we will explore the incredible potential of herbal therapy in
                 stress management and how it can help restore balance and
@@ -1579,8 +1611,8 @@ export default function Home() {
                       trimRight
                       basedOn="letters"
                     />
-                  </p>
-                  <p class="B5 lg:hidden block black7 max-w-2xl ">
+                  </div>
+                  <div class="B5 lg:hidden block black7 max-w-2xl ">
                     <LinesEllipsis
                       text="Stress has become an unavoidable part of our modern lives, impacting our physical and mental well-being. While there are various approaches to managing stress, herbal therapy has emerged as a powerful and natural solution. In this blog post, we will explore the incredible potential of herbal therapy in
                 stress management and how it can help restore balance and
@@ -1590,7 +1622,7 @@ export default function Home() {
                       trimRight
                       basedOn="letters"
                     />
-                  </p>
+                  </div>
                   <div class="flex justify-between items-center">
                     <span class="grn-10 grn-60 H6 hidden lg:block py-2 px-4 rounded-full ">
                       Herbal Therapy
@@ -1606,7 +1638,7 @@ export default function Home() {
               <div class="slidx lg:px-6">
                 <div class="bic flex gap-4 lg:gap-6 flex-col p-4 lg:py-8 lg:px-6">
                   <div class="lg:h-64 object-cover h-52 w-full rounded-2xl overflow-hidden">
-                    <div class="headImg3"></div>
+                    <div class="loaddi headImg3"></div>
                   </div>
                   <Link
                     href="/blog/3"
@@ -1620,7 +1652,7 @@ export default function Home() {
                   >
                     The Art of French Cooking: Mastering Classic Recipes
                   </Link>
-                  <p class="B4 hidden lg:block black7 max-w-2xl">
+                  <div class="B4 hidden lg:block black7 max-w-2xl">
                     <LinesEllipsis
                       text="If you love French cuisine, you've probably heard of Julia Child's 'Mastering the Art of French Cooking.' This classic cookbook has been the go-to guide for home cooks looking to learn the fundamentals of French cuisine for over 50 years. In this blog post, we'll explore why this book is a must-have for anyone looking to master the art of French cooking."
                       maxLine="3"
@@ -1628,8 +1660,8 @@ export default function Home() {
                       trimRight
                       basedOn="letters"
                     />
-                  </p>
-                  <p class="B5 lg:hidden block black7 max-w-2xl ">
+                  </div>
+                  <div class="B5 lg:hidden block black7 max-w-2xl ">
                     <LinesEllipsis
                       text="If you love French cuisine, you've probably heard of Julia Child's 'Mastering the Art of French Cooking.' This classic cookbook has been the go-to guide for home cooks looking to learn the fundamentals of French cuisine for over 50 years. In this blog post, we'll explore why this book is a must-have for anyone looking to master the art of French cooking."
                       maxLine="3"
@@ -1637,7 +1669,7 @@ export default function Home() {
                       trimRight
                       basedOn="letters"
                     />
-                  </p>
+                  </div>
                   <div class="flex justify-between items-center">
                     <span class="grn-10 grn-60 H6 hidden lg:block py-2 px-4 rounded-full ">
                       Herbal Wellness
@@ -1653,7 +1685,7 @@ export default function Home() {
               <div class="slidx lg:px-6">
                 <div class="bic flex gap-4 lg:gap-6 flex-col p-4 lg:py-8 lg:px-6">
                   <div class="lg:h-64 object-cover h-52 w-full rounded-2xl overflow-hidden">
-                    <div class="headImg4"></div>
+                    <div class="loaddi headImg4"></div>
                   </div>
                   <Link
                     href="/blog/4"
@@ -1669,7 +1701,7 @@ export default function Home() {
                     Unlocking the Secrets of Acupressure: Enhancing Well-being
                     Through Pressure Points
                   </Link>
-                  <p class="B4 hidden lg:block black7 max-w-2xl">
+                  <div class="B4 hidden lg:block black7 max-w-2xl">
                     <LinesEllipsis
                       text="Acupressure is an ancient healing technique that has been used for centuries to promote well-being and alleviate various ailments. By applying pressure to specific points on the body, acupressure stimulates the body's natural healing abilities and restores balance. In this blog post, we will delve into the fascinating world of acupressure and explore how it can enhance your overall well-being."
                       maxLine="3"
@@ -1677,8 +1709,8 @@ export default function Home() {
                       trimRight
                       basedOn="letters"
                     />
-                  </p>
-                  <p class="B5 lg:hidden block black7 max-w-2xl ">
+                  </div>
+                  <div class="B5 lg:hidden block black7 max-w-2xl ">
                     <LinesEllipsis
                       text="Acupressure is an ancient healing technique that has been used for centuries to promote well-being and alleviate various ailments. By applying pressure to specific points on the body, acupressure stimulates the body's natural healing abilities and restores balance. In this blog post, we will delve into the fascinating world of acupressure and explore how it can enhance your overall well-being."
                       maxLine="3"
@@ -1686,7 +1718,7 @@ export default function Home() {
                       trimRight
                       basedOn="letters"
                     />
-                  </p>
+                  </div>
                   <div class="flex justify-between items-center">
                     <span class="grn-10 grn-60 H6 hidden lg:block py-2 px-4 rounded-full ">
                       Food and Lifestyle
@@ -2248,7 +2280,7 @@ export default function Home() {
                   1 Qudus Hassan Close, Santos, Idi Mangoro. Lagos. NG
                 </p>
                 <p class="B5 lg:hidden flex gap-2 items-center">
-                <Image
+                  <Image
                     alt="png will occupy here"
                     src="/house-2.svg"
                     class=""
@@ -2256,7 +2288,8 @@ export default function Home() {
                     height="20"
                     quality={100}
                     priority
-                  />1 Qudus Hassan Close, Santos, Idi Mangoro. Lagos. NG
+                  />
+                  1 Qudus Hassan Close, Santos, Idi Mangoro. Lagos. NG
                 </p>
               </div>
               <div class="gap-6 flex flex-col">
@@ -2264,90 +2297,100 @@ export default function Home() {
                 <h4 class="H5 lg:hidden block">Our Contact</h4>
                 <div class="flex flex-col gap-4">
                   <p class="B4 hidden lg:flex gap-4 items-center">
-                  <Image
-                    alt="png will occupy here"
-                    src="/call.svg"
-                    class=""
-                    width="24"
-                    height="24"
-                    quality={100}
-                    priority
-                  />+2349121325047</p>
+                    <Image
+                      alt="png will occupy here"
+                      src="/call.svg"
+                      class=""
+                      width="24"
+                      height="24"
+                      quality={100}
+                      priority
+                    />
+                    +2349121325047
+                  </p>
                   <p class="B5 lg:hidden flex gap-2 items-center">
-                <Image
-                    alt="png will occupy here"
-                    src="/call.svg"
-                    class=""
-                    width="20"
-                    height="20"
-                    quality={100}
-                    priority
-                  />+2349121325047</p>
+                    <Image
+                      alt="png will occupy here"
+                      src="/call.svg"
+                      class=""
+                      width="20"
+                      height="20"
+                      quality={100}
+                      priority
+                    />
+                    +2349121325047
+                  </p>
                   <p class="B4 hidden lg:flex gap-4 items-center">
-                  <Image
-                    alt="png will occupy here"
-                    src="/sms.svg"
-                    class=""
-                    width="24"
-                    height="24"
-                    quality={100}
-                    priority
-                  />
+                    <Image
+                      alt="png will occupy here"
+                      src="/sms.svg"
+                      class=""
+                      width="24"
+                      height="24"
+                      quality={100}
+                      priority
+                    />
                     muilisalimot@salymwellness.center
                   </p>
                   <p class="B5 lg:hidden flex gap-2 items-center">
-                <Image
-                    alt="png will occupy here"
-                    src="/sms.svg"
-                    class=""
-                    width="20"
-                    height="20"
-                    quality={100}
-                    priority
-                  />muilisalimot@salymwellness.center
+                    <Image
+                      alt="png will occupy here"
+                      src="/sms.svg"
+                      class=""
+                      width="20"
+                      height="20"
+                      quality={100}
+                      priority
+                    />
+                    muilisalimot@salymwellness.center
                   </p>
                   <p class="B4 hidden lg:flex gap-4 items-center">
-                  <Image
-                    alt="png will occupy here"
-                    src="/call.svg"
-                    class=""
-                    width="24"
-                    height="24"
-                    quality={100}
-                    priority
-                  />+2348061782702</p>
+                    <Image
+                      alt="png will occupy here"
+                      src="/call.svg"
+                      class=""
+                      width="24"
+                      height="24"
+                      quality={100}
+                      priority
+                    />
+                    +2348061782702
+                  </p>
                   <p class="B5 lg:hidden flex gap-2 items-center">
-                <Image
-                    alt="png will occupy here"
-                    src="/call.svg"
-                    class=""
-                    width="20"
-                    height="20"
-                    quality={100}
-                    priority
-                  />+2348061782702</p>
+                    <Image
+                      alt="png will occupy here"
+                      src="/call.svg"
+                      class=""
+                      width="20"
+                      height="20"
+                      quality={100}
+                      priority
+                    />
+                    +2348061782702
+                  </p>
                   <p class="B4 hidden lg:flex gap-4 items-center">
-                  <Image
-                    alt="png will occupy here"
-                    src="/sms.svg"
-                    class=""
-                    width="24"
-                    height="24"
-                    quality={100}
-                    priority
-                  />
+                    <Image
+                      alt="png will occupy here"
+                      src="/sms.svg"
+                      class=""
+                      width="24"
+                      height="24"
+                      quality={100}
+                      priority
+                    />
                     info@salymwellness.center
                   </p>
                   <p class="B5 lg:hidden flex gap-2 items-center">
-                <Image
-                    alt="png will occupy here"
-                    src="/sms.svg"
-                    class=""
-                    width="20"
-                    height="20"
-                    quality={100}
-                    priority
-                  />info@salymwellness.center
+                    <Image
+                      alt="png will occupy here"
+                      src="/sms.svg"
+                      class=""
+                      width="20"
+                      height="20"
+                      quality={100}
+                      priority
+                    />
+                    info@salymwellness.center
                   </p>
                 </div>
               </div>
@@ -2427,63 +2470,92 @@ export default function Home() {
               </div>
 
               <div class="flex justify-center gap-4">
-                <a href="https://www.instagram.com/salym_wellness_centre" target="_blank"><Image
-                  alt="png will occupy here"
-                  class="H4 text-center hidden lg:block  self-center"
-                  src="/IG.svg"
-                  priority
-                  width="24"
-                  height="24"
-                  quality={100}
-                /></a>
-                <a href="https://www.instagram.com/salym_wellness_centre" target="_blank"><Image
-                  alt="png will occupy here"
-                  class="lg:hidden block self-start"
-                  src="/iig.svg"
-                  width="24"
-                  height="24"
-                  priority
-                  quality={100}
-                /></a>
-                <a href="https://www.facebook.com/profile.php?id=100063809140048&mibextid=LQQJ4d" target="_blank"><Image
-                  alt="png will occupy here"
-                  class="H4 text-center hidden lg:block  self-center"
-                  src="/ffb.svg"
-                  priority
-                  width="24"
-                  height="24"
-                  quality={100}
-                /></a>
-                <a href="https://www.facebook.com/profile.php?id=100063809140048&mibextid=LQQJ4d" target="_blank"><Image
-                  alt="png will occupy here"
-                  class="lg:hidden block self-start"
-                  src="/ffb.svg"
-                  width="24"
-                  height="24"
-                  priority
-                  quality={100}
-                /></a>
-                <a href="https://twitter.com/salymwc?s=21&t=-e4Q0Ih6HOOkE7S_kJdCjg" target="_blank"><Image
-                  alt="png will occupy here"
-                  class="H4 text-center hidden lg:block  self-center"
-                  src="/ttw.svg"
-                  priority
-                  width="24"
-                  height="24"
-                  quality={100}
-                /></a>
-                <a href="https://twitter.com/salymwc?s=21&t=-e4Q0Ih6HOOkE7S_kJdCjg" target="_blank"><Image
-                  alt="png will occupy here"
-                  class="lg:hidden block self-start"
-                  src="/ttw.svg"
-                  width="24"
-                  height="24"
-                  priority
-                  quality={100}
-                /></a>
+                <a
+                  href="https://www.instagram.com/salym_wellness_centre"
+                  target="_blank"
+                >
+                  <Image
+                    alt="png will occupy here"
+                    class="H4 text-center hidden lg:block  self-center"
+                    src="/IG.svg"
+                    priority
+                    width="24"
+                    height="24"
+                    quality={100}
+                  />
+                </a>
+                <a
+                  href="https://www.instagram.com/salym_wellness_centre"
+                  target="_blank"
+                >
+                  <Image
+                    alt="png will occupy here"
+                    class="lg:hidden block self-start"
+                    src="/iig.svg"
+                    width="24"
+                    height="24"
+                    priority
+                    quality={100}
+                  />
+                </a>
+                <a
+                  href="https://www.facebook.com/profile.php?id=100063809140048&mibextid=LQQJ4d"
+                  target="_blank"
+                >
+                  <Image
+                    alt="png will occupy here"
+                    class="H4 text-center hidden lg:block  self-center"
+                    src="/ffb.svg"
+                    priority
+                    width="24"
+                    height="24"
+                    quality={100}
+                  />
+                </a>
+                <a
+                  href="https://www.facebook.com/profile.php?id=100063809140048&mibextid=LQQJ4d"
+                  target="_blank"
+                >
+                  <Image
+                    alt="png will occupy here"
+                    class="lg:hidden block self-start"
+                    src="/ffb.svg"
+                    width="24"
+                    height="24"
+                    priority
+                    quality={100}
+                  />
+                </a>
+                <a
+                  href="https://twitter.com/salymwc?s=21&t=-e4Q0Ih6HOOkE7S_kJdCjg"
+                  target="_blank"
+                >
+                  <Image
+                    alt="png will occupy here"
+                    class="H4 text-center hidden lg:block  self-center"
+                    src="/ttw.svg"
+                    priority
+                    width="24"
+                    height="24"
+                    quality={100}
+                  />
+                </a>
+                <a
+                  href="https://twitter.com/salymwc?s=21&t=-e4Q0Ih6HOOkE7S_kJdCjg"
+                  target="_blank"
+                >
+                  <Image
+                    alt="png will occupy here"
+                    class="lg:hidden block self-start"
+                    src="/ttw.svg"
+                    width="24"
+                    height="24"
+                    priority
+                    quality={100}
+                  />
+                </a>
               </div>
             </div>
-
             <div class="lg:pt-12 lg:pb-10 pt-6 pb-8 text-center w-full">
               <p class="H6 hidden lg:block ">
                 2023 Copyrights. All rights reserved.
