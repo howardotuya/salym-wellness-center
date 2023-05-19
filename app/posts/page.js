@@ -1,10 +1,10 @@
-"use client";
-import { useEffect, useState } from "react";
+"use client"
+import { client } from "../../contentful/client";
+import {useEffect, useState} from "react"
+import PostCard from "./postData.js";
 import Image from "next/image";
 import Link from "next/link";
 import axios from "axios";
-import LinesEllipsis from "react-lines-ellipsis";
-import logo from "../../public/logoLarge.png";
 
 const popuphandler = () => {
   const popup = document.querySelector(".bg-grn-60");
@@ -15,8 +15,8 @@ const popuphandler = () => {
     popup.style.display = "none";
   }
 };
-
-export default function About() {
+ 
+export default async function Index() {
   useEffect(() => {
     var closeButtons = document.getElementsByClassName("colse");
     for (var i = 0; i < closeButtons.length; i++) {
@@ -28,9 +28,7 @@ export default function About() {
       });
     }
   }, []);
-
   const [email, setEmail] = useState("");
-
   const subHandler = async (e) => {
     e.preventDefault();
 
@@ -54,6 +52,8 @@ export default function About() {
       setEmail("");
     }
   };
+  let posts = await getPosts();
+  console.log(posts[0].fields )
 
   return (
     <>
@@ -383,19 +383,23 @@ export default function About() {
       <main class="body-margin">
         <header>
           <nav class="flex items-center flex-row justify-between">
-          <Link href="/">
+            <Link href="/">
               <Image
                 alt="png will occupy here"
                 priority
-                class="hidden w-12 h-auto lg:block"
-                src={logo}
+                class="hidden lg:block"
+                src="/logoLarge.png"
+                width="46"
+                height="64"
                 quality={100}
               />
               <Image
                 alt="png will occupy here"
                 priority
-                class="lg:hidden w-9 h-auto block"
-                src={logo}
+                class="lg:hidden block"
+                src="/logoLarge.png"
+                width="34"
+                height="48"
                 quality={100}
               />
             </Link>
@@ -481,194 +485,11 @@ export default function About() {
             </div>
           </div>
 
-          <div class="pt-6 lg:pt-10 flex flex-wrap w-full gap-8">
-            <div class="bic blogp flex gap-4 lg:gap-6 flex-col p-4 lg:py-8 lg:px-6">
-              <div class="lg:h-64 object-cover h-52 w-full rounded-2xl overflow-hidden">
-                <div class="headImg"></div>
-              </div>
-              <Link
-                href="/blog/1"
-                class="H5 hover:underline hover:text-green-900 hidden lg:block whitespace-nowrap overflow-hidden text-ellipsis"
-              >
-                The Healing Powers of Methyl Cream
-              </Link>
-              <Link
-                href="/blog/1"
-                class="H6 hover:underline hover:text-green-900 lg:hidden block whitespace-nowrap overflow-hidden text-ellipsis"
-              >
-                The Healing Powers of Methyl Cream
-              </Link>
-              <p class="B4 hidden lg:block black7 max-w-2xl">
-                <LinesEllipsis
-                  text="Methyl cream, a natural remedy derived from medicinal plants, has gained popularity for its remarkable healing properties. This blog post explores the benefits and uses of methyl cream in promoting overall well-being and addressing various health concerns."
-                  maxLine="3"
-                  ellipsis="..."
-                  trimRight
-                  basedOn="letters"
-                />
-              </p>
-              <p class="B5 lg:hidden block black7 max-w-2xl ">
-                <LinesEllipsis
-                  text="Methyl cream, a natural remedy derived from medicinal plants, has gained popularity for its remarkable healing properties. This blog post explores the benefits and uses of methyl cream in promoting overall well-being and addressing various health concerns."
-                  maxLine="3"
-                  ellipsis="..."
-                  trimRight
-                  basedOn="letters"
-                />
-              </p>
-              <div class="flex justify-between items-center">
-                <span class="grn-10 grn-60 H6 hidden lg:block py-2 px-4 rounded-full ">
-                  Herbal Wellness
-                </span>
-                <span class=" lg:hidden block grn-10 grn-60 subH py-2 px-4 rounded-full">
-                  Herbal Wellness
-                </span>
-                <p class="H6 hidden lg:block"> 3 mins read</p>
-                <p class="subH lg:hidden block"> 3 mins read</p>
-              </div>
-            </div>
-            <div class="bic blogp flex gap-4 lg:gap-6 flex-col p-4 lg:py-8 lg:px-6">
-              <div class="lg:h-64 object-cover h-52 w-full rounded-2xl overflow-hidden">
-                <div class="headImg2"></div>
-              </div>
-              <Link
-                href="/blog/2"
-                class="H5 hover:underline hover:text-green-900  hidden whitespace-nowrap overflow-hidden text-ellipsis lg:block"
-              >
-                The Power of Herbal Therapy for Stress Management
-              </Link>
-              <Link
-                href="/blog/2"
-                class="H6 hover:underline hover:text-green-900  lg:hidden whitespace-nowrap overflow-hidden text-ellipsis block"
-              >
-                The Power of Herbal Therapy for Stress Management
-              </Link>
-              <p class="B4 hidden lg:block black7 max-w-2xl">
-                <LinesEllipsis
-                  text="Stress has become an unavoidable part of our modern lives, impacting our physical and mental well-being. While there are various approaches to managing stress, herbal therapy has emerged as a powerful and natural solution. In this blog post, we will explore the incredible potential of herbal therapy in
-                stress management and how it can help restore balance and
-                harmony to our lives."
-                  maxLine="3"
-                  ellipsis="..."
-                  trimRight
-                  basedOn="letters"
-                />
-              </p>
-              <p class="B5 lg:hidden block black7 max-w-2xl ">
-                <LinesEllipsis
-                  text="Stress has become an unavoidable part of our modern lives, impacting our physical and mental well-being. While there are various approaches to managing stress, herbal therapy has emerged as a powerful and natural solution. In this blog post, we will explore the incredible potential of herbal therapy in
-                stress management and how it can help restore balance and
-                harmony to our lives."
-                  maxLine="3"
-                  ellipsis="..."
-                  trimRight
-                  basedOn="letters"
-                />
-              </p>
-              <div class="flex justify-between items-center">
-                <span class="grn-10 grn-60 H6 hidden lg:block py-2 px-4 rounded-full ">
-                  Herbal Therapy
-                </span>
-                <span class=" lg:hidden block grn-10 grn-60 subH py-2 px-4 rounded-full">
-                  Herbal Therapy
-                </span>
-                <p class="H6 hidden lg:block">5 mins read</p>
-                <p class="subH lg:hidden block">5 mins read</p>
-              </div>
-            </div>
-            <div class="bic blogp flex gap-4 lg:gap-6 flex-col p-4 lg:py-8 lg:px-6">
-              <div class="lg:h-64 object-cover h-52 w-full rounded-2xl overflow-hidden">
-                <div class="headImg3"></div>
-              </div>
-              <Link
-                href="/blog/3"
-                class="H5 hover:underline hover:text-green-900 hidden whitespace-nowrap overflow-hidden text-ellipsis lg:block"
-              >
-                The Art of French Cooking: Mastering Classic Recipes
-              </Link>
-              <Link
-                href="/blog/3"
-                class="H6 hover:underline hover:text-green-900 lg:hidden whitespace-nowrap overflow-hidden text-ellipsis block"
-              >
-                The Art of French Cooking: Mastering Classic Recipes
-              </Link>
-              <p class="B4 hidden lg:block black7 max-w-2xl">
-                <LinesEllipsis
-                  text="If you love French cuisine, you've probably heard of Julia Child's 'Mastering the Art of French Cooking.' This classic cookbook has been the go-to guide for home cooks looking to learn the fundamentals of French cuisine for over 50 years. In this blog post, we'll explore why this book is a must-have for anyone looking to master the art of French cooking."
-                  maxLine="3"
-                  ellipsis="..."
-                  trimRight
-                  basedOn="letters"
-                />
-              </p>
-              <p class="B5 lg:hidden block black7 max-w-2xl ">
-                <LinesEllipsis
-                  text="If you love French cuisine, you've probably heard of Julia Child's 'Mastering the Art of French Cooking.' This classic cookbook has been the go-to guide for home cooks looking to learn the fundamentals of French cuisine for over 50 years. In this blog post, we'll explore why this book is a must-have for anyone looking to master the art of French cooking."
-                  maxLine="3"
-                  ellipsis="..."
-                  trimRight
-                  basedOn="letters"
-                />
-              </p>
-              <div class="flex justify-between items-center">
-                <span class="grn-10 grn-60 H6 hidden lg:block py-2 px-4 rounded-full ">
-                  Herbal Wellness
-                </span>
-                <span class=" lg:hidden block grn-10 grn-60 subH py-2 px-4 rounded-full">
-                  Herbal Wellness
-                </span>
-                <p class="H6 hidden lg:block"> 3 mins read</p>
-                <p class="subH lg:hidden block"> 3 mins read</p>
-              </div>
-            </div>
-            <div class="bic blogp flex gap-4 lg:gap-6 flex-col p-4 lg:py-8 lg:px-6">
-              <div class="lg:h-64 object-cover h-52 w-full rounded-2xl overflow-hidden">
-                <div class="headImg4"></div>
-              </div>
-              <Link
-                href="/blog/4"
-                class="H5 hover:underline hover:text-green-900 hidden whitespace-nowrap overflow-hidden text-ellipsis lg:block"
-              >
-                Unlocking the Secrets of Acupressure: Enhancing Well-being
-                Through Pressure Points
-              </Link>
-              <Link
-                href="/blog/4"
-                class="H6 hover:underline hover:text-green-900 lg:hidden whitespace-nowrap overflow-hidden text-ellipsis block"
-              >
-                Unlocking the Secrets of Acupressure: Enhancing Well-being
-                Through Pressure Points
-              </Link>
-              <p class="B4 hidden lg:block black7 max-w-2xl">
-                <LinesEllipsis
-                  text="Acupressure is an ancient healing technique that has been used for centuries to promote well-being and alleviate various ailments. By applying pressure to specific points on the body, acupressure stimulates the body's natural healing abilities and restores balance. In this blog post, we will delve into the fascinating world of acupressure and explore how it can enhance your overall well-being."
-                  maxLine="3"
-                  ellipsis="..."
-                  trimRight
-                  basedOn="letters"
-                />
-              </p>
-              <p class="B5 lg:hidden block black7 max-w-2xl ">
-                <LinesEllipsis
-                  text="Acupressure is an ancient healing technique that has been used for centuries to promote well-being and alleviate various ailments. By applying pressure to specific points on the body, acupressure stimulates the body's natural healing abilities and restores balance. In this blog post, we will delve into the fascinating world of acupressure and explore how it can enhance your overall well-being."
-                  maxLine="3"
-                  ellipsis="..."
-                  trimRight
-                  basedOn="letters"
-                />
-              </p>
-              <div class="flex justify-between items-center">
-                <span class="grn-10 grn-60 H6 hidden lg:block py-2 px-4 rounded-full ">
-                  Food and Lifestyle
-                </span>
-                <span class=" lg:hidden block grn-10 grn-60 subH py-2 px-4 rounded-full">
-                  Food and Lifestyle
-                </span>
-                <p class="H6 hidden lg:block">5 mins read</p>
-                <p class="subH lg:hidden block">5 mins read</p>
-              </div>
-            </div>
-          </div>
+      <div class="pt-6 lg:pt-10 flex flex-wrap w-full gap-8">
+        {posts.map((post, i) => (
+          <PostCard key={post.fields.title} post={post} />
+        ))}
+      </div>
         </section>
 
         <footer class="lg:pt-24 pt-20 m-0">
@@ -818,3 +639,8 @@ export default function About() {
     </>
   );
 }
+
+export const getPosts = async () => {
+  const response = await client.getEntries({ content_type: "blogPosts" });
+  return response.items;
+};

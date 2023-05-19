@@ -13,6 +13,8 @@ import p7 from "../../public/p7.png";
 import p8 from "../../public/p8.png";
 import p9 from "../../public/p9.png";
 import p10 from "../../public/p10.png";
+import logo from "../../public/logoLarge.png";
+
 
 const popuphandler = () => {
   const popup = document.querySelector(".bg-grn-60");
@@ -26,6 +28,95 @@ const popuphandler = () => {
 
 export default function About() {
   useEffect(() => {
+    const slideshow = document.getElementById("slideshow");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const prevBtnn = document.getElementById("prevBtnn");
+    const nextBtnn = document.getElementById("nextBtnn");
+    const slideContainer = document.getElementsByClassName("slid")[0];
+    const slideWidth = slideContainer.clientWidth; // Width of each slide
+    const prevBtnnn = document.getElementById("prevBtnnn");
+    const nextBtnnn = document.getElementById("nextBtnnn");
+    const tslideshow = document.getElementById("tslideshow");
+    const tslideContainer = document.getElementsByClassName("tc")[0];
+    const tslideWidth = tslideContainer.clientWidth; // Width of each slide
+    const prevBtnx = document.getElementById("prevBtnx");
+    const nextBtnx = document.getElementById("nextBtnx");
+
+    let currentPosition = 0;
+    let mcurrentPosition = 0;
+    let tcurrentPosition = 0;
+
+    prevBtn.addEventListener("click", () => {
+      currentPosition += slideWidth * 3;
+      if (currentPosition > 0) {
+        currentPosition = 0;
+        prevBtn.classList.remove("buttonM");
+        prevBtn.classList.add("buttonO");
+      }
+      slideshow.style.transform = `translateX(${currentPosition}px)`;
+      nextBtn.classList.remove("buttonO");
+      nextBtn.classList.add("buttonM");
+    });
+    nextBtn.addEventListener("click", () => {
+      currentPosition -= slideWidth * 3;
+      const maxPosition = -(slideWidth * (slideshow.childElementCount - 3));
+      if (currentPosition < maxPosition) {
+        currentPosition = maxPosition;
+        nextBtn.classList.remove("buttonM");
+        nextBtn.classList.add("buttonO");
+      }
+      slideshow.style.transform = `translateX(${currentPosition}px)`;
+      prevBtn.classList.remove("buttonO");
+      prevBtn.classList.add("buttonM");
+    });
+    prevBtnn.addEventListener("click", () => {
+      currentPosition += slideWidth * 1;
+      if (currentPosition > 0) {
+        currentPosition = 0;
+        prevBtnn.classList.remove("buttonM2");
+        prevBtnn.classList.add("buttonO2");
+      }
+      slideshow.style.transform = `translateX(${currentPosition}px)`;
+      nextBtnn.classList.remove("buttonO2");
+      nextBtnn.classList.add("buttonM2");
+    });
+
+    nextBtnn.addEventListener("click", () => {
+      currentPosition -= slideWidth * 1;
+      const maxPosition = -(slideWidth * (slideshow.childElementCount - 1));
+      if (currentPosition < maxPosition) {
+        currentPosition = maxPosition;
+        nextBtnn.classList.remove("buttonM2");
+        nextBtnn.classList.add("buttonO2");
+      }
+      slideshow.style.transform = `translateX(${currentPosition}px)`;
+      prevBtnn.classList.remove("buttonO2");
+      prevBtnn.classList.add("buttonM2");
+    });
+    prevBtnx.addEventListener("click", () => {
+      tcurrentPosition += tslideWidth * 1;
+      if (tcurrentPosition > 0) {
+        tcurrentPosition = 0;
+        prevBtnx.classList.remove("buttonM4");
+        prevBtnx.classList.add("buttonO4");
+      }
+      tslideshow.style.transform = `translateX(${tcurrentPosition}px)`;
+      nextBtnx.classList.remove("buttonO4");
+      nextBtnx.classList.add("buttonM4");
+    });
+    nextBtnx.addEventListener("click", () => {
+      tcurrentPosition -= tslideWidth * 1;
+      const maxPosition = -(tslideWidth * (tslideshow.childElementCount - 1));
+      if (tcurrentPosition < maxPosition) {
+        tcurrentPosition = maxPosition;
+        nextBtnx.classList.remove("buttonM4");
+        nextBtnx.classList.add("buttonO4");
+      }
+      tslideshow.style.transform = `translateX(${tcurrentPosition}px)`;
+      prevBtnx.classList.remove("buttonO4");
+      prevBtnx.classList.add("buttonM4");
+    });
     var closeButtons = document.getElementsByClassName("colse");
     for (var i = 0; i < closeButtons.length; i++) {
       closeButtons[i].addEventListener("click", function () {
@@ -410,23 +501,19 @@ export default function About() {
       <main class="body-margin">
         <header>
           <nav class="flex items-center flex-row justify-between">
-            <Link href="/">
+          <Link href="/">
               <Image
-                priority
                 alt="png will occupy here"
-                class="hidden lg:block"
-                src="/logoLarge.png"
-                width="46"
-                height="64"
+                priority
+                class="hidden w-12 h-auto lg:block"
+                src={logo}
                 quality={100}
               />
               <Image
-                priority
                 alt="png will occupy here"
-                class="lg:hidden block"
-                src="/logoLarge.png"
-                width="34"
-                height="48"
+                priority
+                class="lg:hidden w-9 h-auto block"
+                src={logo}
                 quality={100}
               />
             </Link>

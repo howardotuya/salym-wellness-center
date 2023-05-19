@@ -1,10 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
+import LinesEllipsis from "react-lines-ellipsis";
 import dynamic from 'next/dynamic';
 import Image from "next/image";
 import Link from "next/link";
 import axios from "axios";
-import LinesEllipsis from "react-lines-ellipsis";
 import p1 from "../public/p1.png";
 import p2 from "../public/p2.png";
 import p3 from "../public/p3.png";
@@ -15,6 +15,7 @@ import p7 from "../public/p7.png";
 import p8 from "../public/p8.png";
 import p9 from "../public/p9.png";
 import p10 from "../public/p10.png";
+import logo from "../public/logoLarge.png";
 
 const popuphandler = () => {
   const popup = document.querySelector(".bg-grn-60");
@@ -577,19 +578,15 @@ export default function Home() {
               <Image
                 alt="png will occupy here"
                 priority
-                class="hidden lg:block"
-                src="/logoLarge.png"
-                width="46"
-                height="64"
+                class="hidden w-12 h-auto lg:block"
+                src={logo}
                 quality={100}
               />
               <Image
                 alt="png will occupy here"
                 priority
-                class="lg:hidden block"
-                src="/logoLarge.png"
-                width="34"
-                height="48"
+                class="lg:hidden w-9 h-auto block"
+                src={logo}
                 quality={100}
               />
             </Link>
