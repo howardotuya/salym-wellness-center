@@ -34,7 +34,7 @@ export default function About() {
         id="modalss"
         class="flex px-6 justify-center items-center w-full h-full"
       >
-        <div class="max-w-xl success w-full items-center rounded-2xl bg-white flex flex-col px-4 lg:px-6 py-10 gap-4 lg:gap-6">
+        <div class="max-w-xl success w-full items-center   rounded-2xl bg-white flex flex-col px-4 lg:px-6 py-10 gap-4 lg:gap-6">
           <div>
             <Image
               alt="png will occupy here"
@@ -90,7 +90,7 @@ export default function About() {
         id="modales"
         class="flex px-6 justify-center items-center w-full h-full"
       >
-        <div class="max-w-xl danger w-full items-center rounded-2xl bg-white flex flex-col px-6 py-10 gap-6">
+        <div class="max-w-xl danger w-full items-center   rounded-2xl bg-white flex flex-col px-6 py-10 gap-6">
           <div>
             <Image
               alt="png will occupy here"
@@ -149,7 +149,7 @@ export default function About() {
         id="modalsc"
         class="flex px-6 justify-center items-center w-full h-full"
       >
-        <div class="max-w-xl success w-full items-center rounded-2xl bg-white flex flex-col px-4 lg:px-6 py-10 gap-4 lg:gap-6">
+        <div class="max-w-xl success w-full items-center   rounded-2xl bg-white flex flex-col px-4 lg:px-6 py-10 gap-4 lg:gap-6">
           <div>
             <Image
               alt="png will occupy here"
@@ -205,7 +205,7 @@ export default function About() {
         id="modalec"
         class="flex px-6 justify-center items-center w-full h-full"
       >
-        <div class="max-w-xl danger w-full items-center rounded-2xl bg-white flex flex-col px-6 py-10 gap-6">
+        <div class="max-w-xl danger w-full items-center   rounded-2xl bg-white flex flex-col px-6 py-10 gap-6">
           <div>
             <Image
               alt="png will occupy here"
@@ -411,128 +411,213 @@ export default function About() {
         </header>
 
         <div class=" max-w-3xl w-full mx-auto">
-        <div class="lg:pt-32 pt-16 flex flex-col item gap-8 lg:gap-10">
-          <div class="lg:h-96 object-cover h-56 w-full rounded-2xl overflow-hidden">
-            <div class="headImg4"></div>
-          </div>
-          <div class="flex flex-col gap-6">
-            <h4 class="H5 hidden lg:block">
-            Unlocking the Secrets of Acupressure: Enhancing Well-being Through Pressure Points
-            </h4>
-            <h4 class="H5 lg:hidden block">
-            Unlocking the Secrets of Acupressure: Enhancing Well-being Through Pressure Points
-            </h4>
+          <div class="lg:pt-32 pt-16 flex flex-col item gap-8 lg:gap-10">
+            <div class="lg:h-96 h-56 w-full   rounded-2xl overflow-hidden">
+              <div class="headImg2"></div>
+            </div>
+            <div class="flex flex-col gap-6">
+              <h4 class="H5 hidden lg:block whitespace-nowrap overflow-hidden text-ellipsis">
+                The Power of Herbal Therapy for Stress Management
+              </h4>
+              <h4 class="H5 lg:hidden block whitespace-nowrap overflow-hidden text-ellipsis">
+                The Power of Herbal Therapy for Stress Management
+              </h4>
 
-            <div class="flex flex-col gap-4 lg:gap-6">
-              <div class="flex-row gap-2 lg:hidden flex items-center">
-                <div class="flex flex-col gap-2">
-                  <p class="subH">By Salym Wellness Center Team</p>
-                  <p class="subH black7">Published 14th May, 2023</p>
+              <div class="flex flex-col gap-4 lg:gap-6">
+                <div class="flex-row gap-4 hidden lg:flex items-center">
+                  <div class="flex flex-col gap-2">
+                    <p class="h6">By Salym Wellness Center Team</p>
+                    <p class="subH black7">Published 5th May, 2023</p>
+                  </div>
                 </div>
-              </div>
-              
-              <div class="flex-row gap-4 hidden lg:flex items-center">
-                <div class="flex flex-col gap-2">
-                  <p class="h6">By Salym Wellness Center Team</p>
-                  <p class="subH black7">Published 14th May, 2023</p>
+                <div class="flex-row gap-2 lg:hidden flex items-center">
+                  <div class="flex flex-col gap-2">
+                    <p class="subH">By Salym Wellness Center Team</p>
+                    <p class="subH black7">Published 5th May, 2023</p>
+                  </div>
                 </div>
-              </div>
 
-              <div class="flex gap-8 lg:justify-start justify-between items-center">
-                <span class="grn-10 grn-60 H6 hidden lg:block py-2 px-4 rounded-lg ">
-                  Physical Therapy
-                </span>
-                <span class=" lg:hidden block grn-10 grn-60 subH py-2 px-4 rounded-lg">
-                  Physical Therapy
-                </span>
-                <p class="H6 hidden lg:block">6 mins read</p>
-                <p class="subH lg:hidden block">6 mins read</p>
+                <div class="flex justify-between items-center">
+                  <span class="grn-10 grn-60 H6 hidden lg:block py-2 px-4  rounded-2xl ">
+                    Herbal Therapy
+                  </span>
+                  <span class=" lg:hidden block grn-10 grn-60 subH py-2 px-4  rounded-2xl">
+                    Herbal Therapy
+                  </span>
+                  <p class="H6 hidden lg:block"> 5 mins read</p>
+                  <p class="subH lg:hidden block"> 5 mins read</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class=" flex flex-col gap-8 lg:gap-12 pt-12 lg:pt-16">
-          <div class="gap-4 flex flex-col">
-            <p class="B4 hidden lg:block">
-              Acupressure is an ancient healing technique that has been used for centuries to promote well-being and alleviate various ailments. By applying pressure to specific points on the body, acupressure stimulates the body's natural healing abilities and restores balance. In this blog post, we will delve into the fascinating world of acupressure and explore how it can enhance your overall well-being.
-            </p>
-            <p class="B5 lg:hidden block">
-              Acupressure is an ancient healing technique that has been used for centuries to promote well-being and alleviate various ailments. By applying pressure to specific points on the body, acupressure stimulates the body's natural healing abilities and restores balance. In this blog post, we will delve into the fascinating world of acupressure and explore how it can enhance your overall well-being.
-            </p>
+          <div class=" flex flex-col gap-8 lg:gap-12 pt-12 lg:pt-16">
+            <div class="gap-4 flex flex-col">
+              <p class="B4 hidden lg:block">
+                Stress has become an unavoidable part of our modern lives,
+                impacting our physical and mental well-being. While there are
+                various approaches to managing stress, herbal therapy has
+                emerged as a powerful and natural solution. In this blog post,
+                we will explore the incredible potential of herbal therapy in
+                stress management and how it can help restore balance and
+                harmony to our lives.
+              </p>
+              <p class="B5 lg:hidden block">
+                Stress has become an unavoidable part of our modern lives,
+                impacting our physical and mental well-being. While there are
+                various approaches to managing stress, herbal therapy has
+                emerged as a powerful and natural solution. In this blog post,
+                we will explore the incredible potential of herbal therapy in
+                stress management and how it can help restore balance and
+                harmony to our lives.
+              </p>
+            </div>
+            <div class="gap-4 flex flex-col">
+              <h4 class="H4 hidden lg:block">Understanding Herbal Therapy:</h4>
+              <h4 class="H6 lg:hidden block">Understanding Herbal Therapy:</h4>
+              <p class="B4 hidden lg:block">
+                Herbal therapy, also known as herbal medicine or phytotherapy,
+                involves using plant-based remedies to support the body's
+                natural healing processes. With a rich history dating back
+                centuries, herbal therapy offers a holistic approach to wellness
+                by leveraging the therapeutic properties of herbs and
+                botanicals.
+              </p>
+              <p class="B5 lg:hidden block">
+                Herbal therapy, also known as herbal medicine or phytotherapy,
+                involves using plant-based remedies to support the body's
+                natural healing processes. With a rich history dating back
+                centuries, herbal therapy offers a holistic approach to wellness
+                by leveraging the therapeutic properties of herbs and
+                botanicals.
+              </p>
+            </div>
+            <div class="gap-4 flex flex-col">
+              <h4 class="H4 hidden lg:block">
+                The Science Behind Herbal Therapy:
+              </h4>
+              <h4 class="H6 lg:hidden block">
+                The Science Behind Herbal Therapy:
+              </h4>
+              <p class="B4 hidden lg:block">
+                Scientific research has shed light on the efficacy of herbal
+                therapy in stress management. Certain herbs, such as
+                ashwagandha, chamomile, and holy basil, have adaptogenic
+                properties that help the body adapt and respond to stress more
+                effectively. These herbs can promote relaxation, reduce anxiety,
+                and enhance overall well-being.
+              </p>
+              <p class="B5 lg:hidden block">
+                Scientific research has shed light on the efficacy of herbal
+                therapy in stress management. Certain herbs, such as
+                ashwagandha, chamomile, and holy basil, have adaptogenic
+                properties that help the body adapt and respond to stress more
+                effectively. These herbs can promote relaxation, reduce anxiety,
+                and enhance overall well-being.
+              </p>
+            </div>
+            <div class="gap-4 flex flex-col">
+              <h4 class="H4 hidden lg:block">Herbs for Stress Management:</h4>
+              <h4 class="H6 lg:hidden block">Herbs for Stress Management:</h4>
+              <p class="B4 hidden lg:block">
+                <div>
+                  1. Ashwagandha: This ancient herb has been used for centuries
+                  in Ayurvedic medicine to combat stress and anxiety.
+                  Ashwagandha helps regulate the body's stress response by
+                  reducing cortisol levels and promoting a sense of calm.{" "}
+                </div>
+                <div>
+                  2. Chamomile: Known for its soothing properties, chamomile is
+                  a popular herb for relaxation and stress relief. It can help
+                  ease tension, promote better sleep, and alleviate anxiety
+                  symptoms.
+                </div>
+                <div>
+                  {" "}
+                  3. Holy Basil: Revered as a sacred herb in many cultures, holy
+                  basil has adaptogenic properties that support the body's
+                  stress response. It can help reduce stress-related symptoms,
+                  boost resilience, and enhance mental clarity.
+                </div>
+              </p>
+              <p class="B5 lg:hidden block">
+                <div>
+                  1. Ashwagandha: This ancient herb has been used for centuries
+                  in Ayurvedic medicine to combat stress and anxiety.
+                  Ashwagandha helps regulate the body's stress response by
+                  reducing cortisol levels and promoting a sense of calm.{" "}
+                </div>
+                <div>
+                  2. Chamomile: Known for its soothing properties, chamomile is
+                  a popular herb for relaxation and stress relief. It can help
+                  ease tension, promote better sleep, and alleviate anxiety
+                  symptoms.
+                </div>
+                <div>
+                  {" "}
+                  3. Holy Basil: Revered as a sacred herb in many cultures, holy
+                  basil has adaptogenic properties that support the body's
+                  stress response. It can help reduce stress-related symptoms,
+                  boost resilience, and enhance mental clarity.
+                </div>
+              </p>
+            </div>
+            <div class="gap-4 flex flex-col">
+              <h4 class="H4 hidden lg:block">
+                Incorporating Herbal Therapy into Your Routine:
+              </h4>
+              <h4 class="H6 lg:hidden block">
+                Incorporating Herbal Therapy into Your Routine:
+              </h4>
+              <p class="B4 hidden lg:block">
+                If you're considering incorporating herbal therapy into your
+                stress management routine, it's important to consult with a
+                qualified herbalist or healthcare professional. They can guide
+                you in selecting the right herbs and dosage for your specific
+                needs. Additionally, integrating relaxation techniques like
+                meditation, yoga, and deep breathing exercises can complement
+                the effects of herbal therapy.
+              </p>
+              <p class="B5 lg:hidden block">
+                If you're considering incorporating herbal therapy into your
+                stress management routine, it's important to consult with a
+                qualified herbalist or healthcare professional. They can guide
+                you in selecting the right herbs and dosage for your specific
+                needs. Additionally, integrating relaxation techniques like
+                meditation, yoga, and deep breathing exercises can complement
+                the effects of herbal therapy.
+              </p>
+            </div>
+            <div class="gap-4 flex flex-col">
+              <h4 class="H4 hidden lg:block">Conclusion</h4>
+              <h4 class="H6 lg:hidden block">Conclusion</h4>
+              <p class="B4 hidden lg:block">
+                In a world filled with constant stressors, herbal therapy offers
+                a natural and effective way to find relief and restore balance.
+                By harnessing the power of herbs, we can nurture our well-being,
+                improve resilience, and cultivate a calmer state of mind.
+                Embrace the wisdom of nature and explore the potential of herbal
+                therapy for stress management. Take a step towards holistic
+                wellness and reclaim your inner harmony.
+              </p>
+              <p class="B5 lg:hidden block">
+                In a world filled with constant stressors, herbal therapy offers
+                a natural and effective way to find relief and restore balance.
+                By harnessing the power of herbs, we can nurture our well-being,
+                improve resilience, and cultivate a calmer state of mind.
+                Embrace the wisdom of nature and explore the potential of herbal
+                therapy for stress management. Take a step towards holistic
+                wellness and reclaim your inner harmony.
+              </p>
+            </div>
           </div>
-          <div class="gap-4 flex flex-col">
-            <h4 class="H4 hidden lg:block">
-              What is Acupressure?
-            </h4>
-            <h4 class="H6 lg:hidden block">
-              What is Acupressure?
-            </h4>
-            <p class="B4 hidden lg:block">
-              Acupressure is a non-invasive practice derived from traditional Chinese medicine. It is based on the concept that vital energy, known as Qi, flows through meridians in the body. By applying pressure to specific points along these meridians, blockages are cleared, and the energy can flow freely, promoting physical and mental well-being.
-            </p>
-            <p class="B5 lg:hidden block">
-              Acupressure is a non-invasive practice derived from traditional Chinese medicine. It is based on the concept that vital energy, known as Qi, flows through meridians in the body. By applying pressure to specific points along these meridians, blockages are cleared, and the energy can flow freely, promoting physical and mental well-being.
-            </p>
-          </div>
-          <div class="gap-4 flex flex-col">
-            <h4 class="H4 hidden lg:block">The Benefits of Acupressure</h4>
-            <h4 class="H6 lg:hidden block">The Benefits of Acupressure</h4>
-            <p class="B4 hidden lg:block">
-              Acupressure offers a wide range of benefits for both physical and mental health. By targeting specific pressure points, it can help to relieve pain, reduce stress and anxiety, improve circulation, enhance digestion, boost the immune system, and promote relaxation. Regular acupressure sessions can provide long-term benefits and contribute to a healthier and more balanced life.
-            </p>
-            <p class="B5 lg:hidden block">
-              Acupressure offers a wide range of benefits for both physical and mental health. By targeting specific pressure points, it can help to relieve pain, reduce stress and anxiety, improve circulation, enhance digestion, boost the immune system, and promote relaxation. Regular acupressure sessions can provide long-term benefits and contribute to a healthier and more balanced life.
-            </p>
-          </div>
-          <div class="gap-4 flex flex-col">
-            <h4 class="H4 hidden lg:block">Common Pressure Points for Well-being</h4>
-            <h4 class="H6 lg:hidden block">Common Pressure Points for Well-being</h4>
-            <p class="B4 hidden lg:block">
-              In acupressure, there are numerous pressure points located throughout the body that correspond to different organs, systems, and conditions. Some commonly targeted pressure points include the LI4 point for headache relief, the PC6 point for reducing nausea and anxiety, and the LV3 point for promoting liver health. Each pressure point has unique benefits and applications, and consulting with a qualified acupressure practitioner can help you identify the most appropriate points for your specific needs.
-            </p>
-            <p class="B5 lg:hidden block">
-              In acupressure, there are numerous pressure points located throughout the body that correspond to different organs, systems, and conditions. Some commonly targeted pressure points include the LI4 point for headache relief, the PC6 point for reducing nausea and anxiety, and the LV3 point for promoting liver health. Each pressure point has unique benefits and applications, and consulting with a qualified acupressure practitioner can help you identify the most appropriate points for your specific needs.
-            </p>
-          </div>
-          <div class="gap-4 flex flex-col">
-            <h4 class="H4 hidden lg:block">Acupressure Techniques and Tools</h4>
-            <h4 class="H6 lg:hidden block">Acupressure Techniques and Tools</h4>
-            <p class="B4 hidden lg:block">
-              Acupressure can be performed using various techniques and tools. Finger pressure is the most common method, where gentle yet firm pressure is applied using the fingertips or knuckles. Other techniques include palm pressure, where the entire palm is used to apply pressure, and wristband acupressure, which utilizes specially designed wristbands with acupressure buttons. Additionally, acupressure mats and pillows with strategically placed spikes can provide a therapeutic effect when lying or sitting on them.
-            </p>
-            <p class="B5 lg:hidden block">
-              Acupressure can be performed using various techniques and tools. Finger pressure is the most common method, where gentle yet firm pressure is applied using the fingertips or knuckles. Other techniques include palm pressure, where the entire palm is used to apply pressure, and wristband acupressure, which utilizes specially designed wristbands with acupressure buttons. Additionally, acupressure mats and pillows with strategically placed spikes can provide a therapeutic effect when lying or sitting on them.
-            </p>
-          </div>
-          <div class="gap-4 flex flex-col">
-            <h4 class="H4 hidden lg:block">Incorporating Acupressure Into Your Daily Routine</h4>
-            <h4 class="H6 lg:hidden block">Incorporating Acupressure Into Your Daily Routine</h4>
-            <p class="B4 hidden lg:block">
-              Acupressure can easily be incorporated into your daily routine to promote overall well-being. Simple self-care practices such as a daily acupressure massage, focusing on key pressure points, can help you reap the benefits. You can also explore acupressure techniques for specific concerns or seek professional guidance from an acupressure practitioner.
-            </p>
-            <p class="B5 lg:hidden block">
-              Acupressure can easily be incorporated into your daily routine to promote overall well-being. Simple self-care practices such as a daily acupressure massage, focusing on key pressure points, can help you reap the benefits. You can also explore acupressure techniques for specific concerns or seek professional guidance from an acupressure practitioner.
-            </p>
-          </div>
-          <div class="gap-4 flex flex-col">
-            <h4 class="H4 hidden lg:block">Conclusion</h4>
-            <h4 class="H6 lg:hidden block">Conclusion</h4>
-            <p class="B4 hidden lg:block">
-             Unlocking the secrets of acupressure can lead to a transformative journey of self-healing and well-being. By tapping into the power of pressure points, you can experience a myriad of benefits, from pain relief to stress reduction and enhanced vitality. Whether you choose to explore acupressure on your own or seek professional guidance, this ancient practice has the potential to unlock a world of wellness and vitality. Start your acupressure journey today and discover the incredible benefits it holds for you.
-            </p>
-            <p class="B5 lg:hidden block">
-             Unlocking the secrets of acupressure can lead to a transformative journey of self-healing and well-being. By tapping into the power of pressure points, you can experience a myriad of benefits, from pain relief to stress reduction and enhanced vitality. Whether you choose to explore acupressure on your own or seek professional guidance, this ancient practice has the potential to unlock a world of wellness and vitality. Start your acupressure journey today and discover the incredible benefits it holds for you.
-            </p>
-          </div>
-        </div>
         </div>
 
         <footer class="lg:pt-24 pt-20 m-0">
           <div class="footer px-6 text-white">
             <div class="flex lg:flex-row flex-col justify-between lg:items-center pt-12 lg:pt-16">
               <div class="flex lg:flex-row pb-12 lg:pb-0 flex-col gap-10">
-              <Link href="/" class="hover:text-green-200 H6 hidden lg:block ">
+                <Link href="/" class="hover:text-green-200 H6 hidden lg:block ">
                   Home
                 </Link>
                 <Link

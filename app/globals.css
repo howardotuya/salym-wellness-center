@@ -4,9 +4,18 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.prose :where(p):not(:where([class~="not-prose"] *)) {
+  margin-top: 0rem!important;
+  margin-bottom: 0.5rem!important;
+}
 body {
   color: #0f0f0f;
   font-family: "Source Sans Pro", sans-serif;
+}
+
+h1,h2,h3,h4,h5 {
+  font-family: "Bitter", serif;
 }
 
 .body-margin {
@@ -263,11 +272,11 @@ nav {
 }
 
 .about {
-  padding-top: 128px;
+  padding-top: 96px;
 }
 
 .onws {
-  padding-top: 128px;
+  padding-top: 96px;
 }
 
 #slideshow-container {
@@ -869,7 +878,7 @@ input[type="radio"]:checked {
   }
 
   .header-content {
-    padding-top: 128px;
+    padding-top: 96px;
   }
 
   .navM {
@@ -923,4 +932,12 @@ input[type="radio"]:checked {
     margin: 0 -112px;
     padding: 0 112px;
   }
+}
+
+.ctrr {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

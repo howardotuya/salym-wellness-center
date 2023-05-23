@@ -1,7 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-import LinesEllipsis from "react-lines-ellipsis";
-import dynamic from 'next/dynamic';
 import Image from "next/image";
 import Link from "next/link";
 import axios from "axios";
@@ -15,7 +13,19 @@ import p7 from "../public/p7.png";
 import p8 from "../public/p8.png";
 import p9 from "../public/p9.png";
 import p10 from "../public/p10.png";
+import wh1 from "../public/wh1.png";
+import wh2 from "../public/wh2.png";
+import wh3 from "../public/wh3.png";
+import wh4 from "../public/wh4.png";
+import c1 from "../public/c1.png";
+import c2 from "../public/c2.png";
+import c3 from "../public/c3.png";
+import c4 from "../public/c4.png";
+import c5 from "../public/c5.png";
+import c6 from "../public/c6.png";
 import logo from "../public/logoLarge.png";
+import BlogComponent from "@/component/BlogComponent";
+import { client } from "../contentful/client";
 
 const popuphandler = () => {
   const popup = document.querySelector(".bg-grn-60");
@@ -28,8 +38,19 @@ const popuphandler = () => {
 };
 
 export default function Home() {
-  
+  const [posts, setPosts] = useState(null);
+
   useEffect(() => {
+    async function getdata() {
+      try {
+        const response = await client.getEntries({ content_type: "blogPosts" });
+      setPosts(response.items);
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    getdata();
+    
     const slideshow = document.getElementById("slideshow");
     const prevBtn = document.getElementById("prevBtn");
     const nextBtn = document.getElementById("nextBtn");
@@ -37,20 +58,14 @@ export default function Home() {
     const nextBtnn = document.getElementById("nextBtnn");
     const slideContainer = document.getElementsByClassName("slid")[0];
     const slideWidth = slideContainer.clientWidth; // Width of each slide
-    const mslideshow = document.getElementById("mslideshow");
-    const mslideContainer = document.getElementsByClassName("slidx")[0];
-    const mslideWidth = mslideContainer.clientWidth; // Width of each slide
-    const prevBtnnn = document.getElementById("prevBtnnn");
-    const nextBtnnn = document.getElementById("nextBtnnn");
     const tslideshow = document.getElementById("tslideshow");
     const tslideContainer = document.getElementsByClassName("tc")[0];
     const tslideWidth = tslideContainer.clientWidth; // Width of each slide
     const prevBtnx = document.getElementById("prevBtnx");
     const nextBtnx = document.getElementById("nextBtnx");
 
-    let currentPosition = 0;
-    let mcurrentPosition = 0;
     let tcurrentPosition = 0;
+    let currentPosition = 0;
 
     prevBtn.addEventListener("click", () => {
       currentPosition += slideWidth * 3;
@@ -86,7 +101,6 @@ export default function Home() {
       nextBtnn.classList.remove("buttonO2");
       nextBtnn.classList.add("buttonM2");
     });
-
     nextBtnn.addEventListener("click", () => {
       currentPosition -= slideWidth * 1;
       const maxPosition = -(slideWidth * (slideshow.childElementCount - 1));
@@ -98,29 +112,6 @@ export default function Home() {
       slideshow.style.transform = `translateX(${currentPosition}px)`;
       prevBtnn.classList.remove("buttonO2");
       prevBtnn.classList.add("buttonM2");
-    });
-    prevBtnnn.addEventListener("click", () => {
-      mcurrentPosition += mslideWidth * 3;
-      if (mcurrentPosition > 0) {
-        mcurrentPosition = 0;
-        prevBtnnn.classList.remove("buttonM3");
-        prevBtnnn.classList.add("buttonO3");
-      }
-      mslideshow.style.transform = `translateX(${mcurrentPosition}px)`;
-      nextBtnnn.classList.remove("buttonO3");
-      nextBtnnn.classList.add("buttonM3");
-    });
-    nextBtnnn.addEventListener("click", () => {
-      mcurrentPosition -= mslideWidth * 3;
-      const maxPosition = -(mslideWidth * (mslideshow.childElementCount - 3));
-      if (mcurrentPosition < maxPosition) {
-        mcurrentPosition = maxPosition;
-        nextBtnnn.classList.remove("buttonM3");
-        nextBtnnn.classList.add("buttonO3");
-      }
-      mslideshow.style.transform = `translateX(${mcurrentPosition}px)`;
-      prevBtnnn.classList.remove("buttonO3");
-      prevBtnnn.classList.add("buttonM3");
     });
     prevBtnx.addEventListener("click", () => {
       tcurrentPosition += tslideWidth * 1;
@@ -154,6 +145,7 @@ export default function Home() {
         document.getElementById("modalsc").style.display = "none";
       });
     }
+
   }, []);
 
   const [fname, setfname] = useState("");
@@ -257,7 +249,7 @@ export default function Home() {
         id="modalss"
         class="flex z-50 px-6 justify-center items-center w-full h-full"
       >
-        <div class="max-w-xl success w-full items-center rounded-2xl bg-white flex flex-col px-4 lg:px-6 py-10 gap-4 lg:gap-6">
+        <div class="max-w-xl success w-full items-center   rounded-2xl bg-white flex flex-col px-4 lg:px-6 py-10 gap-4 lg:gap-6">
           <div>
             <Image
               alt="png will occupy here"
@@ -311,7 +303,7 @@ export default function Home() {
         id="modales"
         class="flex z-50 px-6 justify-center items-center w-full h-full"
       >
-        <div class="max-w-xl danger w-full items-center rounded-2xl bg-white flex flex-col px-6 py-10 gap-6">
+        <div class="max-w-xl danger w-full items-center   rounded-2xl bg-white flex flex-col px-6 py-10 gap-6">
           <div>
             <Image
               alt="png will occupy here"
@@ -371,7 +363,7 @@ export default function Home() {
         id="modalsc"
         class="flex z-50 px-6 justify-center items-center w-full h-full"
       >
-        <div class="max-w-xl success w-full items-center rounded-2xl bg-white flex flex-col px-4 lg:px-6 py-10 gap-4 lg:gap-6">
+        <div class="max-w-xl success w-full items-center   rounded-2xl bg-white flex flex-col px-4 lg:px-6 py-10 gap-4 lg:gap-6">
           <div>
             <Image
               alt="png will occupy here"
@@ -425,7 +417,7 @@ export default function Home() {
         id="modalec"
         class="flex z-50 px-6 justify-center items-center w-full h-full"
       >
-        <div class="max-w-xl danger w-full items-center rounded-2xl bg-white flex flex-col px-6 py-10 gap-6">
+        <div class="max-w-xl danger w-full items-center   rounded-2xl bg-white flex flex-col px-6 py-10 gap-6">
           <div>
             <Image
               alt="png will occupy here"
@@ -493,7 +485,7 @@ export default function Home() {
           <Link onClick={popuphandler} href="/#" class="H6 ">
             Home
           </Link>
-          <Link onClick={popuphandler} href="/#about" class="H6 ">
+          <Link onClick={popuphandler} href="/about" class="H6 ">
             About Us
           </Link>
           <Link onClick={popuphandler} href="/#clinicals" class="H6 ">
@@ -502,7 +494,7 @@ export default function Home() {
           <Link onClick={popuphandler} href="/#productions" class="H6 ">
             Production
           </Link>
-          <Link onClick={popuphandler} href="/#blog" class="H6 ">
+          <Link onClick={popuphandler} href="/blog" class="H6 ">
             Blog
           </Link>
           <Link onClick={popuphandler} href="/#contact" class="H6 ">
@@ -591,7 +583,7 @@ export default function Home() {
               />
             </Link>
             <div class="navM hidden lg:flex">
-              <Link class="H6" href="#about">
+              <Link class="H6" href="/about">
                 About
               </Link>
               <Link class="H6" href="#clinicals">
@@ -600,7 +592,7 @@ export default function Home() {
               <Link class="H6" href="#productions">
                 Production
               </Link>
-              <Link class="H6" href="#blog">
+              <Link class="H6" href="/blog">
                 Blog
               </Link>
               <Link class="H6" href="#contact">
@@ -688,7 +680,7 @@ export default function Home() {
           </div>
         </header>
 
-        <section id="why" class="lg:pt-48 pt-32 flex flex-col gap-8 lg:gap-16">
+        <section id="why" class="lg:pt-48 pt-24 flex flex-col gap-8 lg:gap-16">
           <div class="flex flex-col justify-center gap-4">
             <h4 class="H4 text-center hidden lg:block">
               Why Choose Salym Wellness Centre?
@@ -710,22 +702,18 @@ export default function Home() {
             </div>
           </div>
           <div class="flex flex-col lg:flex-row gap-6 ">
-            <div class="lg:px-4 px-6 py-8 grn-10 flex flex-col gap-4 rounded-lg flex-grow  basis-0">
+            <div class="lg:px-4 px-6 py-8 grn-10 flex flex-col gap-4  rounded-2xl flex-grow  basis-0">
               <Image
                 alt="png will occupy here"
-                class="H4 text-center hidden lg:block self-start"
-                src="/wh1.png"
+                class="H4 text-center hidden lg:block self-start w-20 h-auto"
+                src={wh1}
                 priority
-                width="80"
-                height="80"
                 quality={100}
               />
               <Image
                 alt="png will occupy here"
-                class="H5 lg:hidden block"
-                src="/whh1.png"
-                width="56"
-                height="56"
+                class="H5 lg:hidden block w-14 h-auto"
+                src={wh1}
                 priority
                 quality={100}
               />
@@ -744,22 +732,18 @@ export default function Home() {
                 ensure that we offer comprehensive solutions to our customers.
               </p>
             </div>
-            <div class="lg:px-4 px-6 py-8 grn-10 flex flex-col gap-4 rounded-lg flex-grow  basis-0">
+            <div class="lg:px-4 px-6 py-8 grn-10 flex flex-col gap-4  rounded-2xl flex-grow  basis-0">
               <Image
                 alt="png will occupy here"
-                class="H4 text-center hidden lg:block self-start"
-                src="/wh2.png"
+                class="H4 text-center hidden lg:block self-start w-20 h-auto"
+                src={wh2}
                 priority
-                width="80"
-                height="80"
                 quality={100}
               />
               <Image
                 alt="png will occupy here"
-                class="H5 lg:hidden block"
-                src="/whh2.png"
-                width="56"
-                height="56"
+                class="H5 lg:hidden block w-14 h-auto"
+                src={wh2}
                 priority
                 quality={100}
               />
@@ -774,22 +758,18 @@ export default function Home() {
                 accountability at every stage of production.
               </p>
             </div>
-            <div class="lg:px-4 px-6 py-8 grn-10 flex flex-col gap-4 rounded-lg flex-grow  basis-0">
+            <div class="lg:px-4 px-6 py-8 grn-10 flex flex-col gap-4  rounded-2xl flex-grow  basis-0">
               <Image
                 alt="png will occupy here"
-                class="H4 text-center hidden lg:block self-start"
-                src="/wh3.svg"
+                class="H4 text-center hidden lg:block self-start w-20 h-auto"
+                src={wh3}
                 priority
-                width="80"
-                height="80"
                 quality={100}
               />
               <Image
                 alt="png will occupy here"
-                class="H5 lg:hidden block"
-                src="/whh3.png"
-                width="56"
-                height="56"
+                class="H5 lg:hidden block w-14 h-auto"
+                src={wh3}
                 priority
                 quality={100}
               />
@@ -806,22 +786,18 @@ export default function Home() {
                 their efficacy.
               </p>
             </div>
-            <div class="lg:px-4 px-6 py-8 grn-10 flex flex-col gap-4 rounded-lg flex-grow  basis-0">
+            <div class="lg:px-4 px-6 py-8 grn-10 flex flex-col gap-4  rounded-2xl flex-grow  basis-0">
               <Image
                 alt="png will occupy here"
-                class="H4 text-center hidden lg:block self-start"
-                src="/wh4.png"
+                class="H4 text-center hidden lg:block self-start w-20 h-auto"
+                src={wh4}
                 priority
-                width="80"
-                height="80"
                 quality={100}
               />
               <Image
                 alt="png will occupy here"
-                class=" lg:hidden block"
-                src="/whh4.png"
-                width="56"
-                height="56"
+                class="H5 lg:hidden block w-14 h-auto"
+                src={wh4}
                 priority
                 quality={100}
               />
@@ -843,7 +819,7 @@ export default function Home() {
           id="about"
           class="about flex lg:flex-row flex-col gap-10 lg:gap-16 items-center justify-between"
         >
-          <div class="order-2 lg:order-1 lg:w-1/2">
+          <div class="order-2 lg:order-1 hidden lg:block lg:w-1/2">
             <Image
               alt="png will occupy here"
               src="/about.png"
@@ -907,7 +883,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section class="onws">
+        <section class=" pt-24 lg:pt-48">
           <div class="flex flex-col lg:justify-center gap-4">
             <h4 class="H4 text-center hidden lg:block">
               Our Natural Health Solutions
@@ -929,26 +905,22 @@ export default function Home() {
 
           <div class="">
             <div id="clinicals" class="lg:pt-16 pt-8 flex flex-col gap-6">
-              <h4 class="H4 hidden lg:block">Clinicals</h4>
+              <h4 class="H5 hidden lg:block">Clinicals</h4>
               <h4 class="H5 lg:hidden block">Clinicals</h4>
 
               <div class="flex flex-wrap gap-8">
-                <div class="flex flex-row gap-4 lg:gap-6 py-8 px-6 lg:p-8 grn-10 rounded-2xl basis-u">
+                <div class="flex flex-row gap-4 lg:gap-6 py-8 px-6 lg:p-8 grn-10   rounded-2xl basis-u">
                   <Image
                     alt="png will occupy here"
-                    class="H4 text-center hidden lg:block  self-center"
-                    src="/c1.svg"
+                    class="H4 text-center hidden lg:block  self-center w-20 h-auto"
+                    src={c1}
                     priority
-                    width="80"
-                    height="80"
                     quality={100}
                   />
                   <Image
                     alt="png will occupy here"
-                    class="lg:hidden block self-start"
-                    src="/cc1.png"
-                    width="48"
-                    height="48"
+                    class="lg:hidden block self-start w-14 h-auto"
+                    src={c1}
                     priority
                     quality={100}
                   />
@@ -967,22 +939,18 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-                <div class="flex flex-row gap-4 lg:gap-6 py-8 px-6 lg:p-8 grn-10 rounded-2xl basis-u">
+                <div class="flex flex-row gap-4 lg:gap-6 py-8 px-6 lg:p-8 grn-10   rounded-2xl basis-u">
                   <Image
                     alt="png will occupy here"
-                    class="H4 text-center hidden lg:block  self-center"
-                    src="/c2.svg"
+                    class="H4 text-center hidden lg:block  self-center w-20 h-auto"
+                    src={c2}
                     priority
-                    width="80"
-                    height="80"
                     quality={100}
                   />
                   <Image
                     alt="png will occupy here"
-                    class="lg:hidden block self-start"
-                    src="/cc2.png"
-                    width="48"
-                    height="48"
+                    class="lg:hidden block self-start w-14 h-auto"
+                    src={c2}
                     priority
                     quality={100}
                   />
@@ -1001,22 +969,18 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-                <div class="flex flex-row gap-4 lg:gap-6 py-8 px-6 lg:p-8 grn-10 rounded-2xl basis-u">
+                <div class="flex flex-row gap-4 lg:gap-6 py-8 px-6 lg:p-8 grn-10   rounded-2xl basis-u">
                   <Image
                     alt="png will occupy here"
-                    class="H4 text-center hidden lg:block  self-center"
-                    src="/c3.svg"
+                    class="H4 text-center hidden lg:block  self-center w-20 h-auto"
+                    src={c3}
                     priority
-                    width="80"
-                    height="80"
                     quality={100}
                   />
                   <Image
                     alt="png will occupy here"
-                    class="lg:hidden block self-start"
-                    src="/cc3.png"
-                    width="48"
-                    height="48"
+                    class="lg:hidden block self-start w-14 h-auto"
+                    src={c3}
                     priority
                     quality={100}
                   />
@@ -1035,22 +999,18 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-                <div class="flex flex-row gap-4 lg:gap-6 py-8 px-6 lg:p-8 grn-10 rounded-2xl basis-u">
+                <div class="flex flex-row gap-4 lg:gap-6 py-8 px-6 lg:p-8 grn-10   rounded-2xl basis-u">
                   <Image
                     alt="png will occupy here"
-                    class="H4 text-center hidden lg:block  self-center"
-                    src="/c4.svg"
+                    class="H4 text-center hidden lg:block  self-center w-20 h-auto"
+                    src={c4}
                     priority
-                    width="80"
-                    height="80"
                     quality={100}
                   />
                   <Image
                     alt="png will occupy here"
-                    class="lg:hidden block self-start"
-                    src="/cc4.png"
-                    width="48"
-                    height="48"
+                    class="lg:hidden block self-start w-14 h-auto"
+                    src={c4}
                     priority
                     quality={100}
                   />
@@ -1069,22 +1029,18 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-                <div class="flex flex-row gap-4 lg:gap-6 py-8 px-6 lg:p-8 grn-10 rounded-2xl basis-u">
+                <div class="flex flex-row gap-4 lg:gap-6 py-8 px-6 lg:p-8 grn-10   rounded-2xl basis-u">
                   <Image
                     alt="png will occupy here"
-                    class="H4 text-center hidden lg:block  self-center"
-                    src="/c5.svg"
+                    class="H4 text-center hidden lg:block  self-center w-20 h-auto"
+                    src={c5}
                     priority
-                    width="80"
-                    height="80"
                     quality={100}
                   />
                   <Image
                     alt="png will occupy here"
-                    class="lg:hidden block self-start"
-                    src="/cc5.png"
-                    width="48"
-                    height="48"
+                    class="lg:hidden block self-start w-14 h-auto"
+                    src={c5}
                     priority
                     quality={100}
                   />
@@ -1103,22 +1059,18 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-                <div class="flex flex-row gap-4 lg:gap-6 py-8 px-6 lg:p-8 grn-10 rounded-2xl basis-u">
+                <div class="flex flex-row gap-4 lg:gap-6 py-8 px-6 lg:p-8 grn-10   rounded-2xl basis-u">
                   <Image
                     alt="png will occupy here"
-                    class="H4 text-center hidden lg:block  self-center"
-                    src="/c6.svg"
+                    class="H4 text-center hidden lg:block  self-center w-20 h-auto"
+                    src={c6}
                     priority
-                    width="80"
-                    height="80"
                     quality={100}
                   />
                   <Image
                     alt="png will occupy here"
-                    class="lg:hidden block self-start"
-                    src="/cc6.png"
-                    width="48"
-                    height="48"
+                    class="lg:hidden block self-start w-14 h-auto"
+                    src={c6}
                     priority
                     quality={100}
                   />
@@ -1160,7 +1112,7 @@ export default function Home() {
               id="productions"
               class="lg:pt-24 pt-20 flex w-full justify-between"
             >
-              <h4 class="H4 hidden lg:block self-end">Production</h4>
+              <h4 class="H5 hidden lg:block self-end">Production</h4>
               <h4 class="H5 lg:hidden block self-end">Production</h4>
               <div class="lg:hidden flex flex-row items-center justify-center gap-2">
                 <button id="prevBtnn" class="buttonO2 gap-2 subH flex">
@@ -1234,7 +1186,7 @@ export default function Home() {
               <div id="slideshow">
                 <div class="slid lg:px-6">
                   <Image
-                    class="H4 text-center hidden lg:block self-center"
+                    class="H4 text-center hidden lg:block self-center w-full h-auto"
                     src={p1}
                     alt="Local Herbs and Leaves"
                     priority
@@ -1256,7 +1208,7 @@ export default function Home() {
                 </div>
                 <div class="slid lg:px-6">
                   <Image
-                    class="H4 text-center hidden lg:block self-center"
+                    class="H4 text-center hidden lg:block self-center w-full h-auto"
                     src={p2}
                     alt="Local Roots and Barks"
                     priority
@@ -1278,7 +1230,7 @@ export default function Home() {
                 </div>
                 <div class="slid lg:px-6">
                   <Image
-                    class="H4 text-center hidden lg:block self-center"
+                    class="H4 text-center hidden lg:block self-center w-full h-auto"
                     src={p3}
                     alt="Seeds, Flowers and Fruits"
                     priority
@@ -1320,7 +1272,7 @@ export default function Home() {
                 </div>
                 <div class="slid lg:px-6">
                   <Image
-                    class="H4 text-center hidden lg:block self-center"
+                    class="H4 text-center hidden lg:block self-center w-full h-auto"
                     src={p5}
                     alt="Foreign Products"
                     priority
@@ -1342,7 +1294,7 @@ export default function Home() {
                 </div>
                 <div class="slid lg:px-6">
                   <Image
-                    class="H4 text-center hidden lg:block self-center"
+                    class="H4 text-center hidden lg:block self-center w-full h-auto"
                     src={p6}
                     alt="Oils and Fluids"
                     priority
@@ -1364,7 +1316,7 @@ export default function Home() {
                 </div>
                 <div class="slid lg:px-6">
                   <Image
-                    class="H4 text-center hidden lg:block self-center"
+                    class="H4 text-center hidden lg:block self-center w-full h-auto"
                     src={p7}
                     alt="Teas"
                     priority
@@ -1384,7 +1336,7 @@ export default function Home() {
                 </div>
                 <div class="slid lg:px-6">
                   <Image
-                    class="H4 text-center hidden lg:block self-center"
+                    class="H4 text-center hidden lg:block self-center w-full h-auto"
                     src={p8}
                     alt="Apparatus"
                     priority
@@ -1406,7 +1358,7 @@ export default function Home() {
                 </div>
                 <div class="slid lg:px-6">
                   <Image
-                    class="H4 text-center hidden lg:block self-center"
+                    class="H4 text-center hidden lg:block self-center w-full h-auto"
                     src={p9}
                     alt="Cosmetics - Creams/Soaps"
                     priority
@@ -1428,7 +1380,7 @@ export default function Home() {
                 </div>
                 <div class="slid lg:px-6">
                   <Image
-                    class="H4 text-center hidden lg:block self-center"
+                    class="H4 text-center hidden lg:block self-center w-full h-auto"
                     src={p10}
                     alt="Salts, Edibles and Miscellaneous"
                     priority
@@ -1476,272 +1428,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="blog" class="onws">
-          <div class="flex justify-between items-end">
-            <div class="flex flex-col gap-4">
-              <h4 class="H4 hidden lg:block">Recent Blog Posts</h4>
-              <h4 class="H5 lg:hidden block">Recent Blog Posts</h4>
-              <div class="w-full flex">
-                <p class="B4 hidden lg:block black7 max-w-xl">
-                  Stay up to date with our recent blog posts, featuring
-                  insightful articles on health, wellness, and natural remedies
-                  for your daily life.
-                </p>
-                <p class="B5 lg:hidden block black7 max-w-xl">
-                  Stay up to date with our recent blog posts, featuring
-                  insightful articles on health, wellness, and natural remedies
-                  for your daily life.
-                </p>
-              </div>
-            </div>
-            <div class="hidden lg:flex flex-row gap-4">
-              <button id="prevBtnnn" class="buttonO3 hidden lg:flex gap-2 H6">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="w-6 h-6"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
-                  />
-                </svg>
-                Prev
-              </button>
-              <button id="nextBtnnn" class="buttonM3 hidden lg:flex gap-2 H6">
-                Next
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="w-6 h-6"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
+        {posts ? <BlogComponent posts={posts} /> : <div></div>}
 
-          <div id="slideshow-container" class="pt-8 lg:pt-16">
-            <div id="mslideshow">
-              <div class="slidx lg:px-6">
-                <div class="bic flex gap-4 lg:gap-6 flex-col p-4 lg:py-8 lg:px-6">
-                  <div class="lg:h-64 object-cover h-52 w-full rounded-2xl overflow-hidden">
-                    <div class="loaddi headImg"></div>
-                  </div>
-                  <Link
-                    href="/blog/1"
-                    class="H5 hover:underline hover:text-green-900 hidden lg:block whitespace-nowrap overflow-hidden text-ellipsis"
-                  >
-                    The Healing Powers of Methyl Cream
-                  </Link>
-                  <Link
-                    href="/blog/1"
-                    class="H6 hover:underline hover:text-green-900 lg:hidden block whitespace-nowrap overflow-hidden text-ellipsis"
-                  >
-                    The Healing Powers of Methyl Cream
-                  </Link>
-                  <div class="B4 hidden lg:block black7 max-w-2xl">
-                    <LinesEllipsis
-                      text="Methyl cream, a natural remedy derived from medicinal plants, has gained popularity for its remarkable healing properties. This blog post explores the benefits and uses of methyl cream in promoting overall well-being and addressing various health concerns."
-                      maxLine="3"
-                      ellipsis="..."
-                      trimRight
-                      basedOn="letters"
-                    />
-                  </div>
-                  <div class="B5 lg:hidden block black7 max-w-2xl ">
-                    <LinesEllipsis
-                      text="Methyl cream, a natural remedy derived from medicinal plants, has gained popularity for its remarkable healing properties. This blog post explores the benefits and uses of methyl cream in promoting overall well-being and addressing various health concerns."
-                      maxLine="3"
-                      ellipsis="..."
-                      trimRight
-                      basedOn="letters"
-                    />
-                  </div>
-                  <div class="flex justify-between items-center">
-                    <span class="grn-10 grn-60 H6 hidden lg:block py-2 px-4 rounded-full ">
-                      Herbal Wellness
-                    </span>
-                    <span class=" lg:hidden block grn-10 grn-60 subH py-2 px-4 rounded-full">
-                      Herbal Wellness
-                    </span>
-                    <p class="H6 hidden lg:block"> 3 mins read</p>
-                    <p class="subH lg:hidden block"> 3 mins read</p>
-                  </div>
-                </div>
-              </div>
-              <div class="slidx lg:px-6">
-                <div class="bic flex gap-4 lg:gap-6 flex-col p-4 lg:py-8 lg:px-6">
-                  <div class="lg:h-64 object-cover h-52 w-full rounded-2xl overflow-hidden">
-                    <div class="loaddi headImg2"></div>
-                  </div>
-                  <Link
-                    href="/blog/2"
-                    class="H5 hover:underline hover:text-green-900  hidden whitespace-nowrap overflow-hidden text-ellipsis lg:block"
-                  >
-                    The Power of Herbal Therapy for Stress Management
-                  </Link>
-                  <Link
-                    href="/blog/2"
-                    class="H6 hover:underline hover:text-green-900  lg:hidden whitespace-nowrap overflow-hidden text-ellipsis block"
-                  >
-                    The Power of Herbal Therapy for Stress Management
-                  </Link>
-                  <div class="B4 hidden lg:block black7 max-w-2xl">
-                    <LinesEllipsis
-                      text="Stress has become an unavoidable part of our modern lives, impacting our physical and mental well-being. While there are various approaches to managing stress, herbal therapy has emerged as a powerful and natural solution. In this blog post, we will explore the incredible potential of herbal therapy in
-                stress management and how it can help restore balance and
-                harmony to our lives."
-                      maxLine="3"
-                      ellipsis="..."
-                      trimRight
-                      basedOn="letters"
-                    />
-                  </div>
-                  <div class="B5 lg:hidden block black7 max-w-2xl ">
-                    <LinesEllipsis
-                      text="Stress has become an unavoidable part of our modern lives, impacting our physical and mental well-being. While there are various approaches to managing stress, herbal therapy has emerged as a powerful and natural solution. In this blog post, we will explore the incredible potential of herbal therapy in
-                stress management and how it can help restore balance and
-                harmony to our lives."
-                      maxLine="3"
-                      ellipsis="..."
-                      trimRight
-                      basedOn="letters"
-                    />
-                  </div>
-                  <div class="flex justify-between items-center">
-                    <span class="grn-10 grn-60 H6 hidden lg:block py-2 px-4 rounded-full ">
-                      Herbal Therapy
-                    </span>
-                    <span class=" lg:hidden block grn-10 grn-60 subH py-2 px-4 rounded-full">
-                      Herbal Therapy
-                    </span>
-                    <p class="H6 hidden lg:block">5 mins read</p>
-                    <p class="subH lg:hidden block">5 mins read</p>
-                  </div>
-                </div>
-              </div>
-              <div class="slidx lg:px-6">
-                <div class="bic flex gap-4 lg:gap-6 flex-col p-4 lg:py-8 lg:px-6">
-                  <div class="lg:h-64 object-cover h-52 w-full rounded-2xl overflow-hidden">
-                    <div class="loaddi headImg3"></div>
-                  </div>
-                  <Link
-                    href="/blog/3"
-                    class="H5 hover:underline hover:text-green-900 hidden whitespace-nowrap overflow-hidden text-ellipsis lg:block"
-                  >
-                    The Art of French Cooking: Mastering Classic Recipes
-                  </Link>
-                  <Link
-                    href="/blog/3"
-                    class="H6 hover:underline hover:text-green-900 lg:hidden whitespace-nowrap overflow-hidden text-ellipsis block"
-                  >
-                    The Art of French Cooking: Mastering Classic Recipes
-                  </Link>
-                  <div class="B4 hidden lg:block black7 max-w-2xl">
-                    <LinesEllipsis
-                      text="If you love French cuisine, you've probably heard of Julia Child's 'Mastering the Art of French Cooking.' This classic cookbook has been the go-to guide for home cooks looking to learn the fundamentals of French cuisine for over 50 years. In this blog post, we'll explore why this book is a must-have for anyone looking to master the art of French cooking."
-                      maxLine="3"
-                      ellipsis="..."
-                      trimRight
-                      basedOn="letters"
-                    />
-                  </div>
-                  <div class="B5 lg:hidden block black7 max-w-2xl ">
-                    <LinesEllipsis
-                      text="If you love French cuisine, you've probably heard of Julia Child's 'Mastering the Art of French Cooking.' This classic cookbook has been the go-to guide for home cooks looking to learn the fundamentals of French cuisine for over 50 years. In this blog post, we'll explore why this book is a must-have for anyone looking to master the art of French cooking."
-                      maxLine="3"
-                      ellipsis="..."
-                      trimRight
-                      basedOn="letters"
-                    />
-                  </div>
-                  <div class="flex justify-between items-center">
-                    <span class="grn-10 grn-60 H6 hidden lg:block py-2 px-4 rounded-full ">
-                      Herbal Wellness
-                    </span>
-                    <span class=" lg:hidden block grn-10 grn-60 subH py-2 px-4 rounded-full">
-                      Herbal Wellness
-                    </span>
-                    <p class="H6 hidden lg:block"> 3 mins read</p>
-                    <p class="subH lg:hidden block"> 3 mins read</p>
-                  </div>
-                </div>
-              </div>
-              <div class="slidx lg:px-6">
-                <div class="bic flex gap-4 lg:gap-6 flex-col p-4 lg:py-8 lg:px-6">
-                  <div class="lg:h-64 object-cover h-52 w-full rounded-2xl overflow-hidden">
-                    <div class="loaddi headImg4"></div>
-                  </div>
-                  <Link
-                    href="/blog/4"
-                    class="H5 hover:underline hover:text-green-900 hidden whitespace-nowrap overflow-hidden text-ellipsis lg:block"
-                  >
-                    Unlocking the Secrets of Acupressure: Enhancing Well-being
-                    Through Pressure Points
-                  </Link>
-                  <Link
-                    href="/blog/4"
-                    class="H6 hover:underline hover:text-green-900 lg:hidden whitespace-nowrap overflow-hidden text-ellipsis block"
-                  >
-                    Unlocking the Secrets of Acupressure: Enhancing Well-being
-                    Through Pressure Points
-                  </Link>
-                  <div class="B4 hidden lg:block black7 max-w-2xl">
-                    <LinesEllipsis
-                      text="Acupressure is an ancient healing technique that has been used for centuries to promote well-being and alleviate various ailments. By applying pressure to specific points on the body, acupressure stimulates the body's natural healing abilities and restores balance. In this blog post, we will delve into the fascinating world of acupressure and explore how it can enhance your overall well-being."
-                      maxLine="3"
-                      ellipsis="..."
-                      trimRight
-                      basedOn="letters"
-                    />
-                  </div>
-                  <div class="B5 lg:hidden block black7 max-w-2xl ">
-                    <LinesEllipsis
-                      text="Acupressure is an ancient healing technique that has been used for centuries to promote well-being and alleviate various ailments. By applying pressure to specific points on the body, acupressure stimulates the body's natural healing abilities and restores balance. In this blog post, we will delve into the fascinating world of acupressure and explore how it can enhance your overall well-being."
-                      maxLine="3"
-                      ellipsis="..."
-                      trimRight
-                      basedOn="letters"
-                    />
-                  </div>
-                  <div class="flex justify-between items-center">
-                    <span class="grn-10 grn-60 H6 hidden lg:block py-2 px-4 rounded-full ">
-                      Food and Lifestyle
-                    </span>
-                    <span class=" lg:hidden block grn-10 grn-60 subH py-2 px-4 rounded-full">
-                      Food and Lifestyle
-                    </span>
-                    <p class="H6 hidden lg:block">5 mins read</p>
-                    <p class="subH lg:hidden block">5 mins read</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="lg:pt-12 pt-6 flex lg:justify-center gap-6">
-            <Link href="/blog" class="buttonM hidden lg:block H6">
-              Explore the Blog
-            </Link>
-            <Link href="/blog" class="buttonM lg:hidden block subH">
-              Explore the Blog
-            </Link>
-          </div>
-        </section>
-
-        <section id="newsletter" class="onws">
+        <section id="newsletter" class=" pt-24 lg:pt-48">
           <div class="outer-m">
             <div class="newws lg:rounded-2xl px-4 py-10 lg:py-16 flex justify-center items-center text-white flex-col gap-6 lg:gap-10">
               <h2 class="H4 text-center hidden lg:block">
@@ -1792,7 +1481,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="testimonials" class="onws">
+        <section id="testimonials" class=" pt-24 lg:pt-48">
           <div class="flex flex-col lg:justify-center gap-4">
             <h4 class="H4 text-center hidden lg:block">Testimonials</h4>
             <h4 class="H5 lg:hidden block">Testimonials</h4>
@@ -2303,7 +1992,7 @@ export default function Home() {
                       quality={100}
                       priority
                     />
-                    +2349121325047
+                    +2348057532485
                   </p>
                   <p class="B5 lg:hidden flex gap-2 items-center">
                     <Image
@@ -2315,7 +2004,7 @@ export default function Home() {
                       quality={100}
                       priority
                     />
-                    +2349121325047
+                    +2348057532485
                   </p>
                   <p class="B4 hidden lg:flex gap-4 items-center">
                     <Image
@@ -2405,13 +2094,13 @@ export default function Home() {
                   Home
                 </Link>
                 <Link
-                  href="/#about"
+                  href="/about"
                   class="hover:text-green-200 H6 hidden lg:block"
                 >
                   About
                 </Link>
                 <Link
-                  href="/#about"
+                  href="/about"
                   class="hover:text-green-200 subH lg:hidden block"
                 >
                   About
@@ -2441,13 +2130,13 @@ export default function Home() {
                   Productions
                 </Link>
                 <Link
-                  href="/#blog"
+                  href="/blog"
                   class="hover:text-green-200 H6 hidden lg:block"
                 >
                   Blog
                 </Link>
                 <Link
-                  href="/#blog"
+                  href="/blog"
                   class="hover:text-green-200 subH lg:hidden block"
                 >
                   Blog

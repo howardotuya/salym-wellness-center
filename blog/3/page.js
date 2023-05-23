@@ -1,10 +1,9 @@
-"use client"
-import { client } from "../../contentful/client";
-import {useEffect, useState} from "react"
-import PostCard from "./postData.js";
+"use client";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import axios from "axios";
+import LinesEllipsis from "react-lines-ellipsis";
 
 const popuphandler = () => {
   const popup = document.querySelector(".bg-grn-60");
@@ -15,8 +14,8 @@ const popuphandler = () => {
     popup.style.display = "none";
   }
 };
- 
-export default async function Index() {
+
+export default function About() {
   useEffect(() => {
     var closeButtons = document.getElementsByClassName("colse");
     for (var i = 0; i < closeButtons.length; i++) {
@@ -28,32 +27,6 @@ export default async function Index() {
       });
     }
   }, []);
-  const [email, setEmail] = useState("");
-  const subHandler = async (e) => {
-    e.preventDefault();
-
-    document.getElementById("head-sub").style.display = "none";
-    document.getElementById("head-sub2").style.display = "flex";
-
-    try {
-      const { data } = await axios.post(
-        "http://localhost:5000/api/mail/subscribe",
-        { email }
-      );
-
-      document.getElementById("modalss").style.display = "flex";
-      document.getElementById("head-sub").style.display = "flex";
-      document.getElementById("head-sub2").style.display = "none";
-      setEmail("");
-    } catch (error) {
-      document.getElementById("modales").style.display = "flex";
-      document.getElementById("head-sub").style.display = "flex";
-      document.getElementById("head-sub2").style.display = "none";
-      setEmail("");
-    }
-  };
-  let posts = await getPosts();
-  console.log(posts[0].fields )
 
   return (
     <>
@@ -61,7 +34,7 @@ export default async function Index() {
         id="modalss"
         class="flex px-6 justify-center items-center w-full h-full"
       >
-        <div class="max-w-xl success w-full items-center rounded-2xl bg-white flex flex-col px-4 lg:px-6 py-10 gap-4 lg:gap-6">
+        <div class="max-w-xl success w-full items-center   rounded-2xl bg-white flex flex-col px-4 lg:px-6 py-10 gap-4 lg:gap-6">
           <div>
             <Image
               alt="png will occupy here"
@@ -117,7 +90,7 @@ export default async function Index() {
         id="modales"
         class="flex px-6 justify-center items-center w-full h-full"
       >
-        <div class="max-w-xl danger w-full items-center rounded-2xl bg-white flex flex-col px-6 py-10 gap-6">
+        <div class="max-w-xl danger w-full items-center   rounded-2xl bg-white flex flex-col px-6 py-10 gap-6">
           <div>
             <Image
               alt="png will occupy here"
@@ -151,10 +124,10 @@ export default async function Index() {
           </div>
           <div>
             <p class="B4 grn-50 hidden lg:block">
-              Sorry, we couldn&apos;t process your subscription. Please try again.
+              Sorry, we couldn't process your subscription. Please try again.
             </p>
             <p class="B5 grn-50 lg:hidden block">
-              Sorry, we couldn&apos;t process your subscription. Please try again.
+              Sorry, we couldn't process your subscription. Please try again.
             </p>
           </div>
           <div class="flex gap-4">
@@ -176,7 +149,7 @@ export default async function Index() {
         id="modalsc"
         class="flex px-6 justify-center items-center w-full h-full"
       >
-        <div class="max-w-xl success w-full items-center rounded-2xl bg-white flex flex-col px-4 lg:px-6 py-10 gap-4 lg:gap-6">
+        <div class="max-w-xl success w-full items-center   rounded-2xl bg-white flex flex-col px-4 lg:px-6 py-10 gap-4 lg:gap-6">
           <div>
             <Image
               alt="png will occupy here"
@@ -232,7 +205,7 @@ export default async function Index() {
         id="modalec"
         class="flex px-6 justify-center items-center w-full h-full"
       >
-        <div class="max-w-xl danger w-full items-center rounded-2xl bg-white flex flex-col px-6 py-10 gap-6">
+        <div class="max-w-xl danger w-full items-center   rounded-2xl bg-white flex flex-col px-6 py-10 gap-6">
           <div>
             <Image
               alt="png will occupy here"
@@ -435,62 +408,105 @@ export default async function Index() {
               quality={100}
             />
           </nav>
-
-          <div class=" header-content flex justify-center w-full">
-            <div class="gap-4 lg:gap-8 flex flex-col lg:justify-center lg:items-center max-w-4xl">
-              <h1 class="H2 hidden lg:block">The Salym Wellness Center Blog</h1>
-              <h1 class="H4 lg:hidden block">The Salym Wellness Center Blog</h1>
-              <p class="B4 hidden lg:block black7 max-w-2xl lg:text-center">
-                Explore our blog for informative and engaging content on
-                holistic health, wellness, and natural remedies, designed to
-                enhance your overall wellbeing.
-              </p>
-              <p class="B5 lg:hidden block black7 max-w-2xl lg:text-center">
-                Explore our blog for informative and engaging content on
-                holistic health, wellness, and natural remedies, designed to
-                enhance your overall wellbeing.
-              </p>
-              <form onSubmit={subHandler} class="flex gap-2 lg:gap-4">
-                <input
-                  class="newsletterx outline-none"
-                  type="email"
-                  placeholder="you@example.com"
-                  required
-                  onChange={(e) => {
-                    setEmail(e.target.value);
-                  }}
-                  value={email}
-                />
-                <button id="head-sub" type="submit" class="buttonM">
-                  Subscribe
-                </button>
-                <div id="head-sub2" class="buttonNnx flex gap-2">
-                  Subscribe
-                  <img
-                    class="w-6 h-6 spinner"
-                    src="/spinner.svg"
-                    alt="spinner"
-                  />
-                </div>
-              </form>
-            </div>
-          </div>
         </header>
 
-        <section id="blog" class="lg:pt-24 pt-20">
-          <div class="flex justify-between items-end">
-            <div class="flex flex-col gap-4">
-              <h4 class="H4 hidden lg:block">Latest articles</h4>
-              <h4 class="H5 lg:hidden block">Latest articles</h4>
+        <div class=" max-w-3xl w-full mx-auto">
+        <div class="lg:pt-32 pt-16 flex flex-col item gap-8 lg:gap-10">
+          <div class="lg:h-96 object-cover h-56 w-full   rounded-2xl overflow-hidden">
+            <div class="headImg3"></div>
+          </div>
+          <div class="flex flex-col gap-6">
+            <h4 class="H5 hidden lg:block">
+              The Art of French Cooking: Mastering Classic Recipes
+            </h4>
+            <h4 class="H5 lg:hidden block">
+              The Art of French Cooking: Mastering Classic Recipes
+            </h4>
+
+            <div class="flex flex-col gap-4 lg:gap-6">
+              <div class="flex-row gap-4 hidden lg:flex items-center">
+                <div class="flex flex-col gap-2">
+                  <p class="h6">By Salym Wellness Center Team</p>
+                  <p class="subH black7">Published 9th May, 2023</p>
+                </div>
+              </div>
+              <div class="flex-row gap-2 lg:hidden flex items-center">
+                <div class="flex flex-col gap-2">
+                  <p class="subH">By Salym Wellness Center Team</p>
+                  <p class="subH black7">Published 9th May, 2023</p>
+                </div>
+              </div>
+
+              <div class="flex gap-8 lg:justify-start justify-between items-center">
+                <span class="grn-10 grn-60 H6 hidden lg:block py-2 px-4  rounded-2xl ">
+                  Food and Lifestyle
+                </span>
+                <span class=" lg:hidden block grn-10 grn-60 subH py-2 px-4  rounded-2xl">
+                  Food and Lifestyle
+                </span>
+                <p class="H6 hidden lg:block">5 mins read</p>
+                <p class="subH lg:hidden block">5 mins read</p>
+              </div>
+
             </div>
           </div>
+        </div>
 
-      <div class="pt-6 lg:pt-10 flex flex-wrap w-full gap-8">
-        {posts.map((post, i) => (
-          <PostCard key={post.fields.title} post={post} />
-        ))}
-      </div>
-        </section>
+        <div class=" flex flex-col gap-8 lg:gap-12 pt-12 lg:pt-16">
+          <div class="gap-4 flex flex-col">
+            <p class="B4 hidden lg:block">
+              If you love French cuisine, you've probably heard of Julia Child's "Mastering the Art of French Cooking." This classic cookbook has been the go-to guide for home cooks looking to learn the fundamentals of French cuisine for over 50 years. In this blog post, we'll explore why this book is a must-have for anyone looking to master the art of French cooking.
+            </p>
+            <p class="B5 lg:hidden block">
+              If you love French cuisine, you've probably heard of Julia Child's "Mastering the Art of French Cooking." This classic cookbook has been the go-to guide for home cooks looking to learn the fundamentals of French cuisine for over 50 years. In this blog post, we'll explore why this book is a must-have for anyone looking to master the art of French cooking.
+            </p>
+          </div>
+          <div class="gap-4 flex flex-col">
+            <h4 class="H4 hidden lg:block">
+              The History of "Mastering the Art of French Cooking
+            </h4>
+            <h4 class="H6 lg:hidden block">
+              The History of "Mastering the Art of French Cooking
+            </h4>
+            <p class="B4 hidden lg:block">
+              Julia Child, Simone Beck, and Louisette Bertholle co-authored "Mastering the Art of French Cooking" in 1961. The book was an instant success and became a staple in many American kitchens. Its popularity can be attributed to its clear and concise instructions, as well as the emphasis on using fresh, high-quality ingredients.
+            </p>
+            <p class="B5 lg:hidden block">
+              Julia Child, Simone Beck, and Louisette Bertholle co-authored "Mastering the Art of French Cooking" in 1961. The book was an instant success and became a staple in many American kitchens. Its popularity can be attributed to its clear and concise instructions, as well as the emphasis on using fresh, high-quality ingredients.
+            </p>
+          </div>
+          <div class="gap-4 flex flex-col">
+            <h4 class="H4 hidden lg:block">The Techniques of French Cooking</h4>
+            <h4 class="H6 lg:hidden block">The Techniques of French Cooking</h4>
+            <p class="B4 hidden lg:block">
+              One of the most significant benefits of "Mastering the Art of French Cooking" is its focus on teaching the fundamental techniques of French cooking. The book covers everything from basic knife skills to advanced techniques like souffle-making. By mastering these techniques, home cooks can create a wide variety of dishes and build a foundation for future culinary endeavors.
+            </p>
+            <p class="B5 lg:hidden block">
+              One of the most significant benefits of "Mastering the Art of French Cooking" is its focus on teaching the fundamental techniques of French cooking. The book covers everything from basic knife skills to advanced techniques like souffle-making. By mastering these techniques, home cooks can create a wide variety of dishes and build a foundation for future culinary endeavors.
+            </p>
+          </div>
+          <div class="gap-4 flex flex-col">
+            <h4 class="H4 hidden lg:block">The Classic French Recipes</h4>
+            <h4 class="H6 lg:hidden block">The Classic French Recipes</h4>
+            <p class="B4 hidden lg:block">
+              "Mastering the Art of French Cooking" is filled with classic French recipes that have stood the test of time. From Beef Bourguignon to Coq au Vin, these recipes are not only delicious but also provide an excellent introduction to French cuisine. The recipes are written in a straightforward, easy-to-follow manner, making them accessible to cooks of all skill levels.
+            </p>
+            <p class="B5 lg:hidden block">
+              "Mastering the Art of French Cooking" is filled with classic French recipes that have stood the test of time. From Beef Bourguignon to Coq au Vin, these recipes are not only delicious but also provide an excellent introduction to French cuisine. The recipes are written in a straightforward, easy-to-follow manner, making them accessible to cooks of all skill levels.
+            </p>
+          </div>
+          <div class="gap-4 flex flex-col">
+            <h4 class="H4 hidden lg:block">Conclusion</h4>
+            <h4 class="H6 lg:hidden block">Conclusion</h4>
+            <p class="B4 hidden lg:block">
+              Whether you're a seasoned home cook or just starting, "Mastering the Art of French Cooking" is an essential cookbook to have in your collection. Its focus on technique, fresh ingredients, and classic recipes provides a solid foundation for anyone looking to explore the art of French cooking. With this cookbook by your side, you'll be able to impress your family and friends with delicious French cuisine in no time.
+            </p>
+            <p class="B5 lg:hidden block">
+              Whether you're a seasoned home cook or just starting, "Mastering the Art of French Cooking" is an essential cookbook to have in your collection. Its focus on technique, fresh ingredients, and classic recipes provides a solid foundation for anyone looking to explore the art of French cooking. With this cookbook by your side, you'll be able to impress your family and friends with delicious French cuisine in no time.
+            </p>
+          </div>
+        </div>
+        </div>
 
         <footer class="lg:pt-24 pt-20 m-0">
           <div class="footer px-6 text-white">
@@ -639,8 +655,3 @@ export default async function Index() {
     </>
   );
 }
-
-export const getPosts = async () => {
-  const response = await client.getEntries({ content_type: "blogPosts" });
-  return response.items;
-};

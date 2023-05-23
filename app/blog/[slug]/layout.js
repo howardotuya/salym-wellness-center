@@ -1,7 +1,7 @@
-import '../globals.css'
+import '../../globals.css'
 
 export const metadata = {
-  title: "NH",
+  title: "NH - Individual",
   description: "Nothin Here",
   
 };

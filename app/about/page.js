@@ -13,6 +13,12 @@ import p7 from "../../public/p7.png";
 import p8 from "../../public/p8.png";
 import p9 from "../../public/p9.png";
 import p10 from "../../public/p10.png";
+import c1 from "../../public/c1.png";
+import c2 from "../../public/c2.png";
+import c3 from "../../public/c3.png";
+import c4 from "../../public/c4.png";
+import c5 from "../../public/c5.png";
+import c6 from "../../public/c6.png";
 import logo from "../../public/logoLarge.png";
 
 
@@ -180,7 +186,7 @@ export default function About() {
         id="modalss"
         class="flex z-50 px-6 justify-center items-center w-full h-full"
       >
-        <div class="max-w-xl success w-full items-center rounded-2xl bg-white flex flex-col px-4 lg:px-6 py-10 gap-4 lg:gap-6">
+        <div class="max-w-xl success w-full items-center   rounded-2xl bg-white flex flex-col px-4 lg:px-6 py-10 gap-4 lg:gap-6">
           <div>
             <Image
               alt="png will occupy here"
@@ -234,7 +240,7 @@ export default function About() {
         id="modales"
         class="flex z-50 px-6 justify-center items-center w-full h-full"
       >
-        <div class="max-w-xl danger w-full items-center rounded-2xl bg-white flex flex-col px-6 py-10 gap-6">
+        <div class="max-w-xl danger w-full items-center   rounded-2xl bg-white flex flex-col px-6 py-10 gap-6">
           <div>
             <Image
               alt="png will occupy here"
@@ -294,7 +300,7 @@ export default function About() {
         id="modalsc"
         class="flex z-50 px-6 justify-center items-center w-full h-full"
       >
-        <div class="max-w-xl success w-full items-center rounded-2xl bg-white flex flex-col px-4 lg:px-6 py-10 gap-4 lg:gap-6">
+        <div class="max-w-xl success w-full items-center   rounded-2xl bg-white flex flex-col px-4 lg:px-6 py-10 gap-4 lg:gap-6">
           <div>
             <Image
               alt="png will occupy here"
@@ -348,7 +354,7 @@ export default function About() {
         id="modalec"
         class="flex z-50 px-6 justify-center items-center w-full h-full"
       >
-        <div class="max-w-xl danger w-full items-center rounded-2xl bg-white flex flex-col px-6 py-10 gap-6">
+        <div class="max-w-xl danger w-full items-center   rounded-2xl bg-white flex flex-col px-6 py-10 gap-6">
           <div>
             <Image
               alt="png will occupy here"
@@ -413,7 +419,7 @@ export default function About() {
           />
         </div>
         <div class="flex gap-8 flex-col">
-          <Link onClick={popuphandler} href="/about/#" class="H6 ">
+          <Link onClick={popuphandler} href="/" class="H6 ">
             Home
           </Link>
           <Link onClick={popuphandler} href="/about" class="H6 ">
@@ -638,7 +644,7 @@ export default function About() {
 
         <section class="missionvision pt-24 lg:pt-32">
           <div class="flex flex-col lg:flex-row gap-6 ">
-            <div class="px-4 lg:px-6 py-8 grn-10 flex flex-col gap-4 lg:gap-6 rounded-lg flex-grow  basis-0">
+            <div class="px-4 lg:px-6 py-8 grn-10 flex flex-col gap-4 lg:gap-6  rounded-2xl flex-grow  basis-0">
               <Image
                 alt="png will occupy here"
                 class="H4 text-center hidden lg:block self-start"
@@ -678,7 +684,7 @@ export default function About() {
                 solutions and achieve a healthier, more fulfilling life.
               </p>
             </div>
-            <div class="px-4 lg:px-6 py-8 grn-10 flex flex-col gap-4 lg:gap-6 rounded-lg flex-grow  basis-0">
+            <div class="px-4 lg:px-6 py-8 grn-10 flex flex-col gap-4 lg:gap-6  rounded-2xl flex-grow  basis-0">
               <Image
                 alt="png will occupy here"
                 class="H4 text-center hidden lg:block self-start"
@@ -743,7 +749,7 @@ export default function About() {
             </div>
           </div>
           <div class="flex flex-col lg:flex-row gap-6 ">
-            <div class="lg:px-4 px-6 py-8 grn-10 flex flex-col gap-4 rounded-lg flex-grow  basis-0 self-start lg:mt-16">
+            <div class="lg:px-4 px-6 py-8 grn-10 flex flex-col gap-4  rounded-2xl flex-grow  basis-0 self-start lg:mt-16">
               <Image
                 alt="png will occupy here"
                 class="H4 text-center hidden lg:block self-start"
@@ -773,7 +779,7 @@ export default function About() {
                 delivering quality natural wellness solutions
               </p>
             </div>
-            <div class="lg:px-4 px-6 py-8 grn-10 flex flex-col gap-4 rounded-lg flex-grow  basis-0 self-start">
+            <div class="lg:px-4 px-6 py-8 grn-10 flex flex-col gap-4  rounded-2xl flex-grow  basis-0 self-start">
               <Image
                 alt="png will occupy here"
                 class="H4 text-center hidden lg:block self-start"
@@ -803,7 +809,7 @@ export default function About() {
                 in naturopathic wellness
               </p>
             </div>
-            <div class="lg:px-4 px-6 py-8 grn-10 flex flex-col gap-4 rounded-lg flex-grow  basis-0 self-start">
+            <div class="lg:px-4 px-6 py-8 grn-10 flex flex-col gap-4  rounded-2xl flex-grow  basis-0 self-start">
               <Image
                 alt="png will occupy here"
                 class="H4 text-center hidden lg:block self-start"
@@ -833,7 +839,7 @@ export default function About() {
                 wellness products and services
               </p>
             </div>
-            <div class="lg:px-4 px-6 py-8 grn-10 flex flex-col gap-4 rounded-lg flex-grow  basis-0 self-start lg:mt-16">
+            <div class="lg:px-4 px-6 py-8 grn-10 flex flex-col gap-4  rounded-2xl flex-grow  basis-0 self-start lg:mt-16">
               <Image
                 alt="png will occupy here"
                 class="H4 text-center hidden lg:block self-start"
@@ -885,7 +891,7 @@ export default function About() {
           </div>
 
           <div class="flex flex-col lg:flex-row gap-6 ">
-            <div class="px-4 lg:px-6 py-8 grn-10 flex flex-col gap-4 lg:gap-6 rounded-lg flex-grow  basis-0">
+            <div class="px-4 lg:px-6 py-8 grn-10 flex flex-col gap-4 lg:gap-6  rounded-2xl flex-grow  basis-0">
               <Image
                 alt="png will occupy here"
                 class="H4 text-center hidden lg:block self-start"
@@ -923,7 +929,7 @@ export default function About() {
                 health goals.
               </p>
             </div>
-            <div class="px-4 lg:px-6 py-8 grn-10 flex flex-col gap-4 lg:gap-6 rounded-lg flex-grow  basis-0">
+            <div class="px-4 lg:px-6 py-8 grn-10 flex flex-col gap-4 lg:gap-6  rounded-2xl flex-grow  basis-0">
               <Image
                 alt="png will occupy here"
                 class="H4 text-center hidden lg:block self-start"
@@ -983,7 +989,7 @@ export default function About() {
           <div class="flex flex-wrap gap-8">
             <div class="rrr flex flex-col text-center gap-2">
               <img
-                class="H4 rounded-2xl text-center block self-center"
+                class="H4   rounded-2xl text-center block self-center"
                 src="/f3.png"
               />
               <h4 class="H5 hidden lg:block pt-2">Dr. Muili Salimot</h4>
@@ -993,7 +999,7 @@ export default function About() {
             </div>
             <div class="rrr flex flex-col text-center gap-2">
               <img
-                class="H4 rounded-2xl text-center block self-center"
+                class="H4   rounded-2xl text-center block self-center"
                 src="/f1.png"
               />
               <h4 class="H5 hidden lg:block pt-2">Muili Kazeem</h4>
@@ -1003,7 +1009,7 @@ export default function About() {
             </div>
             <div class="rrr flex flex-col text-center gap-2">
               <img
-                class="H4 rounded-2xl text-center block self-center"
+                class="H4   rounded-2xl text-center block self-center"
                 src="/f2.png"
               />
               <h4 class="H5 hidden lg:block pt-2">Musbaudeen Rianat</h4>
@@ -1013,7 +1019,7 @@ export default function About() {
             </div>
             <div class="rrr flex flex-col text-center gap-2">
               <img
-                class="H4 rounded-2xl text-center block self-center"
+                class="H4   rounded-2xl text-center block self-center"
                 src="/f6.png"
               />
               <h4 class="H5 hidden lg:block pt-2">Olatunji Christina</h4>
@@ -1023,7 +1029,7 @@ export default function About() {
             </div>
             <div class="rrr flex flex-col text-center gap-2">
               <img
-                class="H4 rounded-2xl text-center block self-center"
+                class="H4   rounded-2xl text-center block self-center"
                 src="/f5.png"
               />
               <h4 class="H5 hidden lg:block pt-2">Omar Ifeoluwa</h4>
@@ -1034,7 +1040,7 @@ export default function About() {
           </div>
         </section>
 
-        <section class="onws">
+        <section class=" pt-24 lg:pt-48">
           <div class="flex flex-col lg:justify-center gap-4">
             <h4 class="H4 text-center hidden lg:block">
               Our Natural Health Solutions
@@ -1056,26 +1062,22 @@ export default function About() {
 
           <div class="">
             <div id="clinicals" class="lg:pt-16 pt-8 flex flex-col gap-6">
-              <h4 class="H4 hidden lg:block">Clinicals</h4>
+              <h4 class="H5 hidden lg:block">Clinicals</h4>
               <h4 class="H5 lg:hidden block">Clinicals</h4>
 
               <div class="flex flex-wrap gap-8">
-                <div class="flex flex-row gap-4 lg:gap-6 py-8 px-6 lg:p-8 grn-10 rounded-2xl basis-u">
+                <div class="flex flex-row gap-4 lg:gap-6 py-8 px-6 lg:p-8 grn-10   rounded-2xl basis-u">
                   <Image
                     alt="png will occupy here"
-                    class="H4 text-center hidden lg:block  self-center"
-                    src="/c1.svg"
+                    class="H4 text-center hidden lg:block  self-center w-20 h-auto"
+                    src={c1}
                     priority
-                    width="80"
-                    height="80"
                     quality={100}
                   />
                   <Image
                     alt="png will occupy here"
-                    class="lg:hidden block self-start"
-                    src="/cc1.png"
-                    width="48"
-                    height="48"
+                    class="lg:hidden block self-start w-14 h-auto"
+                    src={c1}
                     priority
                     quality={100}
                   />
@@ -1094,22 +1096,18 @@ export default function About() {
                     </p>
                   </div>
                 </div>
-                <div class="flex flex-row gap-4 lg:gap-6 py-8 px-6 lg:p-8 grn-10 rounded-2xl basis-u">
+                <div class="flex flex-row gap-4 lg:gap-6 py-8 px-6 lg:p-8 grn-10   rounded-2xl basis-u">
                   <Image
                     alt="png will occupy here"
-                    class="H4 text-center hidden lg:block  self-center"
-                    src="/c2.svg"
+                    class="H4 text-center hidden lg:block  self-center w-20 h-auto"
+                    src={c2}
                     priority
-                    width="80"
-                    height="80"
                     quality={100}
                   />
                   <Image
                     alt="png will occupy here"
-                    class="lg:hidden block self-start"
-                    src="/cc2.png"
-                    width="48"
-                    height="48"
+                    class="lg:hidden block self-start w-14 h-auto"
+                    src={c2}
                     priority
                     quality={100}
                   />
@@ -1128,22 +1126,18 @@ export default function About() {
                     </p>
                   </div>
                 </div>
-                <div class="flex flex-row gap-4 lg:gap-6 py-8 px-6 lg:p-8 grn-10 rounded-2xl basis-u">
+                <div class="flex flex-row gap-4 lg:gap-6 py-8 px-6 lg:p-8 grn-10   rounded-2xl basis-u">
                   <Image
                     alt="png will occupy here"
-                    class="H4 text-center hidden lg:block  self-center"
-                    src="/c3.svg"
+                    class="H4 text-center hidden lg:block  self-center w-20 h-auto"
+                    src={c3}
                     priority
-                    width="80"
-                    height="80"
                     quality={100}
                   />
                   <Image
                     alt="png will occupy here"
-                    class="lg:hidden block self-start"
-                    src="/cc3.png"
-                    width="48"
-                    height="48"
+                    class="lg:hidden block self-start w-14 h-auto"
+                    src={c3}
                     priority
                     quality={100}
                   />
@@ -1162,22 +1156,18 @@ export default function About() {
                     </p>
                   </div>
                 </div>
-                <div class="flex flex-row gap-4 lg:gap-6 py-8 px-6 lg:p-8 grn-10 rounded-2xl basis-u">
+                <div class="flex flex-row gap-4 lg:gap-6 py-8 px-6 lg:p-8 grn-10   rounded-2xl basis-u">
                   <Image
                     alt="png will occupy here"
-                    class="H4 text-center hidden lg:block  self-center"
-                    src="/c4.svg"
+                    class="H4 text-center hidden lg:block  self-center w-20 h-auto"
+                    src={c4}
                     priority
-                    width="80"
-                    height="80"
                     quality={100}
                   />
                   <Image
                     alt="png will occupy here"
-                    class="lg:hidden block self-start"
-                    src="/cc4.png"
-                    width="48"
-                    height="48"
+                    class="lg:hidden block self-start w-14 h-auto"
+                    src={c4}
                     priority
                     quality={100}
                   />
@@ -1196,22 +1186,18 @@ export default function About() {
                     </p>
                   </div>
                 </div>
-                <div class="flex flex-row gap-4 lg:gap-6 py-8 px-6 lg:p-8 grn-10 rounded-2xl basis-u">
+                <div class="flex flex-row gap-4 lg:gap-6 py-8 px-6 lg:p-8 grn-10   rounded-2xl basis-u">
                   <Image
                     alt="png will occupy here"
-                    class="H4 text-center hidden lg:block  self-center"
-                    src="/c5.svg"
+                    class="H4 text-center hidden lg:block  self-center w-20 h-auto"
+                    src={c5}
                     priority
-                    width="80"
-                    height="80"
                     quality={100}
                   />
                   <Image
                     alt="png will occupy here"
-                    class="lg:hidden block self-start"
-                    src="/cc5.png"
-                    width="48"
-                    height="48"
+                    class="lg:hidden block self-start w-14 h-auto"
+                    src={c5}
                     priority
                     quality={100}
                   />
@@ -1230,22 +1216,18 @@ export default function About() {
                     </p>
                   </div>
                 </div>
-                <div class="flex flex-row gap-4 lg:gap-6 py-8 px-6 lg:p-8 grn-10 rounded-2xl basis-u">
+                <div class="flex flex-row gap-4 lg:gap-6 py-8 px-6 lg:p-8 grn-10   rounded-2xl basis-u">
                   <Image
                     alt="png will occupy here"
-                    class="H4 text-center hidden lg:block  self-center"
-                    src="/c6.svg"
+                    class="H4 text-center hidden lg:block  self-center w-20 h-auto"
+                    src={c6}
                     priority
-                    width="80"
-                    height="80"
                     quality={100}
                   />
                   <Image
                     alt="png will occupy here"
-                    class="lg:hidden block self-start"
-                    src="/cc6.png"
-                    width="48"
-                    height="48"
+                    class="lg:hidden block self-start w-14 h-auto"
+                    src={c6}
                     priority
                     quality={100}
                   />
@@ -1287,7 +1269,7 @@ export default function About() {
               id="productions"
               class="lg:pt-24 pt-20 flex w-full justify-between"
             >
-              <h4 class="H4 hidden lg:block self-end">Production</h4>
+              <h4 class="H5 hidden lg:block self-end">Production</h4>
               <h4 class="H5 lg:hidden block self-end">Production</h4>
               <div class="lg:hidden flex flex-row items-center justify-center gap-2">
                 <button id="prevBtnn" class="buttonO2 gap-2 subH flex">
@@ -1361,7 +1343,7 @@ export default function About() {
               <div id="slideshow">
                 <div class="slid lg:px-6">
                   <Image
-                    class="H4 text-center hidden lg:block self-center"
+                    class="H4 text-center hidden lg:block self-center w-full h-auto"
                     src={p1}
                     alt="Local Herbs and Leaves"
                     priority
@@ -1383,7 +1365,7 @@ export default function About() {
                 </div>
                 <div class="slid lg:px-6">
                   <Image
-                    class="H4 text-center hidden lg:block self-center"
+                    class="H4 text-center hidden lg:block self-center w-full h-auto"
                     src={p2}
                     alt="Local Roots and Barks"
                     priority
@@ -1405,7 +1387,7 @@ export default function About() {
                 </div>
                 <div class="slid lg:px-6">
                   <Image
-                    class="H4 text-center hidden lg:block self-center"
+                    class="H4 text-center hidden lg:block self-center w-full h-auto"
                     src={p3}
                     alt="Seeds, Flowers and Fruits"
                     priority
@@ -1447,7 +1429,7 @@ export default function About() {
                 </div>
                 <div class="slid lg:px-6">
                   <Image
-                    class="H4 text-center hidden lg:block self-center"
+                    class="H4 text-center hidden lg:block self-center w-full h-auto"
                     src={p5}
                     alt="Foreign Products"
                     priority
@@ -1469,7 +1451,7 @@ export default function About() {
                 </div>
                 <div class="slid lg:px-6">
                   <Image
-                    class="H4 text-center hidden lg:block self-center"
+                    class="H4 text-center hidden lg:block self-center w-full h-auto"
                     src={p6}
                     alt="Oils and Fluids"
                     priority
@@ -1491,7 +1473,7 @@ export default function About() {
                 </div>
                 <div class="slid lg:px-6">
                   <Image
-                    class="H4 text-center hidden lg:block self-center"
+                    class="H4 text-center hidden lg:block self-center w-full h-auto"
                     src={p7}
                     alt="Teas"
                     priority
@@ -1511,7 +1493,7 @@ export default function About() {
                 </div>
                 <div class="slid lg:px-6">
                   <Image
-                    class="H4 text-center hidden lg:block self-center"
+                    class="H4 text-center hidden lg:block self-center w-full h-auto"
                     src={p8}
                     alt="Apparatus"
                     priority
@@ -1533,7 +1515,7 @@ export default function About() {
                 </div>
                 <div class="slid lg:px-6">
                   <Image
-                    class="H4 text-center hidden lg:block self-center"
+                    class="H4 text-center hidden lg:block self-center w-full h-auto"
                     src={p9}
                     alt="Cosmetics - Creams/Soaps"
                     priority
@@ -1555,7 +1537,7 @@ export default function About() {
                 </div>
                 <div class="slid lg:px-6">
                   <Image
-                    class="H4 text-center hidden lg:block self-center"
+                    class="H4 text-center hidden lg:block self-center w-full h-auto"
                     src={p10}
                     alt="Salts, Edibles and Miscellaneous"
                     priority
@@ -1603,7 +1585,7 @@ export default function About() {
           </div>
         </section>
 
-        <section id="testimonials" class="onws">
+        <section id="testimonials" class=" pt-24 lg:pt-48">
           <div class="flex flex-col lg:justify-center gap-4">
             <h4 class="H4 text-center hidden lg:block">Testimonials</h4>
             <h4 class="H5 lg:hidden block">Testimonials</h4>
@@ -2114,7 +2096,7 @@ export default function About() {
                       quality={100}
                       priority
                     />
-                    +2349121325047
+                    +2348057532485
                   </p>
                   <p class="B5 lg:hidden flex gap-2 items-center">
                     <Image
@@ -2126,7 +2108,7 @@ export default function About() {
                       quality={100}
                       priority
                     />
-                    +2349121325047
+                    +2348057532485
                   </p>
                   <p class="B4 hidden lg:flex gap-4 items-center">
                     <Image

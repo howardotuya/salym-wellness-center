@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import axios from "axios";
 import LinesEllipsis from "react-lines-ellipsis";
+import logo from "../../public/logoLarge.png";
 
 const popuphandler = () => {
   const popup = document.querySelector(".bg-grn-60");
@@ -15,7 +16,7 @@ const popuphandler = () => {
   }
 };
 
-export default function First() {
+export default function About() {
   useEffect(() => {
     var closeButtons = document.getElementsByClassName("colse");
     for (var i = 0; i < closeButtons.length; i++) {
@@ -28,13 +29,38 @@ export default function First() {
     }
   }, []);
 
+  const [email, setEmail] = useState("");
+  const subHandler = async (e) => {
+    e.preventDefault();
+
+    document.getElementById("head-sub").style.display = "none";
+    document.getElementById("head-sub2").style.display = "flex";
+
+    try {
+      const { data } = await axios.post(
+        "http://localhost:5000/api/mail/subscribe",
+        { email }
+      );
+
+      document.getElementById("modalss").style.display = "flex";
+      document.getElementById("head-sub").style.display = "flex";
+      document.getElementById("head-sub2").style.display = "none";
+      setEmail("");
+    } catch (error) {
+      document.getElementById("modales").style.display = "flex";
+      document.getElementById("head-sub").style.display = "flex";
+      document.getElementById("head-sub2").style.display = "none";
+      setEmail("");
+    }
+  };
+
   return (
     <>
       <div
         id="modalss"
-        class="flex z-50 px-6 justify-center items-center w-full h-full"
+        class="flex px-6 justify-center items-center w-full h-full"
       >
-        <div class="max-w-xl success w-full items-center rounded-2xl bg-white flex flex-col px-4 lg:px-6 py-10 gap-4 lg:gap-6">
+        <div class="max-w-xl success w-full items-center   rounded-2xl bg-white flex flex-col px-4 lg:px-6 py-10 gap-4 lg:gap-6">
           <div>
             <Image
               alt="png will occupy here"
@@ -44,6 +70,7 @@ export default function First() {
               width="96"
               height="96"
               quality={100}
+               
             />
             <Image
               alt="png will occupy here"
@@ -53,6 +80,7 @@ export default function First() {
               height="64"
               priority
               quality={100}
+               
             />
           </div>
           <div>
@@ -86,9 +114,9 @@ export default function First() {
       </div>
       <div
         id="modales"
-        class="flex z-50 px-6 justify-center items-center w-full h-full"
+        class="flex px-6 justify-center items-center w-full h-full"
       >
-        <div class="max-w-xl danger w-full items-center rounded-2xl bg-white flex flex-col px-6 py-10 gap-6">
+        <div class="max-w-xl danger w-full items-center   rounded-2xl bg-white flex flex-col px-6 py-10 gap-6">
           <div>
             <Image
               alt="png will occupy here"
@@ -98,6 +126,7 @@ export default function First() {
               width="96"
               height="96"
               quality={100}
+               
             />
             <Image
               alt="png will occupy here"
@@ -107,6 +136,7 @@ export default function First() {
               height="64"
               priority
               quality={100}
+               
             />
           </div>
           <div>
@@ -120,10 +150,10 @@ export default function First() {
           </div>
           <div>
             <p class="B4 grn-50 hidden lg:block">
-              Sorry, we couldn't process your subscription. Please try again.
+              Sorry, we couldn&apos;t process your subscription. Please try again.
             </p>
             <p class="B5 grn-50 lg:hidden block">
-              Sorry, we couldn't process your subscription. Please try again.
+              Sorry, we couldn&apos;t process your subscription. Please try again.
             </p>
           </div>
           <div class="flex gap-4">
@@ -141,12 +171,11 @@ export default function First() {
             </button>
           </div>
         </div>
-      </div>
-      <div
+      </div><div
         id="modalsc"
-        class="flex z-50 px-6 justify-center items-center w-full h-full"
+        class="flex px-6 justify-center items-center w-full h-full"
       >
-        <div class="max-w-xl success w-full items-center rounded-2xl bg-white flex flex-col px-4 lg:px-6 py-10 gap-4 lg:gap-6">
+        <div class="max-w-xl success w-full items-center   rounded-2xl bg-white flex flex-col px-4 lg:px-6 py-10 gap-4 lg:gap-6">
           <div>
             <Image
               alt="png will occupy here"
@@ -156,6 +185,7 @@ export default function First() {
               width="96"
               height="96"
               quality={100}
+               
             />
             <Image
               alt="png will occupy here"
@@ -165,6 +195,7 @@ export default function First() {
               height="64"
               priority
               quality={100}
+               
             />
           </div>
           <div>
@@ -198,9 +229,9 @@ export default function First() {
       </div>
       <div
         id="modalec"
-        class="flex z-50 px-6 justify-center items-center w-full h-full"
+        class="flex px-6 justify-center items-center w-full h-full"
       >
-        <div class="max-w-xl danger w-full items-center rounded-2xl bg-white flex flex-col px-6 py-10 gap-6">
+        <div class="max-w-xl danger w-full items-center   rounded-2xl bg-white flex flex-col px-6 py-10 gap-6">
           <div>
             <Image
               alt="png will occupy here"
@@ -210,6 +241,7 @@ export default function First() {
               width="96"
               height="96"
               quality={100}
+               
             />
             <Image
               alt="png will occupy here"
@@ -219,6 +251,7 @@ export default function First() {
               height="64"
               priority
               quality={100}
+               
             />
           </div>
           <div>
@@ -349,23 +382,19 @@ export default function First() {
       <main class="body-margin">
         <header>
           <nav class="flex items-center flex-row justify-between">
-            <Link href="/">
+          <Link href="/">
               <Image
                 alt="png will occupy here"
                 priority
-                class="hidden lg:block"
-                src="/logoLarge.png"
-                width="46"
-                height="64"
+                class="hidden w-12 h-auto lg:block"
+                src={logo}
                 quality={100}
               />
               <Image
                 alt="png will occupy here"
                 priority
-                class="lg:hidden block"
-                src="/logoLarge.png"
-                width="34"
-                height="48"
+                class="lg:hidden w-9 h-auto block"
+                src={logo}
                 quality={100}
               />
             </Link>
@@ -401,201 +430,251 @@ export default function First() {
               quality={100}
             />
           </nav>
+
+          <div class=" header-content flex justify-center w-full">
+            <div class="gap-4 lg:gap-8 flex flex-col lg:justify-center lg:items-center max-w-4xl">
+              <h1 class="H2 hidden lg:block">The Salym Wellness Center Blog</h1>
+              <h1 class="H4 lg:hidden block">The Salym Wellness Center Blog</h1>
+              <p class="B4 hidden lg:block black7 max-w-2xl lg:text-center">
+                Explore our blog for informative and engaging content on
+                holistic health, wellness, and natural remedies, designed to
+                enhance your overall wellbeing.
+              </p>
+              <p class="B5 lg:hidden block black7 max-w-2xl lg:text-center">
+                Explore our blog for informative and engaging content on
+                holistic health, wellness, and natural remedies, designed to
+                enhance your overall wellbeing.
+              </p>
+              <form onSubmit={subHandler} class="flex gap-2 lg:gap-4">
+                <input
+                  class="newsletterx outline-none"
+                  type="email"
+                  placeholder="you@example.com"
+                  required
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                  }}
+                  value={email}
+                />
+                <button id="head-sub" type="submit" class="buttonM">
+                  Subscribe
+                </button>
+                <div id="head-sub2" class="buttonNnx flex gap-2">
+                  Subscribe
+                  <img
+                    class="w-6 h-6 spinner"
+                    src="/spinner.svg"
+                    alt="spinner"
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
         </header>
 
-        <div class=" max-w-3xl w-full mx-auto">
-          <div class="lg:pt-32 pt-16 flex flex-col item gap-8 lg:gap-10">
-            <div class="lg:h-96 object-cover h-56 w-full rounded-2xl overflow-hidden">
-              <div class="headImg"></div>
+        <section id="blog" class="lg:pt-24 pt-20">
+          <div class="flex justify-between items-end">
+            <div class="flex flex-col gap-4">
+              <h4 class="H4 hidden lg:block">Latest articles</h4>
+              <h4 class="H5 lg:hidden block">Latest articles</h4>
             </div>
-            <div class="flex flex-col gap-6">
-              <h4 class="H5 hidden lg:block whitespace-nowrap overflow-hidden text-ellipsis">
+          </div>
+
+          <div class="pt-6 lg:pt-10 flex flex-wrap w-full gap-8">
+            <div class="bic blogp flex gap-4 lg:gap-6 flex-col p-4 lg:py-8 lg:px-6">
+              <div class="lg:h-64 object-cover h-52 w-full   rounded-2xl overflow-hidden">
+                <div class="headImg"></div>
+              </div>
+              <Link
+                href="/blog/1"
+                class="H5 hover:underline hover:text-green-900 hidden lg:block whitespace-nowrap overflow-hidden text-ellipsis"
+              >
                 The Healing Powers of Methyl Cream
-              </h4>
-              <h4 class="H5 lg:hidden block whitespace-nowrap overflow-hidden text-ellipsis">
+              </Link>
+              <Link
+                href="/blog/1"
+                class="H6 hover:underline hover:text-green-900 lg:hidden block whitespace-nowrap overflow-hidden text-ellipsis"
+              >
                 The Healing Powers of Methyl Cream
-              </h4>
-
-              <div class="flex flex-col gap-4 lg:gap-6">
-                <div class="flex-row gap-2 lg:hidden flex items-center">
-                  <div class="flex flex-col gap-2">
-                    <p class="subH">By Salym Wellness Center Team</p>
-                    <p class="subH black7">Published 2nd May, 2023</p>
-                  </div>
-                </div>
-
-                <div class="flex-row gap-4 hidden lg:flex items-center">
-                  <div class="flex flex-col gap-2">
-                    <p class="h6">By Salym Wellness Center Team</p>
-                    <p class="subH black7">Published 2nd May, 2023</p>
-                  </div>
-                </div>
-
-                <div class="flex gap-8 lg:justify-start justify-between items-center">
-                  <span class="grn-10 grn-60 H6 hidden lg:block py-2 px-4 rounded-lg ">
-                    Herbal Wellness
-                  </span>
-                  <span class=" lg:hidden block grn-10 grn-60 subH py-2 px-4 rounded-lg">
-                    Herbal Wellness
-                  </span>
-                  <p class="H6 hidden lg:block">3 mins read</p>
-                  <p class="subH lg:hidden block">3 mins read</p>
-                </div>
+              </Link>
+              <p class="B4 hidden lg:block black7 max-w-2xl">
+                <LinesEllipsis
+                  text="Methyl cream, a natural remedy derived from medicinal plants, has gained popularity for its remarkable healing properties. This blog post explores the benefits and uses of methyl cream in promoting overall well-being and addressing various health concerns."
+                  maxLine="3"
+                  ellipsis="..."
+                  trimRight
+                  basedOn="letters"
+                />
+              </p>
+              <p class="B5 lg:hidden block black7 max-w-2xl ">
+                <LinesEllipsis
+                  text="Methyl cream, a natural remedy derived from medicinal plants, has gained popularity for its remarkable healing properties. This blog post explores the benefits and uses of methyl cream in promoting overall well-being and addressing various health concerns."
+                  maxLine="3"
+                  ellipsis="..."
+                  trimRight
+                  basedOn="letters"
+                />
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="grn-10 grn-60 H6 hidden lg:block py-2 px-4    rounded-2xl ">
+                  Herbal Wellness
+                </span>
+                <span class=" lg:hidden block grn-10 grn-60 subH py-2 px-4    rounded-2xl">
+                  Herbal Wellness
+                </span>
+                <p class="H6 hidden lg:block"> 3 mins read</p>
+                <p class="subH lg:hidden block"> 3 mins read</p>
+              </div>
+            </div>
+            <div class="bic blogp flex gap-4 lg:gap-6 flex-col p-4 lg:py-8 lg:px-6">
+              <div class="lg:h-64 object-cover h-52 w-full   rounded-2xl overflow-hidden">
+                <div class="headImg2"></div>
+              </div>
+              <Link
+                href="/blog/2"
+                class="H5 hover:underline hover:text-green-900  hidden whitespace-nowrap overflow-hidden text-ellipsis lg:block"
+              >
+                The Power of Herbal Therapy for Stress Management
+              </Link>
+              <Link
+                href="/blog/2"
+                class="H6 hover:underline hover:text-green-900  lg:hidden whitespace-nowrap overflow-hidden text-ellipsis block"
+              >
+                The Power of Herbal Therapy for Stress Management
+              </Link>
+              <p class="B4 hidden lg:block black7 max-w-2xl">
+                <LinesEllipsis
+                  text="Stress has become an unavoidable part of our modern lives, impacting our physical and mental well-being. While there are various approaches to managing stress, herbal therapy has emerged as a powerful and natural solution. In this blog post, we will explore the incredible potential of herbal therapy in
+                stress management and how it can help restore balance and
+                harmony to our lives."
+                  maxLine="3"
+                  ellipsis="..."
+                  trimRight
+                  basedOn="letters"
+                />
+              </p>
+              <p class="B5 lg:hidden block black7 max-w-2xl ">
+                <LinesEllipsis
+                  text="Stress has become an unavoidable part of our modern lives, impacting our physical and mental well-being. While there are various approaches to managing stress, herbal therapy has emerged as a powerful and natural solution. In this blog post, we will explore the incredible potential of herbal therapy in
+                stress management and how it can help restore balance and
+                harmony to our lives."
+                  maxLine="3"
+                  ellipsis="..."
+                  trimRight
+                  basedOn="letters"
+                />
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="grn-10 grn-60 H6 hidden lg:block py-2 px-4    rounded-2xl ">
+                  Herbal Therapy
+                </span>
+                <span class=" lg:hidden block grn-10 grn-60 subH py-2 px-4    rounded-2xl">
+                  Herbal Therapy
+                </span>
+                <p class="H6 hidden lg:block">5 mins read</p>
+                <p class="subH lg:hidden block">5 mins read</p>
+              </div>
+            </div>
+            <div class="bic blogp flex gap-4 lg:gap-6 flex-col p-4 lg:py-8 lg:px-6">
+              <div class="lg:h-64 object-cover h-52 w-full   rounded-2xl overflow-hidden">
+                <div class="headImg3"></div>
+              </div>
+              <Link
+                href="/blog/3"
+                class="H5 hover:underline hover:text-green-900 hidden whitespace-nowrap overflow-hidden text-ellipsis lg:block"
+              >
+                The Art of French Cooking: Mastering Classic Recipes
+              </Link>
+              <Link
+                href="/blog/3"
+                class="H6 hover:underline hover:text-green-900 lg:hidden whitespace-nowrap overflow-hidden text-ellipsis block"
+              >
+                The Art of French Cooking: Mastering Classic Recipes
+              </Link>
+              <p class="B4 hidden lg:block black7 max-w-2xl">
+                <LinesEllipsis
+                  text="If you love French cuisine, you've probably heard of Julia Child's 'Mastering the Art of French Cooking.' This classic cookbook has been the go-to guide for home cooks looking to learn the fundamentals of French cuisine for over 50 years. In this blog post, we'll explore why this book is a must-have for anyone looking to master the art of French cooking."
+                  maxLine="3"
+                  ellipsis="..."
+                  trimRight
+                  basedOn="letters"
+                />
+              </p>
+              <p class="B5 lg:hidden block black7 max-w-2xl ">
+                <LinesEllipsis
+                  text="If you love French cuisine, you've probably heard of Julia Child's 'Mastering the Art of French Cooking.' This classic cookbook has been the go-to guide for home cooks looking to learn the fundamentals of French cuisine for over 50 years. In this blog post, we'll explore why this book is a must-have for anyone looking to master the art of French cooking."
+                  maxLine="3"
+                  ellipsis="..."
+                  trimRight
+                  basedOn="letters"
+                />
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="grn-10 grn-60 H6 hidden lg:block py-2 px-4    rounded-2xl ">
+                  Herbal Wellness
+                </span>
+                <span class=" lg:hidden block grn-10 grn-60 subH py-2 px-4    rounded-2xl">
+                  Herbal Wellness
+                </span>
+                <p class="H6 hidden lg:block"> 3 mins read</p>
+                <p class="subH lg:hidden block"> 3 mins read</p>
+              </div>
+            </div>
+            <div class="bic blogp flex gap-4 lg:gap-6 flex-col p-4 lg:py-8 lg:px-6">
+              <div class="lg:h-64 object-cover h-52 w-full   rounded-2xl overflow-hidden">
+                <div class="headImg4"></div>
+              </div>
+              <Link
+                href="/blog/4"
+                class="H5 hover:underline hover:text-green-900 hidden whitespace-nowrap overflow-hidden text-ellipsis lg:block"
+              >
+                Unlocking the Secrets of Acupressure: Enhancing Well-being
+                Through Pressure Points
+              </Link>
+              <Link
+                href="/blog/4"
+                class="H6 hover:underline hover:text-green-900 lg:hidden whitespace-nowrap overflow-hidden text-ellipsis block"
+              >
+                Unlocking the Secrets of Acupressure: Enhancing Well-being
+                Through Pressure Points
+              </Link>
+              <p class="B4 hidden lg:block black7 max-w-2xl">
+                <LinesEllipsis
+                  text="Acupressure is an ancient healing technique that has been used for centuries to promote well-being and alleviate various ailments. By applying pressure to specific points on the body, acupressure stimulates the body's natural healing abilities and restores balance. In this blog post, we will delve into the fascinating world of acupressure and explore how it can enhance your overall well-being."
+                  maxLine="3"
+                  ellipsis="..."
+                  trimRight
+                  basedOn="letters"
+                />
+              </p>
+              <p class="B5 lg:hidden block black7 max-w-2xl ">
+                <LinesEllipsis
+                  text="Acupressure is an ancient healing technique that has been used for centuries to promote well-being and alleviate various ailments. By applying pressure to specific points on the body, acupressure stimulates the body's natural healing abilities and restores balance. In this blog post, we will delve into the fascinating world of acupressure and explore how it can enhance your overall well-being."
+                  maxLine="3"
+                  ellipsis="..."
+                  trimRight
+                  basedOn="letters"
+                />
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="grn-10 grn-60 H6 hidden lg:block py-2 px-4    rounded-2xl ">
+                  Food and Lifestyle
+                </span>
+                <span class=" lg:hidden block grn-10 grn-60 subH py-2 px-4    rounded-2xl">
+                  Food and Lifestyle
+                </span>
+                <p class="H6 hidden lg:block">5 mins read</p>
+                <p class="subH lg:hidden block">5 mins read</p>
               </div>
             </div>
           </div>
-
-          <div class=" flex flex-col gap-8 lg:gap-12 pt-12 lg:pt-16">
-            <div class="gap-4 flex flex-col">
-              <p class="B4 hidden lg:block">
-                Methyl cream, a natural remedy derived from medicinal plants,
-                has gained popularity for its remarkable healing properties.
-                This blog post explores the benefits and uses of methyl cream in
-                promoting overall well-being and addressing various health
-                concerns. Discover how this herbal preparation can enhance your
-                journey towards optimal health and vitality.
-              </p>
-              <p class="B5 lg:hidden block">
-                Methyl cream, a natural remedy derived from medicinal plants,
-                has gained popularity for its remarkable healing properties.
-                This blog post explores the benefits and uses of methyl cream in
-                promoting overall well-being and addressing various health
-                concerns. Discover how this herbal preparation can enhance your
-                journey towards optimal health and vitality.
-              </p>
-            </div>
-            <div class="gap-4 flex flex-col">
-              <h4 class="H4 hidden lg:block">What is Methyl Cream?</h4>
-              <h4 class="H6 lg:hidden block">What is Methyl Cream?</h4>
-              <p class="B4 hidden lg:block">
-                Methyl cream is a topical herbal preparation formulated with a
-                blend of plant extracts known for their therapeutic properties.
-                It is commonly used in natural medicine to alleviate discomfort,
-                promote healing, and support the body's natural healing
-                processes.
-              </p>
-              <p class="B5 lg:hidden block">
-                Methyl cream is a topical herbal preparation formulated with a
-                blend of plant extracts known for their therapeutic properties.
-                It is commonly used in natural medicine to alleviate discomfort,
-                promote healing, and support the body's natural healing
-                processes.
-              </p>
-            </div>
-            <div class="gap-4 flex flex-col">
-              <h4 class="H4 hidden lg:block">
-                Relieving Muscle and Joint Discomfort
-              </h4>
-              <h4 class="H6 lg:hidden block">
-                Relieving Muscle and Joint Discomfort
-              </h4>
-              <p class="B4 hidden lg:block">
-                One of the notable benefits of methyl cream is its ability to
-                provide relief from muscle and joint discomfort. The natural
-                ingredients in methyl cream work synergistically to soothe sore
-                muscles, reduce inflammation, and improve mobility. Regular
-                application of methyl cream on affected areas can help alleviate
-                pain and support faster recovery.
-              </p>
-              <p class="B5 lg:hidden block">
-                One of the notable benefits of methyl cream is its ability to
-                provide relief from muscle and joint discomfort. The natural
-                ingredients in methyl cream work synergistically to soothe sore
-                muscles, reduce inflammation, and improve mobility. Regular
-                application of methyl cream on affected areas can help alleviate
-                pain and support faster recovery.
-              </p>
-            </div>
-            <div class="gap-4 flex flex-col">
-              <h4 class="H4 hidden lg:block">Enhancing Skin Health</h4>
-              <h4 class="H6 lg:hidden block">Enhancing Skin Health</h4>
-              <p class="B4 hidden lg:block">
-                In addition to its muscle and joint benefits, methyl cream also
-                offers remarkable advantages for skin health. Its nourishing
-                properties help moisturize the skin, promote a healthy
-                complexion, and address various skin concerns. From dryness and
-                irritation to minor cuts and bruises, methyl cream can be a
-                valuable addition to your skincare routine.
-              </p>
-              <p class="B5 lg:hidden block">
-                In addition to its muscle and joint benefits, methyl cream also
-                offers remarkable advantages for skin health. Its nourishing
-                properties help moisturize the skin, promote a healthy
-                complexion, and address various skin concerns. From dryness and
-                irritation to minor cuts and bruises, methyl cream can be a
-                valuable addition to your skincare routine.
-              </p>
-            </div>
-            <div class="gap-4 flex flex-col">
-              <h4 class="H4 hidden lg:block">
-                Supporting Respiratory Wellness
-              </h4>
-              <h4 class="H6 lg:hidden block">
-                Supporting Respiratory Wellness
-              </h4>
-              <p class="B4 hidden lg:block">
-                Methyl cream has been found to provide respiratory support and
-                relief from common respiratory discomfort. When applied
-                topically or inhaled, the herbal components in methyl cream can
-                help soothe the airways, ease congestion, and promote a healthy
-                respiratory system.
-              </p>
-              <p class="B5 lg:hidden block">
-                Methyl cream has been found to provide respiratory support and
-                relief from common respiratory discomfort. When applied
-                topically or inhaled, the herbal components in methyl cream can
-                help soothe the airways, ease congestion, and promote a healthy
-                respiratory system.
-              </p>
-            </div>
-            <div class="gap-4 flex flex-col">
-              <h4 class="H4 hidden lg:block">Promoting Overall Well-being</h4>
-              <h4 class="H6 lg:hidden block">Promoting Overall Well-being</h4>
-              <p class="B4 hidden lg:block">
-                Beyond its targeted benefits, methyl cream can contribute to
-                overall well-being. Its natural ingredients have antioxidant and
-                anti-inflammatory properties, which support the body's immune
-                system and help maintain a balanced state of health. Regular use
-                of methyl cream can complement a holistic approach to wellness.
-              </p>
-              <p class="B5 lg:hidden block">
-                Beyond its targeted benefits, methyl cream can contribute to
-                overall well-being. Its natural ingredients have antioxidant and
-                anti-inflammatory properties, which support the body's immune
-                system and help maintain a balanced state of health. Regular use
-                of methyl cream can complement a holistic approach to wellness.
-              </p>
-            </div>
-            <div class="gap-4 flex flex-col">
-              <h4 class="H4 hidden lg:block">Conclusion</h4>
-              <h4 class="H6 lg:hidden block">Conclusion</h4>
-              <p class="B4 hidden lg:block">
-                Harnessing the healing powers of methyl cream can be a valuable
-                addition to your wellness journey. Whether you seek relief from
-                muscle and joint discomfort, improved skin health, or support
-                for respiratory wellness, methyl cream offers a natural and
-                effective solution. Incorporate this herbal remedy into your
-                self-care routine and experience the transformative benefits it
-                has to offer.
-              </p>
-              <p class="B5 lg:hidden block">
-                Harnessing the healing powers of methyl cream can be a valuable
-                addition to your wellness journey. Whether you seek relief from
-                muscle and joint discomfort, improved skin health, or support
-                for respiratory wellness, methyl cream offers a natural and
-                effective solution. Incorporate this herbal remedy into your
-                self-care routine and experience the transformative benefits it
-                has to offer.
-              </p>
-            </div>
-          </div>
-        </div>
+        </section>
 
         <footer class="lg:pt-24 pt-20 m-0">
           <div class="footer px-6 text-white">
             <div class="flex lg:flex-row flex-col justify-between lg:items-center pt-12 lg:pt-16">
               <div class="flex lg:flex-row pb-12 lg:pb-0 flex-col gap-10">
-                <Link href="/" class="hover:text-green-200 H6 hidden lg:block ">
+              <Link href="/" class="hover:text-green-200 H6 hidden lg:block ">
                   Home
                 </Link>
                 <Link
