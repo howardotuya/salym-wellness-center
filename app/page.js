@@ -680,7 +680,7 @@ export default function Home() {
           </div>
         </header>
 
-        <section id="why" class="lg:pt-48 pt-24 flex flex-col gap-8 lg:gap-16">
+        <section id="why" class="lg:pt-48 pt-32 flex flex-col gap-8 lg:gap-16">
           <div class="flex flex-col justify-center gap-4">
             <h4 class="H4 text-center hidden lg:block">
               Why Choose Salym Wellness Centre?
@@ -883,7 +883,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section class=" pt-24 lg:pt-48">
+        <section class=" pt-32 lg:pt-48">
           <div class="flex flex-col lg:justify-center gap-4">
             <h4 class="H4 text-center hidden lg:block">
               Our Natural Health Solutions
@@ -1110,7 +1110,7 @@ export default function Home() {
 
             <div
               id="productions"
-              class="lg:pt-24 pt-20 flex w-full justify-between"
+              class="lg:pt-32 pt-20 flex w-full justify-between"
             >
               <h4 class="H5 hidden lg:block self-end">Production</h4>
               <h4 class="H5 lg:hidden block self-end">Production</h4>
@@ -1430,7 +1430,7 @@ export default function Home() {
 
         {posts ? <BlogComponent posts={posts} /> : <div></div>}
 
-        <section id="newsletter" class=" pt-24 lg:pt-48">
+        <section id="newsletter" class=" pt-32 lg:pt-48">
           <div class="outer-m">
             <div class="newws lg:rounded-2xl px-4 py-10 lg:py-16 flex justify-center items-center text-white flex-col gap-6 lg:gap-10">
               <h2 class="H4 text-center hidden lg:block">
@@ -1481,7 +1481,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="testimonials" class=" pt-24 lg:pt-48">
+        <section id="testimonials" class=" pt-32 lg:pt-48">
           <div class="flex flex-col lg:justify-center gap-4">
             <h4 class="H4 text-center hidden lg:block">Testimonials</h4>
             <h4 class="H5 lg:hidden block">Testimonials</h4>

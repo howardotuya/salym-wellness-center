@@ -472,7 +472,7 @@ export default function About() {
           </div>
         </header>
 
-        <section id="blog" class="lg:pt-24 pt-20">
+        <section id="blog" class="lg:pt-32 pt-20">
           <div class="flex justify-between items-end">
             <div class="flex flex-col gap-4">
               <h4 class="H4 hidden lg:block">Latest articles</h4>
@@ -670,7 +670,7 @@ export default function About() {
           </div>
         </section>
 
-        <footer class="lg:pt-24 pt-20 m-0">
+        <footer class="lg:pt-32 pt-20 m-0">
           <div class="footer px-6 text-white">
             <div class="flex lg:flex-row flex-col justify-between lg:items-center pt-12 lg:pt-16">
               <div class="flex lg:flex-row pb-12 lg:pb-0 flex-col gap-10">

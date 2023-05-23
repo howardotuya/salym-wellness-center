@@ -555,7 +555,7 @@ export default function About() {
             />
           </nav>
 
-          <div class=" header-content flex justify-center w-full">
+          <div class="header-content flex justify-center w-full">
             <div class="gap-4 lg:gap-8 flex flex-col lg:justify-center lg:items-center max-w-4xl">
               <span class="Hothers">About Us</span>
               <h1 class="H1 hidden lg:block">
@@ -642,7 +642,7 @@ export default function About() {
           </div>
         </section>
 
-        <section class="missionvision pt-24 lg:pt-32">
+        <section class="missionvision pt-32 lg:pt-32">
           <div class="flex flex-col lg:flex-row gap-6 ">
             <div class="px-4 lg:px-6 py-8 grn-10 flex flex-col gap-4 lg:gap-6  rounded-2xl flex-grow  basis-0">
               <Image
@@ -727,7 +727,7 @@ export default function About() {
           </div>
         </section>
 
-        <section class="whychoose pt-24 lg:pt-48 flex flex-col gap-8 lg:gap-16">
+        <section class="whychoose pt-32 lg:pt-48 flex flex-col gap-8 lg:gap-16">
           <div class="flex flex-col justify-center gap-4">
             <h4 class="H4 text-center hidden lg:block">
               Why Choose Salym Wellness Centre?
@@ -872,7 +872,7 @@ export default function About() {
           </div>
         </section>
 
-        <section class="taraudience pt-24 lg:pt-48 flex flex-col gap-8 lg:gap-16">
+        <section class="taraudience pt-32 lg:pt-48 flex flex-col gap-8 lg:gap-16">
           <div class="flex flex-col justify-center gap-4">
             <h4 class="H4 text-center hidden lg:block">Our Target Audience</h4>
             <h4 class="H5 lg:hidden block">Our Target Audience</h4>
@@ -968,7 +968,7 @@ export default function About() {
           </div>
         </section>
 
-        <section class="team pt-24 lg:pt-48 flex flex-col gap-8 lg:gap-16  ">
+        <section class="team pt-32 lg:pt-48 flex flex-col gap-8 lg:gap-16  ">
           <div class="flex justify-between items-end">
             <div class="flex flex-col gap-4">
               <h4 class="H4 hidden lg:block">Team</h4>
@@ -1040,7 +1040,7 @@ export default function About() {
           </div>
         </section>
 
-        <section class=" pt-24 lg:pt-48">
+        <section class=" pt-32 lg:pt-48">
           <div class="flex flex-col lg:justify-center gap-4">
             <h4 class="H4 text-center hidden lg:block">
               Our Natural Health Solutions
@@ -1267,7 +1267,7 @@ export default function About() {
 
             <div
               id="productions"
-              class="lg:pt-24 pt-20 flex w-full justify-between"
+              class="lg:pt-32 pt-20 flex w-full justify-between"
             >
               <h4 class="H5 hidden lg:block self-end">Production</h4>
               <h4 class="H5 lg:hidden block self-end">Production</h4>
@@ -1585,7 +1585,7 @@ export default function About() {
           </div>
         </section>
 
-        <section id="testimonials" class=" pt-24 lg:pt-48">
+        <section id="testimonials" class=" pt-32 lg:pt-48">
           <div class="flex flex-col lg:justify-center gap-4">
             <h4 class="H4 text-center hidden lg:block">Testimonials</h4>
             <h4 class="H5 lg:hidden block">Testimonials</h4>
