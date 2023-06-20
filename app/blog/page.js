@@ -497,6 +497,7 @@ export default function MainBlog() {
           </div>
         </section>
 
+      </main>
         <footer class="lg:pt-32 pt-20 m-0">
           <div class="footer px-6 text-white">
             <div class="flex lg:flex-row flex-col justify-between lg:items-center pt-12 lg:pt-16">
@@ -670,7 +671,6 @@ export default function MainBlog() {
             </div>
           </div>
         </footer>
-      </main>
     </>
   );
 }

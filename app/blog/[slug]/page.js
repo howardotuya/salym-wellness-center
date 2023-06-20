@@ -255,6 +255,7 @@ export default async function Page({ params }) {
             </div> 
           </div>
         </div>
+      </main>
         <footer class="lg:pt-32 pt-20 m-0">
           <div class="footer px-6 text-white">
             <div class="flex lg:flex-row flex-col justify-between lg:items-center pt-12 lg:pt-16">
@@ -428,7 +429,6 @@ export default async function Page({ params }) {
             </div>
           </div>
         </footer>
-      </main>
     </>
   );
 }

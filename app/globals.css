@@ -4,17 +4,24 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
 
 .prose :where(p):not(:where([class~="not-prose"] *)) {
-  margin-top: 0rem!important;
-  margin-bottom: 0.5rem!important;
+  margin-top: 0rem !important;
+  margin-bottom: 0.5rem !important;
 }
 body {
   color: #0f0f0f;
   font-family: "Source Sans Pro", sans-serif;
 }
 
-h1,h2,h3,h4,h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: "Bitter", serif;
 }
 
@@ -228,8 +235,8 @@ h1,h2,h3,h4,h5 {
 .buttonM2:hover,
 .buttonM3:hover,
 .buttonM3:hover {
-    background-color: #003024;
-    border: none;
+  background-color: #003024;
+  border: none;
 }
 
 .buttonO:hover,
@@ -398,7 +405,6 @@ input[type="radio"]:checked {
   background: url("/footer.png");
   background-size: cover;
   background-repeat: no-repeat;
-  margin: 0 -24px;
 }
 
 .bg-grx {
@@ -536,7 +542,6 @@ input[type="radio"]:checked {
   animation: spin 3s linear infinite;
 }
 
-
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -598,49 +603,48 @@ input[type="radio"]:checked {
   border-radius: 8px;
 }
 
-  .blogp {
-    width: 100%;
-  }
+.blogp {
+  width: 100%;
+}
 
-  .headImg {
-    width: 100%;
-    height: 100%;
-    background-image: url('/blogInd1.jpg'); /* Replace with the actual image path */
-    background-position: center bottom; /* Show only the bottom part of the image */
-    background-size: cover; 
-  }
-  .headImg2 {
-    width: 100%;
-    height: 100%;
-    background-image: url('/blogInd5.jpg'); /* Replace with the actual image path */
-    background-position: center; /* Show only the bottom part of the image */
-    background-size: cover; 
-  }
-  .headImg3 {
-    width: 100%;
-    height: 100%;
-    background-image: url('/blogInd6.jpg'); /* Replace with the actual image path */
-    background-position: center; /* Show only the bottom part of the image */
-    background-size: cover; 
-  }
-  .headImg4 {
-    width: 100%;
-    height: 100%;
-    background-image: url('/blogInd7.jpg'); /* Replace with the actual image path */
-    background-position: center; /* Show only the bottom part of the image */
-    background-size: cover; 
-  }
+.headImg {
+  width: 100%;
+  height: 100%;
+  background-image: url("/blogInd1.jpg"); /* Replace with the actual image path */
+  background-position: center bottom; /* Show only the bottom part of the image */
+  background-size: cover;
+}
+.headImg2 {
+  width: 100%;
+  height: 100%;
+  background-image: url("/blogInd5.jpg"); /* Replace with the actual image path */
+  background-position: center; /* Show only the bottom part of the image */
+  background-size: cover;
+}
+.headImg3 {
+  width: 100%;
+  height: 100%;
+  background-image: url("/blogInd6.jpg"); /* Replace with the actual image path */
+  background-position: center; /* Show only the bottom part of the image */
+  background-size: cover;
+}
+.headImg4 {
+  width: 100%;
+  height: 100%;
+  background-image: url("/blogInd7.jpg"); /* Replace with the actual image path */
+  background-position: center; /* Show only the bottom part of the image */
+  background-size: cover;
+}
 
 @media only screen and (min-width: 1024px) {
+  .blogp {
+    width: calc(33.33% - 32px);
+  }
 
-.blogp {
-  width: calc(33.33% - 32px);
-}
-
-.slidx {
-  flex: 0 0 calc(100% / 3);
-  width: 33.33%;
-}
+  .slidx {
+    flex: 0 0 calc(100% / 3);
+    width: 33.33%;
+  }
   .buttonNnx {
     display: none;
     border-radius: 8px;
@@ -760,7 +764,6 @@ input[type="radio"]:checked {
     background: url("/footer.png");
     background-size: cover;
     background-repeat: no-repeat;
-    margin: 0 -64px;
     padding: 0 64px;
   }
 
@@ -857,7 +860,6 @@ input[type="radio"]:checked {
     flex: 0 0 calc(100% / 3);
   }
 
-
   .basis-u {
     flex-basis: calc(50% - 16px);
   }
@@ -917,27 +919,26 @@ input[type="radio"]:checked {
 
 @media only screen and (min-width: 1440px) {
   .body-margin {
-    margin: 0 112px;
-    max-width: 1440px;
+    margin: 0 auto;
+    max-width: calc(1440px - 224px);
   }
-  .onwss {
-    padding-top: 192px;
-    margin: 0 -112px -2px;
-  }
-
   .footer {
     background: url("/footer.png");
     background-size: cover;
     background-repeat: no-repeat;
-    margin: 0 -112px;
+    margin: 0px;
     padding: 0 112px;
   }
-}
+  .onwss {
+    padding-top: 192px;
+    margin: 0 0 -2px;
+  }
 
-.ctrr {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  .ctrr {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }

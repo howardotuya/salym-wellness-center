@@ -2051,6 +2051,7 @@ export default function About() {
           </div>
         </section>
 
+      </main>
         <footer class="onwsss">
           <div class="footer px-6 text-white">
             <div class="flex flex-col gap-16 pt-10 lg:pt-20">
@@ -2357,7 +2358,6 @@ export default function About() {
             </div>
           </div>
         </footer>
-      </main>
     </>
   );
 }
