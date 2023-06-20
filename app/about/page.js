@@ -22,6 +22,9 @@ import c6 from "../../public/c6.png";
 import logo from "../../public/logoLarge.png";
 
 
+
+export default function About() {
+
 const popuphandler = () => {
   const popup = document.querySelector(".bg-grn-60");
 
@@ -32,8 +35,8 @@ const popuphandler = () => {
   }
 };
 
-export default function About() {
   useEffect(() => {
+    document.querySelector(".bg-grn-60").style.display = "none"
     const slideshow = document.getElementById("slideshow");
     const prevBtn = document.getElementById("prevBtn");
     const nextBtn = document.getElementById("nextBtn");
@@ -505,8 +508,7 @@ export default function About() {
       </div>
 
       <main class="body-margin">
-        <header>
-          <nav class="flex items-center flex-row justify-between">
+          <nav class="flex sticky top-0 left-0 right-0 bg-white z-30 pb-4 items-center flex-row justify-between">
           <Link href="/">
               <Image
                 alt="png will occupy here"
@@ -554,6 +556,7 @@ export default function About() {
               priority
             />
           </nav>
+        <header>
 
           <div class="header-content flex justify-center w-full">
             <div class="gap-4 lg:gap-8 flex flex-col lg:justify-center lg:items-center max-w-4xl">

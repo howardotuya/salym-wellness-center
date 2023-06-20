@@ -27,6 +27,8 @@ import logo from "../public/logoLarge.png";
 import BlogComponent from "@/component/BlogComponent";
 import { client } from "../contentful/client";
 
+
+export default function Home() {
 const popuphandler = () => {
   const popup = document.querySelector(".bg-grn-60");
 
@@ -37,10 +39,11 @@ const popuphandler = () => {
   }
 };
 
-export default function Home() {
   const [posts, setPosts] = useState(null);
 
   useEffect(() => {
+    document.querySelector(".bg-grn-60").style.display = "none"
+
     async function getdata() {
       try {
         const response = await client.getEntries({ content_type: "blogPosts" });
@@ -304,7 +307,7 @@ export default function Home() {
         class="flex z-50 px-6 justify-center items-center w-full h-full"
       >
         <div class="max-w-xl danger w-full items-center   rounded-2xl bg-white flex flex-col px-6 py-10 gap-6">
-          <div>
+          <div> 
             <Image
               alt="png will occupy here"
               class="H4 text-center hidden lg:block self-start"
@@ -468,7 +471,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div class="bg-grn-60 flex flex-col justify-between">
+      <div id="sidebar" class="bg-grn-60 flex-col justify-between">
         <div class="flex justify-end pt-6">
           <Image
             alt="png will occupy here"
@@ -564,8 +567,7 @@ export default function Home() {
       </div>
 
       <main class="body-margin">
-        <header>
-          <nav class="flex items-center flex-row justify-between">
+          <nav class="flex sticky top-0 left-0 right-0 bg-white z-30 pb-4 items-center flex-row justify-between">
             <Link href="/">
               <Image
                 alt="png will occupy here"
@@ -614,6 +616,7 @@ export default function Home() {
             />
           </nav>
 
+        <header>
           <div class="flex lg:flex-row flex-col gap-10 lg:gap-16 justify-between items-center header-content">
             <div class="order-2 lg:order-1 header-left gap-4 lg:gap-8 flex flex-col">
               <span class="Hothers">naturopathic wellness centre</span>

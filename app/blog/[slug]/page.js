@@ -6,17 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "../../../public/logoLarge.png";
 import RichText from "@/component/RichText";
-
-const popuphandler = () => {
-  const popup = document.querySelector(".bg-grn-60");
-
-  if (popup.style.display == "none") {
-    popup.style.display = "flex";
-  } else {
-    popup.style.display = "none";
-  }
-};
-
+import { useEffect } from "react";
 export async function generateStaticParams() {
   const response = await client.getEntries({ content_type: "blogPosts" });
   const posts = response.items;
@@ -35,6 +25,19 @@ export const getPosts = async (params) => {
 };
 
 export default async function Page({ params }) {
+  const popuphandler = () => {
+    const popup = document.querySelector(".bg-grn-60");
+
+    if (popup.style.display == "none") {
+      popup.style.display = "flex";
+    } else {
+      popup.style.display = "none";
+    }
+  };
+  useEffect(() => {
+    document.querySelector(".bg-grn-60").style.display = "none";
+  }, []);
+
   const { slug } = await params;
   const post = await getPosts(slug);
   console.log(post);
@@ -138,7 +141,7 @@ export default async function Page({ params }) {
       </div>
 
       <main class="body-margin">
-        <header>
+        <header class=" sticky top-0 left-0 right-0 bg-white z-30 pb-4">
           <nav class="flex items-center flex-row justify-between">
             <Link href="/">
               <Image
@@ -205,12 +208,8 @@ export default async function Page({ params }) {
                 />
               </div>
               <div class="flex flex-col gap-4 lg:gap-6">
-                <h4 class="H5 hidden lg:block ">
-                  {post.fields.title}
-                </h4>
-                <h4 class="H5 lg:hidden block ">
-                  {post.fields.title}
-                </h4>
+                <h4 class="H5 hidden lg:block ">{post.fields.title}</h4>
+                <h4 class="H5 lg:hidden block ">{post.fields.title}</h4>
 
                 <div class="flex-row gap-2 lg:hidden flex items-center">
                   <div class="flex flex-col gap-2">
@@ -249,186 +248,180 @@ export default async function Page({ params }) {
 
             <div
               id="Blog-Page-body"
-              class=" prose-p:leading-7 lg:prose-p:leading-8 prose-h4:mt-8 flex flex-col pt-12 lg:pt-16 prose w-full max-w-none"
+              class="prose-p:leading-7 text-sm lg:text-base lg:prose-p:leading-8 prose-h4:mt-8 flex flex-col pt-12 lg:pt-16 prose w-full max-w-none"
             >
               <RichText content={content} />
-            </div> 
+            </div>
           </div>
         </div>
       </main>
-        <footer class="lg:pt-32 pt-20 m-0">
-          <div class="footer px-6 text-white">
-            <div class="flex lg:flex-row flex-col justify-between lg:items-center pt-12 lg:pt-16">
-              <div class="flex lg:flex-row pb-12 lg:pb-0 flex-col gap-10">
-                <Link href="/" class="hover:text-green-200 H6 hidden lg:block ">
-                  Home
-                </Link>
-                <Link
-                  href="/"
-                  class="hover:text-green-200 subH lg:hidden block"
-                >
-                  Home
-                </Link>
-                <Link
-                  href="/about"
-                  class="hover:text-green-200 H6 hidden lg:block"
-                >
-                  About
-                </Link>
-                <Link
-                  href="/about"
-                  class="hover:text-green-200 subH lg:hidden block"
-                >
-                  About
-                </Link>
-                <Link
-                  href="/#clinicals"
-                  class="hover:text-green-200 H6 hidden lg:block"
-                >
-                  Clinicals
-                </Link>
-                <Link
-                  href="/#clinicals"
-                  class="hover:text-green-200 subH lg:hidden block"
-                >
-                  Clinicals
-                </Link>
-                <Link
-                  href="/#productions"
-                  class="hover:text-green-200 H6 hidden lg:block "
-                >
-                  Productions
-                </Link>
-                <Link
-                  href="/#productions"
-                  class="hover:text-green-200 subH lg:hidden block"
-                >
-                  Productions
-                </Link>
-                <Link
-                  href="blog"
-                  class="hover:text-green-200 H6 hidden lg:block"
-                >
-                  Blog
-                </Link>
-                <Link
-                  href="blog"
-                  class="hover:text-green-200 subH lg:hidden block"
-                >
-                  Blog
-                </Link>
-                <Link
-                  href="/#contact"
-                  class="hover:text-green-200 H6 hidden lg:block"
-                >
-                  Contact
-                </Link>
-                <Link
-                  href="/#contact"
-                  class="hover:text-green-200 subH lg:hidden block"
-                >
-                  Contact
-                </Link>
-              </div>
-
-              <div class="flex justify-center gap-4">
-                <a
-                  href="https://www.instagram.com/salym_wellness_centre"
-                  target="_blank"
-                >
-                  <Image
-                    alt="png will occupy here"
-                    class="H4 text-center hidden lg:block  self-center"
-                    src="/IG.svg"
-                    priority
-                    width="24"
-                    height="24"
-                    quality={100}
-                  />
-                </a>
-                <a
-                  href="https://www.instagram.com/salym_wellness_centre"
-                  target="_blank"
-                >
-                  <Image
-                    alt="png will occupy here"
-                    class="lg:hidden block self-start"
-                    src="/iig.svg"
-                    width="24"
-                    height="24"
-                    priority
-                    quality={100}
-                  />
-                </a>
-                <a
-                  href="https://www.facebook.com/profile.php?id=100063809140048&mibextid=LQQJ4d"
-                  target="_blank"
-                >
-                  <Image
-                    alt="png will occupy here"
-                    class="H4 text-center hidden lg:block  self-center"
-                    src="/ffb.svg"
-                    priority
-                    width="24"
-                    height="24"
-                    quality={100}
-                  />
-                </a>
-                <a
-                  href="https://www.facebook.com/profile.php?id=100063809140048&mibextid=LQQJ4d"
-                  target="_blank"
-                >
-                  <Image
-                    alt="png will occupy here"
-                    class="lg:hidden block self-start"
-                    src="/ffb.svg"
-                    width="24"
-                    height="24"
-                    priority
-                    quality={100}
-                  />
-                </a>
-                <a
-                  href="https://twitter.com/salymwc?s=21&t=-e4Q0Ih6HOOkE7S_kJdCjg"
-                  target="_blank"
-                >
-                  <Image
-                    alt="png will occupy here"
-                    class="H4 text-center hidden lg:block  self-center"
-                    src="/ttw.svg"
-                    priority
-                    width="24"
-                    height="24"
-                    quality={100}
-                  />
-                </a>
-                <a
-                  href="https://twitter.com/salymwc?s=21&t=-e4Q0Ih6HOOkE7S_kJdCjg"
-                  target="_blank"
-                >
-                  <Image
-                    alt="png will occupy here"
-                    class="lg:hidden block self-start"
-                    src="/ttw.svg"
-                    width="24"
-                    height="24"
-                    priority
-                    quality={100}
-                  />
-                </a>
-              </div>
+      <footer class="lg:pt-32 pt-20 m-0">
+        <div class="footer px-6 text-white">
+          <div class="flex lg:flex-row flex-col justify-between lg:items-center pt-12 lg:pt-16">
+            <div class="flex lg:flex-row pb-12 lg:pb-0 flex-col gap-10">
+              <Link href="/" class="hover:text-green-200 H6 hidden lg:block ">
+                Home
+              </Link>
+              <Link href="/" class="hover:text-green-200 subH lg:hidden block">
+                Home
+              </Link>
+              <Link
+                href="/about"
+                class="hover:text-green-200 H6 hidden lg:block"
+              >
+                About
+              </Link>
+              <Link
+                href="/about"
+                class="hover:text-green-200 subH lg:hidden block"
+              >
+                About
+              </Link>
+              <Link
+                href="/#clinicals"
+                class="hover:text-green-200 H6 hidden lg:block"
+              >
+                Clinicals
+              </Link>
+              <Link
+                href="/#clinicals"
+                class="hover:text-green-200 subH lg:hidden block"
+              >
+                Clinicals
+              </Link>
+              <Link
+                href="/#productions"
+                class="hover:text-green-200 H6 hidden lg:block "
+              >
+                Productions
+              </Link>
+              <Link
+                href="/#productions"
+                class="hover:text-green-200 subH lg:hidden block"
+              >
+                Productions
+              </Link>
+              <Link href="blog" class="hover:text-green-200 H6 hidden lg:block">
+                Blog
+              </Link>
+              <Link
+                href="blog"
+                class="hover:text-green-200 subH lg:hidden block"
+              >
+                Blog
+              </Link>
+              <Link
+                href="/#contact"
+                class="hover:text-green-200 H6 hidden lg:block"
+              >
+                Contact
+              </Link>
+              <Link
+                href="/#contact"
+                class="hover:text-green-200 subH lg:hidden block"
+              >
+                Contact
+              </Link>
             </div>
 
-            <div class="lg:pt-12 lg:pb-10 pt-6 pb-8 text-center w-full">
-              <p class="H6 hidden lg:block ">
-                2023 Copyrights. All rights reserved.
-              </p>
-              <p class="subH lg:hidden block">
-                2023 Copyrights. All rights reserved.
-              </p>
+            <div class="flex justify-center gap-4">
+              <a
+                href="https://www.instagram.com/salym_wellness_centre"
+                target="_blank"
+              >
+                <Image
+                  alt="png will occupy here"
+                  class="H4 text-center hidden lg:block  self-center"
+                  src="/IG.svg"
+                  priority
+                  width="24"
+                  height="24"
+                  quality={100}
+                />
+              </a>
+              <a
+                href="https://www.instagram.com/salym_wellness_centre"
+                target="_blank"
+              >
+                <Image
+                  alt="png will occupy here"
+                  class="lg:hidden block self-start"
+                  src="/iig.svg"
+                  width="24"
+                  height="24"
+                  priority
+                  quality={100}
+                />
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=100063809140048&mibextid=LQQJ4d"
+                target="_blank"
+              >
+                <Image
+                  alt="png will occupy here"
+                  class="H4 text-center hidden lg:block  self-center"
+                  src="/ffb.svg"
+                  priority
+                  width="24"
+                  height="24"
+                  quality={100}
+                />
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=100063809140048&mibextid=LQQJ4d"
+                target="_blank"
+              >
+                <Image
+                  alt="png will occupy here"
+                  class="lg:hidden block self-start"
+                  src="/ffb.svg"
+                  width="24"
+                  height="24"
+                  priority
+                  quality={100}
+                />
+              </a>
+              <a
+                href="https://twitter.com/salymwc?s=21&t=-e4Q0Ih6HOOkE7S_kJdCjg"
+                target="_blank"
+              >
+                <Image
+                  alt="png will occupy here"
+                  class="H4 text-center hidden lg:block  self-center"
+                  src="/ttw.svg"
+                  priority
+                  width="24"
+                  height="24"
+                  quality={100}
+                />
+              </a>
+              <a
+                href="https://twitter.com/salymwc?s=21&t=-e4Q0Ih6HOOkE7S_kJdCjg"
+                target="_blank"
+              >
+                <Image
+                  alt="png will occupy here"
+                  class="lg:hidden block self-start"
+                  src="/ttw.svg"
+                  width="24"
+                  height="24"
+                  priority
+                  quality={100}
+                />
+              </a>
             </div>
           </div>
-        </footer>
+
+          <div class="lg:pt-12 lg:pb-10 pt-6 pb-8 text-center w-full">
+            <p class="H6 hidden lg:block ">
+              2023 Copyrights. All rights reserved.
+            </p>
+            <p class="subH lg:hidden block">
+              2023 Copyrights. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
