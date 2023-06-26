@@ -141,7 +141,7 @@ export default async function Page({ params }) {
       </div>
 
       <main class="body-margin">
-        <header class=" sticky top-0 left-0 right-0 bg-white z-30 pb-4">
+        <header class="   top-0 left-0 right-0 bg-white z-30 pb-4">
           <nav class="flex items-center flex-row justify-between">
             <Link href="/">
               <Image

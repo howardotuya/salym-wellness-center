@@ -391,7 +391,7 @@ const popuphandler = () => {
       </div>
 
       <main class="body-margin">
-        <nav class="flex sticky top-0 left-0 right-0 bg-white z-30 pb-4 items-center flex-row justify-between">
+        <nav class="flex   top-0 left-0 right-0 bg-white z-30 pb-4 items-center flex-row justify-between">
           <Link href="/">
             <Image
               alt="png will occupy here"
