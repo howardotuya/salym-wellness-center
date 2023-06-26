@@ -871,7 +871,7 @@ const popuphandler = () => {
                   href="/about"
                   class="buttonM hidden lg:flex items-start w-auto H6"
                 >
-                  Connect with Us
+                  Read more
                 </Link>
               </div>
               <div class="lg:hidden flex">
@@ -879,7 +879,7 @@ const popuphandler = () => {
                   href="/about"
                   class="buttonM lg:hidden flex items-start w-auto subH"
                 >
-                  Connect with Us
+                  Read more
                 </Link>
               </div>
             </div>
