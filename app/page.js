@@ -23,37 +23,38 @@ import c3 from "../public/c3.png";
 import c4 from "../public/c4.png";
 import c5 from "../public/c5.png";
 import c6 from "../public/c6.png";
+import new1 from "../public/new1.png";
+import new2 from "../public/new2.png";
 import logo from "../public/logoLarge.png";
 import BlogComponent from "@/component/BlogComponent";
 import { client } from "../contentful/client";
 
-
 export default function Home() {
-const popuphandler = () => {
-  const popup = document.querySelector(".bg-grn-60");
+  const popuphandler = () => {
+    const popup = document.querySelector(".bg-grn-60");
 
-  if (popup.style.display == "none") {
-    popup.style.display = "flex";
-  } else {
-    popup.style.display = "none";
-  }
-};
+    if (popup.style.display == "none") {
+      popup.style.display = "flex";
+    } else {
+      popup.style.display = "none";
+    }
+  };
 
   const [posts, setPosts] = useState(null);
 
   useEffect(() => {
-    document.querySelector(".bg-grn-60").style.display = "none"
+    document.querySelector(".bg-grn-60").style.display = "none";
 
     async function getdata() {
       try {
         const response = await client.getEntries({ content_type: "blogPosts" });
-      setPosts(response.items);
+        setPosts(response.items);
       } catch (error) {
-        console.log(error)
+        console.log(error);
       }
     }
     getdata();
-    
+
     const slideshow = document.getElementById("slideshow");
     const prevBtn = document.getElementById("prevBtn");
     const nextBtn = document.getElementById("nextBtn");
@@ -148,7 +149,6 @@ const popuphandler = () => {
         document.getElementById("modalsc").style.display = "none";
       });
     }
-
   }, []);
 
   const [fname, setfname] = useState("");
@@ -307,7 +307,7 @@ const popuphandler = () => {
         class="flex z-50 px-6 justify-center items-center w-full h-full"
       >
         <div class="max-w-xl danger w-full items-center   rounded-2xl bg-white flex flex-col px-6 py-10 gap-6">
-          <div> 
+          <div>
             <Image
               alt="png will occupy here"
               class="H4 text-center hidden lg:block self-start"
@@ -567,54 +567,54 @@ const popuphandler = () => {
       </div>
 
       <main class="body-margin">
-          <nav class="flex   top-0 left-0 right-0 bg-white z-30 pb-4 items-center flex-row justify-between">
-            <Link href="/">
-              <Image
-                alt="png will occupy here"
-                priority
-                class="hidden w-12 h-auto lg:block"
-                src={logo}
-                quality={100}
-              />
-              <Image
-                alt="png will occupy here"
-                priority
-                class="lg:hidden w-9 h-auto block"
-                src={logo}
-                quality={100}
-              />
-            </Link>
-            <div class="navM hidden lg:flex">
-              <Link class="H6" href="/about">
-                About
-              </Link>
-              <Link class="H6" href="#clinicals">
-                Clinicals
-              </Link>
-              <Link class="H6" href="#productions">
-                Production
-              </Link>
-              <Link class="H6" href="/blog">
-                Blog
-              </Link>
-              <Link class="H6" href="#contact">
-                Contact
-              </Link>
-            </div>
-            <Link href="/#contact" class="buttonM H6 hidden lg:flex">
-              Book a Consultation
-            </Link>
+        <nav class="flex   top-0 left-0 right-0 bg-white z-30 pb-4 items-center flex-row justify-between">
+          <Link href="/">
             <Image
               alt="png will occupy here"
-              onClick={popuphandler}
               priority
-              class="lg:hidden block"
-              src="/menu.svg"
-              width="44"
-              height="44"
+              class="hidden w-12 h-auto lg:block"
+              src={logo}
               quality={100}
             />
-          </nav>
+            <Image
+              alt="png will occupy here"
+              priority
+              class="lg:hidden w-9 h-auto block"
+              src={logo}
+              quality={100}
+            />
+          </Link>
+          <div class="navM hidden lg:flex">
+            <Link class="H6" href="/about">
+              About
+            </Link>
+            <Link class="H6" href="#clinicals">
+              Clinicals
+            </Link>
+            <Link class="H6" href="#productions">
+              Production
+            </Link>
+            <Link class="H6" href="/blog">
+              Blog
+            </Link>
+            <Link class="H6" href="#contact">
+              Contact
+            </Link>
+          </div>
+          <Link href="/#contact" class="buttonM H6 hidden lg:flex">
+            Book a Consultation
+          </Link>
+          <Image
+            alt="png will occupy here"
+            onClick={popuphandler}
+            priority
+            class="lg:hidden block"
+            src="/menu.svg"
+            width="44"
+            height="44"
+            quality={100}
+          />
+        </nav>
 
         <header>
           <div class="flex lg:flex-row flex-col gap-10 lg:gap-16 justify-between items-center header-content">
@@ -663,21 +663,15 @@ const popuphandler = () => {
             <div class="order-1 header-right lg:order-2">
               <Image
                 alt="png will occupy here"
-                src="/header-right.png"
+                src={new2}
                 class="hidden lg:block"
-                width="488"
-                height="478"
                 quality={100}
-                priority
               />
               <Image
                 alt="png will occupy here"
-                src="/header-right.png"
+                src={new1}
                 class="lg:hidden block"
-                width="345"
-                height="338"
                 quality={100}
-                priority
               />
             </div>
           </div>
@@ -1949,313 +1943,309 @@ const popuphandler = () => {
             </form>
           </div>
         </section>
-
       </main>
-        <footer class="onwsss">
-          <div class="footer px-6 text-white">
-            <div class="flex flex-col gap-16 pt-10 lg:pt-20">
-              <div class="gap-6 flex flex-col">
-                <h4 class="H5 hidden lg:block">Our Office</h4>
-                <h4 class="H5 lg:hidden block">Our Office</h4>
+      <footer class="onwsss">
+        <div class="footer px-6 text-white">
+          <div class="flex flex-col gap-16 pt-10 lg:pt-20">
+            <div class="gap-6 flex flex-col">
+              <h4 class="H5 hidden lg:block">Our Office</h4>
+              <h4 class="H5 lg:hidden block">Our Office</h4>
+              <p class="B4 hidden lg:flex gap-4 items-center">
+                <Image
+                  alt="png will occupy here"
+                  src="/house-2.svg"
+                  class=""
+                  width="24"
+                  height="24"
+                  quality={100}
+                  priority
+                />
+                1 Qudus Hassan Close, Santos, Idi Mangoro. Lagos. NG
+              </p>
+              <p class="B5 lg:hidden flex gap-2 items-center">
+                <Image
+                  alt="png will occupy here"
+                  src="/house-2.svg"
+                  class=""
+                  width="20"
+                  height="20"
+                  quality={100}
+                  priority
+                />
+                1 Qudus Hassan Close, Santos, Idi Mangoro. Lagos. NG
+              </p>
+            </div>
+            <div class="gap-6 flex flex-col">
+              <h4 class="H5 hidden lg:block">Our Contact</h4>
+              <h4 class="H5 lg:hidden block">Our Contact</h4>
+              <div class="flex flex-col gap-4">
                 <p class="B4 hidden lg:flex gap-4 items-center">
                   <Image
                     alt="png will occupy here"
-                    src="/house-2.svg"
+                    src="/call.svg"
                     class=""
                     width="24"
                     height="24"
                     quality={100}
                     priority
                   />
-                  1 Qudus Hassan Close, Santos, Idi Mangoro. Lagos. NG
+                  +2348057532485
                 </p>
                 <p class="B5 lg:hidden flex gap-2 items-center">
                   <Image
                     alt="png will occupy here"
-                    src="/house-2.svg"
+                    src="/call.svg"
                     class=""
                     width="20"
                     height="20"
                     quality={100}
                     priority
                   />
-                  1 Qudus Hassan Close, Santos, Idi Mangoro. Lagos. NG
+                  +2348057532485
+                </p>
+                <p class="B4 hidden lg:flex gap-4 items-center">
+                  <Image
+                    alt="png will occupy here"
+                    src="/sms.svg"
+                    class=""
+                    width="24"
+                    height="24"
+                    quality={100}
+                    priority
+                  />
+                  muilisalimot@salymwellness.center
+                </p>
+                <p class="B5 lg:hidden flex gap-2 items-center">
+                  <Image
+                    alt="png will occupy here"
+                    src="/sms.svg"
+                    class=""
+                    width="20"
+                    height="20"
+                    quality={100}
+                    priority
+                  />
+                  muilisalimot@salymwellness.center
+                </p>
+                <p class="B4 hidden lg:flex gap-4 items-center">
+                  <Image
+                    alt="png will occupy here"
+                    src="/call.svg"
+                    class=""
+                    width="24"
+                    height="24"
+                    quality={100}
+                    priority
+                  />
+                  +2348061782702
+                </p>
+                <p class="B5 lg:hidden flex gap-2 items-center">
+                  <Image
+                    alt="png will occupy here"
+                    src="/call.svg"
+                    class=""
+                    width="20"
+                    height="20"
+                    quality={100}
+                    priority
+                  />
+                  +2348061782702
+                </p>
+                <p class="B4 hidden lg:flex gap-4 items-center">
+                  <Image
+                    alt="png will occupy here"
+                    src="/sms.svg"
+                    class=""
+                    width="24"
+                    height="24"
+                    quality={100}
+                    priority
+                  />
+                  info@salymwellness.center
+                </p>
+                <p class="B5 lg:hidden flex gap-2 items-center">
+                  <Image
+                    alt="png will occupy here"
+                    src="/sms.svg"
+                    class=""
+                    width="20"
+                    height="20"
+                    quality={100}
+                    priority
+                  />
+                  info@salymwellness.center
                 </p>
               </div>
-              <div class="gap-6 flex flex-col">
-                <h4 class="H5 hidden lg:block">Our Contact</h4>
-                <h4 class="H5 lg:hidden block">Our Contact</h4>
-                <div class="flex flex-col gap-4">
-                  <p class="B4 hidden lg:flex gap-4 items-center">
-                    <Image
-                      alt="png will occupy here"
-                      src="/call.svg"
-                      class=""
-                      width="24"
-                      height="24"
-                      quality={100}
-                      priority
-                    />
-                    +2348057532485
-                  </p>
-                  <p class="B5 lg:hidden flex gap-2 items-center">
-                    <Image
-                      alt="png will occupy here"
-                      src="/call.svg"
-                      class=""
-                      width="20"
-                      height="20"
-                      quality={100}
-                      priority
-                    />
-                    +2348057532485
-                  </p>
-                  <p class="B4 hidden lg:flex gap-4 items-center">
-                    <Image
-                      alt="png will occupy here"
-                      src="/sms.svg"
-                      class=""
-                      width="24"
-                      height="24"
-                      quality={100}
-                      priority
-                    />
-                    muilisalimot@salymwellness.center
-                  </p>
-                  <p class="B5 lg:hidden flex gap-2 items-center">
-                    <Image
-                      alt="png will occupy here"
-                      src="/sms.svg"
-                      class=""
-                      width="20"
-                      height="20"
-                      quality={100}
-                      priority
-                    />
-                    muilisalimot@salymwellness.center
-                  </p>
-                  <p class="B4 hidden lg:flex gap-4 items-center">
-                    <Image
-                      alt="png will occupy here"
-                      src="/call.svg"
-                      class=""
-                      width="24"
-                      height="24"
-                      quality={100}
-                      priority
-                    />
-                    +2348061782702
-                  </p>
-                  <p class="B5 lg:hidden flex gap-2 items-center">
-                    <Image
-                      alt="png will occupy here"
-                      src="/call.svg"
-                      class=""
-                      width="20"
-                      height="20"
-                      quality={100}
-                      priority
-                    />
-                    +2348061782702
-                  </p>
-                  <p class="B4 hidden lg:flex gap-4 items-center">
-                    <Image
-                      alt="png will occupy here"
-                      src="/sms.svg"
-                      class=""
-                      width="24"
-                      height="24"
-                      quality={100}
-                      priority
-                    />
-                    info@salymwellness.center
-                  </p>
-                  <p class="B5 lg:hidden flex gap-2 items-center">
-                    <Image
-                      alt="png will occupy here"
-                      src="/sms.svg"
-                      class=""
-                      width="20"
-                      height="20"
-                      quality={100}
-                      priority
-                    />
-                    info@salymwellness.center
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="flex lg:flex-row flex-col justify-between lg:items-center pt-16">
-              <div class="flex lg:flex-row pb-12 lg:pb-0 flex-col gap-10">
-                <Link href="/" class="hover:text-green-200 H6 hidden lg:block ">
-                  Home
-                </Link>
-                <Link
-                  href="/"
-                  class="hover:text-green-200 subH lg:hidden block"
-                >
-                  Home
-                </Link>
-                <Link
-                  href="/about"
-                  class="hover:text-green-200 H6 hidden lg:block"
-                >
-                  About
-                </Link>
-                <Link
-                  href="/about"
-                  class="hover:text-green-200 subH lg:hidden block"
-                >
-                  About
-                </Link>
-                <Link
-                  href="/#clinicals"
-                  class="hover:text-green-200 H6 hidden lg:block"
-                >
-                  Clinicals
-                </Link>
-                <Link
-                  href="/#clinicals"
-                  class="hover:text-green-200 subH lg:hidden block"
-                >
-                  Clinicals
-                </Link>
-                <Link
-                  href="/#productions"
-                  class="hover:text-green-200 H6 hidden lg:block "
-                >
-                  Productions
-                </Link>
-                <Link
-                  href="/#productions"
-                  class="hover:text-green-200 subH lg:hidden block"
-                >
-                  Productions
-                </Link>
-                <Link
-                  href="/blog"
-                  class="hover:text-green-200 H6 hidden lg:block"
-                >
-                  Blog
-                </Link>
-                <Link
-                  href="/blog"
-                  class="hover:text-green-200 subH lg:hidden block"
-                >
-                  Blog
-                </Link>
-                <Link
-                  href="/#contact"
-                  class="hover:text-green-200 H6 hidden lg:block"
-                >
-                  Contact
-                </Link>
-                <Link
-                  href="/#contact"
-                  class="hover:text-green-200 subH lg:hidden block"
-                >
-                  Contact
-                </Link>
-              </div>
-
-              <div class="flex justify-center gap-4">
-                <a
-                  href="https://www.instagram.com/salym_wellness_centre"
-                  target="_blank"
-                >
-                  <Image
-                    alt="png will occupy here"
-                    class="H4 text-center hidden lg:block  self-center"
-                    src="/IG.svg"
-                    priority
-                    width="24"
-                    height="24"
-                    quality={100}
-                  />
-                </a>
-                <a
-                  href="https://www.instagram.com/salym_wellness_centre"
-                  target="_blank"
-                >
-                  <Image
-                    alt="png will occupy here"
-                    class="lg:hidden block self-start"
-                    src="/iig.svg"
-                    width="24"
-                    height="24"
-                    priority
-                    quality={100}
-                  />
-                </a>
-                <a
-                  href="https://www.facebook.com/profile.php?id=100063809140048&mibextid=LQQJ4d"
-                  target="_blank"
-                >
-                  <Image
-                    alt="png will occupy here"
-                    class="H4 text-center hidden lg:block  self-center"
-                    src="/ffb.svg"
-                    priority
-                    width="24"
-                    height="24"
-                    quality={100}
-                  />
-                </a>
-                <a
-                  href="https://www.facebook.com/profile.php?id=100063809140048&mibextid=LQQJ4d"
-                  target="_blank"
-                >
-                  <Image
-                    alt="png will occupy here"
-                    class="lg:hidden block self-start"
-                    src="/ffb.svg"
-                    width="24"
-                    height="24"
-                    priority
-                    quality={100}
-                  />
-                </a>
-                <a
-                  href="https://twitter.com/salymwc?s=21&t=-e4Q0Ih6HOOkE7S_kJdCjg"
-                  target="_blank"
-                >
-                  <Image
-                    alt="png will occupy here"
-                    class="H4 text-center hidden lg:block  self-center"
-                    src="/ttw.svg"
-                    priority
-                    width="24"
-                    height="24"
-                    quality={100}
-                  />
-                </a>
-                <a
-                  href="https://twitter.com/salymwc?s=21&t=-e4Q0Ih6HOOkE7S_kJdCjg"
-                  target="_blank"
-                >
-                  <Image
-                    alt="png will occupy here"
-                    class="lg:hidden block self-start"
-                    src="/ttw.svg"
-                    width="24"
-                    height="24"
-                    priority
-                    quality={100}
-                  />
-                </a>
-              </div>
-            </div>
-            <div class="lg:pt-12 lg:pb-10 pt-6 pb-8 text-center w-full">
-              <p class="H6 hidden lg:block ">
-                2023 Copyrights. All rights reserved.
-              </p>
-              <p class="subH lg:hidden block">
-                2023 Copyrights. All rights reserved.
-              </p>
             </div>
           </div>
-        </footer>
+
+          <div class="flex lg:flex-row flex-col justify-between lg:items-center pt-16">
+            <div class="flex lg:flex-row pb-12 lg:pb-0 flex-col gap-10">
+              <Link href="/" class="hover:text-green-200 H6 hidden lg:block ">
+                Home
+              </Link>
+              <Link href="/" class="hover:text-green-200 subH lg:hidden block">
+                Home
+              </Link>
+              <Link
+                href="/about"
+                class="hover:text-green-200 H6 hidden lg:block"
+              >
+                About
+              </Link>
+              <Link
+                href="/about"
+                class="hover:text-green-200 subH lg:hidden block"
+              >
+                About
+              </Link>
+              <Link
+                href="/#clinicals"
+                class="hover:text-green-200 H6 hidden lg:block"
+              >
+                Clinicals
+              </Link>
+              <Link
+                href="/#clinicals"
+                class="hover:text-green-200 subH lg:hidden block"
+              >
+                Clinicals
+              </Link>
+              <Link
+                href="/#productions"
+                class="hover:text-green-200 H6 hidden lg:block "
+              >
+                Productions
+              </Link>
+              <Link
+                href="/#productions"
+                class="hover:text-green-200 subH lg:hidden block"
+              >
+                Productions
+              </Link>
+              <Link
+                href="/blog"
+                class="hover:text-green-200 H6 hidden lg:block"
+              >
+                Blog
+              </Link>
+              <Link
+                href="/blog"
+                class="hover:text-green-200 subH lg:hidden block"
+              >
+                Blog
+              </Link>
+              <Link
+                href="/#contact"
+                class="hover:text-green-200 H6 hidden lg:block"
+              >
+                Contact
+              </Link>
+              <Link
+                href="/#contact"
+                class="hover:text-green-200 subH lg:hidden block"
+              >
+                Contact
+              </Link>
+            </div>
+
+            <div class="flex justify-center gap-4">
+              <a
+                href="https://www.instagram.com/salym_wellness_centre"
+                target="_blank"
+              >
+                <Image
+                  alt="png will occupy here"
+                  class="H4 text-center hidden lg:block  self-center"
+                  src="/IG.svg"
+                  priority
+                  width="24"
+                  height="24"
+                  quality={100}
+                />
+              </a>
+              <a
+                href="https://www.instagram.com/salym_wellness_centre"
+                target="_blank"
+              >
+                <Image
+                  alt="png will occupy here"
+                  class="lg:hidden block self-start"
+                  src="/iig.svg"
+                  width="24"
+                  height="24"
+                  priority
+                  quality={100}
+                />
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=100063809140048&mibextid=LQQJ4d"
+                target="_blank"
+              >
+                <Image
+                  alt="png will occupy here"
+                  class="H4 text-center hidden lg:block  self-center"
+                  src="/ffb.svg"
+                  priority
+                  width="24"
+                  height="24"
+                  quality={100}
+                />
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=100063809140048&mibextid=LQQJ4d"
+                target="_blank"
+              >
+                <Image
+                  alt="png will occupy here"
+                  class="lg:hidden block self-start"
+                  src="/ffb.svg"
+                  width="24"
+                  height="24"
+                  priority
+                  quality={100}
+                />
+              </a>
+              <a
+                href="https://twitter.com/salymwc?s=21&t=-e4Q0Ih6HOOkE7S_kJdCjg"
+                target="_blank"
+              >
+                <Image
+                  alt="png will occupy here"
+                  class="H4 text-center hidden lg:block  self-center"
+                  src="/ttw.svg"
+                  priority
+                  width="24"
+                  height="24"
+                  quality={100}
+                />
+              </a>
+              <a
+                href="https://twitter.com/salymwc?s=21&t=-e4Q0Ih6HOOkE7S_kJdCjg"
+                target="_blank"
+              >
+                <Image
+                  alt="png will occupy here"
+                  class="lg:hidden block self-start"
+                  src="/ttw.svg"
+                  width="24"
+                  height="24"
+                  priority
+                  quality={100}
+                />
+              </a>
+            </div>
+          </div>
+          <div class="lg:pt-12 lg:pb-10 pt-6 pb-8 text-center w-full">
+            <p class="H6 hidden lg:block ">
+              2023 Copyrights. All rights reserved.
+            </p>
+            <p class="subH lg:hidden block">
+              2023 Copyrights. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
